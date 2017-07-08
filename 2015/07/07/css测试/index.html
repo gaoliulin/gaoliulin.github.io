@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CSS五 定位 position 及使用 | welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="##  position常用属性有static,relative,relative,fixed,  static    静态定位,默认值,元素出现杂正常的流中,(会忽视left,top,right,bottom,z-index的声明)   relative    相对定位,相对于其正常位置进行定位,移动.本元素在原来空间仍然占据空间(配合使用left,top,right,bottom,z-inde">
+<meta name="keywords" content="日记,学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS五 定位 position 及使用">
+<meta property="og:url" content="http://yoursite.com/2015/07/07/css测试/index.html">
+<meta property="og:site_name" content="welcome">
+<meta property="og:description" content="##  position常用属性有static,relative,relative,fixed,  static    静态定位,默认值,元素出现杂正常的流中,(会忽视left,top,right,bottom,z-index的声明)   relative    相对定位,相对于其正常位置进行定位,移动.本元素在原来空间仍然占据空间(配合使用left,top,right,bottom,z-inde">
+<meta property="og:updated_time" content="2017-07-07T09:07:29.842Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS五 定位 position 及使用">
+<meta name="twitter:description" content="##  position常用属性有static,relative,relative,fixed,  static    静态定位,默认值,元素出现杂正常的流中,(会忽视left,top,right,bottom,z-index的声明)   relative    相对定位,相对于其正常位置进行定位,移动.本元素在原来空间仍然占据空间(配合使用left,top,right,bottom,z-inde">
+  
+    <link rel="alternate" href="/atom.xml" title="welcome" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">welcome</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-css测试" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/07/css测试/" class="article-date">
+  <time datetime="2015-07-07T08:35:20.000Z" itemprop="datePublished">2015-07-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>►<a class="article-category-link" href="/categories/CSS/web/">web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS五 定位 position 及使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>## </p>
+<h3 id="position常用属性有static-relative-relative-fixed"><a href="#position常用属性有static-relative-relative-fixed" class="headerlink" title="position常用属性有static,relative,relative,fixed,"></a>position常用属性有static,relative,relative,fixed,</h3><p>  static    静态定位,默认值,元素出现杂正常的流中,(会忽视left,top,right,bottom,z-index的声明)</p>
+<p>  relative    相对定位,相对于其正常位置进行定位,移动.本元素在原来空间仍然占据空间(配合使用left,top,right,bottom,z-index的声明)</p>
+<p>  absolute    绝对定位,找相对与static定位意外的有定位的父元素,相对于这个父元素设置本身位置,若没有,则相对与body定位(配合使用left,top,right,bottom,z-index的声明).<br>    设置absolute属性的元素在标准流死你不占位置的</p>
+<p>  fixed    固定定位(绝对定位),相对于浏览器窗口进行定位(配合使用left,top,right,bottom,z-index的声明)<br>  在标准流死你不占位置的</p>
+<h2 id="z-index-层级"><a href="#z-index-层级" class="headerlink" title="z-index 层级"></a>z-index 层级</h2><h2 id="怎样把盒子设置居中"><a href="#怎样把盒子设置居中" class="headerlink" title="怎样把盒子设置居中"></a>怎样把盒子设置居中</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">方法一: &#123;</div><div class="line">		<span class="attr">left</span>:<span class="number">50</span>%;</div><div class="line">		margin-left:<span class="number">-1</span>/<span class="number">2</span>width px;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">方法二: &#123;</div><div class="line">	<span class="attr">left</span>:<span class="number">50</span>%;</div><div class="line">	transform:trnaslateX(<span class="number">-50</span>%);</div><div class="line">&#125;</div><div class="line">方法三: &#123;</div><div class="line">	<span class="attr">left</span>:<span class="number">0</span>;</div><div class="line">	rigth:<span class="number">0</span>;</div><div class="line">	bottom:<span class="number">0</span>;</div><div class="line">	margin:<span class="number">0</span> auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="什么是精灵图？"><a href="#什么是精灵图？" class="headerlink" title="什么是精灵图？"></a>什么是精灵图？</h2><h3 id="1-CSS精灵是一种处理网页背景图像的方式（一般针对网页中的logo和一些其他图标）。它将一个页面涉及到的所有零星背景图像都集中到一张大图中去，然后将大图应用于网页，这样，当用户访问该页面时，只需向服务发送一次请求，网页中的背景图像即可全部展示出来。通常情况下，这个由很多小的背景图像合成的大图被称为精灵图"><a href="#1-CSS精灵是一种处理网页背景图像的方式（一般针对网页中的logo和一些其他图标）。它将一个页面涉及到的所有零星背景图像都集中到一张大图中去，然后将大图应用于网页，这样，当用户访问该页面时，只需向服务发送一次请求，网页中的背景图像即可全部展示出来。通常情况下，这个由很多小的背景图像合成的大图被称为精灵图" class="headerlink" title="1. CSS精灵是一种处理网页背景图像的方式（一般针对网页中的logo和一些其他图标）。它将一个页面涉及到的所有零星背景图像都集中到一张大图中去，然后将大图应用于网页，这样，当用户访问该页面时，只需向服务发送一次请求，网页中的背景图像即可全部展示出来。通常情况下，这个由很多小的背景图像合成的大图被称为精灵图."></a>1. CSS精灵是一种处理网页背景图像的方式（一般针对网页中的logo和一些其他图标）。它将一个页面涉及到的所有零星背景图像都集中到一张大图中去，然后将大图应用于网页，这样，当用户访问该页面时，只需向服务发送一次请求，网页中的背景图像即可全部展示出来。通常情况下，这个由很多小的背景图像合成的大图被称为精灵图.</h3><h3 id="2-精灵图的原理和使用方式"><a href="#2-精灵图的原理和使用方式" class="headerlink" title="2. 精灵图的原理和使用方式"></a>2. 精灵图的原理和使用方式</h3><p>CSS 精灵其实是将网页中的一些背景图像整合到一张大图中（精灵图）。然而，各个网页元素通常只需要精灵图中不同位置的某个小图，要想精确定位到精灵图中的某个小图，就需要使用CSS的background-image、background-repeat和background-position属性进行背景定位，其中最关键的是使用background-position属性精确地定位。</p>
+<h2 id="css滑动门技术"><a href="#css滑动门技术" class="headerlink" title="css滑动门技术"></a>css滑动门技术</h2><h3 id="制作网页时，为了美观，常常需要为网页元素设置特殊形状的背景-如果使用传统的CSS思想，要想为列表项“技术联盟”设置上图所示的圆角背景，可以对其所在的标记应用大圆角背景。这种方式固然可以实现圆角背景的效果，但是，如果以后增加或减少列表项中的文字，就需要重新对定义背景图像，以适应文本内容的多少。"><a href="#制作网页时，为了美观，常常需要为网页元素设置特殊形状的背景-如果使用传统的CSS思想，要想为列表项“技术联盟”设置上图所示的圆角背景，可以对其所在的标记应用大圆角背景。这种方式固然可以实现圆角背景的效果，但是，如果以后增加或减少列表项中的文字，就需要重新对定义背景图像，以适应文本内容的多少。" class="headerlink" title="制作网页时，为了美观，常常需要为网页元素设置特殊形状的背景.如果使用传统的CSS思想，要想为列表项“技术联盟”设置上图所示的圆角背景，可以对其所在的标记应用大圆角背景。这种方式固然可以实现圆角背景的效果，但是，如果以后增加或减少列表项中的文字，就需要重新对定义背景图像，以适应文本内容的多少。"></a>制作网页时，为了美观，常常需要为网页元素设置特殊形状的背景.如果使用传统的CSS思想，要想为列表项“技术联盟”设置上图所示的圆角背景，可以对其所在的<li>标记应用大圆角背景。这种方式固然可以实现圆角背景的效果，但是，如果以后增加或减少列表项中的文字，就需要重新对</li><li>定义背景图像，以适应文本内容的多少。</li></h3><h2 id="三．透明度"><a href="#三．透明度" class="headerlink" title="三．透明度"></a>三．透明度</h2><pre><code>样式属性：opacity
+使用方式：
+opacity:数值;    数值范围(0-1)
+filter:alpha(opacity=数值);    数值范围（0-100）  //IE8及其以下版本
+</code></pre><h2 id="隐藏"><a href="#隐藏" class="headerlink" title="隐藏"></a>隐藏</h2><h4 id="overflow-hidden-隐藏超出部分"><a href="#overflow-hidden-隐藏超出部分" class="headerlink" title="overflow:hidden;隐藏超出部分"></a>overflow:hidden;隐藏超出部分</h4><p>display:none;不显示元素,不占位置<br>visibiloty:hidden;不显示元素,不占位置<br>opacity:0;占位置<br>position-top:-9999px; 占位置</p>
+<h2 id="overflow介绍"><a href="#overflow介绍" class="headerlink" title="overflow介绍"></a>overflow介绍</h2><p>###　overflow 属性规定当内容溢出元素框时发生的事情。<br>    overflow:visible    默认值。内容不会被修剪，会呈现在元素框之外。<br>    overflow:hidden    内容会被修剪，并且其余内容是不可见的。<br>    overflow:scroll    内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br>    overflow:auto    如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/07/css测试/" data-id="cj4vdbkfw0034t0bm46ebbp7o" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/07/07/CSS五/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          CSS五 定位 position 及使用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/07/07/CSS三/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">CSS三 border padding margin</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Catégories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/日记/" style="font-size: 10px;">日记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/07/08/angular-02/">angular 02</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/angular-01/">angular 01</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/angular01/">angular01</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/07/CSS四/">CSS四　浮动float</a>
+          </li>
+        
+          <li>
+            <a href="/2015/07/07/CSS/">CSS 一些易忘属性或其他</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 ������<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

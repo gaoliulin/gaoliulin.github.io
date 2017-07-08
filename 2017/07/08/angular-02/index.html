@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>angular 02 | welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="作用域每一个控制器都拥有$scope，这个$scope可以看做是一个作用域，当前控制器中所有绑定的数据内容都会来这个$scope中进行查找 在模块控制的范围内，有一个全局作用域，$rootScope 控制器之间又可以进行嵌套，嵌套之后，作用域之间就形成了继承关系，其原理就是原型继承 继承关系指的就是，绑定数据在查找的时候，会现在当前控制器中进行查找，如果找到了就直接使用，如果找不到就会去外层控制的">
+<meta name="keywords" content="日记,学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="angular 02">
+<meta property="og:url" content="http://yoursite.com/2017/07/08/angular-02/index.html">
+<meta property="og:site_name" content="welcome">
+<meta property="og:description" content="作用域每一个控制器都拥有$scope，这个$scope可以看做是一个作用域，当前控制器中所有绑定的数据内容都会来这个$scope中进行查找 在模块控制的范围内，有一个全局作用域，$rootScope 控制器之间又可以进行嵌套，嵌套之后，作用域之间就形成了继承关系，其原理就是原型继承 继承关系指的就是，绑定数据在查找的时候，会现在当前控制器中进行查找，如果找到了就直接使用，如果找不到就会去外层控制的">
+<meta property="og:updated_time" content="2017-07-08T14:10:51.038Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="angular 02">
+<meta name="twitter:description" content="作用域每一个控制器都拥有$scope，这个$scope可以看做是一个作用域，当前控制器中所有绑定的数据内容都会来这个$scope中进行查找 在模块控制的范围内，有一个全局作用域，$rootScope 控制器之间又可以进行嵌套，嵌套之后，作用域之间就形成了继承关系，其原理就是原型继承 继承关系指的就是，绑定数据在查找的时候，会现在当前控制器中进行查找，如果找到了就直接使用，如果找不到就会去外层控制的">
+  
+    <link rel="alternate" href="/atom.xml" title="welcome" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">welcome</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-angular-02" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/08/angular-02/" class="article-date">
+  <time datetime="2017-07-08T14:06:50.000Z" itemprop="datePublished">2017-07-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/angular/">angular</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      angular 02
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>每一个控制器都拥有$scope，这个$scope可以看做是一个作用域，当前控制器中所有绑定的数据内容都会来这个$scope中进行查找</p>
+<p>在模块控制的范围内，有一个全局作用域，$rootScope</p>
+<p>控制器之间又可以进行嵌套，嵌套之后，作用域之间就形成了继承关系，其原理就是原型继承</p>
+<p>继承关系指的就是，绑定数据在查找的时候，会现在当前控制器中进行查找，如果找到了就直接使用，如果找不到就会去外层控制的作用域中进行查找，直到找到$rootScope为止！</p>
+<p>$rootScope可以被所有的控制器操作，所以很容易出现全局污染的情况，所以应该避免进行类似的操作</p>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><h3 id="创建模块"><a href="#创建模块" class="headerlink" title="创建模块"></a>创建模块</h3><p>angular.module(“模块名称”, [“依赖项”]);</p>
+<h3 id="获取模块"><a href="#获取模块" class="headerlink" title="获取模块"></a>获取模块</h3><p>angular.module(“模块名称”);</p>
+<h3 id="模块注意事项"><a href="#模块注意事项" class="headerlink" title="模块注意事项"></a>模块注意事项</h3><p>angular推荐一个页面中只使用一个ng-app指定一个模块</p>
+<p>如果存在多个ng-app指令，angular只会自动启动第一个模块！</p>
+<p>如果要启动多个模块，需要手动启动<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">angular.bootstrap(模块要控制的dom元素, [<span class="string">"模块名称"</span>]);</div></pre></td></tr></table></figure></p>
+<p>** 模块不能嵌套！！！</p>
+<h2 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h2><p>一种架构模式，将应用程序代码根据功能划分为三部分<br>Model: 数据内容，负责所有的数据操作<br>View: 视图内容, 负责所有的数据展示工作以及用户交互操作<br>Controller: 控制器内容，负责处理所有的业务逻辑（在视图和数据之间搭建一个桥梁）</p>
+<h3 id="MVP-MVVM-MVW-MV"><a href="#MVP-MVVM-MVW-MV" class="headerlink" title="MVP MVVM MVW   MV*"></a>MVP MVVM MVW   MV*</h3><h2 id="jqlite"><a href="#jqlite" class="headerlink" title="jqlite"></a>jqlite</h2><p>jqlite是angular内置的类似于jQuery的东西，但是他不具备jQuery大部分的功能，尤其是没有选择器，这个让人很难以接受！！</p>
+<p>angular.element能够获取到jqlite的对象，也可以在引入jQuery之后，用来获取jQuery的$</p>
+<p>angular不推荐进行dom操作，也不推荐使用别人家的东西！！！</p>
+<h2 id="watch"><a href="#watch" class="headerlink" title="$watch"></a>$watch</h2><p>$watch可以用来监视数据的变化</p>
+<p>只能监视$scope中的内容！<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$scope.$watch(<span class="string">"数据名称"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">newValue, oldValue</span>)</span>&#123;</div><div class="line">	<span class="comment">//这个函数会在数据发生变化的时候被调用</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>如果要监视一个对象，那么需要传入第三个参数，deepwatch，是一个布尔值，设置为true的时候，会在对象内部的属性发生变化的时候也监视到变化，但是他默认值是false！！</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//方法一</span></div><div class="line">$scope.$watch(<span class="string">"数据名称"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">newValue, oldValue</span>)</span>&#123;</div><div class="line">	<span class="comment">//这个函数会在数据发生变化的时候被调用</span></div><div class="line">&#125;,<span class="literal">true</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//方法二</span></div><div class="line">$scope.$watch(<span class="string">"数据名称.属性"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">newValue, oldValue</span>)</span>&#123;</div><div class="line">	<span class="comment">//这个函数会在数据发生变化的时候被调用</span></div><div class="line">&#125;,<span class="literal">true</span>)</div></pre></td></tr></table></figure>
+<h2 id="controller的创建方式"><a href="#controller的创建方式" class="headerlink" title="controller的创建方式"></a>controller的创建方式</h2><ol>
+<li><p>推断式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">模块对象.controller(<span class="string">"控制器名称"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">$scope</span>)</span>&#123;</div><div class="line">	<span class="comment">//$scope这个形参名是定死的，不能随便更改，更改之后会找到不到该内容，报错</span></div><div class="line"></div><div class="line">	<span class="comment">//这种写法不推荐，因为在代码压缩的时候，$scope会被改变名称！</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>依赖注入式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">模块对象.controller(<span class="string">"控制器名称"</span>, [<span class="string">"$scope"</span>, <span class="string">"$log"</span>..., <span class="function"><span class="keyword">function</span>(<span class="params">scope, log...</span>)</span>&#123;&#125;])</div></pre></td></tr></table></figure>
+</li>
+<li><p>面向对象的方式  （可以将数据绑定到控制器的实例上）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">模块对象.controller(<span class="string">"控制器名称"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="comment">//this指向的就是控制器的一个实例，</span></div><div class="line">	<span class="comment">//下面的操作就是将数据绑定到了实例对象上</span></div><div class="line">	<span class="keyword">this</span>.数据 = <span class="string">"neirong"</span>;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>在视图中需要通过如下的方式进行使用<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 这里的item其实就是控制器实例 --&gt;</span></div><div class="line"><span class="comment">&lt;!-- 这句话就相当于执行了 var item = new 控制器() --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-controller</span>=<span class="string">"控制器名称 as item"</span>&gt;</span></div><div class="line">	&#123;&#123;item.数据&#125;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="依赖注入"><a href="#依赖注入" class="headerlink" title="依赖注入"></a>依赖注入</h2><p>DI dependence injection<br>将需要使用的内容注入到指定的位置！</p>
+<p>优势：</p>
+<pre><code>1. 参数的顺序不需要指定了，参数也不需要将所有的内容都传递进来了
+2. 参数名称也不需要定死了
+</code></pre><p>angular当中的依赖注入的实现<br><a href="./10-依赖注入的说明.html">依赖注入的说明</a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div></pre></td><td class="code"><pre><div class="line">	&lt;!doctype html&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">		<span class="comment">// DI   dependence injection</span></div><div class="line">		<span class="comment">// 依赖注入</span></div><div class="line"></div><div class="line"></div><div class="line">		<span class="comment">// function test(num, num1, num2, num3)&#123;</span></div><div class="line">		<span class="comment">// 	console.log(num, num2);</span></div><div class="line">		<span class="comment">// &#125;</span></div><div class="line"></div><div class="line"></div><div class="line">		<span class="comment">// test(1, 2)</span></div><div class="line"></div><div class="line"></div><div class="line">		<span class="comment">// function test()&#123;</span></div><div class="line"></div><div class="line">		<span class="comment">// &#125;</span></div><div class="line"></div><div class="line">		<span class="comment">// test(1, 2)</span></div><div class="line"></div><div class="line"></div><div class="line">		<span class="comment">//如果按照通常的方式，那么函数参数在获取的时候，必须是按照指定的顺序，不能够只获取指定的几个参数</span></div><div class="line">		<span class="comment">// function ($scope, $log, $window, $...)&#123;</span></div><div class="line"></div><div class="line">		<span class="comment">// &#125;</span></div><div class="line"></div><div class="line">		<span class="comment">//依赖注入的做法</span></div><div class="line">		<span class="comment">//我们可以通过告诉angular我们需要哪几个内容，angular通过获取我们告诉他的，我们需要的内容，进行指定的传参</span></div><div class="line">		<span class="comment">// ["$scope", "$log", function($scope, $log)&#123;</span></div><div class="line"></div><div class="line">		<span class="comment">// &#125;]</span></div><div class="line"></div><div class="line"></div><div class="line">		<span class="comment">//&lt;下面的这段代码就是依赖注入的方式创建控制器的原理&gt;</span></div><div class="line">		<span class="function"><span class="keyword">function</span> <span class="title">ctrl</span>(<span class="params">name, params</span>)</span>&#123;</div><div class="line">			<span class="comment">//系统中包含的所有的功能</span></div><div class="line">			<span class="keyword">var</span> features = &#123;</div><div class="line">				<span class="string">"$scope"</span>: &#123;</div><div class="line">					<span class="attr">name</span>: <span class="string">"张三"</span></div><div class="line">				&#125;,</div><div class="line">				<span class="string">"$log"</span>: &#123;</div><div class="line">					<span class="attr">log</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;,</div><div class="line">					<span class="attr">warn</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">				&#125;,</div><div class="line">				<span class="string">"$rootScope"</span>: &#123;&#125;,</div><div class="line">				<span class="string">"$window"</span>: <span class="built_in">window</span></div><div class="line">			&#125;</div><div class="line"></div><div class="line">			<span class="comment">//获取到了回调函数</span></div><div class="line">			<span class="keyword">var</span> callback = params[params.length - <span class="number">1</span>];</div><div class="line"></div><div class="line">			<span class="comment">//在调用这个函数的时候，需要给用户传递的参数</span></div><div class="line">			<span class="comment">//是根据用户告诉我们的内容，传递</span></div><div class="line"></div><div class="line">			<span class="comment">//声明一个数组，准备存放用户需要的所有的内容</span></div><div class="line">			<span class="keyword">var</span> args = [];</div><div class="line"></div><div class="line">			<span class="comment">//遍历用户所需要的内容</span></div><div class="line">			<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt;= params.length - <span class="number">2</span>; i++)&#123;</div><div class="line">				<span class="comment">//遍历所有的功能, 找到和用户所需的功能对应的内容</span></div><div class="line">				<span class="keyword">for</span>(<span class="keyword">var</span> k <span class="keyword">in</span> features)&#123;</div><div class="line">					<span class="keyword">if</span>(k == params[i])&#123;</div><div class="line">						args.push(features[k]);</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">			<span class="comment">//将用户所需的所有的功能，传入callbck进行调用</span></div><div class="line">			callback.apply(<span class="literal">null</span>, args);</div><div class="line">		&#125;</div><div class="line"></div><div class="line"></div><div class="line">		<span class="comment">// ctrl("c1", ["$scope", "$log", function(scope, log)&#123;</span></div><div class="line">		<span class="comment">// 	console.log(log, scope);</span></div><div class="line">		<span class="comment">// &#125;])</span></div><div class="line"></div><div class="line">		<span class="comment">//&lt;/上面的这段代码就是依赖注入的方式创建控制器的原理&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">		<span class="comment">//&lt;推断式创建控制器的原理&gt;</span></div><div class="line">		<span class="function"><span class="keyword">function</span> <span class="title">ctrl</span>(<span class="params">name, callback</span>)</span>&#123;</div><div class="line">			<span class="keyword">var</span> features = &#123;</div><div class="line">				<span class="string">"$scope"</span>: &#123;</div><div class="line">					<span class="attr">name</span>: <span class="string">"张三"</span></div><div class="line">				&#125;,</div><div class="line">				<span class="string">"$log"</span>: &#123;</div><div class="line">					<span class="attr">log</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;,</div><div class="line">					<span class="attr">warn</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">				&#125;,</div><div class="line">				<span class="string">"$rootScope"</span>: &#123;&#125;,</div><div class="line">				<span class="string">"$window"</span>: <span class="built_in">window</span></div><div class="line">			&#125;</div><div class="line"></div><div class="line">			<span class="comment">//根据用户传进来回调函数的形参，来确定用户要的是哪几个内容</span></div><div class="line">			<span class="comment">//通过将用户传进来的回调函数转换成字符串，然后在用正则表达式去获取这个函数的所有的形参</span></div><div class="line">			<span class="keyword">var</span> params = extractArgs(callback);</div><div class="line"></div><div class="line">			<span class="keyword">var</span> args = [];</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; params.length; i ++)&#123;</div><div class="line">				<span class="comment">//去功能里面找对应的项 将其存入最终要传入回调函数的实参列表中</span></div><div class="line">				<span class="keyword">for</span>(<span class="keyword">var</span> k <span class="keyword">in</span> features)&#123;</div><div class="line">					<span class="keyword">if</span>(k == params[i].trim())&#123;</div><div class="line">						args.push(features[k]);</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line"></div><div class="line">			<span class="comment">// console.log(args);</span></div><div class="line">			callback.apply(<span class="literal">null</span>, args);</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		ctrl(<span class="string">"c1"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">$scope, $log</span>)</span>&#123;</div><div class="line">			<span class="built_in">console</span>.log($scope, $log);</div><div class="line">		&#125;)</div><div class="line"></div><div class="line">		<span class="function"><span class="keyword">function</span> <span class="title">extractArgs</span>(<span class="params">fn</span>) </span>&#123;</div><div class="line">		    <span class="keyword">var</span> r = <span class="regexp">/^[^\(]*\(\s*([^\)]*)\)/</span>;</div><div class="line">		    <span class="keyword">var</span> args = r.exec( fn.toString() );</div><div class="line">		    <span class="keyword">return</span> args[<span class="number">1</span>].split(<span class="string">','</span>);</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="comment">//&lt;/推断式创建控制器的原理&gt;</span></div><div class="line"></div><div class="line">		<span class="comment">//传统的方式实现</span></div><div class="line">		<span class="comment">// function ctrl(name, callback)&#123;</span></div><div class="line">		<span class="comment">// 	//系统中包含的所有的功能</span></div><div class="line">		<span class="comment">// 	var features = &#123;</span></div><div class="line">		<span class="comment">// 		"$scope": &#123;&#125;,</span></div><div class="line">		<span class="comment">// 		"$log": &#123;</span></div><div class="line">		<span class="comment">// 			log: function()&#123;&#125;,</span></div><div class="line">		<span class="comment">// 			warn: function()&#123;&#125;</span></div><div class="line">		<span class="comment">// 		&#125;,</span></div><div class="line">		<span class="comment">// 		"$rootScope": &#123;&#125;,</span></div><div class="line">		<span class="comment">// 		"$window": window</span></div><div class="line">		<span class="comment">// 	&#125;</span></div><div class="line"></div><div class="line">		<span class="comment">// 	//获取到了回调函数</span></div><div class="line">		<span class="comment">// 	callback(features["$scope"], features["$log"],features["$window"], features["$rootScope"])</span></div><div class="line"></div><div class="line">		<span class="comment">// &#125;</span></div><div class="line"></div><div class="line">		<span class="comment">// ctrl("c1", function($scope, $log, $window)&#123;</span></div><div class="line">			</div><div class="line">		<span class="comment">// &#125;);</span></div><div class="line">	<span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="ng-class"><a href="#ng-class" class="headerlink" title="ng-class"></a>ng-class</h2><p>可以用来绑定类样式</p>
+<ol>
+<li><p>ng-class=”数据”  数据中存储的可以直接是类名</p>
+</li>
+<li><p>ng-class=”数据”  数据中存储的是一个对象，对象中的属性名表示类名，属性值表示该类名有没有在元素中出现，是一个布尔值！<br>ng-class=”{red: true, green: false}”</p>
+</li>
+</ol>
+<h2 id="ng-repeat"><a href="#ng-repeat" class="headerlink" title="ng-repeat"></a>ng-repeat</h2><p>用来遍历数据，生成html<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">ng-repeat</span>=<span class="string">"item in list"</span>&gt;</span>&#123;&#123;item&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">ng-repeat</span>=<span class="string">"item in list"</span>&gt;</span>&#123;&#123;item&#125;&#125; &#123;&#123;$index&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">ng-repeat</span>=<span class="string">"(key, value) in list"</span>&gt;</span>&#123;&#123;key&#125;&#125; &#123;&#123;value&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line">ng-repeat不仅可以遍历数组，也可以遍历对象</div></pre></td></tr></table></figure></p>
+<p>ng-repeat遍历的数组中的内容是不允许重复的，如果想要重复的内容，需要加上track by</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">ng-repeat</span>=<span class="string">"item in list track by 一个唯一的值"</span>&gt;</span>&#123;&#123;item&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">唯一的值一般使用的就是$index</div></pre></td></tr></table></figure>
+<h2 id="ng-cloak-解决闪烁问题"><a href="#ng-cloak-解决闪烁问题" class="headerlink" title="ng-cloak 解决闪烁问题"></a>ng-cloak 解决闪烁问题</h2><p>原理：在angular加载完毕之后，所有ng-cloak相关的内容全都会被移除</p>
+<ol>
+<li>声明ng-cloak的类样式，或者用属性选择器，加上display:none </li>
+<li>在元素中使用class=”ng-cloak”，或者加上ng-cloak属性 将元素隐藏</li>
+<li>在angular加载完毕之后，ng-cloak的类样式和ng-cloak属性都将被移除，元素显示！</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/08/angular-02/" data-id="cj4vdbkc0000mt0bm1u86cis6" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/07/08/angular-01/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">angular 01</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Catégories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/日记/" style="font-size: 10px;">日记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/07/08/angular-02/">angular 02</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/angular-01/">angular 01</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/angular01/">angular01</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/07/CSS四/">CSS四　浮动float</a>
+          </li>
+        
+          <li>
+            <a href="/2015/07/07/CSS/">CSS 一些易忘属性或其他</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 ������<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

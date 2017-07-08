@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CSS二 CSS选择器及三大特性 | welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="CSS基础选择器1：.class  类选择器2：#id  id选择器3：ele      标签选择器4：*  通配符选择器CSS符合选择器1：ele1 ele2  后代选择器后代选择器用来选择元素或元素组的后代，其写法就是把外层标记写在前面，内层标记写在后面，中间用空格分隔。当标记发生嵌套时，内层标记就成为外层标记的后代。 2：ele1&amp;gt;ele2  子代选择器3：ele1,ele2">
+<meta name="keywords" content="日记,学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS二 CSS选择器及三大特性">
+<meta property="og:url" content="http://yoursite.com/2015/07/07/CSS二/index.html">
+<meta property="og:site_name" content="welcome">
+<meta property="og:description" content="CSS基础选择器1：.class  类选择器2：#id  id选择器3：ele      标签选择器4：*  通配符选择器CSS符合选择器1：ele1 ele2  后代选择器后代选择器用来选择元素或元素组的后代，其写法就是把外层标记写在前面，内层标记写在后面，中间用空格分隔。当标记发生嵌套时，内层标记就成为外层标记的后代。 2：ele1&amp;gt;ele2  子代选择器3：ele1,ele2">
+<meta property="og:updated_time" content="2017-07-07T09:17:34.677Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS二 CSS选择器及三大特性">
+<meta name="twitter:description" content="CSS基础选择器1：.class  类选择器2：#id  id选择器3：ele      标签选择器4：*  通配符选择器CSS符合选择器1：ele1 ele2  后代选择器后代选择器用来选择元素或元素组的后代，其写法就是把外层标记写在前面，内层标记写在后面，中间用空格分隔。当标记发生嵌套时，内层标记就成为外层标记的后代。 2：ele1&amp;gt;ele2  子代选择器3：ele1,ele2">
+  
+    <link rel="alternate" href="/atom.xml" title="welcome" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">welcome</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-CSS二" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/07/CSS二/" class="article-date">
+  <time datetime="2015-07-07T03:30:11.000Z" itemprop="datePublished">2015-07-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>►<a class="article-category-link" href="/categories/CSS/web/">web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS二 CSS选择器及三大特性
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="CSS基础选择器"><a href="#CSS基础选择器" class="headerlink" title="CSS基础选择器"></a>CSS基础选择器</h2><h3 id="1：-class-类选择器"><a href="#1：-class-类选择器" class="headerlink" title="1：.class  类选择器"></a>1：.class  类选择器</h3><h3 id="2：-id-id选择器"><a href="#2：-id-id选择器" class="headerlink" title="2：#id  id选择器"></a>2：#id  id选择器</h3><h3 id="3：ele-标签选择器"><a href="#3：ele-标签选择器" class="headerlink" title="3：ele      标签选择器"></a>3：ele      标签选择器</h3><h3 id="4：-通配符选择器"><a href="#4：-通配符选择器" class="headerlink" title="4：*  通配符选择器"></a>4：*  通配符选择器</h3><h2 id="CSS符合选择器"><a href="#CSS符合选择器" class="headerlink" title="CSS符合选择器"></a>CSS符合选择器</h2><h3 id="1：ele1-ele2-后代选择器"><a href="#1：ele1-ele2-后代选择器" class="headerlink" title="1：ele1 ele2  后代选择器"></a>1：ele1 ele2  后代选择器</h3><pre><code>后代选择器用来选择元素或元素组的后代，其写法就是把外层标记写在前面，内层标记写在后面，中间用空格分隔。当标记发生嵌套时，内层标记就成为外层标记的后代。
+</code></pre><h3 id="2：ele1-gt-ele2-子代选择器"><a href="#2：ele1-gt-ele2-子代选择器" class="headerlink" title="2：ele1&gt;ele2  子代选择器"></a>2：ele1&gt;ele2  子代选择器</h3><h3 id="3：ele1-ele2-并集选择器"><a href="#3：ele1-ele2-并集选择器" class="headerlink" title="3：ele1,ele2      并集选择器"></a>3：ele1,ele2      并集选择器</h3><pre><code>并集选择器是各个选择器通过逗号连接而成的，任何形式的选择器（包括标记选择器、class类选择器id选择器等），都可以作为并集选择器的一部分。如果某些选择器定义的样式完全相同，或部分相同，就可以利用并集选择器为它们定义相同的CSS样式
+</code></pre><h3 id="4：p-class-交集选择器"><a href="#4：p-class-交集选择器" class="headerlink" title="4：p.class 交集选择器"></a>4：p.class 交集选择器</h3><pre><code>交集选择器由两个选择器构成，其中第一个为标记选择器，第二个为class选择器或id选择器，两个选择器之间不能有空格.
+</code></pre><h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><h3 id="link-未访问前-IE6不兼容，解决此问题，直接使用a标签。"><a href="#link-未访问前-IE6不兼容，解决此问题，直接使用a标签。" class="headerlink" title=":link         未访问前    IE6不兼容，解决此问题，直接使用a标签。"></a>:link         未访问前    IE6不兼容，解决此问题，直接使用a标签。</h3><h3 id="visited-访问后-在IE6只能应用于a连接，IE7-所有元素都兼容。"><a href="#visited-访问后-在IE6只能应用于a连接，IE7-所有元素都兼容。" class="headerlink" title=":visited     访问后        在IE6只能应用于a连接，IE7+所有元素都兼容。"></a>:visited     访问后        在IE6只能应用于a连接，IE7+所有元素都兼容。</h3><h3 id="hover-悬浮"><a href="#hover-悬浮" class="headerlink" title=":hover         悬浮"></a>:hover         悬浮</h3><h3 id="active-点击为松手-被选择的链接"><a href="#active-点击为松手-被选择的链接" class="headerlink" title=":active     点击为松手/ 被选择的链接"></a>:active     点击为松手/ 被选择的链接</h3><h3 id="focus-伪类将应用于拥有键盘输入焦点的元素。"><a href="#focus-伪类将应用于拥有键盘输入焦点的元素。" class="headerlink" title=":focus        伪类将应用于拥有键盘输入焦点的元素。"></a>:focus        伪类将应用于拥有键盘输入焦点的元素。</h3><h4 id="1-为了产生预期的效果，在-CSS-定义中，a-hover-必须位于-a-link-和-a-visited-之后！！"><a href="#1-为了产生预期的效果，在-CSS-定义中，a-hover-必须位于-a-link-和-a-visited-之后！！" class="headerlink" title="1. 为了产生预期的效果，在 CSS 定义中，a:hover 必须位于 a:link 和 a:visited 之后！！"></a>1. 为了产生预期的效果，在 CSS 定义中，a:hover 必须位于 a:link 和 a:visited 之后！！</h4><pre><code>2. 为了产生预期的效果，在 CSS 定义中，a:active 必须位于 a:hover 之后！！
+3. Pseudo-class（伪类）的名称对大小写不敏感。
+4. 伪类可与 CSS 类配合使用：
+</code></pre><h2 id="css三大特性"><a href="#css三大特性" class="headerlink" title="css三大特性"></a>css三大特性</h2><h3 id="1-继承性"><a href="#1-继承性" class="headerlink" title="1.继承性"></a>1.继承性</h3><pre><code>eg: tetx-  font-  line-  color  都会被后代继承
+并不是所有的CSS属性都可以继承，例如，下面的属性就不具有继承性：边框、外边距、内边距、背景、定位、元素宽高属性。
+所有盒子相关的属性都不能继承。   a标签  h1 标签不会实现继承
+</code></pre><h3 id="2-层叠性"><a href="#2-层叠性" class="headerlink" title="2.层叠性"></a>2.层叠性</h3><pre><code>是指后面设置的属性会把前面设置的属性层叠掉
+</code></pre><h3 id="3-优先级"><a href="#3-优先级" class="headerlink" title="3.优先级"></a>3.优先级</h3><pre><code>给元素设置属性时,是有优先级的
+也就是说靠近元素的样式具有最大的优先级，或者说排在最后的样式优先级最大。
+!importent &gt; 行内样式 &gt; id选址器 &gt; 类选择器 &gt; 标签选择器 &gt; 通配符 &gt; 继承
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/07/CSS二/" data-id="cj4vdbkaz0005t0bmltz09lgj" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/07/07/CSS三/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          CSS三 border padding margin
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/07/07/CSS一/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">CSS一  字体 背景</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Catégories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/日记/" style="font-size: 10px;">日记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/07/08/angular-02/">angular 02</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/angular-01/">angular 01</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/angular01/">angular01</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/07/CSS四/">CSS四　浮动float</a>
+          </li>
+        
+          <li>
+            <a href="/2015/07/07/CSS/">CSS 一些易忘属性或其他</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 ������<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

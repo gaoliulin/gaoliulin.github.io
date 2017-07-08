@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CSS四　浮动float | welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一．为什么需要浮动？###　浮动对于元素的排列和布局，操作更加简单，易于控制。 二．浮动的使用方式###　语法：float         float:left; 元素向左浮动         float:right; 元素向右浮 三．浮动的特点###　特点一：脱离标准的文档流（脱标）           标准文档流，就是没有浮动时，浏览器默认显示浏览器的方式。           脱离标准流的元">
+<meta name="keywords" content="日记,学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS四　浮动float">
+<meta property="og:url" content="http://yoursite.com/2017/07/07/CSS四/index.html">
+<meta property="og:site_name" content="welcome">
+<meta property="og:description" content="一．为什么需要浮动？###　浮动对于元素的排列和布局，操作更加简单，易于控制。 二．浮动的使用方式###　语法：float         float:left; 元素向左浮动         float:right; 元素向右浮 三．浮动的特点###　特点一：脱离标准的文档流（脱标）           标准文档流，就是没有浮动时，浏览器默认显示浏览器的方式。           脱离标准流的元">
+<meta property="og:updated_time" content="2017-07-07T09:17:38.078Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS四　浮动float">
+<meta name="twitter:description" content="一．为什么需要浮动？###　浮动对于元素的排列和布局，操作更加简单，易于控制。 二．浮动的使用方式###　语法：float         float:left; 元素向左浮动         float:right; 元素向右浮 三．浮动的特点###　特点一：脱离标准的文档流（脱标）           标准文档流，就是没有浮动时，浏览器默认显示浏览器的方式。           脱离标准流的元">
+  
+    <link rel="alternate" href="/atom.xml" title="welcome" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">welcome</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-CSS四" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/07/CSS四/" class="article-date">
+  <time datetime="2017-07-07T08:18:27.378Z" itemprop="datePublished">2017-07-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>►<a class="article-category-link" href="/categories/CSS/web/">web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS四　浮动float
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一．为什么需要浮动？"><a href="#一．为什么需要浮动？" class="headerlink" title="一．为什么需要浮动？"></a>一．为什么需要浮动？</h2><p>###　浮动对于元素的排列和布局，操作更加简单，易于控制。</p>
+<h2 id="二．浮动的使用方式"><a href="#二．浮动的使用方式" class="headerlink" title="二．浮动的使用方式"></a>二．浮动的使用方式</h2><p>###　语法：float<br>         float:left; 元素向左浮动<br>         float:right; 元素向右浮</p>
+<h2 id="三．浮动的特点"><a href="#三．浮动的特点" class="headerlink" title="三．浮动的特点"></a>三．浮动的特点</h2><p>###　特点一：脱离标准的文档流（脱标）<br>           标准文档流，就是没有浮动时，浏览器默认显示浏览器的方式。<br>           脱离标准流的元素会在标准流之上，不在标准流中占位置。</p>
+<h3 id="特点二-浮动找浮动（多个连续的浮动盒子），不浮动找不浮动。"><a href="#特点二-浮动找浮动（多个连续的浮动盒子），不浮动找不浮动。" class="headerlink" title="特点二:浮动找浮动（多个连续的浮动盒子），不浮动找不浮动。"></a>特点二:浮动找浮动（多个连续的浮动盒子），不浮动找不浮动。</h3><h3 id="特点三：浮动只影响后面的元素。。"><a href="#特点三：浮动只影响后面的元素。。" class="headerlink" title="特点三：浮动只影响后面的元素。。"></a>特点三：浮动只影响后面的元素。。</h3><h3 id="特点四：浮动以元素的顶部为基准对齐。"><a href="#特点四：浮动以元素的顶部为基准对齐。" class="headerlink" title="特点四：浮动以元素的顶部为基准对齐。"></a>特点四：浮动以元素的顶部为基准对齐。</h3><h3 id="特点五：会改变元素的显示方式（转换成行内块级元素）"><a href="#特点五：会改变元素的显示方式（转换成行内块级元素）" class="headerlink" title="特点五：会改变元素的显示方式（转换成行内块级元素）"></a>特点五：会改变元素的显示方式（转换成行内块级元素）</h3><h2 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h2><h3 id="为什么要清除浮动？"><a href="#为什么要清除浮动？" class="headerlink" title="为什么要清除浮动？"></a>为什么要清除浮动？</h3><h4 id="如果不清除浮动就出现，就会出现div重叠的问题"><a href="#如果不清除浮动就出现，就会出现div重叠的问题" class="headerlink" title="如果不清除浮动就出现，就会出现div重叠的问题"></a>如果不清除浮动就出现，就会出现div重叠的问题</h4><h2 id="清除浮动的方法"><a href="#清除浮动的方法" class="headerlink" title="清除浮动的方法"></a>清除浮动的方法</h2><h3 id="1-给父元素增高-不常用"><a href="#1-给父元素增高-不常用" class="headerlink" title="1.给父元素增高(不常用)"></a>1.给父元素增高(不常用)</h3><h3 id="2-样式属性clear"><a href="#2-样式属性clear" class="headerlink" title="2.样式属性clear"></a>2.样式属性clear</h3><pre><code>clear:left; 清除左浮动的影响
+clear:right; 清除右浮动的影响
+ clear:both; 清除左右浮动的影响
+</code></pre><h3 id="3-样式属性overflow-hidden"><a href="#3-样式属性overflow-hidden" class="headerlink" title="3.样式属性overflow:hidden;"></a>3.样式属性overflow:hidden;</h3><ul>
+<li><h3 id="4-伪元素-after-现在最流行的方式"><a href="#4-伪元素-after-现在最流行的方式" class="headerlink" title="4.伪元素:after(现在最流行的方式)"></a>4.伪元素:after(现在最流行的方式)</h3> 给父元素添加一个伪元素:after，并对伪元素进行样式设置：<pre><code>  代表父元素的选择器:after {
+    content:””;  //内容是空
+  display:block;    //转换成块级元素
+  visibility:hidden; //隐藏元素
+  height:0;
+     line-height:0;
+  clear:both;//清除左右浮动
+}
+</code></pre></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">给父元素加类 .clearfix</div><div class="line">然后设置属性</div><div class="line">.clearfix:after&#123;</div><div class="line">	<span class="attr">content</span>:<span class="string">""</span>;</div><div class="line">	display:block;</div><div class="line">	visibility:hidden;</div><div class="line">	height:<span class="number">0</span>;</div><div class="line">	line-height：<span class="number">0</span>；</div><div class="line">	clear:both;</div><div class="line">&#125;</div><div class="line">.clearfloat&#123;</div><div class="line">	<span class="attr">zoom</span>:<span class="number">1</span>;</div><div class="line">&#125;<span class="comment">//兼容ie低版本</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/07/CSS四/" data-id="cj4vdbkbf000at0bmcp1l8l12" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/07/08/angular01/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          angular01
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/07/07/CSS/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">CSS 一些易忘属性或其他</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Catégories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/日记/" style="font-size: 10px;">日记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/07/08/angular-02/">angular 02</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/angular-01/">angular 01</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/angular01/">angular01</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/07/CSS四/">CSS四　浮动float</a>
+          </li>
+        
+          <li>
+            <a href="/2015/07/07/CSS/">CSS 一些易忘属性或其他</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 ������<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

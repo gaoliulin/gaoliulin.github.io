@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>welcome</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="welcome">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="welcome">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="welcome">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="welcome" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -33,7 +33,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">welcome</a>
       </h1>
       
     </div>
@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -61,14 +61,14 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-HTML简介二-标签" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-angular-02" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/07/06/HTML简介二-标签/" class="article-date">
-  <time datetime="2015-07-06T02:20:18.000Z" itemprop="datePublished">2015-07-06</time>
+    <a href="/2017/07/08/angular-02/" class="article-date">
+  <time datetime="2017-07-08T14:06:50.000Z" itemprop="datePublished">2017-07-08</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/HTML/">HTML</a>►<a class="article-category-link" href="/categories/HTML/web/">web</a>
+    <a class="article-category-link" href="/categories/angular/">angular</a>
   </div>
 
   </div>
@@ -79,7 +79,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/06/HTML简介二-标签/">html简介二</a>
+      <a class="article-title" href="/2017/07/08/angular-02/">angular 02</a>
     </h1>
   
 
@@ -87,84 +87,482 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="常用标签"><a href="#常用标签" class="headerlink" title="常用标签"></a>常用标签</h3><ul>
-<li>h 标题标签 h1–h6表示不同等级的标题</li>
+        <h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>每一个控制器都拥有$scope，这个$scope可以看做是一个作用域，当前控制器中所有绑定的数据内容都会来这个$scope中进行查找</p>
+<p>在模块控制的范围内，有一个全局作用域，$rootScope</p>
+<p>控制器之间又可以进行嵌套，嵌套之后，作用域之间就形成了继承关系，其原理就是原型继承</p>
+<p>继承关系指的就是，绑定数据在查找的时候，会现在当前控制器中进行查找，如果找到了就直接使用，如果找不到就会去外层控制的作用域中进行查找，直到找到$rootScope为止！</p>
+<p>$rootScope可以被所有的控制器操作，所以很容易出现全局污染的情况，所以应该避免进行类似的操作</p>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><h3 id="创建模块"><a href="#创建模块" class="headerlink" title="创建模块"></a>创建模块</h3><p>angular.module(“模块名称”, [“依赖项”]);</p>
+<h3 id="获取模块"><a href="#获取模块" class="headerlink" title="获取模块"></a>获取模块</h3><p>angular.module(“模块名称”);</p>
+<h3 id="模块注意事项"><a href="#模块注意事项" class="headerlink" title="模块注意事项"></a>模块注意事项</h3><p>angular推荐一个页面中只使用一个ng-app指定一个模块</p>
+<p>如果存在多个ng-app指令，angular只会自动启动第一个模块！</p>
+<p>如果要启动多个模块，需要手动启动<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">angular.bootstrap(模块要控制的dom元素, [<span class="string">"模块名称"</span>]);</div></pre></td></tr></table></figure></p>
+<p>** 模块不能嵌套！！！</p>
+<h2 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h2><p>一种架构模式，将应用程序代码根据功能划分为三部分<br>Model: 数据内容，负责所有的数据操作<br>View: 视图内容, 负责所有的数据展示工作以及用户交互操作<br>Controller: 控制器内容，负责处理所有的业务逻辑（在视图和数据之间搭建一个桥梁）</p>
+<h3 id="MVP-MVVM-MVW-MV"><a href="#MVP-MVVM-MVW-MV" class="headerlink" title="MVP MVVM MVW   MV*"></a>MVP MVVM MVW   MV*</h3><h2 id="jqlite"><a href="#jqlite" class="headerlink" title="jqlite"></a>jqlite</h2><p>jqlite是angular内置的类似于jQuery的东西，但是他不具备jQuery大部分的功能，尤其是没有选择器，这个让人很难以接受！！</p>
+<p>angular.element能够获取到jqlite的对象，也可以在引入jQuery之后，用来获取jQuery的$</p>
+<p>angular不推荐进行dom操作，也不推荐使用别人家的东西！！！</p>
+<h2 id="watch"><a href="#watch" class="headerlink" title="$watch"></a>$watch</h2><p>$watch可以用来监视数据的变化</p>
+<p>只能监视$scope中的内容！<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$scope.$watch(<span class="string">"数据名称"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">newValue, oldValue</span>)</span>&#123;</div><div class="line">	<span class="comment">//这个函数会在数据发生变化的时候被调用</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>如果要监视一个对象，那么需要传入第三个参数，deepwatch，是一个布尔值，设置为true的时候，会在对象内部的属性发生变化的时候也监视到变化，但是他默认值是false！！</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//方法一</span></div><div class="line">$scope.$watch(<span class="string">"数据名称"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">newValue, oldValue</span>)</span>&#123;</div><div class="line">	<span class="comment">//这个函数会在数据发生变化的时候被调用</span></div><div class="line">&#125;,<span class="literal">true</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//方法二</span></div><div class="line">$scope.$watch(<span class="string">"数据名称.属性"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">newValue, oldValue</span>)</span>&#123;</div><div class="line">	<span class="comment">//这个函数会在数据发生变化的时候被调用</span></div><div class="line">&#125;,<span class="literal">true</span>)</div></pre></td></tr></table></figure>
+<h2 id="controller的创建方式"><a href="#controller的创建方式" class="headerlink" title="controller的创建方式"></a>controller的创建方式</h2><ol>
+<li><p>推断式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">模块对象.controller(<span class="string">"控制器名称"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">$scope</span>)</span>&#123;</div><div class="line">	<span class="comment">//$scope这个形参名是定死的，不能随便更改，更改之后会找到不到该内容，报错</span></div><div class="line"></div><div class="line">	<span class="comment">//这种写法不推荐，因为在代码压缩的时候，$scope会被改变名称！</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>依赖注入式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">模块对象.controller(<span class="string">"控制器名称"</span>, [<span class="string">"$scope"</span>, <span class="string">"$log"</span>..., <span class="function"><span class="keyword">function</span>(<span class="params">scope, log...</span>)</span>&#123;&#125;])</div></pre></td></tr></table></figure>
+</li>
+<li><p>面向对象的方式  （可以将数据绑定到控制器的实例上）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">模块对象.controller(<span class="string">"控制器名称"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="comment">//this指向的就是控制器的一个实例，</span></div><div class="line">	<span class="comment">//下面的操作就是将数据绑定到了实例对象上</span></div><div class="line">	<span class="keyword">this</span>.数据 = <span class="string">"neirong"</span>;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>在视图中需要通过如下的方式进行使用<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 这里的item其实就是控制器实例 --&gt;</span></div><div class="line"><span class="comment">&lt;!-- 这句话就相当于执行了 var item = new 控制器() --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-controller</span>=<span class="string">"控制器名称 as item"</span>&gt;</span></div><div class="line">	&#123;&#123;item.数据&#125;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="依赖注入"><a href="#依赖注入" class="headerlink" title="依赖注入"></a>依赖注入</h2><p>DI dependence injection<br>将需要使用的内容注入到指定的位置！</p>
+<p>优势：</p>
+<pre><code>1. 参数的顺序不需要指定了，参数也不需要将所有的内容都传递进来了
+2. 参数名称也不需要定死了
+</code></pre><p>angular当中的依赖注入的实现<br><a href="./10-依赖注入的说明.html">依赖注入的说明</a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div></pre></td><td class="code"><pre><div class="line">	&lt;!doctype html&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">		<span class="comment">// DI   dependence injection</span></div><div class="line">		<span class="comment">// 依赖注入</span></div><div class="line"></div><div class="line"></div><div class="line">		<span class="comment">// function test(num, num1, num2, num3)&#123;</span></div><div class="line">		<span class="comment">// 	console.log(num, num2);</span></div><div class="line">		<span class="comment">// &#125;</span></div><div class="line"></div><div class="line"></div><div class="line">		<span class="comment">// test(1, 2)</span></div><div class="line"></div><div class="line"></div><div class="line">		<span class="comment">// function test()&#123;</span></div><div class="line"></div><div class="line">		<span class="comment">// &#125;</span></div><div class="line"></div><div class="line">		<span class="comment">// test(1, 2)</span></div><div class="line"></div><div class="line"></div><div class="line">		<span class="comment">//如果按照通常的方式，那么函数参数在获取的时候，必须是按照指定的顺序，不能够只获取指定的几个参数</span></div><div class="line">		<span class="comment">// function ($scope, $log, $window, $...)&#123;</span></div><div class="line"></div><div class="line">		<span class="comment">// &#125;</span></div><div class="line"></div><div class="line">		<span class="comment">//依赖注入的做法</span></div><div class="line">		<span class="comment">//我们可以通过告诉angular我们需要哪几个内容，angular通过获取我们告诉他的，我们需要的内容，进行指定的传参</span></div><div class="line">		<span class="comment">// ["$scope", "$log", function($scope, $log)&#123;</span></div><div class="line"></div><div class="line">		<span class="comment">// &#125;]</span></div><div class="line"></div><div class="line"></div><div class="line">		<span class="comment">//&lt;下面的这段代码就是依赖注入的方式创建控制器的原理&gt;</span></div><div class="line">		<span class="function"><span class="keyword">function</span> <span class="title">ctrl</span>(<span class="params">name, params</span>)</span>&#123;</div><div class="line">			<span class="comment">//系统中包含的所有的功能</span></div><div class="line">			<span class="keyword">var</span> features = &#123;</div><div class="line">				<span class="string">"$scope"</span>: &#123;</div><div class="line">					<span class="attr">name</span>: <span class="string">"张三"</span></div><div class="line">				&#125;,</div><div class="line">				<span class="string">"$log"</span>: &#123;</div><div class="line">					<span class="attr">log</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;,</div><div class="line">					<span class="attr">warn</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">				&#125;,</div><div class="line">				<span class="string">"$rootScope"</span>: &#123;&#125;,</div><div class="line">				<span class="string">"$window"</span>: <span class="built_in">window</span></div><div class="line">			&#125;</div><div class="line"></div><div class="line">			<span class="comment">//获取到了回调函数</span></div><div class="line">			<span class="keyword">var</span> callback = params[params.length - <span class="number">1</span>];</div><div class="line"></div><div class="line">			<span class="comment">//在调用这个函数的时候，需要给用户传递的参数</span></div><div class="line">			<span class="comment">//是根据用户告诉我们的内容，传递</span></div><div class="line"></div><div class="line">			<span class="comment">//声明一个数组，准备存放用户需要的所有的内容</span></div><div class="line">			<span class="keyword">var</span> args = [];</div><div class="line"></div><div class="line">			<span class="comment">//遍历用户所需要的内容</span></div><div class="line">			<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt;= params.length - <span class="number">2</span>; i++)&#123;</div><div class="line">				<span class="comment">//遍历所有的功能, 找到和用户所需的功能对应的内容</span></div><div class="line">				<span class="keyword">for</span>(<span class="keyword">var</span> k <span class="keyword">in</span> features)&#123;</div><div class="line">					<span class="keyword">if</span>(k == params[i])&#123;</div><div class="line">						args.push(features[k]);</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">			<span class="comment">//将用户所需的所有的功能，传入callbck进行调用</span></div><div class="line">			callback.apply(<span class="literal">null</span>, args);</div><div class="line">		&#125;</div><div class="line"></div><div class="line"></div><div class="line">		<span class="comment">// ctrl("c1", ["$scope", "$log", function(scope, log)&#123;</span></div><div class="line">		<span class="comment">// 	console.log(log, scope);</span></div><div class="line">		<span class="comment">// &#125;])</span></div><div class="line"></div><div class="line">		<span class="comment">//&lt;/上面的这段代码就是依赖注入的方式创建控制器的原理&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">		<span class="comment">//&lt;推断式创建控制器的原理&gt;</span></div><div class="line">		<span class="function"><span class="keyword">function</span> <span class="title">ctrl</span>(<span class="params">name, callback</span>)</span>&#123;</div><div class="line">			<span class="keyword">var</span> features = &#123;</div><div class="line">				<span class="string">"$scope"</span>: &#123;</div><div class="line">					<span class="attr">name</span>: <span class="string">"张三"</span></div><div class="line">				&#125;,</div><div class="line">				<span class="string">"$log"</span>: &#123;</div><div class="line">					<span class="attr">log</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;,</div><div class="line">					<span class="attr">warn</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">				&#125;,</div><div class="line">				<span class="string">"$rootScope"</span>: &#123;&#125;,</div><div class="line">				<span class="string">"$window"</span>: <span class="built_in">window</span></div><div class="line">			&#125;</div><div class="line"></div><div class="line">			<span class="comment">//根据用户传进来回调函数的形参，来确定用户要的是哪几个内容</span></div><div class="line">			<span class="comment">//通过将用户传进来的回调函数转换成字符串，然后在用正则表达式去获取这个函数的所有的形参</span></div><div class="line">			<span class="keyword">var</span> params = extractArgs(callback);</div><div class="line"></div><div class="line">			<span class="keyword">var</span> args = [];</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; params.length; i ++)&#123;</div><div class="line">				<span class="comment">//去功能里面找对应的项 将其存入最终要传入回调函数的实参列表中</span></div><div class="line">				<span class="keyword">for</span>(<span class="keyword">var</span> k <span class="keyword">in</span> features)&#123;</div><div class="line">					<span class="keyword">if</span>(k == params[i].trim())&#123;</div><div class="line">						args.push(features[k]);</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line"></div><div class="line">			<span class="comment">// console.log(args);</span></div><div class="line">			callback.apply(<span class="literal">null</span>, args);</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		ctrl(<span class="string">"c1"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">$scope, $log</span>)</span>&#123;</div><div class="line">			<span class="built_in">console</span>.log($scope, $log);</div><div class="line">		&#125;)</div><div class="line"></div><div class="line">		<span class="function"><span class="keyword">function</span> <span class="title">extractArgs</span>(<span class="params">fn</span>) </span>&#123;</div><div class="line">		    <span class="keyword">var</span> r = <span class="regexp">/^[^\(]*\(\s*([^\)]*)\)/</span>;</div><div class="line">		    <span class="keyword">var</span> args = r.exec( fn.toString() );</div><div class="line">		    <span class="keyword">return</span> args[<span class="number">1</span>].split(<span class="string">','</span>);</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="comment">//&lt;/推断式创建控制器的原理&gt;</span></div><div class="line"></div><div class="line">		<span class="comment">//传统的方式实现</span></div><div class="line">		<span class="comment">// function ctrl(name, callback)&#123;</span></div><div class="line">		<span class="comment">// 	//系统中包含的所有的功能</span></div><div class="line">		<span class="comment">// 	var features = &#123;</span></div><div class="line">		<span class="comment">// 		"$scope": &#123;&#125;,</span></div><div class="line">		<span class="comment">// 		"$log": &#123;</span></div><div class="line">		<span class="comment">// 			log: function()&#123;&#125;,</span></div><div class="line">		<span class="comment">// 			warn: function()&#123;&#125;</span></div><div class="line">		<span class="comment">// 		&#125;,</span></div><div class="line">		<span class="comment">// 		"$rootScope": &#123;&#125;,</span></div><div class="line">		<span class="comment">// 		"$window": window</span></div><div class="line">		<span class="comment">// 	&#125;</span></div><div class="line"></div><div class="line">		<span class="comment">// 	//获取到了回调函数</span></div><div class="line">		<span class="comment">// 	callback(features["$scope"], features["$log"],features["$window"], features["$rootScope"])</span></div><div class="line"></div><div class="line">		<span class="comment">// &#125;</span></div><div class="line"></div><div class="line">		<span class="comment">// ctrl("c1", function($scope, $log, $window)&#123;</span></div><div class="line">			</div><div class="line">		<span class="comment">// &#125;);</span></div><div class="line">	<span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="ng-class"><a href="#ng-class" class="headerlink" title="ng-class"></a>ng-class</h2><p>可以用来绑定类样式</p>
+<ol>
+<li><p>ng-class=”数据”  数据中存储的可以直接是类名</p>
+</li>
+<li><p>ng-class=”数据”  数据中存储的是一个对象，对象中的属性名表示类名，属性值表示该类名有没有在元素中出现，是一个布尔值！<br>ng-class=”{red: true, green: false}”</p>
+</li>
+</ol>
+<h2 id="ng-repeat"><a href="#ng-repeat" class="headerlink" title="ng-repeat"></a>ng-repeat</h2><p>用来遍历数据，生成html<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">ng-repeat</span>=<span class="string">"item in list"</span>&gt;</span>&#123;&#123;item&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">ng-repeat</span>=<span class="string">"item in list"</span>&gt;</span>&#123;&#123;item&#125;&#125; &#123;&#123;$index&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">ng-repeat</span>=<span class="string">"(key, value) in list"</span>&gt;</span>&#123;&#123;key&#125;&#125; &#123;&#123;value&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line">ng-repeat不仅可以遍历数组，也可以遍历对象</div></pre></td></tr></table></figure></p>
+<p>ng-repeat遍历的数组中的内容是不允许重复的，如果想要重复的内容，需要加上track by</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">ng-repeat</span>=<span class="string">"item in list track by 一个唯一的值"</span>&gt;</span>&#123;&#123;item&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">唯一的值一般使用的就是$index</div></pre></td></tr></table></figure>
+<h2 id="ng-cloak-解决闪烁问题"><a href="#ng-cloak-解决闪烁问题" class="headerlink" title="ng-cloak 解决闪烁问题"></a>ng-cloak 解决闪烁问题</h2><p>原理：在angular加载完毕之后，所有ng-cloak相关的内容全都会被移除</p>
+<ol>
+<li>声明ng-cloak的类样式，或者用属性选择器，加上display:none </li>
+<li>在元素中使用class=”ng-cloak”，或者加上ng-cloak属性 将元素隐藏</li>
+<li>在angular加载完毕之后，ng-cloak的类样式和ng-cloak属性都将被移除，元素显示！</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/08/angular-02/" data-id="cj4vdbkc0000mt0bm1u86cis6" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-angular-01" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/08/angular-01/" class="article-date">
+  <time datetime="2017-07-08T14:06:33.000Z" itemprop="datePublished">2017-07-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/08/angular-01/">angular 01</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/08/angular-01/" data-id="cj4vdbkbw000kt0bmi6jkvipw" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-angular01" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/08/angular01/" class="article-date">
+  <time datetime="2017-07-08T14:02:34.000Z" itemprop="datePublished">2017-07-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/08/angular01/">angular01</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/08/angular01/" data-id="cj4vdbkc5000qt0bm4pfpgeja" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS四" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/07/CSS四/" class="article-date">
+  <time datetime="2017-07-07T08:18:27.378Z" itemprop="datePublished">2017-07-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>►<a class="article-category-link" href="/categories/CSS/web/">web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/07/CSS四/">CSS四　浮动float</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一．为什么需要浮动？"><a href="#一．为什么需要浮动？" class="headerlink" title="一．为什么需要浮动？"></a>一．为什么需要浮动？</h2><p>###　浮动对于元素的排列和布局，操作更加简单，易于控制。</p>
+<h2 id="二．浮动的使用方式"><a href="#二．浮动的使用方式" class="headerlink" title="二．浮动的使用方式"></a>二．浮动的使用方式</h2><p>###　语法：float<br>         float:left; 元素向左浮动<br>         float:right; 元素向右浮</p>
+<h2 id="三．浮动的特点"><a href="#三．浮动的特点" class="headerlink" title="三．浮动的特点"></a>三．浮动的特点</h2><p>###　特点一：脱离标准的文档流（脱标）<br>           标准文档流，就是没有浮动时，浏览器默认显示浏览器的方式。<br>           脱离标准流的元素会在标准流之上，不在标准流中占位置。</p>
+<h3 id="特点二-浮动找浮动（多个连续的浮动盒子），不浮动找不浮动。"><a href="#特点二-浮动找浮动（多个连续的浮动盒子），不浮动找不浮动。" class="headerlink" title="特点二:浮动找浮动（多个连续的浮动盒子），不浮动找不浮动。"></a>特点二:浮动找浮动（多个连续的浮动盒子），不浮动找不浮动。</h3><h3 id="特点三：浮动只影响后面的元素。。"><a href="#特点三：浮动只影响后面的元素。。" class="headerlink" title="特点三：浮动只影响后面的元素。。"></a>特点三：浮动只影响后面的元素。。</h3><h3 id="特点四：浮动以元素的顶部为基准对齐。"><a href="#特点四：浮动以元素的顶部为基准对齐。" class="headerlink" title="特点四：浮动以元素的顶部为基准对齐。"></a>特点四：浮动以元素的顶部为基准对齐。</h3><h3 id="特点五：会改变元素的显示方式（转换成行内块级元素）"><a href="#特点五：会改变元素的显示方式（转换成行内块级元素）" class="headerlink" title="特点五：会改变元素的显示方式（转换成行内块级元素）"></a>特点五：会改变元素的显示方式（转换成行内块级元素）</h3><h2 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h2><h3 id="为什么要清除浮动？"><a href="#为什么要清除浮动？" class="headerlink" title="为什么要清除浮动？"></a>为什么要清除浮动？</h3><h4 id="如果不清除浮动就出现，就会出现div重叠的问题"><a href="#如果不清除浮动就出现，就会出现div重叠的问题" class="headerlink" title="如果不清除浮动就出现，就会出现div重叠的问题"></a>如果不清除浮动就出现，就会出现div重叠的问题</h4><h2 id="清除浮动的方法"><a href="#清除浮动的方法" class="headerlink" title="清除浮动的方法"></a>清除浮动的方法</h2><h3 id="1-给父元素增高-不常用"><a href="#1-给父元素增高-不常用" class="headerlink" title="1.给父元素增高(不常用)"></a>1.给父元素增高(不常用)</h3><h3 id="2-样式属性clear"><a href="#2-样式属性clear" class="headerlink" title="2.样式属性clear"></a>2.样式属性clear</h3><pre><code>clear:left; 清除左浮动的影响
+clear:right; 清除右浮动的影响
+ clear:both; 清除左右浮动的影响
+</code></pre><h3 id="3-样式属性overflow-hidden"><a href="#3-样式属性overflow-hidden" class="headerlink" title="3.样式属性overflow:hidden;"></a>3.样式属性overflow:hidden;</h3><ul>
+<li><h3 id="4-伪元素-after-现在最流行的方式"><a href="#4-伪元素-after-现在最流行的方式" class="headerlink" title="4.伪元素:after(现在最流行的方式)"></a>4.伪元素:after(现在最流行的方式)</h3> 给父元素添加一个伪元素:after，并对伪元素进行样式设置：<pre><code>  代表父元素的选择器:after {
+    content:””;  //内容是空
+  display:block;    //转换成块级元素
+  visibility:hidden; //隐藏元素
+  height:0;
+     line-height:0;
+  clear:both;//清除左右浮动
+}
+</code></pre></li>
 </ul>
-<h1>标题1</h1>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">给父元素加类 .clearfix</div><div class="line">然后设置属性</div><div class="line">.clearfix:after&#123;</div><div class="line">	<span class="attr">content</span>:<span class="string">""</span>;</div><div class="line">	display:block;</div><div class="line">	visibility:hidden;</div><div class="line">	height:<span class="number">0</span>;</div><div class="line">	line-height：<span class="number">0</span>；</div><div class="line">	clear:both;</div><div class="line">&#125;</div><div class="line">.clearfloat&#123;</div><div class="line">	<span class="attr">zoom</span>:<span class="number">1</span>;</div><div class="line">&#125;<span class="comment">//兼容ie低版本</span></div></pre></td></tr></table></figure>
 
-<h2>标题2</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/07/CSS四/" data-id="cj4vdbkbf000at0bmcp1l8l12" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
 
-<h3>标题3</h3>
-
-<h4>标题4</h4>
-
-<h5>标题5</h5>
-
-<h6>标题6</h6>
+    </footer>
+  </div>
+  
+</article>
 
 
-<p>效果：</p>
-<ul>
-<li><p>行控制标签</p>
-</li>
-<li><p>br/ 换行</p>
-</li>
-<li><p>p 段落</p>
-</li>
-<li><p>hr/  水平线</p>
-</li>
-<li><p>span  范围</p>
-</li>
+  
+    <article id="post-CSS" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/07/CSS/" class="article-date">
+  <time datetime="2015-07-07T08:58:18.000Z" itemprop="datePublished">2015-07-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>►<a class="article-category-link" href="/categories/CSS/web/">web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/07/CSS/">CSS 一些易忘属性或其他</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###<br>    |vertical-align:middle;| 图片居中 文字和图片的对齐方式|<br>    |border:none;|去掉边框|<br>    |outline:none;|去掉发光边框|<br>    |list-style:none;|去掉列表前面的点|<br>    |transparent|透明|<br>    |box-shadow|阴影|</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/07/CSS/" data-id="cj4vdbkam0001t0bm87t3emcg" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS五" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/07/CSS五/" class="article-date">
+  <time datetime="2015-07-07T08:35:20.000Z" itemprop="datePublished">2015-07-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>►<a class="article-category-link" href="/categories/CSS/web/">web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/07/CSS五/">CSS五 定位 position 及使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>## </p>
+<h3 id="position常用属性有static-relative-relative-fixed"><a href="#position常用属性有static-relative-relative-fixed" class="headerlink" title="position常用属性有static,relative,relative,fixed,"></a>position常用属性有static,relative,relative,fixed,</h3><p>  static    静态定位,默认值,元素出现杂正常的流中,(会忽视left,top,right,bottom,z-index的声明)</p>
+<p>  relative    相对定位,相对于其正常位置进行定位,移动.本元素在原来空间仍然占据空间(配合使用left,top,right,bottom,z-index的声明)</p>
+<p>  absolute    绝对定位,找相对与static定位意外的有定位的父元素,相对于这个父元素设置本身位置,若没有,则相对与body定位(配合使用left,top,right,bottom,z-index的声明).<br>    设置absolute属性的元素在标准流死你不占位置的</p>
+<p>  fixed    固定定位(绝对定位),相对于浏览器窗口进行定位(配合使用left,top,right,bottom,z-index的声明)<br>  在标准流死你不占位置的</p>
+<h2 id="z-index-层级"><a href="#z-index-层级" class="headerlink" title="z-index 层级"></a>z-index 层级</h2><h2 id="怎样把盒子设置居中"><a href="#怎样把盒子设置居中" class="headerlink" title="怎样把盒子设置居中"></a>怎样把盒子设置居中</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">方法一: &#123;</div><div class="line">		<span class="attr">left</span>:<span class="number">50</span>%;</div><div class="line">		margin-left:<span class="number">-1</span>/<span class="number">2</span>width px;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">方法二: &#123;</div><div class="line">	<span class="attr">left</span>:<span class="number">50</span>%;</div><div class="line">	transform:trnaslateX(<span class="number">-50</span>%);</div><div class="line">&#125;</div><div class="line">方法三: &#123;</div><div class="line">	<span class="attr">left</span>:<span class="number">0</span>;</div><div class="line">	rigth:<span class="number">0</span>;</div><div class="line">	bottom:<span class="number">0</span>;</div><div class="line">	margin:<span class="number">0</span> auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="什么是精灵图？"><a href="#什么是精灵图？" class="headerlink" title="什么是精灵图？"></a>什么是精灵图？</h2><h3 id="1-CSS精灵是一种处理网页背景图像的方式（一般针对网页中的logo和一些其他图标）。它将一个页面涉及到的所有零星背景图像都集中到一张大图中去，然后将大图应用于网页，这样，当用户访问该页面时，只需向服务发送一次请求，网页中的背景图像即可全部展示出来。通常情况下，这个由很多小的背景图像合成的大图被称为精灵图"><a href="#1-CSS精灵是一种处理网页背景图像的方式（一般针对网页中的logo和一些其他图标）。它将一个页面涉及到的所有零星背景图像都集中到一张大图中去，然后将大图应用于网页，这样，当用户访问该页面时，只需向服务发送一次请求，网页中的背景图像即可全部展示出来。通常情况下，这个由很多小的背景图像合成的大图被称为精灵图" class="headerlink" title="1. CSS精灵是一种处理网页背景图像的方式（一般针对网页中的logo和一些其他图标）。它将一个页面涉及到的所有零星背景图像都集中到一张大图中去，然后将大图应用于网页，这样，当用户访问该页面时，只需向服务发送一次请求，网页中的背景图像即可全部展示出来。通常情况下，这个由很多小的背景图像合成的大图被称为精灵图."></a>1. CSS精灵是一种处理网页背景图像的方式（一般针对网页中的logo和一些其他图标）。它将一个页面涉及到的所有零星背景图像都集中到一张大图中去，然后将大图应用于网页，这样，当用户访问该页面时，只需向服务发送一次请求，网页中的背景图像即可全部展示出来。通常情况下，这个由很多小的背景图像合成的大图被称为精灵图.</h3><h3 id="2-精灵图的原理和使用方式"><a href="#2-精灵图的原理和使用方式" class="headerlink" title="2. 精灵图的原理和使用方式"></a>2. 精灵图的原理和使用方式</h3><p>CSS 精灵其实是将网页中的一些背景图像整合到一张大图中（精灵图）。然而，各个网页元素通常只需要精灵图中不同位置的某个小图，要想精确定位到精灵图中的某个小图，就需要使用CSS的background-image、background-repeat和background-position属性进行背景定位，其中最关键的是使用background-position属性精确地定位。</p>
+<h2 id="css滑动门技术"><a href="#css滑动门技术" class="headerlink" title="css滑动门技术"></a>css滑动门技术</h2><h3 id="制作网页时，为了美观，常常需要为网页元素设置特殊形状的背景-如果使用传统的CSS思想，要想为列表项“技术联盟”设置上图所示的圆角背景，可以对其所在的标记应用大圆角背景。这种方式固然可以实现圆角背景的效果，但是，如果以后增加或减少列表项中的文字，就需要重新对定义背景图像，以适应文本内容的多少。"><a href="#制作网页时，为了美观，常常需要为网页元素设置特殊形状的背景-如果使用传统的CSS思想，要想为列表项“技术联盟”设置上图所示的圆角背景，可以对其所在的标记应用大圆角背景。这种方式固然可以实现圆角背景的效果，但是，如果以后增加或减少列表项中的文字，就需要重新对定义背景图像，以适应文本内容的多少。" class="headerlink" title="制作网页时，为了美观，常常需要为网页元素设置特殊形状的背景.如果使用传统的CSS思想，要想为列表项“技术联盟”设置上图所示的圆角背景，可以对其所在的标记应用大圆角背景。这种方式固然可以实现圆角背景的效果，但是，如果以后增加或减少列表项中的文字，就需要重新对定义背景图像，以适应文本内容的多少。"></a>制作网页时，为了美观，常常需要为网页元素设置特殊形状的背景.如果使用传统的CSS思想，要想为列表项“技术联盟”设置上图所示的圆角背景，可以对其所在的<li>标记应用大圆角背景。这种方式固然可以实现圆角背景的效果，但是，如果以后增加或减少列表项中的文字，就需要重新对</li><li>定义背景图像，以适应文本内容的多少。</li></h3><h2 id="三．透明度"><a href="#三．透明度" class="headerlink" title="三．透明度"></a>三．透明度</h2><pre><code>样式属性：opacity
+使用方式：
+opacity:数值;    数值范围(0-1)
+filter:alpha(opacity=数值);    数值范围（0-100）  //IE8及其以下版本
+</code></pre><h2 id="隐藏"><a href="#隐藏" class="headerlink" title="隐藏"></a>隐藏</h2><h4 id="overflow-hidden-隐藏超出部分"><a href="#overflow-hidden-隐藏超出部分" class="headerlink" title="overflow:hidden;隐藏超出部分"></a>overflow:hidden;隐藏超出部分</h4><p>display:none;不显示元素,不占位置<br>visibiloty:hidden;不显示元素,不占位置<br>opacity:0;占位置<br>position-top:-9999px; 占位置</p>
+<h2 id="overflow介绍"><a href="#overflow介绍" class="headerlink" title="overflow介绍"></a>overflow介绍</h2><p>###　overflow 属性规定当内容溢出元素框时发生的事情。<br>    overflow:visible    默认值。内容不会被修剪，会呈现在元素框之外。<br>    overflow:hidden    内容会被修剪，并且其余内容是不可见的。<br>    overflow:scroll    内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br>    overflow:auto    如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/07/CSS五/" data-id="cj4vdbkbb0009t0bmr3204d0j" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-css测试" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/07/css测试/" class="article-date">
+  <time datetime="2015-07-07T08:35:20.000Z" itemprop="datePublished">2015-07-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>►<a class="article-category-link" href="/categories/CSS/web/">web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/07/css测试/">CSS五 定位 position 及使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>## </p>
+<h3 id="position常用属性有static-relative-relative-fixed"><a href="#position常用属性有static-relative-relative-fixed" class="headerlink" title="position常用属性有static,relative,relative,fixed,"></a>position常用属性有static,relative,relative,fixed,</h3><p>  static    静态定位,默认值,元素出现杂正常的流中,(会忽视left,top,right,bottom,z-index的声明)</p>
+<p>  relative    相对定位,相对于其正常位置进行定位,移动.本元素在原来空间仍然占据空间(配合使用left,top,right,bottom,z-index的声明)</p>
+<p>  absolute    绝对定位,找相对与static定位意外的有定位的父元素,相对于这个父元素设置本身位置,若没有,则相对与body定位(配合使用left,top,right,bottom,z-index的声明).<br>    设置absolute属性的元素在标准流死你不占位置的</p>
+<p>  fixed    固定定位(绝对定位),相对于浏览器窗口进行定位(配合使用left,top,right,bottom,z-index的声明)<br>  在标准流死你不占位置的</p>
+<h2 id="z-index-层级"><a href="#z-index-层级" class="headerlink" title="z-index 层级"></a>z-index 层级</h2><h2 id="怎样把盒子设置居中"><a href="#怎样把盒子设置居中" class="headerlink" title="怎样把盒子设置居中"></a>怎样把盒子设置居中</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">方法一: &#123;</div><div class="line">		<span class="attr">left</span>:<span class="number">50</span>%;</div><div class="line">		margin-left:<span class="number">-1</span>/<span class="number">2</span>width px;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">方法二: &#123;</div><div class="line">	<span class="attr">left</span>:<span class="number">50</span>%;</div><div class="line">	transform:trnaslateX(<span class="number">-50</span>%);</div><div class="line">&#125;</div><div class="line">方法三: &#123;</div><div class="line">	<span class="attr">left</span>:<span class="number">0</span>;</div><div class="line">	rigth:<span class="number">0</span>;</div><div class="line">	bottom:<span class="number">0</span>;</div><div class="line">	margin:<span class="number">0</span> auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="什么是精灵图？"><a href="#什么是精灵图？" class="headerlink" title="什么是精灵图？"></a>什么是精灵图？</h2><h3 id="1-CSS精灵是一种处理网页背景图像的方式（一般针对网页中的logo和一些其他图标）。它将一个页面涉及到的所有零星背景图像都集中到一张大图中去，然后将大图应用于网页，这样，当用户访问该页面时，只需向服务发送一次请求，网页中的背景图像即可全部展示出来。通常情况下，这个由很多小的背景图像合成的大图被称为精灵图"><a href="#1-CSS精灵是一种处理网页背景图像的方式（一般针对网页中的logo和一些其他图标）。它将一个页面涉及到的所有零星背景图像都集中到一张大图中去，然后将大图应用于网页，这样，当用户访问该页面时，只需向服务发送一次请求，网页中的背景图像即可全部展示出来。通常情况下，这个由很多小的背景图像合成的大图被称为精灵图" class="headerlink" title="1. CSS精灵是一种处理网页背景图像的方式（一般针对网页中的logo和一些其他图标）。它将一个页面涉及到的所有零星背景图像都集中到一张大图中去，然后将大图应用于网页，这样，当用户访问该页面时，只需向服务发送一次请求，网页中的背景图像即可全部展示出来。通常情况下，这个由很多小的背景图像合成的大图被称为精灵图."></a>1. CSS精灵是一种处理网页背景图像的方式（一般针对网页中的logo和一些其他图标）。它将一个页面涉及到的所有零星背景图像都集中到一张大图中去，然后将大图应用于网页，这样，当用户访问该页面时，只需向服务发送一次请求，网页中的背景图像即可全部展示出来。通常情况下，这个由很多小的背景图像合成的大图被称为精灵图.</h3><h3 id="2-精灵图的原理和使用方式"><a href="#2-精灵图的原理和使用方式" class="headerlink" title="2. 精灵图的原理和使用方式"></a>2. 精灵图的原理和使用方式</h3><p>CSS 精灵其实是将网页中的一些背景图像整合到一张大图中（精灵图）。然而，各个网页元素通常只需要精灵图中不同位置的某个小图，要想精确定位到精灵图中的某个小图，就需要使用CSS的background-image、background-repeat和background-position属性进行背景定位，其中最关键的是使用background-position属性精确地定位。</p>
+<h2 id="css滑动门技术"><a href="#css滑动门技术" class="headerlink" title="css滑动门技术"></a>css滑动门技术</h2><h3 id="制作网页时，为了美观，常常需要为网页元素设置特殊形状的背景-如果使用传统的CSS思想，要想为列表项“技术联盟”设置上图所示的圆角背景，可以对其所在的标记应用大圆角背景。这种方式固然可以实现圆角背景的效果，但是，如果以后增加或减少列表项中的文字，就需要重新对定义背景图像，以适应文本内容的多少。"><a href="#制作网页时，为了美观，常常需要为网页元素设置特殊形状的背景-如果使用传统的CSS思想，要想为列表项“技术联盟”设置上图所示的圆角背景，可以对其所在的标记应用大圆角背景。这种方式固然可以实现圆角背景的效果，但是，如果以后增加或减少列表项中的文字，就需要重新对定义背景图像，以适应文本内容的多少。" class="headerlink" title="制作网页时，为了美观，常常需要为网页元素设置特殊形状的背景.如果使用传统的CSS思想，要想为列表项“技术联盟”设置上图所示的圆角背景，可以对其所在的标记应用大圆角背景。这种方式固然可以实现圆角背景的效果，但是，如果以后增加或减少列表项中的文字，就需要重新对定义背景图像，以适应文本内容的多少。"></a>制作网页时，为了美观，常常需要为网页元素设置特殊形状的背景.如果使用传统的CSS思想，要想为列表项“技术联盟”设置上图所示的圆角背景，可以对其所在的<li>标记应用大圆角背景。这种方式固然可以实现圆角背景的效果，但是，如果以后增加或减少列表项中的文字，就需要重新对</li><li>定义背景图像，以适应文本内容的多少。</li></h3><h2 id="三．透明度"><a href="#三．透明度" class="headerlink" title="三．透明度"></a>三．透明度</h2><pre><code>样式属性：opacity
+使用方式：
+opacity:数值;    数值范围(0-1)
+filter:alpha(opacity=数值);    数值范围（0-100）  //IE8及其以下版本
+</code></pre><h2 id="隐藏"><a href="#隐藏" class="headerlink" title="隐藏"></a>隐藏</h2><h4 id="overflow-hidden-隐藏超出部分"><a href="#overflow-hidden-隐藏超出部分" class="headerlink" title="overflow:hidden;隐藏超出部分"></a>overflow:hidden;隐藏超出部分</h4><p>display:none;不显示元素,不占位置<br>visibiloty:hidden;不显示元素,不占位置<br>opacity:0;占位置<br>position-top:-9999px; 占位置</p>
+<h2 id="overflow介绍"><a href="#overflow介绍" class="headerlink" title="overflow介绍"></a>overflow介绍</h2><p>###　overflow 属性规定当内容溢出元素框时发生的事情。<br>    overflow:visible    默认值。内容不会被修剪，会呈现在元素框之外。<br>    overflow:hidden    内容会被修剪，并且其余内容是不可见的。<br>    overflow:scroll    内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br>    overflow:auto    如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/07/css测试/" data-id="cj4vdbkfw0034t0bm46ebbp7o" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS三" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/07/CSS三/" class="article-date">
+  <time datetime="2015-07-07T06:05:05.000Z" itemprop="datePublished">2015-07-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>►<a class="article-category-link" href="/categories/CSS/web/">web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/07/CSS三/">CSS三 border padding margin</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h2><pre><code>所谓盒子模型就是把HTML页面中的元素看作是一个矩形的盒子，也就是一个盛装内容的容器。每个矩形都由元素的内容、内边距（padding）、边框（border）和外边距（margin）组成。
+</code></pre><h2 id="border"><a href="#border" class="headerlink" title="border"></a>border</h2><h3 id="css中盒子模型由三部分组成-1边框（border）-2-内边距（padding）-3外边距（margin）"><a href="#css中盒子模型由三部分组成-1边框（border）-2-内边距（padding）-3外边距（margin）" class="headerlink" title="css中盒子模型由三部分组成: 1边框（border） 2 内边距（padding） 3外边距（margin）"></a>css中盒子模型由三部分组成: 1边框（border） 2 内边距（padding） 3外边距（margin）</h3><h4 id="属性名称-介绍"><a href="#属性名称-介绍" class="headerlink" title="|属性名称    |                   介绍|"></a>|属性名称    |                   介绍|</h4><pre><code>|border-width     |设置边框宽度单位以px为主   例如:12px|
+|border-style     |设置边框样式|
+|border-color      |设置边框颜色|
+
+|border-top        |设置上边框样式|
+|border-bottom    |设置下边框样式|
+|border-left    |设置左边框样式|
+|border-right    |设置右边框样式|
+
+轮廓线    outline-style:none   取消轮廓线
+获取焦点    :focus  获取鼠标光标状态
+取消表单边框    border:0 none;           兼容性好
+label标签    &lt;label  for=&quot;ID名&quot;&gt;     友好性 
+</code></pre><h3 id="border-collapse-collapse-设置表格边框合并（适用于表格）"><a href="#border-collapse-collapse-设置表格边框合并（适用于表格）" class="headerlink" title="border-collapse:collapse      设置表格边框合并（适用于表格）"></a>border-collapse:collapse      设置表格边框合并（适用于表格）</h3><h2 id="padding"><a href="#padding" class="headerlink" title="padding"></a>padding</h2><h3 id="padding-10px-上，下，左，右距离分别是10px"><a href="#padding-10px-上，下，左，右距离分别是10px" class="headerlink" title="padding:10px    上，下，左，右距离分别是10px"></a>padding:10px    上，下，左，右距离分别是10px</h3><pre><code>padding:10px 40px    上下10px  左右40px
+padding:10px 40px 20px    上10px     左右40px    下20px
+padding:10px 20px 30px 40px    上10   右20px   下30px   左40px
+</code></pre><h3 id="padding-top-上内边距"><a href="#padding-top-上内边距" class="headerlink" title="padding-top:上内边距"></a>padding-top:上内边距</h3><pre><code>padding-right:右内边距
+padding-bottom:下内边距
+padding-left:左内边距
+</code></pre><h2 id="margin"><a href="#margin" class="headerlink" title="margin"></a>margin</h2><h3 id="用法与padding一样，margin对盒子宽度不会有影响"><a href="#用法与padding一样，margin对盒子宽度不会有影响" class="headerlink" title="用法与padding一样，margin对盒子宽度不会有影响"></a>用法与padding一样，margin对盒子宽度不会有影响</h3><pre><code>margin:10px      距离上下左右边距10px
+margin:10px  20px     距离上下10px   左右20px
+margin:10px   20px  30px    距离上10px    左右 20px   下30px
+margin:10px   20px   30px   40px    距离上10px   右20px   下 30px  左40px
+margin-left:    距离左边
+margin-right    距离右边
+margin-top    距离上边
+margin-bottom    距离下边
+margin:0  auto    auto 设置为相对边的值
+</code></pre><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><h3 id="外边距合并（叠加）是一个相当简单的概念。"><a href="#外边距合并（叠加）是一个相当简单的概念。" class="headerlink" title="外边距合并（叠加）是一个相当简单的概念。"></a>外边距合并（叠加）是一个相当简单的概念。</h3><pre><code>简单地说，外边距合并指的是，当两个垂直外边距相遇时，它们将形成一个外边距。合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。
+当一个元素出现在另一个元素上面时，第一个元素的下外边距与第二个元素的上外边距会发生合并。
+</code></pre><ul>
+<li>边距合并问题只发生在块级元素之间</li>
+<li>内外两个盒子都设置margin-top,那么水的值大听谁的,同时对两个盒子起作用<br>如果给外面父盒子设置  overfloat:hidden;那么分别对自己起作用</li>
 </ul>
-<p>这是P标签</p>
+<h1 id="行内元素的padding-和margin"><a href="#行内元素的padding-和margin" class="headerlink" title="行内元素的padding 和margin"></a>行内元素的padding 和margin</h1><p>###　行内元素不要给上下的margin 和padding<br>    上下margin和padding会被忽略。<br>    左右margin和padding会起作用。</p>
 
-<p>这是换行效果sdafafa<br>asfafafafafafafaf</p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/07/CSS三/" data-id="cj4vdbkb70006t0bm61at1po1" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
 
-<p>asdasdasdada<hr></p>
-<p><span>fuzj</span></p>
-<p>效果：</p>
-<ul>
-<li><p>上标和下标</p>
-<p>上标：&lt; sub&gt;&lt;/ sub&gt;</p>
-<p>下标：&lt; sup&gt;&lt;/ sup&gt;</p>
-</li>
-<li><p>a  超链接标签  </p>
-</li>
-<li><p>页面链接</p>
-</li>
-</ul>
-<p>&lt; a href=”b.html”&gt; </p>
-<ul>
-<li>url连接 </li>
-</ul>
-<p>&lt; a href=”<a href="http://www.autohome.com.cn&quot;&gt;" target="_blank" rel="external">http://www.autohome.com.cn&quot;&gt;</a> </p>
-<ul>
-<li>锚连接</li>
-</ul>
-<p>1.命名标记  id=1  id需要唯一</p>
-<p>2.锚连接   &lt; a href=”#1”&gt; </p>
-<p><a href="http://www.baidu.com" target="_blank" rel="external">百度1</a>   </p>
-<p><a href="http://www.baidu.com" target="_blank">百度2</a></p>
-<h3 id="以上两个代码都是跳转到百度页面，唯一在于，加target又重新打开一个标签页面，第一句是在自身页面打开的"><a href="#以上两个代码都是跳转到百度页面，唯一在于，加target又重新打开一个标签页面，第一句是在自身页面打开的" class="headerlink" title="以上两个代码都是跳转到百度页面，唯一在于，加target又重新打开一个标签页面，第一句是在自身页面打开的"></a>以上两个代码都是跳转到百度页面，唯一在于，加target又重新打开一个标签页面，第一句是在自身页面打开的</h3><!--寻找页面中id=i1的标签，将其标签放置在页面顶部-->
-<pre><code>&lt;a href=&quot;#i1&quot;&gt;第一章&lt;/a&gt;
-
-&lt;a href=&quot;#i2&quot;&gt;第二章&lt;/a&gt;
-
-&lt;a href=&quot;#i3&quot;&gt;第三章&lt;/a&gt;
+    </footer>
+  </div>
+  
+</article>
 
 
-&lt;!--id没有一个标签的id属性值不允许重复，id属性可以不写--&gt;
+  
+    <article id="post-CSS二" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/07/CSS二/" class="article-date">
+  <time datetime="2015-07-07T03:30:11.000Z" itemprop="datePublished">2015-07-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>►<a class="article-category-link" href="/categories/CSS/web/">web</a>
+  </div>
 
-&lt;div id=&quot;i1&quot; style=&quot;height: 500px&quot;;&gt;第一章内容&lt;/div&gt;
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/07/CSS二/">CSS二 CSS选择器及三大特性</a>
+    </h1>
+  
 
-&lt;div id=&quot;i2&quot; style=&quot;height: 500px&quot;;&gt;第二章内容&lt;/div&gt;
-
-&lt;div id=&quot;i3&quot; style=&quot;height: 500px&quot;;&gt;第三章内容&lt;/div&gt;
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="CSS基础选择器"><a href="#CSS基础选择器" class="headerlink" title="CSS基础选择器"></a>CSS基础选择器</h2><h3 id="1：-class-类选择器"><a href="#1：-class-类选择器" class="headerlink" title="1：.class  类选择器"></a>1：.class  类选择器</h3><h3 id="2：-id-id选择器"><a href="#2：-id-id选择器" class="headerlink" title="2：#id  id选择器"></a>2：#id  id选择器</h3><h3 id="3：ele-标签选择器"><a href="#3：ele-标签选择器" class="headerlink" title="3：ele      标签选择器"></a>3：ele      标签选择器</h3><h3 id="4：-通配符选择器"><a href="#4：-通配符选择器" class="headerlink" title="4：*  通配符选择器"></a>4：*  通配符选择器</h3><h2 id="CSS符合选择器"><a href="#CSS符合选择器" class="headerlink" title="CSS符合选择器"></a>CSS符合选择器</h2><h3 id="1：ele1-ele2-后代选择器"><a href="#1：ele1-ele2-后代选择器" class="headerlink" title="1：ele1 ele2  后代选择器"></a>1：ele1 ele2  后代选择器</h3><pre><code>后代选择器用来选择元素或元素组的后代，其写法就是把外层标记写在前面，内层标记写在后面，中间用空格分隔。当标记发生嵌套时，内层标记就成为外层标记的后代。
+</code></pre><h3 id="2：ele1-gt-ele2-子代选择器"><a href="#2：ele1-gt-ele2-子代选择器" class="headerlink" title="2：ele1&gt;ele2  子代选择器"></a>2：ele1&gt;ele2  子代选择器</h3><h3 id="3：ele1-ele2-并集选择器"><a href="#3：ele1-ele2-并集选择器" class="headerlink" title="3：ele1,ele2      并集选择器"></a>3：ele1,ele2      并集选择器</h3><pre><code>并集选择器是各个选择器通过逗号连接而成的，任何形式的选择器（包括标记选择器、class类选择器id选择器等），都可以作为并集选择器的一部分。如果某些选择器定义的样式完全相同，或部分相同，就可以利用并集选择器为它们定义相同的CSS样式
+</code></pre><h3 id="4：p-class-交集选择器"><a href="#4：p-class-交集选择器" class="headerlink" title="4：p.class 交集选择器"></a>4：p.class 交集选择器</h3><pre><code>交集选择器由两个选择器构成，其中第一个为标记选择器，第二个为class选择器或id选择器，两个选择器之间不能有空格.
+</code></pre><h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><h3 id="link-未访问前-IE6不兼容，解决此问题，直接使用a标签。"><a href="#link-未访问前-IE6不兼容，解决此问题，直接使用a标签。" class="headerlink" title=":link         未访问前    IE6不兼容，解决此问题，直接使用a标签。"></a>:link         未访问前    IE6不兼容，解决此问题，直接使用a标签。</h3><h3 id="visited-访问后-在IE6只能应用于a连接，IE7-所有元素都兼容。"><a href="#visited-访问后-在IE6只能应用于a连接，IE7-所有元素都兼容。" class="headerlink" title=":visited     访问后        在IE6只能应用于a连接，IE7+所有元素都兼容。"></a>:visited     访问后        在IE6只能应用于a连接，IE7+所有元素都兼容。</h3><h3 id="hover-悬浮"><a href="#hover-悬浮" class="headerlink" title=":hover         悬浮"></a>:hover         悬浮</h3><h3 id="active-点击为松手-被选择的链接"><a href="#active-点击为松手-被选择的链接" class="headerlink" title=":active     点击为松手/ 被选择的链接"></a>:active     点击为松手/ 被选择的链接</h3><h3 id="focus-伪类将应用于拥有键盘输入焦点的元素。"><a href="#focus-伪类将应用于拥有键盘输入焦点的元素。" class="headerlink" title=":focus        伪类将应用于拥有键盘输入焦点的元素。"></a>:focus        伪类将应用于拥有键盘输入焦点的元素。</h3><h4 id="1-为了产生预期的效果，在-CSS-定义中，a-hover-必须位于-a-link-和-a-visited-之后！！"><a href="#1-为了产生预期的效果，在-CSS-定义中，a-hover-必须位于-a-link-和-a-visited-之后！！" class="headerlink" title="1. 为了产生预期的效果，在 CSS 定义中，a:hover 必须位于 a:link 和 a:visited 之后！！"></a>1. 为了产生预期的效果，在 CSS 定义中，a:hover 必须位于 a:link 和 a:visited 之后！！</h4><pre><code>2. 为了产生预期的效果，在 CSS 定义中，a:active 必须位于 a:hover 之后！！
+3. Pseudo-class（伪类）的名称对大小写不敏感。
+4. 伪类可与 CSS 类配合使用：
+</code></pre><h2 id="css三大特性"><a href="#css三大特性" class="headerlink" title="css三大特性"></a>css三大特性</h2><h3 id="1-继承性"><a href="#1-继承性" class="headerlink" title="1.继承性"></a>1.继承性</h3><pre><code>eg: tetx-  font-  line-  color  都会被后代继承
+并不是所有的CSS属性都可以继承，例如，下面的属性就不具有继承性：边框、外边距、内边距、背景、定位、元素宽高属性。
+所有盒子相关的属性都不能继承。   a标签  h1 标签不会实现继承
+</code></pre><h3 id="2-层叠性"><a href="#2-层叠性" class="headerlink" title="2.层叠性"></a>2.层叠性</h3><pre><code>是指后面设置的属性会把前面设置的属性层叠掉
+</code></pre><h3 id="3-优先级"><a href="#3-优先级" class="headerlink" title="3.优先级"></a>3.优先级</h3><pre><code>给元素设置属性时,是有优先级的
+也就是说靠近元素的样式具有最大的优先级，或者说排在最后的样式优先级最大。
+!importent &gt; 行内样式 &gt; id选址器 &gt; 类选择器 &gt; 标签选择器 &gt; 通配符 &gt; 继承
 </code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/06/HTML简介二-标签/" data-id="cj4t95rg10000l4bmaplsohrb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/07/CSS二/" data-id="cj4vdbkaz0005t0bmltz09lgj" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -176,14 +574,14 @@
 
 
   
-    <article id="post-HTML简介三" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-CSS一" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/07/06/HTML简介三/" class="article-date">
-  <time datetime="2015-07-06T02:00:39.000Z" itemprop="datePublished">2015-07-06</time>
+    <a href="/2015/07/07/CSS一/" class="article-date">
+  <time datetime="2015-07-07T03:03:11.000Z" itemprop="datePublished">2015-07-07</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/HTML/">HTML</a>►<a class="article-category-link" href="/categories/HTML/web/">web</a>
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>►<a class="article-category-link" href="/categories/CSS/web/">web</a>
   </div>
 
   </div>
@@ -194,7 +592,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/06/HTML简介三/">html简介3</a>
+      <a class="article-title" href="/2015/07/07/CSS一/">CSS一  字体 背景</a>
     </h1>
   
 
@@ -202,104 +600,47 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><h3 id="table标签"><a href="#table标签" class="headerlink" title="table标签"></a>table标签</h3><p>作用：表示一个表格<br>语法：<br>       <table><br>         <caption>表格标题</caption>   可有可无<br>         <thead></thead> 表头        可有可无<br>         <tbody></tbody> 表体        必须有<br>         <tfoot></tfoot>   表格底部    可有可无<br>       </table><br>属性：<br>   border  设置表格边框<br>   width、height 设置表格的宽度和高度<br>   cellspacing 设置单元格之间的间隙<br>   cellpadding 设置内容距离单元格边框的大小<br>   align 控制内容显示的位置<br>        左边：left<br>        中间：center<br>        右边：right<br>tr标签<br>  作用：表示表格中的一行<br>  语法：在thead、tbody、tfoot中使用<br>     <tr></tr></p>
-<p>th、td<br>作用表示一行中的单元格<br>语法：<br>th写在thead标签里的tr标签里</p>
-<p><th></th><br>td写在tbody和tfoot标签里的tr标签里</p>
-<p><td></td><br>属性：<br>    colspan跨列<br>    rowspan 跨行</p>
+        <h2 id="什么是CSS？"><a href="#什么是CSS？" class="headerlink" title="什么是CSS？"></a>什么是CSS？</h2><h3 id="CSS-指层叠样式表-Cascading-Style-Sheets"><a href="#CSS-指层叠样式表-Cascading-Style-Sheets" class="headerlink" title="CSS 指层叠样式表 (Cascading Style Sheets)"></a>CSS 指层叠样式表 (Cascading Style Sheets)</h3><pre><code>CSS通常称为CSS样式表或层叠样式表（级联样式表），主要用于设置HTML页面中的文本内容（字体、大小、对齐方式等）、图片的外形（宽高、边框样式、边距等）以及版面的布局等外观显示样式。
+</code></pre><h2 id="语法结构"><a href="#语法结构" class="headerlink" title="语法结构"></a>语法结构</h2><h3 id="选择器"><a href="#选择器" class="headerlink" title="选择器{"></a>选择器{</h3><pre><code>    属性:值;
+    属性:值;
+    ...
+}
+</code></pre><h2 id="css得基础属性介绍"><a href="#css得基础属性介绍" class="headerlink" title="css得基础属性介绍"></a>css得基础属性介绍</h2><pre><code>|   文本相关属性   |
+|color|前景色（文字颜色）【 表示方式见底部备注信息】
+ |font-style    |normal 正常显示  |   italic  斜体显示  |  oblique 文字倾斜
+|font-weight|normal 正常显示|bold 加粗| bolder 超粗 | lighter 超细| 400  正常  |  700 加粗
+|font-family|    文字字体    【字体见底部备注信息】
+|font-size    |文字大小
+|font:font-style  | font-weight  font-size/line-height | font-family
+|line-height|
+|font-family|
+</code></pre><h3 id="可以连写-font-font-style-font-weight-font-size-line-height-font-family"><a href="#可以连写-font-font-style-font-weight-font-size-line-height-font-family" class="headerlink" title="可以连写  font:font-style  font-weight  font-size/line-height font-family;"></a>可以连写  font:font-style  font-weight  font-size/line-height font-family;</h3><pre><code>其中1,2,3,连写是可以省略.
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/06/HTML简介三/" data-id="cj4siehvq0004j8bm00uvzwmc" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/06/25/2/" class="article-date">
-  <time datetime="2015-06-25T02:46:40.000Z" itemprop="datePublished">2015-06-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/javasript/">javasript</a>►<a class="article-category-link" href="/categories/javasript/面向对象二/">面向对象二</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/25/2/">2</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##面向对象是一种思维,其他编程语言中也有</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/25/2/" data-id="cj4siehv70000j8bmue0m2tnf" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
+|text-index|首行缩进|
+text-decoration:none/underline/overline/line-throuth;
+</code></pre><h2 id="宽度属性和背景属性"><a href="#宽度属性和背景属性" class="headerlink" title="宽度属性和背景属性"></a>宽度属性和背景属性</h2><pre><code>|width|宽度|
+|height|高度|
+|background-color|背景|
+</code></pre><h3 id="background-url-no-repeat-x-y"><a href="#background-url-no-repeat-x-y" class="headerlink" title="background:url() no-repeat x y ;"></a>background:url() no-repeat x y ;</h3><pre><code>background-repeat:no-rapeat/repeat-x/repeat-y;
+background-position:cneter/left/right;
+background-attachment:scroll;滑动
+                        :fixed;固定
 
 
-  
-    <article id="post-面向对象" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/06/25/面向对象/" class="article-date">
-  <time datetime="2015-06-25T02:13:54.000Z" itemprop="datePublished">2015-06-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/javascript/">javascript</a>►<a class="article-category-link" href="/categories/javascript/面向对象/">面向对象</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/25/面向对象/">面向对象</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="面向对象的基本概念"><a href="#面向对象的基本概念" class="headerlink" title="面向对象的基本概念"></a>面向对象的基本概念</h2><h3 id="解决问题的思维方式，-将解决问题的关注点方法在了解决问题的每一个详细的步骤上！"><a href="#解决问题的思维方式，-将解决问题的关注点方法在了解决问题的每一个详细的步骤上！" class="headerlink" title="解决问题的思维方式， 将解决问题的关注点方法在了解决问题的每一个详细的步骤上！"></a>解决问题的思维方式， 将解决问题的关注点方法在了解决问题的每一个详细的步骤上！</h3><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h3 id="解决问题的思维方式，-将解决问题的关注点方法在了解决问题所需要的一系列的对象身上！"><a href="#解决问题的思维方式，-将解决问题的关注点方法在了解决问题所需要的一系列的对象身上！" class="headerlink" title="解决问题的思维方式， 将解决问题的关注点方法在了解决问题所需要的一系列的对象身上！"></a>解决问题的思维方式， 将解决问题的关注点方法在了解决问题所需要的一系列的对象身上！</h3><h2 id="面向对象和面向过程的关系"><a href="#面向对象和面向过程的关系" class="headerlink" title="面向对象和面向过程的关系"></a>面向对象和面向过程的关系</h2><pre><code>面向对象其实就是对面向过程的封装
-
-### 什么是对象
-js中,无序的键值对集合,就是对象!
+|值    |描述    |CSS|
+|background-color    |规定要使用的背景颜色。    |
+|background-position|    规定背景图像的位置。|    
+|background-size    |规定背景图片的尺寸。    |
+|background-repeat    |规定如何重复背景图像。    |
+|background-origin    |规定背景图片的定位区域。|    
+|background-clip    |规定背景的绘制区域。    |
+|background-attachment    |规定背景图像是否固定或者随着页面的其余部分滚动。|
+|background-image    |规定要使用的背景图像。|
 </code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/25/面向对象/" data-id="cj4siehw80009j8bmdsywpifh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/07/CSS一/" data-id="cj4vdbkax0004t0bmf5q87j8y" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -311,336 +652,20 @@ js中,无序的键值对集合,就是对象!
 
 
   
-    <article id="post-HTML简介" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/04/29/HTML简介/" class="article-date">
-  <time datetime="2015-04-29T03:47:02.000Z" itemprop="datePublished">2015-04-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/HTML/">HTML</a>►<a class="article-category-link" href="/categories/HTML/web/">web</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/29/HTML简介/">HTML简介</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一．DTD-文档类型声明"><a href="#一．DTD-文档类型声明" class="headerlink" title="一．DTD 文档类型声明"></a>一．DTD 文档类型声明</h2><h3 id="DTD-Document-Type-Declaration-文档类型声明。"><a href="#DTD-Document-Type-Declaration-文档类型声明。" class="headerlink" title="DTD (Document Type Declaration) 文档类型声明。"></a>DTD (Document Type Declaration) 文档类型声明。</h3><pre><code>作用：
-用来告诉浏览器在解析我们的网页时按照哪种版本解析
-</code></pre><h3 id="html4-01-的DTD有三种模式，分别是"><a href="#html4-01-的DTD有三种模式，分别是" class="headerlink" title="html4.01 的DTD有三种模式，分别是"></a>html4.01 的DTD有三种模式，分别是</h3><h4 id="Strict：严格模式-严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。"><a href="#Strict：严格模式-严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。" class="headerlink" title="Strict：严格模式.严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。"></a>Strict：严格模式.严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。</h4><h4 id="Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。"><a href="#Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。" class="headerlink" title="Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。"></a>Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。</h4><h4 id="Frameset：框架模式-（基本不用）在页面中若，使用frameset标签，推荐使用该模式声明"><a href="#Frameset：框架模式-（基本不用）在页面中若，使用frameset标签，推荐使用该模式声明" class="headerlink" title="Frameset：框架模式 （基本不用）在页面中若，使用frameset标签，推荐使用该模式声明"></a>Frameset：框架模式 （基本不用）在页面中若，使用frameset标签，推荐使用该模式声明</h4><h3 id="xhtml1-0-的DTD-有三种模式分别是"><a href="#xhtml1-0-的DTD-有三种模式分别是" class="headerlink" title="xhtml1.0 的DTD 有三种模式分别是"></a>xhtml1.0 的DTD 有三种模式分别是</h3><h4 id="Strict：严格模式"><a href="#Strict：严格模式" class="headerlink" title="Strict：严格模式"></a>Strict：严格模式</h4><h4 id="Transitional：过渡模式"><a href="#Transitional：过渡模式" class="headerlink" title="Transitional：过渡模式"></a>Transitional：过渡模式</h4><h4 id="Frameset：框架模式-（基本不用）"><a href="#Frameset：框架模式-（基本不用）" class="headerlink" title="Frameset：框架模式 （基本不用）"></a>Frameset：框架模式 （基本不用）</h4><h3 id="xhtml1-0-和-html4-01的区别"><a href="#xhtml1-0-和-html4-01的区别" class="headerlink" title="xhtml1.0 和 html4.01的区别"></a>xhtml1.0 和 html4.01的区别</h3><pre><code>xhtml1.0比html4.01在语法上规范要求更加严格
-如：双标签要成对、html以及其中的标签要小写
-</code></pre><h3 id="lang属性"><a href="#lang属性" class="headerlink" title="lang属性"></a>lang属性</h3><h4 id="lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。"><a href="#lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。" class="headerlink" title="lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。"></a>lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。</h4><h3 id="meta标签"><a href="#meta标签" class="headerlink" title="meta标签"></a>meta标签</h3><h4 id="作用：用作配置"><a href="#作用：用作配置" class="headerlink" title="作用：用作配置"></a>作用：用作配置</h4><pre><code> 使用方式：字符集配置
- 在html中&lt;meta charset=”utf-8”/&gt; 是用来告诉浏览器，在解析我们的文件内容的时候，按照哪种编码格式来解析。
-若文件的编码格式 和  &lt;meta charset=”utf-8”/&gt;这里的编码格式不一致时，则会造成乱码。
-</code></pre><h2 id="SEO"><a href="#SEO" class="headerlink" title="SEO"></a>SEO</h2><p>SEO(Search Engine Optimization) ：搜索引擎优化<br>优化：<br>     就是通过某些手段，使我们的网站在被搜索时，排名靠前。<br><strong> 优化手段：<br>    -花钱买排名<br>        很烧钱，效果最好<br>    -广发外链<br>    -标签语义化<br>        在合适地方用合适的标签<br>        seo更加喜欢语义化健全的网站<br>    -从技术角度<br>        在meta标签里写上关键字… </strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/29/HTML简介/" data-id="cj4siehvg0001j8bmbti8f02l" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
 
 
-  
-    <article id="post-HTML简介五-列表" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/04/29/HTML简介五-列表/" class="article-date">
-  <time datetime="2015-04-29T03:47:02.000Z" itemprop="datePublished">2015-04-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/HTML/">HTML</a>►<a class="article-category-link" href="/categories/HTML/web/">web</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/29/HTML简介五-列表/">HTML简介五</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p>列表</p>
-</li>
-<li><p>无序列表</p>
-</li>
-</ul>
-<p>&lt; ul&gt;<br>    &lt; li&gt;&lt; /li&gt;<br>    &lt; li&gt;&lt; /li&gt;<br>&lt; /ul&gt;</p>
-<ul>
-<li>有序列表</li>
-</ul>
-<p>&lt; ol&gt;<br>    &lt; li&gt;&lt; /li&gt;<br>    &lt; li&gt;&lt; /li&gt;<br>&lt; /ol&gt;</p>
-<ul>
-<li>定义列表 </li>
-</ul>
-<p>&lt; dl&gt;<br>    &lt; dt&gt;标题1&lt; /dt&gt;<br>    &lt; dd&gt;选项1&lt; /dd&gt;<br>    &lt; dd&gt;选项2&lt; /dd&gt;<br>    &lt; dt&gt;标题2&lt; /dt&gt;<br>    &lt; dd&gt;选项1&lt; /dd&gt;<br>    &lt; dd&gt;选项2&lt; /dd&gt;<br>&lt; /dl&gt;</p>
-<ul>
-<li><p>表格</p>
-</li>
-<li><p>格式： </p>
-</li>
-</ul>
-<p>&lt; table&gt;</p>
-<p>&lt; tr&gt;   一列</p>
-<p>&lt; td&gt;&lt; /td&gt;  一行</p>
-<p>&lt; td&gt;&lt; /td&gt;  二行</p>
-<p>&lt; /tr&gt;</p>
-<p>&lt; tr&gt;   二列</p>
-<p>&lt; td&gt;&lt; /td&gt;  一行</p>
-<p>&lt; td&gt;&lt; /td&gt;  二行</p>
-<p>&lt; /tr&gt;</p>
-<p>&lt; /table&gt;</p>
-<ul>
-<li>合并单元格：</li>
-</ul>
-<p>跨列（横向合并）：&lt; td cospan=列数&gt;。。。&lt; /td&gt;</p>
-<p>跨行（纵向合并）: &lt; tr rowspan=行数&gt;。。。&lt; /tr&gt;</p>
-<p>注意：合并多少，需在下一列或行减去对应的行数或列数</p>
-<ul>
-<li><p>高级</p>
-</li>
-<li><p>标题 &lt; caption&gt;…&lt; /caption&gt;</p>
-</li>
-<li><p>表头 &lt; th&gt;..&lt; /th&gt;</p>
-</li>
-<li><p>页眉 &lt; thread&gt;…&lt; /thread&gt;</p>
-</li>
-<li><p>页脚 &lt; tfoot&gt;..&lt; /tfoot&gt;</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/29/HTML简介五-列表/" data-id="cj4t95rgh0001l4bmyak14k9h" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML简介四-form表单" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/04/29/HTML简介四-form表单/" class="article-date">
-  <time datetime="2015-04-29T03:47:02.000Z" itemprop="datePublished">2015-04-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/HTML/">HTML</a>►<a class="article-category-link" href="/categories/HTML/web/">web</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/29/HTML简介四-form表单/">HTML简介四</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p>表单 form</p>
-</li>
-<li><p>概念</p>
-</li>
-</ul>
-<p>作用：收集客户端的信息，实现交互</p>
-<p>结构：</p>
-<p>表单域  &lt; form&gt; &lt; /form&gt;</p>
-<p>表单元素 &lt; input /&gt;</p>
-<ul>
-<li>表单域 </li>
-</ul>
-<p>action 数据提交的目标地址</p>
-<p>method 提交方式 get post</p>
-<ul>
-<li><p>表单元素</p>
-</li>
-<li><p>文本域  type=’text’</p>
-</li>
-<li><p>密码框  type=’password’</p>
-</li>
-<li><p>单选框  type=’redio’ 注意同表单中name需要指定，并且保持一致，并设置不同的选定值 value</p>
-</li>
-<li><p>复选框 type=’checkbox’ 需设定选定值value</p>
-</li>
-<li><p>列表菜单 select</p>
-</li>
-</ul>
-<p>&lt; select&gt;</p>
-<p>&lt; option&gt;选项1&lt; /option&gt;</p>
-<p>&lt; option&gt;选项2&lt; /option&gt;</p>
-<p>&lt; /select&gt;</p>
-<ul>
-<li><p>提交按钮  type=’submit’</p>
-</li>
-<li><p>重置按钮 type=’reset’</p>
-</li>
-<li><p>普通按钮 type=’butten’</p>
-</li>
-<li><p>图片按钮 type=’image’ src=’图片’</p>
-</li>
-<li><p>文本区域  &lt; testarea&gt;&lt; /testarea&gt;</p>
-</li>
-<li><p>文件域 type=’file’</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;form&gt;</div><div class="line"></div><div class="line">    &lt;input type=&quot;text&quot; value=&quot;文本框&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;input type=&quot;password&quot; value=&quot;密码框&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;br&gt; 男 &lt;input type=&quot;radio&quot; value=&quot;man&quot; name=&quot;chice&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;br&gt; 女 &lt;input type=&quot;radio&quot; value=&quot;woman&quot; name=&quot;chice&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;br&gt; 北京 &lt;input type=&quot;checkbox&quot; value=&quot;Beijing&quot; name=&quot;bj&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;br&gt; 上海 &lt;input type=&quot;checkbox&quot; value=&quot;Shanghai&quot; name=&quot;sh&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;br&gt; 广州 &lt;input type=&quot;checkbox&quot; value=&quot;Guangzhou&quot; name=&quot;gz&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;br&gt; 深圳 &lt;input type=&quot;checkbox&quot; value=&quot;Shenzhen&quot; name=&quot;sz&quot; /&gt;</div><div class="line"></div><div class="line"></div><div class="line">    &lt;select&gt;</div><div class="line"></div><div class="line">        &lt;option&gt;北京&lt;/option&gt;</div><div class="line"></div><div class="line">        &lt;option&gt;上海&lt;/option&gt;</div><div class="line"></div><div class="line">        &lt;option&gt;广州&lt;/option&gt;</div><div class="line"></div><div class="line">    &lt;/select&gt;</div><div class="line"></div><div class="line"></div><div class="line">    &lt;select&gt;</div><div class="line"></div><div class="line">        &lt;optgroup label=&quot;华北&quot;&gt;</div><div class="line"></div><div class="line">           &lt;option&gt;北京&lt;/option&gt;</div><div class="line"></div><div class="line">            &lt;option&gt;天津&lt;/option&gt;</div><div class="line"></div><div class="line">            &lt;option&gt;石家庄&lt;/option&gt;</div><div class="line"></div><div class="line">        &lt;/optgroup&gt;</div><div class="line"></div><div class="line">        &lt;optgroup label=&quot;东北&quot;&gt;</div><div class="line"></div><div class="line">           &lt;option&gt;辽宁&lt;/option&gt;</div><div class="line"></div><div class="line">            &lt;option&gt;吉林&lt;/option&gt;</div><div class="line"></div><div class="line">            &lt;option&gt;黑龙江&lt;/option&gt;</div><div class="line"></div><div class="line">        &lt;/optgroup&gt;</div><div class="line"></div><div class="line">    &lt;/select&gt;</div><div class="line"></div><div class="line">    &lt;input type=&quot;button&quot; value=&quot;普通按钮&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;input type=&quot;submit&quot; value=&quot;提交按钮&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;input type=&quot;reset&quot; value=&quot;重置按钮&quot; /&gt;</div><div class="line"></div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/29/HTML简介四-form表单/" data-id="cj4t95rgh0003l4bmpx347nlv" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-我的第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/04/24/我的第一篇博客/" class="article-date">
-  <time datetime="2015-04-24T09:15:23.000Z" itemprop="datePublished">2015-04-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/javascript/">javascript</a>►<a class="article-category-link" href="/categories/javascript/web/">web</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/24/我的第一篇博客/">我的第一篇博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##你好</p>
-<p>###你好啊</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;SS</div><div class="line">	<span class="keyword">var</span> a = <span class="number">10</span>;</div><div class="line">	<span class="keyword">var</span> b = <span class="number">20</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/24/我的第一篇博客/" data-id="cj4siehvy0005j8bmye4v0cwc" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/04/24/hello-world/" class="article-date">
-  <time datetime="2015-04-24T08:25:53.000Z" itemprop="datePublished">2015-04-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/24/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/24/hello-world/" data-id="cj4siehwd000aj8bmbdz4mgso" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+  </nav>
 </section>
         
           <aside id="sidebar">
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Catégories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li></ul>
     </div>
   </div>
 
@@ -648,7 +673,7 @@ js中,无序的键值对集合,就是对象!
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li></ul>
     </div>
@@ -658,7 +683,7 @@ js中,无序的键值对集合,就是对象!
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
       <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/日记/" style="font-size: 10px;">日记</a>
     </div>
@@ -669,7 +694,7 @@ js中,无序的键值对集合,就是对象!
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
     </div>
   </div>
 
@@ -677,28 +702,28 @@ js中,无序的键值对集合,就是对象!
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2015/07/06/HTML简介二-标签/">html简介二</a>
+            <a href="/2017/07/08/angular-02/">angular 02</a>
           </li>
         
           <li>
-            <a href="/2015/07/06/HTML简介三/">html简介3</a>
+            <a href="/2017/07/08/angular-01/">angular 01</a>
           </li>
         
           <li>
-            <a href="/2015/06/25/2/">2</a>
+            <a href="/2017/07/08/angular01/">angular01</a>
           </li>
         
           <li>
-            <a href="/2015/06/25/面向对象/">面向对象</a>
+            <a href="/2017/07/07/CSS四/">CSS四　浮动float</a>
           </li>
         
           <li>
-            <a href="/2015/04/29/HTML简介/">HTML简介</a>
+            <a href="/2015/07/07/CSS/">CSS 一些易忘属性或其他</a>
           </li>
         
       </ul>
@@ -713,8 +738,8 @@ js中,无序的键值对集合,就是对象!
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      &copy; 2017 ������<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
