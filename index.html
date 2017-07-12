@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -144,7 +144,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/08/angular-02/" data-id="cj4vdbkc0000mt0bm1u86cis6" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/07/08/angular-02/" data-id="cj512ulur001c4cbmmfjbh0rc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -182,7 +182,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/08/angular-01/" data-id="cj4vdbkbw000kt0bmi6jkvipw" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/07/08/angular-01/" data-id="cj512ulru000g4cbm52kdr5a6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -218,7 +218,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/08/angular01/" data-id="cj4vdbkc5000qt0bm4pfpgeja" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/07/08/angular01/" data-id="cj512ulsk000q4cbm2da1iic7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -276,7 +276,107 @@ clear:right; 清除右浮动的影响
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/07/CSS四/" data-id="cj4vdbkbf000at0bmcp1l8l12" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/07/07/CSS四/" data-id="cj512ulqr00044cbmty9sr5gu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-javascript一" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/12/javascript一/" class="article-date">
+  <time datetime="2015-07-12T12:45:32.000Z" itemprop="datePublished">2015-07-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/javascript/">javascript</a>►<a class="article-category-link" href="/categories/javascript/web/">web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/12/javascript一/">javascript一   基础- 变量-数值类型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-变量"><a href="#1-变量" class="headerlink" title="1 变量"></a>1 变量</h1><h2 id="1-1-变量的命名规范"><a href="#1-1-变量的命名规范" class="headerlink" title="1.1  变量的命名规范"></a>1.1  变量的命名规范</h2><pre><code>规则(必须遵守)
+区分大小写
+不能是关键字和保留字
+由字母、数字、下划线、$ 组成且开头不能是数字
+
+规范(建议遵守)
+变量的名称要有实际意义
+变量的命名遵守驼峰命名法，首字母小写,第二个单词的首字母大写 例如：userName
+</code></pre><h2 id="1-2-变量的声明赋值"><a href="#1-2-变量的声明赋值" class="headerlink" title="1.2  变量的声明赋值"></a>1.2  变量的声明赋值</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> 变量名 = 值</div></pre></td></tr></table></figure>
+<h1 id="2-数据类型"><a href="#2-数据类型" class="headerlink" title="2 数据类型"></a>2 数据类型</h1><pre><code>2.1  数据类型
+声明的时候不用考虑类型，但是处理和计算的时候要考虑类型
+</code></pre><ul>
+<li><p>基本数据类型<br>number数值型  string字符串型  boolean布尔型  undefined未定义 null空<br>number数值型       字面量</p>
+<pre><code>        var num = 数字;
+        浮点数
+        计算浮点数时会丢失精度
+        我们通常用整数的计算来表示浮点数的计算
+        不要以两个浮点数是否相等作为条件判断的依据（判断范围还是可以的）
+        NaN  NaN是数值类型  NaN不等于自身  isNaN( ) 不是有意义的数值返回true 
+
+转化成数值型     将任意类型转化为数值型
+                Number(值)   将字符串转化为数值
+                parseInt(“字符串”)会丢失小数；  parseFloat(“字符串”)不会丢失小数；
+                小技巧   值-0
+</code></pre><p>string字符串型</p>
+<pre><code>var str = “字符串”;
+字符串的长度  str.length  length就是长度的意思
+注意:由于字符串有不可变性，在大量拼接字符串的时候会非常消耗内存。
+</code></pre></li>
+<li><p>转换成字符串<br>   将任意类型转化为字符串<br>   String(值)<br>   大部分类型都有toString方法<br>   值.toString()<br>   小技巧<br>   值+””</p>
+</li>
+<li><p>转义符</p>
+<pre><code>\n 换行 \’单引号 \”双引号 \\斜杠
+</code></pre><p>boolean布尔型    所有类型的值都可以转化成布尔值</p>
+<pre><code>会转化成false的值有： 空字符串 数值零NaN undefined null
+</code></pre><p>   转换成布尔值<br>   Boolean(值)  将任意类型转化为布尔值<br>   if(值)   条件判断中会自动转换<br>   !!值  小技巧<br>undefined       表示声明但未赋值的变量</p>
+<p>null空</p>
+</li>
+<li>复杂数据类型<br>数组[]    object对象{}</li>
+</ul>
+<pre><code>使用typeof关键字可以查看变量的数据类型
+</code></pre><h2 id="3-运算符"><a href="#3-运算符" class="headerlink" title="3.运算符"></a>3.运算符</h2><h3 id="3-1-一元运算符"><a href="#3-1-一元运算符" class="headerlink" title="3.1 一元运算符"></a>3.1 一元运算符</h3><pre><code>递增和递减
+递增++ 递减--
+a++ 先参与运算 后自加
+++a 先自加 后参与运算
+</code></pre><h3 id="3-2-逻辑运算符"><a href="#3-2-逻辑运算符" class="headerlink" title="3.2 逻辑运算符"></a>3.2 逻辑运算符</h3><pre><code>&amp;&amp;和||都采取短路运算，即第一个能够决定结果就不再看第二个了
+&amp;&amp; 的要求比较严格 要两个都是true才是true 所以看到第一个是false就没有必要继续完后看了
+||   的要求比较宽松  要两个都是false才是false 所以看到第一个是true就没有必要继续完后看了
+短路运算（了解）
+&amp;&amp;和||不但可以操作布尔类型的值，对其他类型的值也可以进行操作，并返回可以决定表达式结果的那个值。
+</code></pre><h3 id="3-3-赋值运算符"><a href="#3-3-赋值运算符" class="headerlink" title="3.3 赋值运算符"></a>3.3 赋值运算符</h3><pre><code>赋值运算符
+表达式练习
+</code></pre><h3 id="3-4-运算符的优先级"><a href="#3-4-运算符的优先级" class="headerlink" title="3.4 运算符的优先级"></a>3.4 运算符的优先级</h3><h1 id="4-语句"><a href="#4-语句" class="headerlink" title="4. 语句"></a>4. 语句</h1><h2 id="4-1-选择语句if"><a href="#4-1-选择语句if" class="headerlink" title="4.1 选择语句if"></a>4.1 选择语句if</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (condition) &#123;</div><div class="line">       statement1</div><div class="line">   &#125; <span class="keyword">else</span> <span class="keyword">if</span> (condition) &#123;</div><div class="line">       statement2</div><div class="line">   &#125; <span class="keyword">else</span> &#123;</div><div class="line">       statement3</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<h2 id="4-2-三元表达式-三目表达式"><a href="#4-2-三元表达式-三目表达式" class="headerlink" title="4.2 三元表达式(三目表达式)"></a>4.2 三元表达式(三目表达式)</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">表达式<span class="number">1</span> ? 表达式<span class="number">2</span> : 表达式<span class="number">3</span></div></pre></td></tr></table></figure>
+<h2 id="4-3-选择语句switch"><a href="#4-3-选择语句switch" class="headerlink" title="4.3 选择语句switch"></a>4.3 选择语句switch</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">switch</span> (expression) &#123;</div><div class="line">       <span class="keyword">case</span> value:</div><div class="line">           statement</div><div class="line">           <span class="keyword">break</span>;</div><div class="line">       <span class="keyword">case</span> value:</div><div class="line">           statement</div><div class="line">           <span class="keyword">break</span>;</div><div class="line">       <span class="keyword">default</span>:</div><div class="line">           statement</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<h2 id="4-4-循环语句for"><a href="#4-4-循环语句for" class="headerlink" title="4.4 循环语句for"></a>4.4 循环语句for</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;a;i++)&#123;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>** 4.break和continue<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">break</span>跳出当前循环，执行循环后的语句</div><div class="line"><span class="keyword">continue</span>跳出当前循环，继续执行循环</div><div class="line">@<span class="keyword">break</span>和<span class="keyword">continue</span></div></pre></td></tr></table></figure></p>
+<p>##　５.6　循环语句while<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span>语句 先判断后执行</div><div class="line"><span class="keyword">while</span>(expression) statement</div><div class="line"><span class="keyword">do</span> <span class="keyword">while</span> 语句 先执行后判断</div><div class="line"><span class="keyword">do</span> &#123;statement&#125; <span class="keyword">while</span> (expression);</div><div class="line">@循环语句<span class="keyword">while</span></div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/12/javascript一/" data-id="cj512ultm000y4cbmyzvb70im" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -319,7 +419,7 @@ clear:right; 清除右浮动的影响
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/07/CSS/" data-id="cj4vdbkam0001t0bm87t3emcg" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2015/07/07/CSS/" data-id="cj512ulqb00014cbmqini6m9a" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -374,7 +474,7 @@ filter:alpha(opacity=数值);    数值范围（0-100）  //IE8及其以下版�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/07/CSS五/" data-id="cj4vdbkbb0009t0bmr3204d0j" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2015/07/07/CSS五/" data-id="cj512ulqx00054cbmnsix1375" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -429,7 +529,7 @@ filter:alpha(opacity=数值);    数值范围（0-100）  //IE8及其以下版�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/07/css测试/" data-id="cj4vdbkfw0034t0bm46ebbp7o" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2015/07/07/css测试/" data-id="cj512ulv9001g4cbmaurwf4zn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -507,7 +607,7 @@ margin:0  auto    auto 设置为相对边的值
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/07/CSS三/" data-id="cj4vdbkb70006t0bm61at1po1" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2015/07/07/CSS三/" data-id="cj512uls3000k4cbmtp18h1zm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -562,85 +662,7 @@ margin:0  auto    auto 设置为相对边的值
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/07/CSS二/" data-id="cj4vdbkaz0005t0bmltz09lgj" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS一" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/07/07/CSS一/" class="article-date">
-  <time datetime="2015-07-07T03:03:11.000Z" itemprop="datePublished">2015-07-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/CSS/">CSS</a>►<a class="article-category-link" href="/categories/CSS/web/">web</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/07/CSS一/">CSS一  字体 背景</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="什么是CSS？"><a href="#什么是CSS？" class="headerlink" title="什么是CSS？"></a>什么是CSS？</h2><h3 id="CSS-指层叠样式表-Cascading-Style-Sheets"><a href="#CSS-指层叠样式表-Cascading-Style-Sheets" class="headerlink" title="CSS 指层叠样式表 (Cascading Style Sheets)"></a>CSS 指层叠样式表 (Cascading Style Sheets)</h3><pre><code>CSS通常称为CSS样式表或层叠样式表（级联样式表），主要用于设置HTML页面中的文本内容（字体、大小、对齐方式等）、图片的外形（宽高、边框样式、边距等）以及版面的布局等外观显示样式。
-</code></pre><h2 id="语法结构"><a href="#语法结构" class="headerlink" title="语法结构"></a>语法结构</h2><h3 id="选择器"><a href="#选择器" class="headerlink" title="选择器{"></a>选择器{</h3><pre><code>    属性:值;
-    属性:值;
-    ...
-}
-</code></pre><h2 id="css得基础属性介绍"><a href="#css得基础属性介绍" class="headerlink" title="css得基础属性介绍"></a>css得基础属性介绍</h2><pre><code>|   文本相关属性   |
-|color|前景色（文字颜色）【 表示方式见底部备注信息】
- |font-style    |normal 正常显示  |   italic  斜体显示  |  oblique 文字倾斜
-|font-weight|normal 正常显示|bold 加粗| bolder 超粗 | lighter 超细| 400  正常  |  700 加粗
-|font-family|    文字字体    【字体见底部备注信息】
-|font-size    |文字大小
-|font:font-style  | font-weight  font-size/line-height | font-family
-|line-height|
-|font-family|
-</code></pre><h3 id="可以连写-font-font-style-font-weight-font-size-line-height-font-family"><a href="#可以连写-font-font-style-font-weight-font-size-line-height-font-family" class="headerlink" title="可以连写  font:font-style  font-weight  font-size/line-height font-family;"></a>可以连写  font:font-style  font-weight  font-size/line-height font-family;</h3><pre><code>其中1,2,3,连写是可以省略.
-
-|text-index|首行缩进|
-text-decoration:none/underline/overline/line-throuth;
-</code></pre><h2 id="宽度属性和背景属性"><a href="#宽度属性和背景属性" class="headerlink" title="宽度属性和背景属性"></a>宽度属性和背景属性</h2><pre><code>|width|宽度|
-|height|高度|
-|background-color|背景|
-</code></pre><h3 id="background-url-no-repeat-x-y"><a href="#background-url-no-repeat-x-y" class="headerlink" title="background:url() no-repeat x y ;"></a>background:url() no-repeat x y ;</h3><pre><code>background-repeat:no-rapeat/repeat-x/repeat-y;
-background-position:cneter/left/right;
-background-attachment:scroll;滑动
-                        :fixed;固定
-
-
-|值    |描述    |CSS|
-|background-color    |规定要使用的背景颜色。    |
-|background-position|    规定背景图像的位置。|    
-|background-size    |规定背景图片的尺寸。    |
-|background-repeat    |规定如何重复背景图像。    |
-|background-origin    |规定背景图片的定位区域。|    
-|background-clip    |规定背景的绘制区域。    |
-|background-attachment    |规定背景图像是否固定或者随着页面的其余部分滚动。|
-|background-image    |规定要使用的背景图像。|
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/07/CSS一/" data-id="cj4vdbkax0004t0bmf5q87j8y" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2015/07/07/CSS二/" data-id="cj512ulr100064cbmgmbxx0fy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -663,7 +685,7 @@ background-attachment:scroll;滑动
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Catégories</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li></ul>
     </div>
@@ -673,7 +695,7 @@ background-attachment:scroll;滑动
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li></ul>
     </div>
@@ -683,7 +705,7 @@ background-attachment:scroll;滑动
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
       <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/日记/" style="font-size: 10px;">日记</a>
     </div>
@@ -702,7 +724,7 @@ background-attachment:scroll;滑动
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -723,7 +745,7 @@ background-attachment:scroll;滑动
           </li>
         
           <li>
-            <a href="/2015/07/07/CSS/">CSS 一些易忘属性或其他</a>
+            <a href="/2015/07/12/javascript一/">javascript一   基础- 变量-数值类型</a>
           </li>
         
       </ul>
@@ -739,7 +761,7 @@ background-attachment:scroll;滑动
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 ������<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
