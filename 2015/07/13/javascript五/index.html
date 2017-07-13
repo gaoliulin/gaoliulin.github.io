@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>javascript五    数组/字符串的方法 | welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="数组的方法123456789101112131415增删方法push()//从后面推入元素，返回新数组的lengthpop()  //从后面删除元素，返回被删除的元素shift() //从前面删除元素，返回被删除的元素unshift() //从前面添加元素，返回新数组的length排序方法reverse() //翻转数组sort(); 操作方法concat()  //把参数拼接到当前数组slice">
+<meta name="keywords" content="日记,学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript五    数组&#x2F;字符串的方法">
+<meta property="og:url" content="http://yoursite.com/2015/07/13/javascript五/index.html">
+<meta property="og:site_name" content="welcome">
+<meta property="og:description" content="数组的方法123456789101112131415增删方法push()//从后面推入元素，返回新数组的lengthpop()  //从后面删除元素，返回被删除的元素shift() //从前面删除元素，返回被删除的元素unshift() //从前面添加元素，返回新数组的length排序方法reverse() //翻转数组sort(); 操作方法concat()  //把参数拼接到当前数组slice">
+<meta property="og:updated_time" content="2017-07-13T09:23:43.319Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript五    数组&#x2F;字符串的方法">
+<meta name="twitter:description" content="数组的方法123456789101112131415增删方法push()//从后面推入元素，返回新数组的lengthpop()  //从后面删除元素，返回被删除的元素shift() //从前面删除元素，返回被删除的元素unshift() //从前面添加元素，返回新数组的length排序方法reverse() //翻转数组sort(); 操作方法concat()  //把参数拼接到当前数组slice">
+  
+    <link rel="alternate" href="/atom.xml" title="welcome" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">welcome</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-javascript五" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/13/javascript五/" class="article-date">
+  <time datetime="2015-07-13T09:18:27.000Z" itemprop="datePublished">2015-07-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/javascript基础/">javascript基础</a>►<a class="article-category-link" href="/categories/javascript基础/web/">web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      javascript五    数组/字符串的方法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数组的方法"><a href="#数组的方法" class="headerlink" title="数组的方法"></a>数组的方法</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">增删方法</div><div class="line">push()<span class="comment">//从后面推入元素，返回新数组的length</span></div><div class="line">pop()  <span class="comment">//从后面删除元素，返回被删除的元素</span></div><div class="line">shift() <span class="comment">//从前面删除元素，返回被删除的元素</span></div><div class="line">unshift() <span class="comment">//从前面添加元素，返回新数组的length</span></div><div class="line"></div><div class="line">排序方法</div><div class="line">reverse() <span class="comment">//翻转数组</span></div><div class="line">sort(); </div><div class="line"></div><div class="line">操作方法</div><div class="line">concat()  <span class="comment">//把参数拼接到当前数组</span></div><div class="line">slice() <span class="comment">//从当前数组中把要的东西复制一份，不影响原来的数组</span></div><div class="line">splice()<span class="comment">//删除或替换当前数组的某些项目</span></div><div class="line">Join 通过连接符将数组中的每一项转换为对应字符串</div></pre></td></tr></table></figure>
+<h1 id="字符串的方法"><a href="#字符串的方法" class="headerlink" title="字符串的方法"></a>字符串的方法</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">charAt(num) 					<span class="comment">// 得到指定索引位置的单字符</span></div><div class="line">charCodeAt(num) 				<span class="comment">// 得到指定索引位置字符的Unicode值 (ascii为其子集)</span></div><div class="line">concat(str01,str02) 			<span class="comment">// 连接俩字符~</span></div><div class="line">indexOf(<span class="string">"str"</span>) 					<span class="comment">// 取str第一次出现的索引</span></div><div class="line">lastIndexOf(<span class="string">"str"</span>) 				<span class="comment">// 取str最后一次出现的索引</span></div><div class="line">replace( <span class="string">"oldStr"</span> , <span class="string">"newStr"</span> ) 	<span class="comment">// 找到oldStr替换为newStr</span></div><div class="line">slice( start , end ) 			<span class="comment">// 其对象可以是字符串or数组 , 记得其范围不包括end</span></div><div class="line">substr( start , length ) 		<span class="comment">// 从索引start开始取length个字符 , length不可小于0否则返回空字符串</span></div><div class="line">search(<span class="string">"str"</span>) 					<span class="comment">// 在str01中搜索字符串"str" , 返回其第一个字符在str01中的索引</span></div><div class="line"><span class="built_in">String</span>.fromCharCode(uniNum,uniNum) <span class="comment">// 参数为Unicode值 ( &gt;=1个即可)</span></div><div class="line">str01.localeCompare(str02) 		<span class="comment">// 以本地特定规则比较 , 若str01&gt;str02 = 1 反之-1 相等为0</span></div><div class="line">str03 = str02.valueOf() ; 		<span class="comment">// 可返回字符串对象(str02)的原始值</span></div><div class="line">str03 = str01.split(<span class="string">"str"</span>) 		<span class="comment">// 将原字符串分割为一个数组对象 , 分隔符为逗号 , 参数为 空 空格 字符串</span></div><div class="line"><span class="keyword">var</span> n = num.toString() 			<span class="comment">// 将Number对象=&gt;String对象(n为字符) , 源对象没变</span></div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/13/javascript五/" data-id="cj528a1sh001a30bm7u1jv5o5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/07/07/CSS四/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          CSS四　浮动float
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/07/13/javasript四/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">javasript四   内置对象</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Kategorier</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/">javascript基础</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/日记/" style="font-size: 10px;">日记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Arkiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Siste innlegg</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/07/13/javascript三/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/angular-02/">angular 02</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/angular-01/">angular 01</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/angular01/">angular01</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/07/CSS四/">CSS四　浮动float</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 ������<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
