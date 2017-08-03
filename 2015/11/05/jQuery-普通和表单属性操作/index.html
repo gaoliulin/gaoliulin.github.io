@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>jQuery 普通和表单属性操作/内容操作val()-html() | welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一.普通属性操作;- 1.属性添加和获取;   attr();       &amp;apos;$(&amp;quot;div&amp;quot;).attr(&amp;quot;title&amp;quot;)&amp;apos;       &amp;apos;$(&amp;quot;div&amp;quot;).attr(&amp;quot;title&amp;quot;,&amp;quot;ccc&amp;quot;)&amp;apos; 如果有两个参数就是赋值;如果只有一个参数就是获取; - 2.">
+<meta name="keywords" content="学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery 普通和表单属性操作&#x2F;内容操作val()-html()">
+<meta property="og:url" content="http://yoursite.com/2015/11/05/jQuery-普通和表单属性操作/index.html">
+<meta property="og:site_name" content="welcome">
+<meta property="og:description" content="一.普通属性操作;- 1.属性添加和获取;   attr();       &amp;apos;$(&amp;quot;div&amp;quot;).attr(&amp;quot;title&amp;quot;)&amp;apos;       &amp;apos;$(&amp;quot;div&amp;quot;).attr(&amp;quot;title&amp;quot;,&amp;quot;ccc&amp;quot;)&amp;apos; 如果有两个参数就是赋值;如果只有一个参数就是获取; - 2.">
+<meta property="og:updated_time" content="2017-08-03T10:13:28.267Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery 普通和表单属性操作&#x2F;内容操作val()-html()">
+<meta name="twitter:description" content="一.普通属性操作;- 1.属性添加和获取;   attr();       &amp;apos;$(&amp;quot;div&amp;quot;).attr(&amp;quot;title&amp;quot;)&amp;apos;       &amp;apos;$(&amp;quot;div&amp;quot;).attr(&amp;quot;title&amp;quot;,&amp;quot;ccc&amp;quot;)&amp;apos; 如果有两个参数就是赋值;如果只有一个参数就是获取; - 2.">
+  
+    <link rel="alternate" href="/atom.xml" title="welcome" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">welcome</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-jQuery-普通和表单属性操作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/05/jQuery-普通和表单属性操作/" class="article-date">
+  <time datetime="2015-11-05T06:19:08.000Z" itemprop="datePublished">2015-11-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/jQuery/">jQuery</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      jQuery 普通和表单属性操作/内容操作val()-html()
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="一-普通属性操作"><a href="#一-普通属性操作" class="headerlink" title="一.普通属性操作;"></a>一.普通属性操作;</h4><pre><code>- 1.属性添加和获取;   attr();  
+    &apos;$(&quot;div&quot;).attr(&quot;title&quot;)&apos;  
+    &apos;$(&quot;div&quot;).attr(&quot;title&quot;,&quot;ccc&quot;)&apos; 如果有两个参数就是赋值;如果只有一个参数就是获取;
+- 2.属性删除;        
+    &apos;removeAttr()&apos;;  只能有一个属性;删除;
+</code></pre><h4 id="2-属性删除-removeAttr-只能有一个属性-删除"><a href="#2-属性删除-removeAttr-只能有一个属性-删除" class="headerlink" title="+ 2.属性删除;        removeAttr();  只能有一个属性;删除;"></a>+ 2.属性删除;        removeAttr();  只能有一个属性;删除;</h4><pre><code>&apos;$(&quot;div&quot;).removeAttr(&quot;title&quot;)&apos;;        在标签上直接删除;
+</code></pre><ul>
+<li><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">二.对于表单属性或者属性值为<span class="literal">true</span>的类型的属性我们用prop();</div><div class="line">    因为attr();获取值为<span class="literal">undefined</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log($(<span class="string">"input"</span>).attr(<span class="string">"checked"</span>));  值为<span class="literal">undefined</span>;</div><div class="line"><span class="built_in">console</span>.log($(<span class="string">"input"</span>).prop(<span class="string">"checked"</span>));  值为<span class="literal">true</span>/<span class="literal">false</span>;</div><div class="line"></div><div class="line"><span class="keyword">if</span>($(<span class="string">"input"</span>).prop(<span class="string">"checked"</span>))&#123;</div><div class="line">    $(<span class="string">"input"</span>).prop(<span class="string">"checked"</span>,<span class="literal">false</span>);</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    $(<span class="string">"input"</span>).prop(<span class="string">"checked"</span>,<span class="literal">true</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">三个属性;  innerHTML/innerText/value;</div><div class="line">             html()/text()/val();  jquery中的</div><div class="line">            双闭合标签内部的内容一个识别标签一个不识别标签;</div><div class="line">            可以输入内容的vlaue属性;</div><div class="line">$(<span class="string">"div"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="number">1.</span>DOM对象中的innerHTML属性 === jquery对象中的html();</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">"div"</span>).html());</div><div class="line">    $(<span class="string">"div"</span>).html(<span class="string">"&lt;i&gt;我是html()赋值的内容&lt;/i&gt;"</span>)</div><div class="line"></div><div class="line"></div><div class="line">    <span class="number">2.</span>DOM对象中的innerText属性 === jquery对象中的text();</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">"div"</span>).text());</div><div class="line">    $(<span class="string">"div"</span>).text(<span class="string">"&lt;i&gt;我是html()赋值的内容&lt;/i&gt;"</span>)</div><div class="line"></div><div class="line"></div><div class="line">   <span class="number">3.</span>DOM对象中的value属性 === jquery对象中的val();</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">"input"</span>).prop(<span class="string">"value"</span>));</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">"input"</span>).val());</div><div class="line">    $(<span class="string">"input"</span>).val(<span class="number">222222222</span>)</div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/11/05/jQuery-普通和表单属性操作/" data-id="cj5wctc3a002ihkbmtz20xb5e" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/11/05/jQuery-获取盒子宽高-位置/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          jQuery 获取盒子宽高-位置
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/11/04/jQuery-操作元素/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">jQuery 操作元素   创建/添加/删除/复制</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/h5-cs/">h5/cs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery-原生JS区别/">jQuery-原生JS区别</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/">javascript基础</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/">js-DOM/BOM</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/">js-特效</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/web/">web</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/js-特效/">js-特效</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/js-特效/" style="font-size: 10px;">js-特效</a> <a href="/tags/学习/" style="font-size: 20px;">学习</a> <a href="/tags/日记/" style="font-size: 15px;">日记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/01/jQuery选择器/">jQuery选择器</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/15/node-js简介/">node.js简介</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/13/javascript三/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/angular-02/">angular 02</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/angular-01/">angular 01</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 ������<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

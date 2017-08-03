@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -61,14 +61,14 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-HTML简介二-标签" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-js-正则表达式02" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/07/06/HTML简介二-标签/" class="article-date">
-  <time datetime="2015-07-06T02:20:18.000Z" itemprop="datePublished">2015-07-06</time>
+    <a href="/2015/10/28/js-正则表达式02/" class="article-date">
+  <time datetime="2015-10-28T06:19:08.000Z" itemprop="datePublished">2015-10-28</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/HTML/">HTML</a>►<a class="article-category-link" href="/categories/HTML/web/">web</a>
+    <a class="article-category-link" href="/categories/js-特效/">js-特效</a>
   </div>
 
   </div>
@@ -79,7 +79,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/06/HTML简介二-标签/">html简介二</a>
+      <a class="article-title" href="/2015/10/28/js-正则表达式02/">js-正则表达式02    简单应用(匹配)/和一些方法</a>
     </h1>
   
 
@@ -87,94 +87,379 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="常用标签"><a href="#常用标签" class="headerlink" title="常用标签"></a>常用标签</h3><ul>
-<li>h 标题标签 h1–h6表示不同等级的标题</li>
-</ul>
-<h1>标题1</h1>
+        <h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级;"></a>优先级;</h3><pre><code>1.（）   
+2.|    
+3.^$   
+4.量词
 
-<h2>标题2</h2>
-
-<h3>标题3</h3>
-
-<h4>标题4</h4>
-
-<h5>标题5</h5>
-
-<h6>标题6</h6>
-
-
-<p>效果：</p>
-<ul>
-<li><p>行控制标签</p>
-</li>
-<li><p>br/ 换行</p>
-</li>
-<li><p>p 段落</p>
-</li>
-<li><p>hr/  水平线</p>
-</li>
-<li><p>span  范围</p>
-</li>
-</ul>
-<p>这是P标签</p>
-
-<p>这是换行效果sdafafa<br>asfafafafafafafaf</p>
-
-<p>asdasdasdada<hr></p>
-<p><span>fuzj</span></p>
-<p>效果：</p>
-<ul>
-<li><p>上标和下标</p>
-<p>上标：&lt; sub&gt;&lt;/ sub&gt;</p>
-<p>下标：&lt; sup&gt;&lt;/ sup&gt;</p>
-</li>
-<li><p>a  超链接标签  </p>
-</li>
-<li><p>页面链接</p>
-</li>
-</ul>
-<p>&lt; a href=”b.html”&gt; </p>
-<ul>
-<li>url连接 </li>
-</ul>
-<p>&lt; a href=”<a href="http://www.autohome.com.cn&quot;&gt;" target="_blank" rel="external">http://www.autohome.com.cn&quot;&gt;</a> </p>
-<ul>
-<li>锚连接</li>
-</ul>
-<p>1.命名标记  id=1  id需要唯一</p>
-<p>2.锚连接   &lt; a href=”#1”&gt; </p>
-<p><a href="http://www.baidu.com" target="_blank" rel="external">百度1</a>   </p>
-<p><a href="http://www.baidu.com" target="_blank">百度2</a></p>
-<h3 id="以上两个代码都是跳转到百度页面，唯一在于，加target又重新打开一个标签页面，第一句是在自身页面打开的"><a href="#以上两个代码都是跳转到百度页面，唯一在于，加target又重新打开一个标签页面，第一句是在自身页面打开的" class="headerlink" title="以上两个代码都是跳转到百度页面，唯一在于，加target又重新打开一个标签页面，第一句是在自身页面打开的"></a>以上两个代码都是跳转到百度页面，唯一在于，加target又重新打开一个标签页面，第一句是在自身页面打开的</h3><!--寻找页面中id=i1的标签，将其标签放置在页面顶部-->
-<pre><code>&lt;a href=&quot;#i1&quot;&gt;第一章&lt;/a&gt;
-
-&lt;a href=&quot;#i2&quot;&gt;第二章&lt;/a&gt;
-
-&lt;a href=&quot;#i3&quot;&gt;第三章&lt;/a&gt;
-
-
-&lt;!--id没有一个标签的id属性值不允许重复，id属性可以不写--&gt;
-
-&lt;div id=&quot;i1&quot; style=&quot;height: 500px&quot;;&gt;第一章内容&lt;/div&gt;
-
-&lt;div id=&quot;i2&quot; style=&quot;height: 500px&quot;;&gt;第二章内容&lt;/div&gt;
-
-&lt;div id=&quot;i3&quot; style=&quot;height: 500px&quot;;&gt;第三章内容&lt;/div&gt;
-
-
-
-|src|设置跳转路径|
-|title|设置鼠标放图片上时显示的位子|
-|target|设置打开方式|
-</code></pre><h3 id="target"><a href="#target" class="headerlink" title="target"></a>target</h3><pre><code>值        描述
-_blank    在新窗口中打开被链接文档。
-_self    默认。在相同的框架中打开被链接文档。
-</code></pre><h2 id="img"><a href="#img" class="headerlink" title="img"></a>img</h2><p>###　</p>
+注:| 是或的意思; 在正则中没有||;   满足一个添加就行;
+</code></pre><h4 id="eg-匹配中文姓名"><a href="#eg-匹配中文姓名" class="headerlink" title="eg:匹配中文姓名"></a>eg:匹配中文姓名</h4><pre><code>需求: 在input中输入内容,要求输入2-4个中文;
+    汉字在Unicode编码中有范围;    [\u4e00-\u9fa5]
+</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">判断input里面的内容,是否符合正则表达式;</div><div class="line">   <span class="keyword">var</span> reg = <span class="regexp">/^[\u4e00-\u9fa5]&#123;2,4&#125;$/</span>;</div><div class="line"></div><div class="line">   <span class="keyword">if</span>(reg.test(inp.value))&#123;</div><div class="line">       <span class="comment">//符合标准;</span></div><div class="line">       span.style.color = <span class="string">"green"</span>;</div><div class="line">       span.innerHTML = <span class="string">"恭喜您输入正确!"</span>;</div><div class="line">   &#125;<span class="keyword">else</span>&#123;</div><div class="line">       <span class="comment">//不符合标准;</span></div><div class="line">       span.style.color = <span class="string">"red"</span>;</div><div class="line">       span.innerHTML = <span class="string">"对不起,您输入的为非法字符!"</span>;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<h4 id="eg-匹配手机号码"><a href="#eg-匹配手机号码" class="headerlink" title="eg:匹配手机号码"></a>eg:匹配手机号码</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">	判断input里面的内容,是否符合正则表达式;</div><div class="line"><span class="comment">//        var reg1 = /^0\d&#123;2&#125;-5\d&#123;7&#125;$/;//直辖市;</span></div><div class="line"><span class="comment">//        var reg2 = /^0\d&#123;3&#125;-3\d&#123;6&#125;$/;//普通市;</span></div><div class="line"></div><div class="line">        <span class="comment">//两个正则合并;</span></div><div class="line">        <span class="keyword">var</span> reg = <span class="regexp">/(^0\d&#123;2&#125;-5\d&#123;7&#125;$)|(^0\d&#123;3&#125;-3\d&#123;6&#125;$)/</span>;</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(reg.test(inp.value))&#123;</div><div class="line">            <span class="comment">//符合标准;</span></div><div class="line">            span.style.color = <span class="string">"green"</span>;</div><div class="line">            span.innerHTML = <span class="string">"恭喜您输入正确!"</span>;</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="comment">//不符合标准;</span></div><div class="line">            span.style.color = <span class="string">"red"</span>;</div><div class="line">            span.innerHTML = <span class="string">"对不起,您输入的为非法字符!"</span>;</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<h2 id="表单验证"><a href="#表单验证" class="headerlink" title="表单验证"></a>表单验证</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div></pre></td><td class="code"><pre><div class="line">	 <span class="keyword">var</span> inpArr = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"input"</span>);</div><div class="line">            <span class="keyword">var</span> password = <span class="built_in">document</span>.getElementById(<span class="string">"password"</span>);</div><div class="line"></div><div class="line">            需求<span class="number">1</span>: 在第<span class="number">1</span>个input中输入内容,失去焦点后判断是否符合QQ号标准;并把反馈写到后面的span中;</div><div class="line">            fn(inpArr[<span class="number">0</span>],/^[<span class="number">1</span><span class="number">-9</span>][<span class="number">0</span><span class="number">-9</span>]&#123;<span class="number">4</span>,<span class="number">12</span>&#125;$/);</div><div class="line">            需求<span class="number">2</span>: 在第<span class="number">2</span>个input中输入内容,失去焦点后判断是否符合手机号标准;并把反馈写到后面的span中;</div><div class="line">            fn(inpArr[<span class="number">1</span>],/^((<span class="number">13</span>[<span class="number">0</span><span class="number">-9</span>])|(<span class="number">15</span>[^<span class="number">4</span>,\D])|(<span class="number">18</span>[<span class="number">0</span><span class="number">-9</span>]))\d&#123;<span class="number">8</span>&#125;$/);</div><div class="line">            需求<span class="number">3</span>: 在第<span class="number">3</span>个input中输入内容,失去焦点后判断是否符合邮箱号标准;并把反馈写到后面的span中;</div><div class="line">            fn(inpArr[<span class="number">2</span>],/^[\w\-\.]+\@[\w]+\.[\w]&#123;<span class="number">2</span>,<span class="number">4</span>&#125;$/);</div><div class="line">            需求<span class="number">4</span>: 在第<span class="number">4</span>个input中输入内容,失去焦点后判断是否符合座机号标准;并把反馈写到后面的span中;</div><div class="line">            fn(inpArr[<span class="number">3</span>],/^<span class="number">0</span>\d&#123;<span class="number">2</span>&#125;-\d&#123;<span class="number">8</span>&#125;$|^<span class="number">0</span>\d&#123;<span class="number">3</span>&#125;-\d&#123;<span class="number">7</span>&#125;$/);</div><div class="line">            需求<span class="number">5</span>: 在第<span class="number">5</span>个input中输入内容,失去焦点后判断是否符合账号标准;并把反馈写到后面的span中;</div><div class="line">            fn(inpArr[<span class="number">4</span>],/^[a-zA-Z0<span class="number">-9</span>_-]&#123;<span class="number">4</span>,<span class="number">20</span>&#125;$/);</div><div class="line"></div><div class="line"></div><div class="line">            需求<span class="number">6</span>: 在第<span class="number">6</span>个input中输入内容,失去焦点后判断是否符合密码标准;并把反馈写到后面的span中;</div><div class="line">            inpArr[<span class="number">5</span>].onblur = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                如果内容为空,不能校验;</div><div class="line">                <span class="keyword">if</span>(<span class="keyword">this</span>.value.trim() === <span class="string">""</span>)&#123;</div><div class="line">                    <span class="keyword">return</span>;</div><div class="line">                &#125;</div><div class="line">                判断是否符合正则表达式:</div><div class="line">                <span class="keyword">if</span>(<span class="regexp">/^[\$a-zA-Z0-9_-]&#123;6,18&#125;$/</span>.test(<span class="keyword">this</span>.value))&#123;</div><div class="line">                    符合标准: 设置span的正确内容和样式;</div><div class="line">                    <span class="keyword">this</span>.nextSibling.className = <span class="string">"right"</span>;</div><div class="line">                    <span class="keyword">this</span>.nextSibling.innerHTML = <span class="string">"输入正确"</span>;</div><div class="line"></div><div class="line">                    需求<span class="number">7</span>: 判断密码强度;(从高到底;)</div><div class="line">                    判断input内容的强度,然后通过类名添加进行修改密码强度;</div><div class="line">                    <span class="keyword">if</span>(<span class="regexp">/^[A-Za-z0-9]+[_$][A-Za-z0-9]*$/</span>.test(<span class="keyword">this</span>.value))&#123;</div><div class="line">                        password.className = <span class="string">"pwd str4"</span>;</div><div class="line">                    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="regexp">/^([a-z].*[0-9])|([A-Z].*[0-9])|([0-9].*[a-zA-Z])$/</span>.test(<span class="keyword">this</span>.value))&#123;</div><div class="line">                        password.className = <span class="string">"pwd str3"</span>;</div><div class="line">                    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="regexp">/^([a-z].*[A-Z])|([A-Z].*[a-z])$/</span>.test(<span class="keyword">this</span>.value))&#123;</div><div class="line">                        password.className = <span class="string">"pwd str2"</span>;</div><div class="line">                    &#125;<span class="keyword">else</span>&#123;</div><div class="line">                        password.className = <span class="string">"pwd str1"</span>;</div><div class="line">                    &#125;</div><div class="line"></div><div class="line"></div><div class="line">                &#125;<span class="keyword">else</span>&#123;</div><div class="line">                    不符合标准: 设置span的错误内容和样式;</div><div class="line">                    <span class="keyword">this</span>.nextSibling.className = <span class="string">"wrong"</span>;</div><div class="line">                    <span class="keyword">this</span>.nextSibling.innerHTML = <span class="string">"对不起,格式错误!"</span>;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">            封装一个方法;绑定事件并设置正则表达式;</div><div class="line">            <span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">ele,reg</span>) </span>&#123;</div><div class="line">                ele.onblur = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                    如果内容为空,不能校验;</div><div class="line">                    <span class="keyword">if</span>(<span class="keyword">this</span>.value.trim() === <span class="string">""</span>)&#123;</div><div class="line">                          符合标准: 设置span的正确内容和样式;</div><div class="line"><span class="comment">//                        this.nextSibling.className = "";</span></div><div class="line"><span class="comment">//                        this.nextSibling.nerHTML = "请输入!";</span></div><div class="line">                        <span class="keyword">return</span>;</div><div class="line">                    &#125;</div><div class="line"></div><div class="line">                    判断是否符合正则表达式:</div><div class="line">                    <span class="keyword">if</span>(reg.test(<span class="keyword">this</span>.value))&#123;</div><div class="line">                        符合标准: 设置span的正确内容和样式;</div><div class="line">                        <span class="keyword">this</span>.nextSibling.className = <span class="string">"right"</span>;</div><div class="line">                        <span class="keyword">this</span>.nextSibling.innerHTML = <span class="string">"输入正确"</span>;</div><div class="line">                    &#125;<span class="keyword">else</span>&#123;</div><div class="line">                        不符合标准: 设置span的错误内容和样式;</div><div class="line">                        <span class="keyword">this</span>.nextSibling.className = <span class="string">"wrong"</span>;</div><div class="line">                        <span class="keyword">this</span>.nextSibling.innerHTML = <span class="string">"对不起,格式错误!"</span>;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div></pre></td></tr></table></figure>
+<h3 id="三个函数"><a href="#三个函数" class="headerlink" title="三个函数"></a>三个函数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span>replace();   替换字符串;</div><div class="line">   <span class="keyword">var</span> str = <span class="string">"aaaBBBAAACCCaaa"</span>;</div><div class="line">   <span class="built_in">console</span>.log(str.replace(<span class="string">"aaa"</span>,<span class="string">"ooo"</span>));</div><div class="line">   <span class="built_in">console</span>.log(str.replace(<span class="regexp">/aaa/g</span>,<span class="string">"ooo"</span>));</div><div class="line">   <span class="built_in">console</span>.log(str.replace(<span class="regexp">/aaa/gi</span>,<span class="string">"ooo"</span>));</div><div class="line">   i: 忽略大小写;    g:全局替换;</div><div class="line"></div><div class="line"></div><div class="line">   <span class="number">2.</span>trim();   去除字符串两边的空格;   ie678不支持;</div><div class="line">   <span class="keyword">var</span> str = <span class="string">"   aaa   bbb   ccc   "</span>;</div><div class="line">   <span class="built_in">console</span>.log(str);</div><div class="line">   <span class="built_in">console</span>.log(str.trim());</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">   <span class="number">3.</span>search(正则);  给字符查索引值;</div><div class="line">   <span class="keyword">var</span> str = <span class="string">"abcdefg"</span>;</div><div class="line">   <span class="built_in">console</span>.log(str.search(<span class="regexp">/cd/</span>));<span class="comment">//给索引值;</span></div></pre></td></tr></table></figure>
+<p>##　trim()方法封装<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//封装一个方法,可以去除字符串两边的空格;</span></div><div class="line">           <span class="comment">//替换,只替换前后的,中间不替换;   把空格替换成"";</span></div><div class="line"></div><div class="line">       <span class="comment">//测试</span></div><div class="line">       <span class="keyword">var</span> str1 = <span class="string">"   aaa   bbb   ddd   eee   "</span>;</div><div class="line">       <span class="built_in">console</span>.log(str1);</div><div class="line">       <span class="built_in">console</span>.log(trim(str1));</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">       <span class="function"><span class="keyword">function</span> <span class="title">trim</span>(<span class="params">str</span>)</span>&#123;</div><div class="line">           <span class="comment">//替换前后空格的正则表达式;</span></div><div class="line">           <span class="keyword">var</span> reg = <span class="regexp">/(^\s+)|(\s+$)/g</span>;</div><div class="line">           <span class="keyword">return</span> str.replace(reg,<span class="string">""</span>);</div><div class="line">       &#125;</div><div class="line"></div><div class="line">       或</div><div class="line">       <span class="function"><span class="keyword">function</span> <span class="title">trim</span>(<span class="params">str</span>) </span>&#123;            </div><div class="line">       	<span class="keyword">return</span> str.replace(<span class="regexp">/（^\s+）|（\s+$）/g</span>,<span class="string">""</span>);   去掉前面和后面的空格</div><div class="line">       &#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/06/HTML简介二-标签/" data-id="cj5auvizw000e14bmuipjc1fi" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2015/10/28/js-正则表达式02/" data-id="cj5wctc610047hkbmc3cmlrxa" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-js-正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/28/js-正则表达式/" class="article-date">
+  <time datetime="2015-10-28T05:40:08.000Z" itemprop="datePublished">2015-10-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/js-特效/">js-特效</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/28/js-正则表达式/">js-正则表达式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="正则表达式的声明有两种："><a href="#正则表达式的声明有两种：" class="headerlink" title="正则表达式的声明有两种："></a>正则表达式的声明有两种：</h4><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">##### 1.构造函数法;</div><div class="line">    var reg1 = new RegExp(/abc/);</div><div class="line">    console.dir(reg1);</div><div class="line">    console.log(reg1);</div><div class="line">    console.log(typeof reg1);</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">    2.直接量;字面量;</div><div class="line">    var reg2 = /abc/;</div><div class="line">    var reg3 = /abc/;</div><div class="line">    console.dir(reg2);</div><div class="line">    console.log(reg2);</div><div class="line">    console.log(typeof reg2);</div><div class="line"></div><div class="line">    简单数据类型比较的时候,比较的是数值;</div><div class="line">    复杂数据类型比较的时候,比较的是地址值;</div><div class="line">    console.log(reg1 === reg2);</div><div class="line">    console.log(reg3 === reg2);</div></pre></td></tr></table></figure>
+<h5 id="2-正则表达式的使用"><a href="#2-正则表达式的使用" class="headerlink" title="2.正则表达式的使用;"></a>2.正则表达式的使用;</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(<span class="number">1</span>)test();  测试参数是否符合正则表达式的约束;  符合就是<span class="literal">true</span>; 不符合就是<span class="literal">false</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="regexp">/abc/</span>.test(<span class="string">"abc"</span>));</div><div class="line"><span class="built_in">console</span>.log(<span class="regexp">/abc/</span>.test(<span class="string">"xxxxxxxx"</span>));</div></pre></td></tr></table></figure>
+<h3 id="正则的内部五大类"><a href="#正则的内部五大类" class="headerlink" title="正则的内部五大类"></a>正则的内部五大类</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">1. 预定义类 正则表达式预先设计好的一些元字符</div><div class="line">	1.1  .   除了换行和回车以外;</div><div class="line">	1.2  \d  数字字符;    \D:非数字;</div><div class="line">	1.3  \s:空白字符       \S: 非空白字符</div><div class="line">	1.4  \w: 单词字符;    \W:非单词字符;</div><div class="line">	1.5  .   除了换行和回车以外;</div><div class="line">	1.6  .   除了换行和回车以外;</div><div class="line">2. 简单类</div><div class="line">	2.1. 直接书写;  (必须是完整的，只多不能少,顺序必须对)</div><div class="line">	console.log(/abc/.test("abc"));</div><div class="line">    2.2. 写到[]里;  (只要包含里面的任何一个就可以)</div><div class="line">    console.log(/[abc]/.test("axxxxxxx"));</div><div class="line">3. 负向类</div><div class="line">	把^写到[]里面的最前面就是负向类; </div><div class="line">		仅仅是一部分不行，超出哪怕一个就没有问题了(不是个数,是种类).</div><div class="line">		被测试的参数只要有正则中没有规定的就是tru;</div><div class="line">    	如果完整包含,或者只是约束的一部分;那么就是fales;</div><div class="line">    console.log(/[^abc]/.test("abccr"));</div><div class="line">4. 范围类</div><div class="line">	范围类就是 : -;   从哪到哪的意思;一般与[]连用;</div><div class="line">    console.log(/[a-d]/.test("cc"));</div><div class="line">5. 组合类</div><div class="line">	就是把范围类,一起用;</div><div class="line">	console.log(/[a-dA-D0-5]/.test("cC3"));</div><div class="line"></div><div class="line">## 正则边界:  </div><div class="line">	1.以什么为开始;</div><div class="line">		^: 1.[]里面的负向类;   </div><div class="line">        	2.  进入//里面直接书写的^;以什么...开始;</div><div class="line">        	console.log(/^abc/.test("a"));   </div><div class="line">	2.以什么为结束; </div><div class="line">		$: 以什么...为结束;</div><div class="line">            想输入元素组就要用\符;</div><div class="line">            console.log(/abc$/.test("a"));   </div><div class="line">	3.必须是这样,不能多也不能少;</div><div class="line">      	console.log(/^abc$/.test("ab"));</div></pre></td></tr></table></figure>
+<h2 id="量词四种"><a href="#量词四种" class="headerlink" title="量词四种:"></a>量词四种:</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span>*       重复零次或更多    (&gt;=<span class="number">0</span>)</div><div class="line">	<span class="built_in">console</span>.log(<span class="regexp">/^a*$/</span>.test(<span class="string">""</span>));<span class="comment">//a* : 代表a不出现也可以,出现也可以,多少次都行;</span></div><div class="line">   <span class="number">2.</span>+       重复一次或更多次  (&gt;=<span class="number">1</span>)</div><div class="line">   	<span class="built_in">console</span>.log(<span class="regexp">/^a+$/</span>.test(<span class="string">""</span>));<span class="comment">//a* : 代表a不出现也可以,出现也可以,多少次都行;</span></div><div class="line">   <span class="number">3.</span>?       重复零次或一次    (<span class="number">0</span>||<span class="number">1</span>)  要么有 要么没有</div><div class="line">   	重复零次或一次    (<span class="number">0</span>||<span class="number">1</span>)  要么有 要么没有</div><div class="line">   	<span class="built_in">console</span>.log(<span class="regexp">/^a?$/</span>.test(<span class="string">""</span>));<span class="comment">//a* : 代表a不出现也可以,出现也可以,多少次都行;</span></div><div class="line">   <span class="number">4.</span>&#123;&#125;      重复多少次的意思</div><div class="line">(<span class="number">1</span>).&#123;<span class="number">4</span>&#125;  重复<span class="number">4</span>次;      (<span class="number">2</span>).&#123;<span class="number">4</span>,&#125;  重复<span class="number">4</span>次以上;     <span class="number">3.</span>&#123;<span class="number">4</span>,<span class="number">8</span>&#125;   重复<span class="number">4</span><span class="number">-8</span>次;</div><div class="line">  	&#123;n&#125;	  n次	（x=n）</div><div class="line">  	&#123;n,&#125;	  重复n次或更多  (x&gt;=n)</div><div class="line">  	&#123;n,m&#125;   重复出现的次数比n多但比m少 (n&lt;=x&lt;=m)</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/28/js-正则表达式/" data-id="cj5wctc5p003whkbm0k9bx8aw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-js-特效-事件委托" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/27/js-特效-事件委托/" class="article-date">
+  <time datetime="2015-10-27T05:40:08.000Z" itemprop="datePublished">2015-10-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/js-特效/">js-特效</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/27/js-特效-事件委托/">js-特效-事件委托</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="事件委托原来"><a href="#事件委托原来" class="headerlink" title="事件委托原来"></a>事件委托原来</h2><h4 id="事件委托是利用事件的冒泡原理来实现的，何为事件冒泡呢？就是事件从最深的节点开始，然后逐步向上传播事件，举个例子：页面上有这么一个节点树，div-gt-ul-gt-li-gt-a-比如给最里面的a加一个click点击事件，那么这个事件就会一层一层的往外执行，执行顺序a-gt-li-gt-ul-gt-div，有这样一个机制，那么我们给最外面的div加点击事件，那么里面的ul，li，a做点击事件的时候，都会冒泡到最外层的div上，所以都会触发，这就是事件委托，委托它们父级代为执行事件"><a href="#事件委托是利用事件的冒泡原理来实现的，何为事件冒泡呢？就是事件从最深的节点开始，然后逐步向上传播事件，举个例子：页面上有这么一个节点树，div-gt-ul-gt-li-gt-a-比如给最里面的a加一个click点击事件，那么这个事件就会一层一层的往外执行，执行顺序a-gt-li-gt-ul-gt-div，有这样一个机制，那么我们给最外面的div加点击事件，那么里面的ul，li，a做点击事件的时候，都会冒泡到最外层的div上，所以都会触发，这就是事件委托，委托它们父级代为执行事件" class="headerlink" title="事件委托是利用事件的冒泡原理来实现的，何为事件冒泡呢？就是事件从最深的节点开始，然后逐步向上传播事件，举个例子：页面上有这么一个节点树，div&gt;ul&gt;li&gt;a;比如给最里面的a加一个click点击事件，那么这个事件就会一层一层的往外执行，执行顺序a&gt;li&gt;ul&gt;div，有这样一个机制，那么我们给最外面的div加点击事件，那么里面的ul，li，a做点击事件的时候，都会冒泡到最外层的div上，所以都会触发，这就是事件委托，委托它们父级代为执行事件"></a>事件委托是利用事件的冒泡原理来实现的，何为事件冒泡呢？就是事件从最深的节点开始，然后逐步向上传播事件，举个例子：页面上有这么一个节点树，div&gt;ul&gt;li&gt;a;比如给最里面的a加一个click点击事件，那么这个事件就会一层一层的往外执行，执行顺序a&gt;li&gt;ul&gt;div，有这样一个机制，那么我们给最外面的div加点击事件，那么里面的ul，li，a做点击事件的时候，都会冒泡到最外层的div上，所以都会触发，这就是事件委托，委托它们父级代为执行事件</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">	<span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="comment">//问题: 新添加的元素没有老事件;</span></div><div class="line">                    <span class="comment">//解决办法:事件委托;</span></div><div class="line">            </div><div class="line">            <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"button"</span>)[<span class="number">0</span>];</div><div class="line">            <span class="keyword">var</span> ul = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"ul"</span>)[<span class="number">0</span>];</div><div class="line">            btn.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="comment">//产生一个新的li;</span></div><div class="line">                <span class="keyword">var</span> li = <span class="built_in">document</span>.createElement(<span class="string">"li"</span>);</div><div class="line">                <span class="comment">//证明这个是特殊li</span></div><div class="line">                li.innerHTML = <span class="string">"我是新添加的li"</span>;</div><div class="line">                li.className = <span class="string">"aaa"</span>;</div><div class="line">                ul.appendChild(li);</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">            </div><div class="line">            <span class="comment">//问题: 为li绑定事件;(新li没有)</span></div><div class="line"><span class="comment">//            var liArr = document.getElementsByTagName("li");</span></div><div class="line"><span class="comment">//            for(var i=0;i&lt;liArr.length;i++)&#123;</span></div><div class="line"><span class="comment">//                liArr[i].onclick = function () &#123;</span></div><div class="line"><span class="comment">//                    alert(1);</span></div><div class="line"><span class="comment">//                &#125;</span></div><div class="line"><span class="comment">//            &#125;</span></div><div class="line"></div><div class="line"></div><div class="line">            <span class="comment">//事件委托: 就是把该执行的程序赋值给他们的父盒子;</span></div><div class="line">                    <span class="comment">//通过冒泡到父盒子,然后只要判断是你需要的盒子,就执行逻辑就可以了;</span></div><div class="line">                    <span class="comment">//这样不管新的还是老的都会有这个事件;</span></div><div class="line">                <span class="comment">//判断标签: 1.id;     2.className;    3.tagName;</span></div><div class="line"></div><div class="line">            <span class="comment">//思路:通过冒泡给ul绑定事件,这样所有的子元素就都会触动到盒子的事件,</span></div><div class="line">            <span class="comment">//    然后判断子元素是不是想要的标签;是就执行,不是就不执行该;</span></div><div class="line">            ul.onclick = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">                <span class="comment">//判断事件触发者的标签名是不是"LI";如果是li就完成的时间委托;</span></div><div class="line">                event = event || <span class="built_in">window</span>.event;</div><div class="line">                <span class="keyword">var</span> ele = event.target?event.target:event.srcElement;</div><div class="line">                <span class="comment">//判断:是li就执行;</span></div><div class="line">                <span class="keyword">if</span>(ele.tagName === <span class="string">"LI"</span>)&#123;</div><div class="line">                    alert(<span class="string">"我是li"</span>);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">            <span class="comment">//jquery这样实现事件委托;</span></div><div class="line"><span class="comment">//            ul.on("click","li", function () &#123;</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//            &#125;);</span></div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/27/js-特效-事件委托/" data-id="cj5wctc78004zhkbm6wu4t2qw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-js特效-事件冒泡" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/27/js特效-事件冒泡/" class="article-date">
+  <time datetime="2015-10-27T05:40:08.000Z" itemprop="datePublished">2015-10-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/js-特效/">js-特效</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/27/js特效-事件冒泡/">js特效-事件冒泡</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么叫冒泡"><a href="#什么叫冒泡" class="headerlink" title="什么叫冒泡?"></a>什么叫冒泡?</h2><h3 id="触动一个元素的事件的时候-该元素的所有祖先元素的该事件都会被执行-这就叫做冒泡"><a href="#触动一个元素的事件的时候-该元素的所有祖先元素的该事件都会被执行-这就叫做冒泡" class="headerlink" title="触动一个元素的事件的时候,该元素的所有祖先元素的该事件都会被执行,这就叫做冒泡;"></a>触动一个元素的事件的时候,该元素的所有祖先元素的该事件都会被执行,这就叫做冒泡;</h3><h3 id="如果祖先元素没有绑定该事件-那么也会发生冒泡-因为该元素还是有这个事件的只不过"><a href="#如果祖先元素没有绑定该事件-那么也会发生冒泡-因为该元素还是有这个事件的只不过" class="headerlink" title="如果祖先元素没有绑定该事件,那么也会发生冒泡;因为该元素还是有这个事件的只不过,"></a>如果祖先元素没有绑定该事件,那么也会发生冒泡;因为该元素还是有这个事件的只不过,</h3><pre><code>事件的执行程序是null;
+</code></pre><h2 id="事件的传播有的时候我们主动利用-但是更多的时候我们在阻止传播"><a href="#事件的传播有的时候我们主动利用-但是更多的时候我们在阻止传播" class="headerlink" title="事件的传播有的时候我们主动利用,但是更多的时候我们在阻止传播;"></a>事件的传播有的时候我们主动利用,但是更多的时候我们在阻止传播;</h2><pre><code>1.火狐谷歌ie9+: 阻止冒泡和阻止捕获是一个方法;
+2.ie678      : 可以阻止冒泡,但是无法阻止捕获因为ie678没有捕获;
+</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span>火狐谷歌ie9+: 阻止冒泡和阻止捕获是一个方法;</div><div class="line">       event.stopPropagation();    方法;</div><div class="line">   <span class="number">2.</span>ie678;阻止冒泡:  event.cancelBubble = <span class="literal">true</span>;   属性;</div></pre></td></tr></table></figure>
+<ul>
+<li>兼容写法<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">兼容写法:</div><div class="line">      event = event || <span class="built_in">window</span>.event;</div><div class="line">      <span class="keyword">if</span>(event &amp;&amp; event.stopPropagation)&#123;</div><div class="line">          event.stopPropagation();</div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">          event.cancelBubble = <span class="literal">true</span>;</div><div class="line">      &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/27/js特效-事件冒泡/" data-id="cj5wctc990072hkbmtd6tozkn" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-js特效之监听封装-JQuery的-封装" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/27/js特效之监听封装-JQuery的-封装/" class="article-date">
+  <time datetime="2015-10-27T05:34:51.000Z" itemprop="datePublished">2015-10-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/27/js特效之监听封装-JQuery的-封装/">js特效之监听封装/JQuery的$封装</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//需求:用普通的方法封装一个函数可以绑定并执行多个函数;(不会出现层叠)</span></div><div class="line">              <span class="comment">//思路:在绑定新逻辑新函数之前,先把老函数获取到,</span></div><div class="line">              <span class="comment">//    然后在新函数li执行逻辑之前把老函数执行一次就可以;</span></div><div class="line"></div><div class="line">       <span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">ele,eve,fn</span>)</span>&#123;</div><div class="line">           <span class="comment">//1.在绑定新逻辑新函数之前,先把老函数获取到,</span></div><div class="line">           <span class="keyword">var</span> oldEvent = ele[<span class="string">"on"</span>+eve];<span class="comment">//返回值是一个函数或者null;</span></div><div class="line">           <span class="comment">//2.绑定事件；</span></div><div class="line">           ele[<span class="string">"on"</span>+eve] = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">               <span class="comment">//3.然后在新函数li执行逻辑之前把老函数执行一次就可以;</span></div><div class="line">               <span class="comment">//判断：有老函数我才执行老函数，如果没有老函数就</span></div><div class="line">               <span class="comment">//    说明我们是第一次绑定事件,那么就把要绑定的函数执行了就可以了;</span></div><div class="line">               <span class="comment">//if(oldEvent &amp;&amp; typeof oldEvent === "function")&#123;</span></div><div class="line">               <span class="keyword">if</span>(oldEvent)&#123;<span class="comment">//是函数就是true.是null就是false;</span></div><div class="line">                   oldEvent();<span class="comment">//如0果他在前,就是addEventListener的底层原理</span></div><div class="line">                   fn();<span class="comment">//如果他在前,就是attachEvent的底层原理</span></div><div class="line">               &#125;<span class="keyword">else</span>&#123;</div><div class="line">                   <span class="comment">//这说明第一次绑定事件,老事件是null;</span></div><div class="line">                   fn();</div><div class="line">               &#125;</div><div class="line">           &#125;</div><div class="line">       &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//用一个方法,通过不同变量的传递,可以调用三种方法获取元素;</span></div><div class="line">           <span class="comment">//封装一个函数,如果传递的参数是以i为开头;调用document.getElementById();</span></div><div class="line">           <span class="comment">//封装一个函数,如果传递的参数是以c为开头;调用document.getElementsByClassName();</span></div><div class="line">           <span class="comment">//封装一个函数,如果传递的参数是以t为开头;调用document.getElementsByTagName();</span></div><div class="line"></div><div class="line">                   <span class="comment">//.box;   #box;    div；</span></div><div class="line"></div><div class="line"></div><div class="line">       </div><div class="line">       <span class="function"><span class="keyword">function</span> <span class="title">$</span>(<span class="params">str</span>)</span>&#123;</div><div class="line">           <span class="comment">//判断首字母:</span></div><div class="line">           <span class="keyword">var</span> char = str.charAt(<span class="number">0</span>);<span class="comment">//获取字符串的第一个字符;</span></div><div class="line">           <span class="comment">//参数用: 出去第一个字符以外的所有字符;</span></div><div class="line">           <span class="keyword">if</span>(char === <span class="string">"#"</span>)&#123;</div><div class="line">               <span class="keyword">return</span> <span class="built_in">document</span>.getElementById(str.slice(<span class="number">1</span>));</div><div class="line">           &#125;<span class="keyword">else</span> <span class="keyword">if</span>(char === <span class="string">"."</span>)&#123;</div><div class="line">               <span class="keyword">return</span> <span class="built_in">document</span>.getElementsByClassName(str.slice(<span class="number">1</span>));</div><div class="line">           &#125;<span class="keyword">else</span>&#123;</div><div class="line">               <span class="comment">//既不是.  也不是#   那就一定是标签名；而如果直接传递标签名，不需要截取字符串；</span></div><div class="line">               <span class="keyword">return</span> <span class="built_in">document</span>.getElementsByTagName(str);</div><div class="line">           &#125;</div><div class="line">       &#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/27/js特效之监听封装-JQuery的-封装/" data-id="cj5wctc7w005khkbmgtxxv39u" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js-特效/">js-特效</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-js-特效-事件解绑" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/08/24/js-特效-事件解绑/" class="article-date">
+  <time datetime="2015-08-24T05:10:35.000Z" itemprop="datePublished">2015-08-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/js-特效/">js-特效</a>►<a class="article-category-link" href="/categories/js-特效/web/">web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/24/js-特效-事件解绑/">js-特效-事件解绑</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="事件解绑就是把已经绑定的事件解除-怎么绑定就怎么解绑"><a href="#事件解绑就是把已经绑定的事件解除-怎么绑定就怎么解绑" class="headerlink" title="事件解绑就是把已经绑定的事件解除;  (怎么绑定就怎么解绑)"></a>事件解绑就是把已经绑定的事件解除;  (怎么绑定就怎么解绑)</h1><h2 id="1-直接绑定"><a href="#1-直接绑定" class="headerlink" title="1.直接绑定;"></a>1.直接绑定;</h2><pre><code>   document.onclick = fn1;
+直接解绑:  null;
+   document.onclick = null;
+</code></pre><h2 id="2-addEventListener事件解绑；-对火狐谷歌ie9"><a href="#2-addEventListener事件解绑；-对火狐谷歌ie9" class="headerlink" title="2.addEventListener事件解绑；(对火狐谷歌ie9+)"></a>2.addEventListener事件解绑；(对火狐谷歌ie9+)</h2><pre><code>   document.addEventListener(&quot;click&quot;,fn2);
+removeEventListener();
+   document.removeEventListener(&quot;click&quot;,fn2);
+</code></pre><h2 id="3-attachEvent事件解绑；-对ie678"><a href="#3-attachEvent事件解绑；-对ie678" class="headerlink" title="3.attachEvent事件解绑；(对ie678)"></a>3.attachEvent事件解绑；(对ie678)</h2><pre><code>    document.attachEvent(&quot;onclick&quot;,fn3);
+解绑：detachEvent();
+    document.detachEvent(&quot;onclick&quot;,fn3);
+</code></pre><ul>
+<li>注意点：<br>   1.怎么绑定，怎么解绑；<br>   2.只能一个一个解绑；不能一次解绑一群；<br>   3.必须传递满两个参数；<br>   4.匿名函数无法解绑；<pre><code>拓展：jquery会对事件的操作进行优化；
+</code></pre></li>
+</ul>
+<ul>
+<li><p>事件解绑封装</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">	<span class="comment">//思路：封装addEventListener和attachEvent;(浏览器支持谁，就使用谁)；</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">ele,eve,fn</span>)</span>&#123;</div><div class="line">        <span class="comment">//判断：浏览器是否支持某个方法，支持就调用；</span></div><div class="line">        <span class="keyword">if</span>(ele.addEventListener)&#123;</div><div class="line">            ele.addEventListener(eve,fn);</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(ele.attachEvent)&#123;</div><div class="line">            ele.attachEvent(<span class="string">"on"</span>+eve,fn);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            ele[<span class="string">"on"</span>+eve] = fn;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"><span class="string">``</span><span class="string">`  </span></div><div class="line"></div><div class="line">## 事件监听封装</div><div class="line">`<span class="string">``</span>js</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">ele,eve,fn</span>)</span>&#123;</div><div class="line">        <span class="comment">//判断：浏览器是否支持某个方法，支持就调用；</span></div><div class="line">        <span class="keyword">if</span>(ele.addEventListener)&#123;</div><div class="line">            ele.addEventListener(eve,fn);</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(ele.attachEvent)&#123;</div><div class="line">            ele.attachEvent(<span class="string">"on"</span>+eve,fn);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            ele[<span class="string">"on"</span>+eve] = fn;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>事件监听/解绑一起封装</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//把原来的全局函数;封装到一个对象里面去做一个方法;(以后在调用就要用 对象名.方法(参数))</span></div><div class="line">   <span class="keyword">var</span> Event = &#123;</div><div class="line">       <span class="attr">removeEvent</span>:<span class="function"><span class="keyword">function</span> (<span class="params">ele,eve,fn</span>)</span>&#123;</div><div class="line">           <span class="comment">//判断：浏览器是否支持某个方法，支持就调用；</span></div><div class="line">           <span class="keyword">if</span>(ele.removeEventListener)&#123;</div><div class="line">               ele.removeEventListener(eve,fn);</div><div class="line">           &#125;<span class="keyword">else</span> <span class="keyword">if</span>(ele.detachEvent)&#123;</div><div class="line">               ele.detachEvent(<span class="string">"on"</span>+eve,fn);</div><div class="line">           &#125;<span class="keyword">else</span>&#123;</div><div class="line">               <span class="comment">//dom0;</span></div><div class="line">               ele[<span class="string">'on'</span>+eve] = <span class="literal">null</span>;</div><div class="line">           &#125;</div><div class="line">       &#125;,</div><div class="line">       <span class="attr">addEvent</span>:<span class="function"><span class="keyword">function</span> (<span class="params">ele,eve,fn</span>)</span>&#123;</div><div class="line">           <span class="comment">//判断：浏览器是否支持某个方法，支持就调用；</span></div><div class="line">           <span class="keyword">if</span>(ele.addEventListener)&#123;</div><div class="line">               ele.addEventListener(eve,fn);</div><div class="line">           &#125;<span class="keyword">else</span> <span class="keyword">if</span>(ele.attachEvent)&#123;</div><div class="line">               ele.attachEvent(<span class="string">"on"</span>+eve,fn);</div><div class="line">           &#125;<span class="keyword">else</span>&#123;</div><div class="line">               ele[<span class="string">"on"</span>+eve] = fn;</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/08/24/js-特效-事件解绑/" data-id="cj5wctc6m004jhkbm20492s9e" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-js-特效-事件监听" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/08/22/js-特效-事件监听/" class="article-date">
+  <time datetime="2015-08-22T00:43:18.000Z" itemprop="datePublished">2015-08-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/js-特效/">js-特效</a>►<a class="article-category-link" href="/categories/js-特效/web/">web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/22/js-特效-事件监听/">js-特效-事件监听</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="为什么会出现事件监听"><a href="#为什么会出现事件监听" class="headerlink" title="为什么会出现事件监听?"></a>为什么会出现事件监听?</h2><pre><code>因为普通事件绑定容易出现层叠;
+</code></pre><h2 id="事件监听"><a href="#事件监听" class="headerlink" title="事件监听"></a>事件监听</h2><pre><code>你做你的,我做我的,但是我监听着你!程序中,两个逻辑同一事件都执行;
+</code></pre><ul>
+<li><p>addEventListener();   火狐谷歌ie9+<br>1.参数有三个;<br>   (1).事件名;<br>   (2).逻辑;(匿名函数,函数名)<br>   (3).boolean;支持冒泡还是捕获;<br>2.先绑定谁,执行谁;事件监听不会自己和自己矛盾;<br>3.ie678不支持;</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">       <span class="built_in">console</span>.log(<span class="string">"测试事件监听1;"</span>);</div><div class="line">   &#125;);</div></pre></td></tr></table></figure>
+<p>ie678:   attachEvent();<br>1.参数有两个;<br>   (1).事件名(带on);<br>   (2).逻辑;(匿名函数,函数名)<br>   (3).没有第三个参数:ie678只支持冒泡不支持捕获;<br>2.先绑定谁,后执行;事件监听不会自己和自己矛盾;(执行先后影响不大)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.attachEvent(<span class="string">"onclick"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">       <span class="built_in">console</span>.log(<span class="string">"测试事件监听2;"</span>);</div><div class="line">   &#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>事件监听兼容封装</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//思路：封装addEventListener和attachEvent;(浏览器支持谁，就使用谁)；</span></div><div class="line">       <span class="comment">//参数：事件源，事件(不带on)，事件驱动程序；      返回值：不需要；</span></div><div class="line">       <span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">ele,eve,fn</span>)</span>&#123;</div><div class="line">           <span class="comment">//判断：浏览器是否支持某个方法，支持就调用；</span></div><div class="line">           <span class="comment">//if(ele.addEventListener)&#123;//比较严谨：ele.addEventListener &amp;&amp; typeof ele.addEventListener === "functioin"</span></div><div class="line">           <span class="keyword">if</span>(ele.addEventListener)&#123;<span class="comment">//方法名如果存在，就等于整个方法；//如果不存在就是undefined;</span></div><div class="line">               ele.addEventListener(eve,fn);</div><div class="line">           &#125;<span class="keyword">else</span> <span class="keyword">if</span>(ele.attachEvent)&#123;</div><div class="line">               ele.attachEvent(<span class="string">"on"</span>+eve,fn);</div><div class="line">           &#125;<span class="keyword">else</span>&#123;</div><div class="line">               <span class="comment">//dom0: 两个方法都不支持；</span></div><div class="line">               <span class="comment">//ele.onclick = fn;</span></div><div class="line">               ele[<span class="string">"on"</span>+eve] = fn;<span class="comment">//还是会出现，后面的事件把前面的事件层叠；</span></div><div class="line">           &#125;</div><div class="line">       &#125;</div></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/08/22/js-特效-事件监听/" data-id="cj5wctc6t004qhkbmugxxxwvx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-js-特效-client系列" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/24/js-特效-client系列/" class="article-date">
+  <time datetime="2015-07-24T00:12:50.000Z" itemprop="datePublished">2015-07-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/js-特效/">js-特效</a>►<a class="article-category-link" href="/categories/js-特效/web/">web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/24/js-特效-client系列/">js-特效-scoll</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="clientWidth和clientHeight-不同的调用者代表一样的功能"><a href="#clientWidth和clientHeight-不同的调用者代表一样的功能" class="headerlink" title="clientWidth和clientHeight: 不同的调用者代表一样的功能;"></a>clientWidth和clientHeight: 不同的调用者代表一样的功能;</h1><pre><code>1.盒子调用;           获取盒子的宽高+padding;
+2.body/html调用;      浏览器可视区域的宽高;
+</code></pre><h2 id="1-盒子调用"><a href="#1-盒子调用" class="headerlink" title="1.盒子调用;"></a>1.盒子调用;</h2><pre><code>clientWidth/Height = width/height + padding;   不包含border和margin;
+       不会受到内容影响;
+</code></pre><h2 id="获取浏览器可视区域的宽高"><a href="#获取浏览器可视区域的宽高" class="headerlink" title="获取浏览器可视区域的宽高"></a>获取浏览器可视区域的宽高</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="number">2.</span>body/html调用;      浏览器可视区域的宽高;(兼容性问题);</div><div class="line"></div><div class="line">    clientHeight和clientWidth: 只受到dtd的约束;(和浏览器几乎无关)</div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">document</span>.body.clientHeight);</div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">document</span>.body.clientWidth);</div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">document</span>.documentElement.clientHeight);</div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">document</span>.documentElement.clientWidth);</div><div class="line"></div><div class="line"></div><div class="line">    <span class="number">1.</span>不分浏览器,如果是没有dtd;    <span class="built_in">document</span>.documentElement.clientWidth</div><div class="line">    <span class="number">2.</span>不分浏览器,如果是带有dtd;    <span class="built_in">document</span>.body.clientWidth</div><div class="line">    <span class="number">3.</span>不分浏览器,w3c官方推荐;      <span class="built_in">window</span>.innerWidht/innerHeight;</div><div class="line">                ie678不支持;</div><div class="line"></div><div class="line">    <span class="number">1.</span>不分浏览器,如果是没有dtd;    <span class="built_in">document</span>.documentElement.clientWidth</div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">document</span>.body.clientHeight);</div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">document</span>.body.clientWidth);</div><div class="line">    <span class="number">2.</span>不分浏览器,如果是带有dtd;    <span class="built_in">document</span>.body.clientWidth</div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">document</span>.documentElement.clientHeight);</div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">document</span>.documentElement.clientWidth);</div><div class="line">    <span class="number">3.</span>不分浏览器,w3c官方推荐;      <span class="built_in">window</span>.innerWidht/innerHeight;</div><div class="line">                ie678不支持;</div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">window</span>.innerHeight);</div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">window</span>.innerWidth);</div></pre></td></tr></table></figure>
+<h3 id="clientTop和clientLeft-获取元素的顶部和左侧border的高和宽-一般不会用到该属性"><a href="#clientTop和clientLeft-获取元素的顶部和左侧border的高和宽-一般不会用到该属性" class="headerlink" title="clientTop和clientLeft: 获取元素的顶部和左侧border的高和宽;(一般不会用到该属性)"></a>clientTop和clientLeft: 获取元素的顶部和左侧border的高和宽;(一般不会用到该属性)</h3><h5 id="clientTop-顶部border的高-clientLeft-左侧border的宽"><a href="#clientTop-顶部border的高-clientLeft-左侧border的宽" class="headerlink" title="clientTop;顶部border的高;   clientLeft;左侧border的宽;"></a>clientTop;顶部border的高;   clientLeft;左侧border的宽;</h5><p>   不会受到内容影响;</p>
+<ul>
+<li><p>一般兼容封装</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">client</span>(<span class="params"></span>)</span>&#123;</div><div class="line">       <span class="comment">//普通方法: 不可以了,因为ie678也要判断是否拥有dtd;</span></div><div class="line">       <span class="keyword">return</span> &#123;</div><div class="line">           <span class="attr">width</span>: <span class="built_in">window</span>.innerWidth || <span class="built_in">document</span>.documentElement.clientWidth,</div><div class="line">           <span class="attr">width</span>: <span class="built_in">window</span>.innerHeight || <span class="built_in">document</span>.documentElement.clientHeight</div><div class="line">       &#125;</div><div class="line"></div><div class="line"></div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>兼容封装</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">client</span>(<span class="params"></span>)</span>&#123;</div><div class="line">       <span class="comment">//先判断:是否支持window.innnerWidth;  然后在判断是否拥有dtd;有就调用有dtd的,没有就调用另外一个;</span></div><div class="line">       <span class="keyword">if</span>(<span class="built_in">window</span>.innerHeight !== <span class="literal">undefined</span>)&#123;</div><div class="line">           <span class="keyword">return</span> &#123;</div><div class="line">               <span class="attr">width</span>: <span class="built_in">window</span>.innerWidth,</div><div class="line">               <span class="attr">height</span>: <span class="built_in">window</span>.innerHeight</div><div class="line">           &#125;;</div><div class="line"></div><div class="line">       <span class="comment">//走到这里.一定是ie678,然后判断是否拥有dtd;</span></div><div class="line">               <span class="comment">//document.compatMode;</span></div><div class="line">       &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">document</span>.compatMode === <span class="string">"CSS1Compat"</span>)&#123;</div><div class="line">           <span class="comment">//有dtd</span></div><div class="line">           <span class="keyword">return</span> &#123;</div><div class="line">               <span class="attr">width</span>: <span class="built_in">document</span>.documentElement.clientWidth,</div><div class="line">               <span class="attr">height</span>: <span class="built_in">document</span>.documentElement.clientHeight</div><div class="line">           &#125;;</div><div class="line">       &#125;<span class="keyword">else</span>&#123;</div><div class="line">           <span class="comment">//无dtd</span></div><div class="line">           <span class="keyword">return</span> &#123;</div><div class="line">               <span class="attr">width</span>: <span class="built_in">document</span>.body.clientWidth,</div><div class="line">               <span class="attr">height</span>: <span class="built_in">document</span>.body.clientHeight</div><div class="line">           &#125;;</div><div class="line">       &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>监听屏幕的分辨率<br>``js<br>  window.onresize = function () {</p>
+<pre><code>//屏幕的分辨率，但是有些分辨率无法获取；
+console.log(window.screen.width);
+console.log(window.screen.height);
+</code></pre><p>  }</p>
+</li>
+</ul>
+<p>```</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/24/js-特效-client系列/" data-id="cj5wctc66004ahkbmt9lnms74" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -186,14 +471,14 @@ _self    默认。在相同的框架中打开被链接文档。
 
 
   
-    <article id="post-HTML简介三" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-js-特效-scroll系列" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/07/06/HTML简介三/" class="article-date">
-  <time datetime="2015-07-06T02:00:39.000Z" itemprop="datePublished">2015-07-06</time>
+    <a href="/2015/07/20/js-特效-scroll系列/" class="article-date">
+  <time datetime="2015-07-20T12:29:26.000Z" itemprop="datePublished">2015-07-20</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/HTML/">HTML</a>►<a class="article-category-link" href="/categories/HTML/web/">web</a>
+    <a class="article-category-link" href="/categories/js-特效/">js-特效</a>►<a class="article-category-link" href="/categories/js-特效/web/">web</a>
   </div>
 
   </div>
@@ -204,7 +489,7 @@ _self    默认。在相同的框架中打开被链接文档。
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/06/HTML简介三/">html简介3</a>
+      <a class="article-title" href="/2015/07/20/js-特效-scroll系列/">js-特效-scroll系列</a>
     </h1>
   
 
@@ -212,15 +497,30 @@ _self    默认。在相同的框架中打开被链接文档。
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><h3 id="table标签"><a href="#table标签" class="headerlink" title="table标签"></a>table标签</h3><p>作用：表示一个表格<br>语法：<br>       <table><br>         <caption>表格标题</caption>   可有可无<br>         <thead></thead> 表头        可有可无<br>         <tbody></tbody> 表体        必须有<br>         <tfoot></tfoot>   表格底部    可有可无<br>       </table><br>属性：<br>   border  设置表格边框<br>   width、height 设置表格的宽度和高度<br>   cellspacing 设置单元格之间的间隙<br>   cellpadding 设置内容距离单元格边框的大小<br>   align 控制内容显示的位置<br>        左边：left<br>        中间：center<br>        右边：right<br>tr标签<br>  作用：表示表格中的一行<br>  语法：在thead、tbody、tfoot中使用<br>     <tr></tr></p>
-<p>th、td<br>作用表示一行中的单元格<br>语法：<br>th写在thead标签里的tr标签里</p>
-<p><th></th><br>td写在tbody和tfoot标签里的tr标签里</p>
-<p><td></td><br>属性：<br>    colspan跨列<br>    rowspan 跨行</p>
+        <h1 id="屏幕滚动事件-onscroll-页面-盒子滚动哪怕1px也会触动这个事件-滚动条-鼠标滚轮"><a href="#屏幕滚动事件-onscroll-页面-盒子滚动哪怕1px也会触动这个事件-滚动条-鼠标滚轮" class="headerlink" title="屏幕滚动事件 onscroll:页面/盒子滚动哪怕1px也会触动这个事件;(滚动条,鼠标滚轮)"></a>屏幕滚动事件 onscroll:页面/盒子滚动哪怕1px也会触动这个事件;(滚动条,鼠标滚轮)</h1><h3 id="调用者1-window-document-body-html不行-代表页面滑动触动这个事件"><a href="#调用者1-window-document-body-html不行-代表页面滑动触动这个事件" class="headerlink" title="调用者1: window;  document;  body;    (html不行;):代表页面滑动触动这个事件;"></a>调用者1: window;  document;  body;    (html不行;):代表页面滑动触动这个事件;</h3><pre><code>调用者2: 标签调用;    代表的是该标签里面的子盒子出现滑动触动这个事件;
+</code></pre><h2 id="注意-html不能调用onscroll事件"><a href="#注意-html不能调用onscroll事件" class="headerlink" title="注意: html不能调用onscroll事件;"></a>注意: html不能调用onscroll事件;</h2><h1 id="scroll家族；一家四口"><a href="#scroll家族；一家四口" class="headerlink" title="scroll家族；一家四口;"></a>scroll家族；一家四口;</h1><ol>
+<li>scrollWidth和scrollHeight: 用于检测盒子的宽高（不仅是宽高）；<h1 id="语法-DOM元素-scrollWidth"><a href="#语法-DOM元素-scrollWidth" class="headerlink" title="语法: DOM元素.scrollWidth"></a>语法: DOM元素.scrollWidth</h1><h1 id="语法-DOM元素-scrollHeight"><a href="#语法-DOM元素-scrollHeight" class="headerlink" title="语法: DOM元素.scrollHeight"></a>语法: DOM元素.scrollHeight</h1><h3 id="scrollWidth-Height-width-height-padding-border和marign不算在内-容易受到内容影响"><a href="#scrollWidth-Height-width-height-padding-border和marign不算在内-容易受到内容影响" class="headerlink" title="scrollWidth/Height = width/height + padding;       border和marign不算在内;容易受到内容影响;"></a>scrollWidth/Height = width/height + padding;       border和marign不算在内;容易受到内容影响;</h3></li>
+</ol>
+<h2 id="兼容性-1-如果是火狐谷歌ie8-内容少于盒子本身-以盒子本身为标准"><a href="#兼容性-1-如果是火狐谷歌ie8-内容少于盒子本身-以盒子本身为标准" class="headerlink" title="兼容性     1.如果是火狐谷歌ie8+: 内容少于盒子本身,以盒子本身为标准;"></a>兼容性     1.如果是火狐谷歌ie8+: 内容少于盒子本身,以盒子本身为标准;</h2><pre><code>                       内容多于盒子本身,那么以内容为标准;
+2.ie67:  永远都以内容为准;(容易受到padding影响;)
+</code></pre><ol>
+<li>scrollTop和scrollLeft:调用者有两个;<br> 1.普通标签调用,代表该盒子遮挡住子盒子的部分;(几乎无人用)</li>
+</ol>
+<ul>
+<li>2.body或者html调用,代表页面被卷去的头部或者左侧;(用的最多,但是有兼容问题)</li>
+</ul>
+<h3 id="兼容问题"><a href="#兼容问题" class="headerlink" title="兼容问题:"></a>兼容问题:</h3><pre><code>1. 受浏览器约束；  2.受w3c约束；   3.受dtd约束；
+</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">  <span class="number">1.</span>谷歌只支持body，ie678只支持html(documentElement)</div><div class="line">  	<span class="built_in">console</span>.log(<span class="built_in">document</span>.body.scrollTop);</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">document</span>.documentElement.scrollTop);</div><div class="line">  <span class="number">2.</span>大多数浏览器w3c推荐使用<span class="built_in">window</span>.pageX/YOffset;   ie678不支持；</div><div class="line">  	<span class="built_in">console</span>.log(<span class="built_in">window</span>.pageYOffset);<span class="comment">//不区分dtd;  ie678不支持；</span></div><div class="line">  <span class="number">3.</span>有dtd支持的是html，没有dtd支持的是body；</div><div class="line">无dtd</div><div class="line">      <span class="built_in">console</span>.log(<span class="built_in">document</span>.body.scrollTop);</div><div class="line">      有dtd</div><div class="line">      <span class="built_in">console</span>.log(<span class="built_in">document</span>.documentElement.scrollTop);</div></pre></td></tr></table></figure>
+<ul>
+<li>兼容处理<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">scroll</span>(<span class="params"></span>)</span>&#123;</div><div class="line">       <span class="comment">//类似: &#123;top: 111,left: 222&#125;</span></div><div class="line">       <span class="keyword">return</span> &#123;</div><div class="line">           <span class="attr">top</span>: <span class="built_in">window</span>.pageYOffset || <span class="built_in">document</span>.documentElement.scrollTop,</div><div class="line">           <span class="attr">left</span>: <span class="built_in">window</span>.pageXOffset || <span class="built_in">document</span>.documentElement.scrollLeft</div><div class="line">       &#125;;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="有下面推导"><a href="#有下面推导" class="headerlink" title="有下面推导"></a>有下面推导</h3><figure class="highlight plain"><figcaption><span>封装称两个方法；</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">function scrollTop()&#123;</div><div class="line">           大多数浏览器               ie678支持他</div><div class="line">    return window.pageYOffset || document.documentElement.scrollTop;</div><div class="line">&#125;</div><div class="line">function scrollLeft()&#123;</div><div class="line">    大多数浏览器               ie678支持他</div><div class="line">    return window.pageXOffset || document.documentElement.scrollLeft;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">方法2: 合成一个方法;(返回一个对象)</div><div class="line">function scroll()&#123;</div><div class="line">    var obj = new Object();</div><div class="line">    属性绑定: left和top;</div><div class="line">    obj.top = window.pageYOffset || document.documentElement.scrollTop;</div><div class="line">    obj.left = window.pageXOffset || document.documentElement.scrollLeft;</div><div class="line">    把对象返回,用的时候,直接.top或者.left;因为他的返回值是一个对象;</div><div class="line">    return obj;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/06/HTML简介三/" data-id="cj5auvj0i000q14bmmlzo98c7" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2015/07/20/js-特效-scroll系列/" data-id="cj5wctc6q004mhkbma6qp4so1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -232,14 +532,14 @@ _self    默认。在相同的框架中打开被链接文档。
 
 
   
-    <article id="post-2" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-js-特效-1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/06/25/2/" class="article-date">
-  <time datetime="2015-06-25T02:46:40.000Z" itemprop="datePublished">2015-06-25</time>
+    <a href="/2015/07/19/js-特效-1/" class="article-date">
+  <time datetime="2015-07-19T11:47:26.000Z" itemprop="datePublished">2015-07-19</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/javasript/">javasript</a>►<a class="article-category-link" href="/categories/javasript/面向对象二/">面向对象二</a>
+    <a class="article-category-link" href="/categories/js-特效/">js-特效</a>►<a class="article-category-link" href="/categories/js-特效/web/">web</a>
   </div>
 
   </div>
@@ -250,7 +550,7 @@ _self    默认。在相同的框架中打开被链接文档。
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/25/2/">2</a>
+      <a class="article-title" href="/2015/07/19/js-特效-1/">js-特效-offset系列-匀速动画封装(利用offsetLeft)</a>
     </h1>
   
 
@@ -258,382 +558,15 @@ _self    默认。在相同的框架中打开被链接文档。
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##面向对象是一种思维,其他编程语言中也有</p>
-
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//匀速动画封装；</span></div><div class="line">       <span class="comment">//参数：1.移动谁？？？   2.移动到哪里；</span></div><div class="line">       <span class="comment">//返回值：不需要；</span></div><div class="line">       <span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">ele,target</span>) </span>&#123;</div><div class="line">           <span class="comment">//bug1：要用定时器,先清定时器;</span></div><div class="line">           clearInterval(ele.timer);</div><div class="line">           <span class="comment">//设置一个定时器;</span></div><div class="line">           <span class="comment">//一个盒子一个定时器，用以保证，能够停止每个盒子上的定时器，不会出现后面的定时器使用前的，导致前面的无法关闭</span></div><div class="line">               <span class="comment">//3.把每个盒子自己身上自定义一个属性，值为定时器的编号；</span></div><div class="line">           ele.timer = setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">               <span class="comment">//盒子未来的位置 = 本身位置 + 步长;</span></div><div class="line">               <span class="comment">//bug2: 步长不能永远是正数，还可能是负数；</span></div><div class="line">               <span class="comment">//判断：如果目标位置在当前位置值前步长就是正数，否则就是负数；</span></div><div class="line">               <span class="keyword">var</span> step = target&gt;ele.offsetLeft?<span class="number">10</span>:<span class="number">-10</span>;</div><div class="line">               <span class="comment">//用步长进行赋值</span></div><div class="line">               ele.style.left = ele.offsetLeft + step + <span class="string">"px"</span>;</div><div class="line">               <span class="comment">//到目标位置停止（==目标位置就清除定时器）</span></div><div class="line">                   <span class="comment">//bug3:目标位置和当前位置的差值不足一个步长的时候，清除定时器</span></div><div class="line">               <span class="keyword">if</span>(<span class="built_in">Math</span>.abs(target-ele.offsetLeft) &lt;= <span class="built_in">Math</span>.abs(step))&#123;</div><div class="line">                   <span class="comment">//清除定时器之前，先把目标位置赋值给盒子；</span></div><div class="line">                   ele.style.left = target + <span class="string">"px"</span>;</div><div class="line">                   clearInterval(ele.timer);</div><div class="line">               &#125;</div><div class="line">           &#125;,<span class="number">30</span>);</div><div class="line">       &#125;</div></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/25/2/" data-id="cj5auviyp000114bmkvq517rn" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2015/07/19/js-特效-1/" data-id="cj5wctc6b004dhkbmlku39sio" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-面向对象" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/06/25/面向对象/" class="article-date">
-  <time datetime="2015-06-25T02:13:54.000Z" itemprop="datePublished">2015-06-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/javascript/">javascript</a>►<a class="article-category-link" href="/categories/javascript/面向对象/">面向对象</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/25/面向对象/">面向对象</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="面向对象的基本概念"><a href="#面向对象的基本概念" class="headerlink" title="面向对象的基本概念"></a>面向对象的基本概念</h2><h3 id="解决问题的思维方式，-将解决问题的关注点方法在了解决问题的每一个详细的步骤上！"><a href="#解决问题的思维方式，-将解决问题的关注点方法在了解决问题的每一个详细的步骤上！" class="headerlink" title="解决问题的思维方式， 将解决问题的关注点方法在了解决问题的每一个详细的步骤上！"></a>解决问题的思维方式， 将解决问题的关注点方法在了解决问题的每一个详细的步骤上！</h3><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h3 id="解决问题的思维方式，-将解决问题的关注点方法在了解决问题所需要的一系列的对象身上！"><a href="#解决问题的思维方式，-将解决问题的关注点方法在了解决问题所需要的一系列的对象身上！" class="headerlink" title="解决问题的思维方式， 将解决问题的关注点方法在了解决问题所需要的一系列的对象身上！"></a>解决问题的思维方式， 将解决问题的关注点方法在了解决问题所需要的一系列的对象身上！</h3><h2 id="面向对象和面向过程的关系"><a href="#面向对象和面向过程的关系" class="headerlink" title="面向对象和面向过程的关系"></a>面向对象和面向过程的关系</h2><pre><code>面向对象其实就是对面向过程的封装
-
-### 什么是对象
-js中,无序的键值对集合,就是对象!
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/25/面向对象/" data-id="cj5auvj3e002614bmxk4zvdr9" class="article-share-link">Delen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML简介" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/04/29/HTML简介/" class="article-date">
-  <time datetime="2015-04-29T03:47:02.000Z" itemprop="datePublished">2015-04-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/HTML/">HTML</a>►<a class="article-category-link" href="/categories/HTML/web/">web</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/29/HTML简介/">HTML简介</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一．DTD-文档类型声明"><a href="#一．DTD-文档类型声明" class="headerlink" title="一．DTD 文档类型声明"></a>一．DTD 文档类型声明</h2><h3 id="DTD-Document-Type-Declaration-文档类型声明。"><a href="#DTD-Document-Type-Declaration-文档类型声明。" class="headerlink" title="DTD (Document Type Declaration) 文档类型声明。"></a>DTD (Document Type Declaration) 文档类型声明。</h3><pre><code>作用：
-用来告诉浏览器在解析我们的网页时按照哪种版本解析
-</code></pre><h3 id="html4-01-的DTD有三种模式，分别是"><a href="#html4-01-的DTD有三种模式，分别是" class="headerlink" title="html4.01 的DTD有三种模式，分别是"></a>html4.01 的DTD有三种模式，分别是</h3><h4 id="Strict：严格模式-严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。"><a href="#Strict：严格模式-严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。" class="headerlink" title="Strict：严格模式.严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。"></a>Strict：严格模式.严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。</h4><h4 id="Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。"><a href="#Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。" class="headerlink" title="Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。"></a>Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。</h4><h4 id="Frameset：框架模式-（基本不用）在页面中若，使用frameset标签，推荐使用该模式声明"><a href="#Frameset：框架模式-（基本不用）在页面中若，使用frameset标签，推荐使用该模式声明" class="headerlink" title="Frameset：框架模式 （基本不用）在页面中若，使用frameset标签，推荐使用该模式声明"></a>Frameset：框架模式 （基本不用）在页面中若，使用frameset标签，推荐使用该模式声明</h4><h3 id="xhtml1-0-的DTD-有三种模式分别是"><a href="#xhtml1-0-的DTD-有三种模式分别是" class="headerlink" title="xhtml1.0 的DTD 有三种模式分别是"></a>xhtml1.0 的DTD 有三种模式分别是</h3><h4 id="Strict：严格模式"><a href="#Strict：严格模式" class="headerlink" title="Strict：严格模式"></a>Strict：严格模式</h4><h4 id="Transitional：过渡模式"><a href="#Transitional：过渡模式" class="headerlink" title="Transitional：过渡模式"></a>Transitional：过渡模式</h4><h4 id="Frameset：框架模式-（基本不用）"><a href="#Frameset：框架模式-（基本不用）" class="headerlink" title="Frameset：框架模式 （基本不用）"></a>Frameset：框架模式 （基本不用）</h4><h3 id="xhtml1-0-和-html4-01的区别"><a href="#xhtml1-0-和-html4-01的区别" class="headerlink" title="xhtml1.0 和 html4.01的区别"></a>xhtml1.0 和 html4.01的区别</h3><pre><code>xhtml1.0比html4.01在语法上规范要求更加严格
-如：双标签要成对、html以及其中的标签要小写
-</code></pre><h3 id="lang属性"><a href="#lang属性" class="headerlink" title="lang属性"></a>lang属性</h3><h4 id="lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。"><a href="#lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。" class="headerlink" title="lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。"></a>lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。</h4><h3 id="meta标签"><a href="#meta标签" class="headerlink" title="meta标签"></a>meta标签</h3><h4 id="作用：用作配置"><a href="#作用：用作配置" class="headerlink" title="作用：用作配置"></a>作用：用作配置</h4><pre><code> 使用方式：字符集配置
- 在html中&lt;meta charset=”utf-8”/&gt; 是用来告诉浏览器，在解析我们的文件内容的时候，按照哪种编码格式来解析。
-若文件的编码格式 和  &lt;meta charset=”utf-8”/&gt;这里的编码格式不一致时，则会造成乱码。
-</code></pre><h2 id="SEO"><a href="#SEO" class="headerlink" title="SEO"></a>SEO</h2><p>SEO(Search Engine Optimization) ：搜索引擎优化<br>优化：<br>     就是通过某些手段，使我们的网站在被搜索时，排名靠前。<br><strong> 优化手段：<br>    -花钱买排名<br>        很烧钱，效果最好<br>    -广发外链<br>    -标签语义化<br>        在合适地方用合适的标签<br>        seo更加喜欢语义化健全的网站<br>    -从技术角度<br>        在meta标签里写上关键字… </strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/29/HTML简介/" data-id="cj5auvizo000a14bmix7oyzkg" class="article-share-link">Delen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML简介五-列表" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/04/29/HTML简介五-列表/" class="article-date">
-  <time datetime="2015-04-29T03:47:02.000Z" itemprop="datePublished">2015-04-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/HTML/">HTML</a>►<a class="article-category-link" href="/categories/HTML/web/">web</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/29/HTML简介五-列表/">HTML简介五</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p>列表</p>
-</li>
-<li><p>无序列表</p>
-</li>
-</ul>
-<p>&lt; ul&gt;<br>    &lt; li&gt;&lt; /li&gt;<br>    &lt; li&gt;&lt; /li&gt;<br>&lt; /ul&gt;</p>
-<ul>
-<li>有序列表</li>
-</ul>
-<p>&lt; ol&gt;<br>    &lt; li&gt;&lt; /li&gt;<br>    &lt; li&gt;&lt; /li&gt;<br>&lt; /ol&gt;</p>
-<ul>
-<li>定义列表 </li>
-</ul>
-<p>&lt; dl&gt;<br>    &lt; dt&gt;标题1&lt; /dt&gt;<br>    &lt; dd&gt;选项1&lt; /dd&gt;<br>    &lt; dd&gt;选项2&lt; /dd&gt;<br>    &lt; dt&gt;标题2&lt; /dt&gt;<br>    &lt; dd&gt;选项1&lt; /dd&gt;<br>    &lt; dd&gt;选项2&lt; /dd&gt;<br>&lt; /dl&gt;</p>
-<ul>
-<li><p>表格</p>
-</li>
-<li><p>格式： </p>
-</li>
-</ul>
-<p>&lt; table&gt;</p>
-<p>&lt; tr&gt;   一列</p>
-<p>&lt; td&gt;&lt; /td&gt;  一行</p>
-<p>&lt; td&gt;&lt; /td&gt;  二行</p>
-<p>&lt; /tr&gt;</p>
-<p>&lt; tr&gt;   二列</p>
-<p>&lt; td&gt;&lt; /td&gt;  一行</p>
-<p>&lt; td&gt;&lt; /td&gt;  二行</p>
-<p>&lt; /tr&gt;</p>
-<p>&lt; /table&gt;</p>
-<ul>
-<li>合并单元格：</li>
-</ul>
-<p>跨列（横向合并）：&lt; td cospan=列数&gt;。。。&lt; /td&gt;</p>
-<p>跨行（纵向合并）: &lt; tr rowspan=行数&gt;。。。&lt; /tr&gt;</p>
-<p>注意：合并多少，需在下一列或行减去对应的行数或列数</p>
-<ul>
-<li><p>高级</p>
-</li>
-<li><p>标题 &lt; caption&gt;…&lt; /caption&gt;</p>
-</li>
-<li><p>表头 &lt; th&gt;..&lt; /th&gt;</p>
-</li>
-<li><p>页眉 &lt; thread&gt;…&lt; /thread&gt;</p>
-</li>
-<li><p>页脚 &lt; tfoot&gt;..&lt; /tfoot&gt;</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/29/HTML简介五-列表/" data-id="cj5auvj05000k14bmqkkv3ql7" class="article-share-link">Delen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML简介四-form表单" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/04/29/HTML简介四-form表单/" class="article-date">
-  <time datetime="2015-04-29T03:47:02.000Z" itemprop="datePublished">2015-04-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/HTML/">HTML</a>►<a class="article-category-link" href="/categories/HTML/web/">web</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/29/HTML简介四-form表单/">HTML简介四</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p>表单 form</p>
-</li>
-<li><p>概念</p>
-</li>
-</ul>
-<p>作用：收集客户端的信息，实现交互</p>
-<p>结构：</p>
-<p>表单域  &lt; form&gt; &lt; /form&gt;</p>
-<p>表单元素 &lt; input /&gt;</p>
-<ul>
-<li>表单域 </li>
-</ul>
-<p>action 数据提交的目标地址</p>
-<p>method 提交方式 get post</p>
-<ul>
-<li><p>表单元素</p>
-</li>
-<li><p>文本域  type=’text’</p>
-</li>
-<li><p>密码框  type=’password’</p>
-</li>
-<li><p>单选框  type=’redio’ 注意同表单中name需要指定，并且保持一致，并设置不同的选定值 value</p>
-</li>
-<li><p>复选框 type=’checkbox’ 需设定选定值value</p>
-</li>
-<li><p>列表菜单 select</p>
-</li>
-</ul>
-<p>&lt; select&gt;</p>
-<p>&lt; option&gt;选项1&lt; /option&gt;</p>
-<p>&lt; option&gt;选项2&lt; /option&gt;</p>
-<p>&lt; /select&gt;</p>
-<ul>
-<li><p>提交按钮  type=’submit’</p>
-</li>
-<li><p>重置按钮 type=’reset’</p>
-</li>
-<li><p>普通按钮 type=’butten’</p>
-</li>
-<li><p>图片按钮 type=’image’ src=’图片’</p>
-</li>
-<li><p>文本区域  &lt; testarea&gt;&lt; /testarea&gt;</p>
-</li>
-<li><p>文件域 type=’file’</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;form&gt;</div><div class="line"></div><div class="line">    &lt;input type=&quot;text&quot; value=&quot;文本框&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;input type=&quot;password&quot; value=&quot;密码框&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;br&gt; 男 &lt;input type=&quot;radio&quot; value=&quot;man&quot; name=&quot;chice&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;br&gt; 女 &lt;input type=&quot;radio&quot; value=&quot;woman&quot; name=&quot;chice&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;br&gt; 北京 &lt;input type=&quot;checkbox&quot; value=&quot;Beijing&quot; name=&quot;bj&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;br&gt; 上海 &lt;input type=&quot;checkbox&quot; value=&quot;Shanghai&quot; name=&quot;sh&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;br&gt; 广州 &lt;input type=&quot;checkbox&quot; value=&quot;Guangzhou&quot; name=&quot;gz&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;br&gt; 深圳 &lt;input type=&quot;checkbox&quot; value=&quot;Shenzhen&quot; name=&quot;sz&quot; /&gt;</div><div class="line"></div><div class="line"></div><div class="line">    &lt;select&gt;</div><div class="line"></div><div class="line">        &lt;option&gt;北京&lt;/option&gt;</div><div class="line"></div><div class="line">        &lt;option&gt;上海&lt;/option&gt;</div><div class="line"></div><div class="line">        &lt;option&gt;广州&lt;/option&gt;</div><div class="line"></div><div class="line">    &lt;/select&gt;</div><div class="line"></div><div class="line"></div><div class="line">    &lt;select&gt;</div><div class="line"></div><div class="line">        &lt;optgroup label=&quot;华北&quot;&gt;</div><div class="line"></div><div class="line">           &lt;option&gt;北京&lt;/option&gt;</div><div class="line"></div><div class="line">            &lt;option&gt;天津&lt;/option&gt;</div><div class="line"></div><div class="line">            &lt;option&gt;石家庄&lt;/option&gt;</div><div class="line"></div><div class="line">        &lt;/optgroup&gt;</div><div class="line"></div><div class="line">        &lt;optgroup label=&quot;东北&quot;&gt;</div><div class="line"></div><div class="line">           &lt;option&gt;辽宁&lt;/option&gt;</div><div class="line"></div><div class="line">            &lt;option&gt;吉林&lt;/option&gt;</div><div class="line"></div><div class="line">            &lt;option&gt;黑龙江&lt;/option&gt;</div><div class="line"></div><div class="line">        &lt;/optgroup&gt;</div><div class="line"></div><div class="line">    &lt;/select&gt;</div><div class="line"></div><div class="line">    &lt;input type=&quot;button&quot; value=&quot;普通按钮&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;input type=&quot;submit&quot; value=&quot;提交按钮&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;input type=&quot;reset&quot; value=&quot;重置按钮&quot; /&gt;</div><div class="line"></div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/29/HTML简介四-form表单/" data-id="cj5auvj0a000m14bmro50eozq" class="article-share-link">Delen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-我的第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/04/24/我的第一篇博客/" class="article-date">
-  <time datetime="2015-04-24T09:15:23.000Z" itemprop="datePublished">2015-04-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/javascript/">javascript</a>►<a class="article-category-link" href="/categories/javascript/web/">web</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/24/我的第一篇博客/">我的第一篇博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##你好</p>
-<p>###你好啊</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;SS</div><div class="line">	<span class="keyword">var</span> a = <span class="number">10</span>;</div><div class="line">	<span class="keyword">var</span> b = <span class="number">20</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/24/我的第一篇博客/" data-id="cj5auvj39002314bmmh6tkcjo" class="article-share-link">Delen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/04/24/hello-world/" class="article-date">
-  <time datetime="2015-04-24T08:25:53.000Z" itemprop="datePublished">2015-04-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/24/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/24/hello-world/" data-id="cj5auvj0y000x14bm546mfd9f" class="article-share-link">Delen</a>
-      
-      
     </footer>
   </div>
   
@@ -644,7 +577,7 @@ js中,无序的键值对集合,就是对象!
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/">__('next') &raquo;</a>
   </nav>
 </section>
         
@@ -652,9 +585,9 @@ js中,无序的键值对集合,就是对象!
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categorieën</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/">javascript基础</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-BOM/">js-BOM</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-BOM/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM/">js-DOM</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM/web/">web</a></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/h5-cs/">h5/cs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery-原生JS区别/">jQuery-原生JS区别</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/">javascript基础</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/">js-DOM/BOM</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/">js-特效</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/web/">web</a></li></ul></li></ul>
     </div>
   </div>
 
@@ -662,9 +595,9 @@ js中,无序的键值对集合,就是对象!
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Labels</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/js-特效/">js-特效</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li></ul>
     </div>
   </div>
 
@@ -674,16 +607,16 @@ js中,无序的键值对集合,就是对象!
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/日记/" style="font-size: 10px;">日记</a>
+      <a href="/tags/js-特效/" style="font-size: 10px;">js-特效</a> <a href="/tags/学习/" style="font-size: 20px;">学习</a> <a href="/tags/日记/" style="font-size: 15px;">日记</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
     </div>
   </div>
 
@@ -691,9 +624,13 @@ js中,无序的键值对集合,就是对象!
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/08/01/jQuery选择器/">jQuery选择器</a>
+          </li>
         
           <li>
             <a href="/2017/07/15/node-js简介/">node.js简介</a>
@@ -709,10 +646,6 @@ js中,无序的键值对集合,就是对象!
         
           <li>
             <a href="/2017/07/08/angular-01/">angular 01</a>
-          </li>
-        
-          <li>
-            <a href="/2017/07/08/angular01/">angular01</a>
           </li>
         
       </ul>

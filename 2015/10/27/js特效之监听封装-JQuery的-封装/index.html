@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>js特效之监听封装/JQuery的$封装 | welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="12345678910111213141516171819202122//需求:用普通的方法封装一个函数可以绑定并执行多个函数;(不会出现层叠)              //思路:在绑定新逻辑新函数之前,先把老函数获取到,              //    然后在新函数li执行逻辑之前把老函数执行一次就可以;       function fn(ele,eve,fn)&amp;#123;">
+<meta name="keywords" content="学习,js-特效">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js特效之监听封装&#x2F;JQuery的$封装">
+<meta property="og:url" content="http://yoursite.com/2015/10/27/js特效之监听封装-JQuery的-封装/index.html">
+<meta property="og:site_name" content="welcome">
+<meta property="og:description" content="12345678910111213141516171819202122//需求:用普通的方法封装一个函数可以绑定并执行多个函数;(不会出现层叠)              //思路:在绑定新逻辑新函数之前,先把老函数获取到,              //    然后在新函数li执行逻辑之前把老函数执行一次就可以;       function fn(ele,eve,fn)&amp;#123;">
+<meta property="og:updated_time" content="2017-07-27T05:40:33.588Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js特效之监听封装&#x2F;JQuery的$封装">
+<meta name="twitter:description" content="12345678910111213141516171819202122//需求:用普通的方法封装一个函数可以绑定并执行多个函数;(不会出现层叠)              //思路:在绑定新逻辑新函数之前,先把老函数获取到,              //    然后在新函数li执行逻辑之前把老函数执行一次就可以;       function fn(ele,eve,fn)&amp;#123;">
+  
+    <link rel="alternate" href="/atom.xml" title="welcome" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">welcome</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-js特效之监听封装-JQuery的-封装" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/27/js特效之监听封装-JQuery的-封装/" class="article-date">
+  <time datetime="2015-10-27T05:34:51.000Z" itemprop="datePublished">2015-10-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js特效之监听封装/JQuery的$封装
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//需求:用普通的方法封装一个函数可以绑定并执行多个函数;(不会出现层叠)</span></div><div class="line">              <span class="comment">//思路:在绑定新逻辑新函数之前,先把老函数获取到,</span></div><div class="line">              <span class="comment">//    然后在新函数li执行逻辑之前把老函数执行一次就可以;</span></div><div class="line"></div><div class="line">       <span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">ele,eve,fn</span>)</span>&#123;</div><div class="line">           <span class="comment">//1.在绑定新逻辑新函数之前,先把老函数获取到,</span></div><div class="line">           <span class="keyword">var</span> oldEvent = ele[<span class="string">"on"</span>+eve];<span class="comment">//返回值是一个函数或者null;</span></div><div class="line">           <span class="comment">//2.绑定事件；</span></div><div class="line">           ele[<span class="string">"on"</span>+eve] = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">               <span class="comment">//3.然后在新函数li执行逻辑之前把老函数执行一次就可以;</span></div><div class="line">               <span class="comment">//判断：有老函数我才执行老函数，如果没有老函数就</span></div><div class="line">               <span class="comment">//    说明我们是第一次绑定事件,那么就把要绑定的函数执行了就可以了;</span></div><div class="line">               <span class="comment">//if(oldEvent &amp;&amp; typeof oldEvent === "function")&#123;</span></div><div class="line">               <span class="keyword">if</span>(oldEvent)&#123;<span class="comment">//是函数就是true.是null就是false;</span></div><div class="line">                   oldEvent();<span class="comment">//如0果他在前,就是addEventListener的底层原理</span></div><div class="line">                   fn();<span class="comment">//如果他在前,就是attachEvent的底层原理</span></div><div class="line">               &#125;<span class="keyword">else</span>&#123;</div><div class="line">                   <span class="comment">//这说明第一次绑定事件,老事件是null;</span></div><div class="line">                   fn();</div><div class="line">               &#125;</div><div class="line">           &#125;</div><div class="line">       &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//用一个方法,通过不同变量的传递,可以调用三种方法获取元素;</span></div><div class="line">           <span class="comment">//封装一个函数,如果传递的参数是以i为开头;调用document.getElementById();</span></div><div class="line">           <span class="comment">//封装一个函数,如果传递的参数是以c为开头;调用document.getElementsByClassName();</span></div><div class="line">           <span class="comment">//封装一个函数,如果传递的参数是以t为开头;调用document.getElementsByTagName();</span></div><div class="line"></div><div class="line">                   <span class="comment">//.box;   #box;    div；</span></div><div class="line"></div><div class="line"></div><div class="line">       </div><div class="line">       <span class="function"><span class="keyword">function</span> <span class="title">$</span>(<span class="params">str</span>)</span>&#123;</div><div class="line">           <span class="comment">//判断首字母:</span></div><div class="line">           <span class="keyword">var</span> char = str.charAt(<span class="number">0</span>);<span class="comment">//获取字符串的第一个字符;</span></div><div class="line">           <span class="comment">//参数用: 出去第一个字符以外的所有字符;</span></div><div class="line">           <span class="keyword">if</span>(char === <span class="string">"#"</span>)&#123;</div><div class="line">               <span class="keyword">return</span> <span class="built_in">document</span>.getElementById(str.slice(<span class="number">1</span>));</div><div class="line">           &#125;<span class="keyword">else</span> <span class="keyword">if</span>(char === <span class="string">"."</span>)&#123;</div><div class="line">               <span class="keyword">return</span> <span class="built_in">document</span>.getElementsByClassName(str.slice(<span class="number">1</span>));</div><div class="line">           &#125;<span class="keyword">else</span>&#123;</div><div class="line">               <span class="comment">//既不是.  也不是#   那就一定是标签名；而如果直接传递标签名，不需要截取字符串；</span></div><div class="line">               <span class="keyword">return</span> <span class="built_in">document</span>.getElementsByTagName(str);</div><div class="line">           &#125;</div><div class="line">       &#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/27/js特效之监听封装-JQuery的-封装/" data-id="cj5wctc7w005khkbmgtxxv39u" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js-特效/">js-特效</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/10/27/js特效-事件冒泡/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          js特效-事件冒泡
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/08/24/js-特效-事件解绑/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">js-特效-事件解绑</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/h5-cs/">h5/cs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery-原生JS区别/">jQuery-原生JS区别</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/">javascript基础</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/">js-DOM/BOM</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/">js-特效</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/web/">web</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/js-特效/">js-特效</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/js-特效/" style="font-size: 10px;">js-特效</a> <a href="/tags/学习/" style="font-size: 20px;">学习</a> <a href="/tags/日记/" style="font-size: 15px;">日记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/01/jQuery选择器/">jQuery选择器</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/15/node-js简介/">node.js简介</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/13/javascript三/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/angular-02/">angular 02</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/angular-01/">angular 01</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 ������<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
