@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,202 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-javascript二" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/13/javascript二/" class="article-date">
+  <time datetime="2015-07-13T03:28:03.000Z" itemprop="datePublished">2015-07-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/javascript基础/">javascript基础</a>►<a class="article-category-link" href="/categories/javascript基础/web/">web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/13/javascript二/">javascript二  基础-数组</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="1-数组的声明"><a href="#1-数组的声明" class="headerlink" title="1. 数组的声明"></a>1. 数组的声明</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.1</span> 通过构造函数声明（更加通用）</div><div class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>);</div><div class="line"></div><div class="line"><span class="number">1.2</span> 通过字面量声明（更加简便）</div><div class="line"><span class="keyword">var</span> arr = [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>];</div></pre></td></tr></table></figure>
+<h2 id="2-数组的赋值和取值"><a href="#2-数组的赋值和取值" class="headerlink" title="2.数组的赋值和取值"></a>2.数组的赋值和取值</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="number">2.1</span> 赋值</div><div class="line">数组名[索引号] = 值 <span class="comment">//arr[0]=100</span></div><div class="line"></div><div class="line"><span class="number">2.2</span> 取值（通过数组名和索引即可取到对应的值）</div><div class="line">数组名[索引号]  <span class="comment">//console.log(arr[0])</span></div></pre></td></tr></table></figure>
+<h2 id="3-数组的遍历"><a href="#3-数组的遍历" class="headerlink" title="3.数组的遍历"></a>3.数组的遍历</h2><pre><code>数组的索引是从0开始的
+数组的长度可以通过arr.length获取
+由于数组的索引从0开始，所以最后一个值的索引为arr.length-1
+</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">通过<span class="keyword">for</span>循环遍历数组</div><div class="line"> <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">       <span class="built_in">console</span>.log(arr[i]);</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>往数组中添加新元素，数组的length会增加<br>通过给arr.length赋值可以改变数组的长度</li>
+</ul>
+<h2 id="4-冒泡排序"><a href="#4-冒泡排序" class="headerlink" title="4.冒泡排序"></a>4.冒泡排序</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">65</span>, <span class="number">97</span>, <span class="number">76</span>, <span class="number">13</span>, <span class="number">27</span>, <span class="number">49</span>, <span class="number">58</span>];</div><div class="line"><span class="comment">//循环控制趟数</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</div><div class="line">    <span class="comment">//控制两两比较的次数</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; arr.length - <span class="number">1</span>; j++) &#123;</div><div class="line">        <span class="comment">//两两比较   从小到大排序</span></div><div class="line">        <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</div><div class="line">            <span class="comment">//交换位置</span></div><div class="line">            <span class="keyword">var</span> tmp = arr[j];</div><div class="line">            arr[j] = arr[j + <span class="number">1</span>];</div><div class="line">            arr[j + <span class="number">1</span>] = tmp;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="对上面代码优化-提高性能"><a href="#对上面代码优化-提高性能" class="headerlink" title="对上面代码优化.提高性能"></a>对上面代码优化.提高性能</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">65</span>, <span class="number">97</span>, <span class="number">76</span>, <span class="number">13</span>, <span class="number">27</span>, <span class="number">49</span>, <span class="number">58</span>];</div><div class="line"><span class="comment">//循环控制趟数</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</div><div class="line">    <span class="comment">//控制两两比较的次数</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; arr.length - <span class="number">1</span>-i; j++) &#123;</div><div class="line">        <span class="comment">//两两比较   从小到大排序</span></div><div class="line">        <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</div><div class="line">            <span class="comment">//交换位置</span></div><div class="line">            <span class="keyword">var</span> tmp = arr[j];</div><div class="line">            arr[j] = arr[j + <span class="number">1</span>];</div><div class="line">            arr[j + <span class="number">1</span>] = tmp;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">65</span>, <span class="number">97</span>, <span class="number">76</span>, <span class="number">13</span>, <span class="number">27</span>, <span class="number">49</span>, <span class="number">58</span>];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">       <span class="keyword">var</span> isSort = <span class="literal">true</span>;</div><div class="line">       <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; arr.length - <span class="number">1</span>-i ; j++) &#123;</div><div class="line">       		<span class="built_in">console</span>.log(<span class="number">1</span>)<span class="comment">//打印18次</span></div><div class="line">           <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</div><div class="line">               isSort = <span class="literal">false</span>;</div><div class="line">               <span class="keyword">var</span> temp = arr[j];</div><div class="line">               arr[j] = arr[j + <span class="number">1</span>];</div><div class="line">               arr[j + <span class="number">1</span>] = temp;</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">       <span class="keyword">if</span> (isSort) &#123;</div><div class="line">           <span class="keyword">break</span>;</div><div class="line">       &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/13/javascript二/" data-id="cj5we7bbe002ig4bm9ywr9ww5" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-javascript一" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/12/javascript一/" class="article-date">
+  <time datetime="2015-07-12T12:45:32.000Z" itemprop="datePublished">2015-07-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/javascript基础/">javascript基础</a>►<a class="article-category-link" href="/categories/javascript基础/web/">web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/12/javascript一/">javascript一   基础- 变量-数值类型-判断循环语句</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-变量"><a href="#1-变量" class="headerlink" title="1 变量"></a>1 变量</h1><h2 id="1-1-变量的命名规范"><a href="#1-1-变量的命名规范" class="headerlink" title="1.1  变量的命名规范"></a>1.1  变量的命名规范</h2><pre><code>规则(必须遵守)
+区分大小写
+不能是关键字和保留字
+由字母、数字、下划线、$ 组成且开头不能是数字
+
+规范(建议遵守)
+变量的名称要有实际意义
+变量的命名遵守驼峰命名法，首字母小写,第二个单词的首字母大写 例如：userName
+</code></pre><h2 id="1-2-变量的声明赋值"><a href="#1-2-变量的声明赋值" class="headerlink" title="1.2  变量的声明赋值"></a>1.2  变量的声明赋值</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> 变量名 = 值</div></pre></td></tr></table></figure>
+<h1 id="2-数据类型"><a href="#2-数据类型" class="headerlink" title="2 数据类型"></a>2 数据类型</h1><pre><code>2.1  数据类型
+声明的时候不用考虑类型，但是处理和计算的时候要考虑类型
+</code></pre><ul>
+<li><p>基本数据类型<br>number数值型  string字符串型  boolean布尔型  undefined未定义 null空<br>number数值型       字面量</p>
+<pre><code>        var num = 数字;
+        浮点数
+        计算浮点数时会丢失精度
+        我们通常用整数的计算来表示浮点数的计算
+        不要以两个浮点数是否相等作为条件判断的依据（判断范围还是可以的）
+        NaN  NaN是数值类型  NaN不等于自身  isNaN( ) 不是有意义的数值返回true 
+
+转化成数值型     将任意类型转化为数值型
+                Number(值)   将字符串转化为数值
+                parseInt(“字符串”)会丢失小数；  parseFloat(“字符串”)不会丢失小数；
+                小技巧   值-0
+</code></pre><p>string字符串型</p>
+<pre><code>var str = “字符串”;
+字符串的长度  str.length  length就是长度的意思
+注意:由于字符串有不可变性，在大量拼接字符串的时候会非常消耗内存。
+</code></pre></li>
+<li><p>转换成字符串<br>   将任意类型转化为字符串<br>   String(值)<br>   大部分类型都有toString方法<br>   值.toString()<br>   小技巧<br>   值+””</p>
+</li>
+<li><p>转义符</p>
+<pre><code>\n 换行 \’单引号 \”双引号 \\斜杠
+</code></pre><p>boolean布尔型    所有类型的值都可以转化成布尔值</p>
+<pre><code>会转化成false的值有： 空字符串 数值零NaN undefined null
+</code></pre><p>   转换成布尔值<br>   Boolean(值)  将任意类型转化为布尔值<br>   if(值)   条件判断中会自动转换<br>   !!值  小技巧<br>undefined       表示声明但未赋值的变量</p>
+<p>null空</p>
+</li>
+<li>复杂数据类型<br>数组[]    object对象{}</li>
+</ul>
+<pre><code>使用typeof关键字可以查看变量的数据类型
+</code></pre><h2 id="3-运算符"><a href="#3-运算符" class="headerlink" title="3.运算符"></a>3.运算符</h2><h3 id="3-1-一元运算符"><a href="#3-1-一元运算符" class="headerlink" title="3.1 一元运算符"></a>3.1 一元运算符</h3><pre><code>递增和递减
+递增++ 递减--
+a++ 先参与运算 后自加
+++a 先自加 后参与运算
+</code></pre><h3 id="3-2-逻辑运算符"><a href="#3-2-逻辑运算符" class="headerlink" title="3.2 逻辑运算符"></a>3.2 逻辑运算符</h3><pre><code>&amp;&amp;和||都采取短路运算，即第一个能够决定结果就不再看第二个了
+&amp;&amp; 的要求比较严格 要两个都是true才是true 所以看到第一个是false就没有必要继续完后看了
+||   的要求比较宽松  要两个都是false才是false 所以看到第一个是true就没有必要继续完后看了
+短路运算（了解）
+&amp;&amp;和||不但可以操作布尔类型的值，对其他类型的值也可以进行操作，并返回可以决定表达式结果的那个值。
+</code></pre><h3 id="3-3-赋值运算符"><a href="#3-3-赋值运算符" class="headerlink" title="3.3 赋值运算符"></a>3.3 赋值运算符</h3><pre><code>赋值运算符
+表达式练习
+</code></pre><h3 id="3-4-运算符的优先级"><a href="#3-4-运算符的优先级" class="headerlink" title="3.4 运算符的优先级"></a>3.4 运算符的优先级</h3><h1 id="4-语句"><a href="#4-语句" class="headerlink" title="4. 语句"></a>4. 语句</h1><h2 id="4-1-选择语句if"><a href="#4-1-选择语句if" class="headerlink" title="4.1 选择语句if"></a>4.1 选择语句if</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (condition) &#123;</div><div class="line">       statement1</div><div class="line">   &#125; <span class="keyword">else</span> <span class="keyword">if</span> (condition) &#123;</div><div class="line">       statement2</div><div class="line">   &#125; <span class="keyword">else</span> &#123;</div><div class="line">       statement3</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<h2 id="4-2-三元表达式-三目表达式"><a href="#4-2-三元表达式-三目表达式" class="headerlink" title="4.2 三元表达式(三目表达式)"></a>4.2 三元表达式(三目表达式)</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">表达式<span class="number">1</span> ? 表达式<span class="number">2</span> : 表达式<span class="number">3</span></div></pre></td></tr></table></figure>
+<h2 id="4-3-选择语句switch"><a href="#4-3-选择语句switch" class="headerlink" title="4.3 选择语句switch"></a>4.3 选择语句switch</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">switch</span> (expression) &#123;</div><div class="line">       <span class="keyword">case</span> value:</div><div class="line">           statement</div><div class="line">           <span class="keyword">break</span>;</div><div class="line">       <span class="keyword">case</span> value:</div><div class="line">           statement</div><div class="line">           <span class="keyword">break</span>;</div><div class="line">       <span class="keyword">default</span>:</div><div class="line">           statement</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<h2 id="4-4-循环语句for"><a href="#4-4-循环语句for" class="headerlink" title="4.4 循环语句for"></a>4.4 循环语句for</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;a;i++)&#123;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>** 4.break和continue<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">break</span>跳出当前循环，执行循环后的语句</div><div class="line"><span class="keyword">continue</span>跳出当前循环，继续执行循环</div></pre></td></tr></table></figure></p>
+<p>##　５.6　循环语句while<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span>语句 先判断后执行</div><div class="line"><span class="keyword">while</span>(expression) &#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="keyword">do</span> <span class="keyword">while</span> 语句 先执行后判断</div><div class="line"><span class="keyword">do</span> &#123;</div><div class="line"></div><div class="line">&#125; <span class="keyword">while</span> (expression);</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/12/javascript一/" data-id="cj5we7bbe002dg4bmvyjwodl4" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/07/CSS/" class="article-date">
+  <time datetime="2015-07-07T08:58:18.000Z" itemprop="datePublished">2015-07-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>►<a class="article-category-link" href="/categories/CSS/web/">web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/07/CSS/">CSS 一些易忘属性或其他</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###<br>    |vertical-align:middle;| 图片居中 文字和图片的对齐方式|<br>    |border:none;|去掉边框|<br>    |outline:none;|去掉发光边框|<br>    |list-style:none;|去掉列表前面的点|<br>    |transparent|透明|<br>    |box-shadow|阴影|</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/07/CSS/" data-id="cj5we7b6m0001g4bm2w5u8eyq" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-CSS五" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -104,7 +300,7 @@ filter:alpha(opacity=数值);    数值范围（0-100）  //IE8及其以下版�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/07/CSS五/" data-id="cj5wctbym0004hkbmglaxpesa" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/07/CSS五/" data-id="cj5we7b7h0009g4bmdtyijnyd" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -159,7 +355,7 @@ filter:alpha(opacity=数值);    数值范围（0-100）  //IE8及其以下版�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/07/css测试/" data-id="cj5wctc2q0024hkbml5xjygb0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/07/css测试/" data-id="cj5we7b980013g4bmoe5n09fd" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -237,7 +433,7 @@ margin:0  auto    auto 设置为相对边的值
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/07/CSS三/" data-id="cj5wctbyo0005hkbmfvrsmea7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/07/CSS三/" data-id="cj5we7b710005g4bm3lsxufpa" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -292,7 +488,7 @@ margin:0  auto    auto 设置为相对边的值
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/07/CSS二/" data-id="cj5wctc3s002phkbms7eqm8yr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/07/CSS二/" data-id="cj5we7b710006g4bmdls212jw" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -370,7 +566,7 @@ background-attachment:scroll;滑动
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/07/CSS一/" data-id="cj5wctbz8000ahkbmd3xkn1qg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/07/CSS一/" data-id="cj5we7b6m0004g4bml0m5xxra" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -495,7 +691,7 @@ _self    默认。在相同的框架中打开被链接文档。
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/06/HTML简介二-标签/" data-id="cj5wctc4c0033hkbm4eqjdrpt" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/06/HTML简介二-标签/" data-id="cj5we7b7x000kg4bm7qu67cxl" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -541,146 +737,7 @@ _self    默认。在相同的框架中打开被链接文档。
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/06/HTML简介三/" data-id="cj5wctbz30009hkbm7035zp1d" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/06/25/2/" class="article-date">
-  <time datetime="2015-06-25T02:46:40.000Z" itemprop="datePublished">2015-06-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/javasript/">javasript</a>►<a class="article-category-link" href="/categories/javasript/面向对象二/">面向对象二</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/25/2/">2</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##面向对象是一种思维,其他编程语言中也有</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/25/2/" data-id="cj5wctby30000hkbmv22oraq5" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-面向对象" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/06/25/面向对象/" class="article-date">
-  <time datetime="2015-06-25T02:13:54.000Z" itemprop="datePublished">2015-06-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/javascript/">javascript</a>►<a class="article-category-link" href="/categories/javascript/面向对象/">面向对象</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/25/面向对象/">面向对象</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="面向对象的基本概念"><a href="#面向对象的基本概念" class="headerlink" title="面向对象的基本概念"></a>面向对象的基本概念</h2><h3 id="解决问题的思维方式，-将解决问题的关注点方法在了解决问题的每一个详细的步骤上！"><a href="#解决问题的思维方式，-将解决问题的关注点方法在了解决问题的每一个详细的步骤上！" class="headerlink" title="解决问题的思维方式， 将解决问题的关注点方法在了解决问题的每一个详细的步骤上！"></a>解决问题的思维方式， 将解决问题的关注点方法在了解决问题的每一个详细的步骤上！</h3><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h3 id="解决问题的思维方式，-将解决问题的关注点方法在了解决问题所需要的一系列的对象身上！"><a href="#解决问题的思维方式，-将解决问题的关注点方法在了解决问题所需要的一系列的对象身上！" class="headerlink" title="解决问题的思维方式， 将解决问题的关注点方法在了解决问题所需要的一系列的对象身上！"></a>解决问题的思维方式， 将解决问题的关注点方法在了解决问题所需要的一系列的对象身上！</h3><h2 id="面向对象和面向过程的关系"><a href="#面向对象和面向过程的关系" class="headerlink" title="面向对象和面向过程的关系"></a>面向对象和面向过程的关系</h2><pre><code>面向对象其实就是对面向过程的封装
-
-### 什么是对象
-js中,无序的键值对集合,就是对象!
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/25/面向对象/" data-id="cj5wctc7p005dhkbmd78bffjn" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML简介" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/04/29/HTML简介/" class="article-date">
-  <time datetime="2015-04-29T03:47:02.000Z" itemprop="datePublished">2015-04-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/HTML/">HTML</a>►<a class="article-category-link" href="/categories/HTML/web/">web</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/29/HTML简介/">HTML简介</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一．DTD-文档类型声明"><a href="#一．DTD-文档类型声明" class="headerlink" title="一．DTD 文档类型声明"></a>一．DTD 文档类型声明</h2><h3 id="DTD-Document-Type-Declaration-文档类型声明。"><a href="#DTD-Document-Type-Declaration-文档类型声明。" class="headerlink" title="DTD (Document Type Declaration) 文档类型声明。"></a>DTD (Document Type Declaration) 文档类型声明。</h3><pre><code>作用：
-用来告诉浏览器在解析我们的网页时按照哪种版本解析
-</code></pre><h3 id="html4-01-的DTD有三种模式，分别是"><a href="#html4-01-的DTD有三种模式，分别是" class="headerlink" title="html4.01 的DTD有三种模式，分别是"></a>html4.01 的DTD有三种模式，分别是</h3><h4 id="Strict：严格模式-严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。"><a href="#Strict：严格模式-严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。" class="headerlink" title="Strict：严格模式.严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。"></a>Strict：严格模式.严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。</h4><h4 id="Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。"><a href="#Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。" class="headerlink" title="Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。"></a>Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。</h4><h4 id="Frameset：框架模式-（基本不用）在页面中若，使用frameset标签，推荐使用该模式声明"><a href="#Frameset：框架模式-（基本不用）在页面中若，使用frameset标签，推荐使用该模式声明" class="headerlink" title="Frameset：框架模式 （基本不用）在页面中若，使用frameset标签，推荐使用该模式声明"></a>Frameset：框架模式 （基本不用）在页面中若，使用frameset标签，推荐使用该模式声明</h4><h3 id="xhtml1-0-的DTD-有三种模式分别是"><a href="#xhtml1-0-的DTD-有三种模式分别是" class="headerlink" title="xhtml1.0 的DTD 有三种模式分别是"></a>xhtml1.0 的DTD 有三种模式分别是</h3><h4 id="Strict：严格模式"><a href="#Strict：严格模式" class="headerlink" title="Strict：严格模式"></a>Strict：严格模式</h4><h4 id="Transitional：过渡模式"><a href="#Transitional：过渡模式" class="headerlink" title="Transitional：过渡模式"></a>Transitional：过渡模式</h4><h4 id="Frameset：框架模式-（基本不用）"><a href="#Frameset：框架模式-（基本不用）" class="headerlink" title="Frameset：框架模式 （基本不用）"></a>Frameset：框架模式 （基本不用）</h4><h3 id="xhtml1-0-和-html4-01的区别"><a href="#xhtml1-0-和-html4-01的区别" class="headerlink" title="xhtml1.0 和 html4.01的区别"></a>xhtml1.0 和 html4.01的区别</h3><pre><code>xhtml1.0比html4.01在语法上规范要求更加严格
-如：双标签要成对、html以及其中的标签要小写
-</code></pre><h3 id="lang属性"><a href="#lang属性" class="headerlink" title="lang属性"></a>lang属性</h3><h4 id="lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。"><a href="#lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。" class="headerlink" title="lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。"></a>lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。</h4><h3 id="meta标签"><a href="#meta标签" class="headerlink" title="meta标签"></a>meta标签</h3><h4 id="作用：用作配置"><a href="#作用：用作配置" class="headerlink" title="作用：用作配置"></a>作用：用作配置</h4><pre><code> 使用方式：字符集配置
- 在html中&lt;meta charset=”utf-8”/&gt; 是用来告诉浏览器，在解析我们的文件内容的时候，按照哪种编码格式来解析。
-若文件的编码格式 和  &lt;meta charset=”utf-8”/&gt;这里的编码格式不一致时，则会造成乱码。
-</code></pre><h2 id="SEO"><a href="#SEO" class="headerlink" title="SEO"></a>SEO</h2><p>SEO(Search Engine Optimization) ：搜索引擎优化<br>优化：<br>     就是通过某些手段，使我们的网站在被搜索时，排名靠前。<br><strong> 优化手段：<br>    -花钱买排名<br>        很烧钱，效果最好<br>    -广发外链<br>    -标签语义化<br>        在合适地方用合适的标签<br>        seo更加喜欢语义化健全的网站<br>    -从技术角度<br>        在meta标签里写上关键字… </strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/29/HTML简介/" data-id="cj5wctbzk000ehkbmqizfr0xk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/06/HTML简介三/" data-id="cj5we7b7x000gg4bm6l1vtuvr" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -703,7 +760,7 @@ js中,无序的键值对集合,就是对象!
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Catégories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/h5-cs/">h5/cs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery-原生JS区别/">jQuery-原生JS区别</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/">javascript基础</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/">js-DOM/BOM</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/">js-特效</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/web/">web</a></li></ul></li></ul>
     </div>
@@ -713,9 +770,9 @@ js中,无序的键值对集合,就是对象!
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/js-特效/">js-特效</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/js-特效/">js-特效</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件学习/">插件学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li></ul>
     </div>
   </div>
 
@@ -723,9 +780,9 @@ js中,无序的键值对集合,就是对象!
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/tags/js-特效/" style="font-size: 10px;">js-特效</a> <a href="/tags/学习/" style="font-size: 20px;">学习</a> <a href="/tags/日记/" style="font-size: 15px;">日记</a>
+      <a href="/tags/js-特效/" style="font-size: 10px;">js-特效</a> <a href="/tags/学习/" style="font-size: 20px;">学习</a> <a href="/tags/插件学习/" style="font-size: 13.33px;">插件学习</a> <a href="/tags/日记/" style="font-size: 16.67px;">日记</a>
     </div>
   </div>
 
@@ -734,7 +791,7 @@ js中,无序的键值对集合,就是对象!
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
     </div>
   </div>
 
@@ -742,7 +799,7 @@ js中,无序的键值对集合,就是对象!
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -779,7 +836,7 @@ js中,无序的键值对集合,就是对象!
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 ������<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
