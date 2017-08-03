@@ -61,6 +61,239 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-jQuery-获取盒子宽高-位置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/05/jQuery-获取盒子宽高-位置/" class="article-date">
+  <time datetime="2015-11-05T06:49:08.000Z" itemprop="datePublished">2015-11-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/jQuery/">jQuery</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/05/jQuery-获取盒子宽高-位置/">jQuery 获取盒子宽高-位置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="检测盒子宽高"><a href="#检测盒子宽高" class="headerlink" title="检测盒子宽高"></a>检测盒子宽高</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">检测盒子宽高;</div><div class="line">           <span class="number">1.</span>css();   <span class="number">2.</span>attr();   <span class="number">3.</span>prop();   <span class="number">4.</span>height();</div><div class="line"></div><div class="line">       $(<span class="string">"div"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">           获取盒子的高;</div><div class="line">           alert($(<span class="string">"div"</span>).css(<span class="string">"height"</span>));能够获取行内内嵌外链的最高权限属性;  带单位;</div><div class="line">           alert($(<span class="string">"div"</span>).css(<span class="string">"width"</span>));能够获取行内内嵌外链的最高权限属性;  带单位;</div><div class="line"></div><div class="line">           alert($(<span class="string">"div"</span>).height())<span class="comment">//或最高权限的高;数值类型;</span></div><div class="line">           alert($(<span class="string">"div"</span>).width());<span class="comment">//或最高权限的宽;数值类型                alert(typeof $("div").width());</span></div><div class="line"></div><div class="line">          可以获取值,也可以赋值;</div><div class="line">           <span class="built_in">console</span>.log($(<span class="string">"div"</span>).width());</div><div class="line">           $(<span class="string">"div"</span>).width(<span class="number">234</span>);</div><div class="line"></div><div class="line">       &#125;);</div></pre></td></tr></table></figure>
+<h3 id="盒子检测"><a href="#盒子检测" class="headerlink" title="盒子检测"></a>盒子检测</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> offset获取值;</div><div class="line">    返回值是一个json: 距离整个页面的距离; 和定位没有关系;</div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">".box2"</span>).offset());</div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">".box2"</span>).offset().left);   <span class="comment">//scroll().left;</span></div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">".box2"</span>).offset().top);   <span class="comment">//scroll().top;</span></div><div class="line"></div><div class="line"><span class="number">2.</span> position()系列: 我们宁愿用css();获取和设置top/left;</div><div class="line">    只能获取不能赋值: 距离父系盒子带有定位的盒子的距离;</div><div class="line">    和自己有没有定位无关,如果都么有那么是距离页面的距离;</div><div class="line">    position获取值;</div><div class="line">        返回值是一个json: 距离父系盒子带有定位的盒子的距离; 和定位有关系;</div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">".box2"</span>).position());</div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">".box2"</span>).position().left);<span class="comment">//scroll().left;</span></div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">".box2"</span>).position().top);<span class="comment">//scroll().top;//新七步;</span></div><div class="line"></div><div class="line"> 注:   position()无法赋值;</div><div class="line"></div><div class="line"><span class="number">3.</span> scrollTop() 页面被卷去的部分;</div><div class="line">    可以赋值,也可以获取值;</div><div class="line">    scrollTop获取值;<span class="comment">//用jquery对象调用</span></div><div class="line">                <span class="comment">//window.pageYOffset || document.documentElement.scrollTop;</span></div><div class="line">            <span class="built_in">console</span>.log($(<span class="built_in">window</span>).scrollTop());</div><div class="line">    <span class="comment">//scrollTop()赋值;//window.scrollTo();</span></div><div class="line">            $(<span class="built_in">window</span>).scrollTop(<span class="number">107</span>);</div></pre></td></tr></table></figure>
+<h6 id="固定导航例子"><a href="#固定导航例子" class="headerlink" title="固定导航例子"></a>固定导航例子</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//需求: 页面滑动触动这个事件,检测被卷去的头部的高度.</span></div><div class="line">    <span class="comment">//      如果大于第一个盒子的高,那么第二个盒子添加固定定位,</span></div><div class="line">    <span class="comment">//      第一/三个盒子添加上下padding/marign;</span></div><div class="line">    $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">       <span class="comment">//判断:如果大于第一个盒子的高,那么第二个盒子添加固定定位,</span></div><div class="line">                <span class="comment">//第一/三个盒子添加上下padding/marign;</span></div><div class="line">        <span class="keyword">if</span>($(<span class="built_in">window</span>).scrollTop() &gt; $(<span class="string">".top"</span>).height())&#123;</div><div class="line">            <span class="keyword">var</span> json1 = &#123;<span class="string">"position"</span>:<span class="string">"fixed"</span>,<span class="string">"top"</span>:<span class="number">0</span>,<span class="string">"left"</span>:<span class="number">0</span>&#125;;</div><div class="line">            $(<span class="string">".nav"</span>).css(json1);</div><div class="line">            <span class="comment">//取消抖动效果;</span></div><div class="line">            $(<span class="string">".top"</span>).css(<span class="string">"margin-bottom"</span>,$(<span class="string">".nav"</span>).height());</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">var</span> json2 = &#123;<span class="string">"position"</span>:<span class="string">"static"</span>&#125;;</div><div class="line">            $(<span class="string">".nav"</span>).css(json2);</div><div class="line">            <span class="comment">//取消抖动效果;</span></div><div class="line">            $(<span class="string">".top"</span>).css(<span class="string">"margin-bottom"</span>,<span class="number">0</span>);</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/11/05/jQuery-获取盒子宽高-位置/" data-id="cj5wh3f4v002m4obmbcwwqmx1" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-jQuery-普通和表单属性操作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/05/jQuery-普通和表单属性操作/" class="article-date">
+  <time datetime="2015-11-05T06:19:08.000Z" itemprop="datePublished">2015-11-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/jQuery/">jQuery</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/05/jQuery-普通和表单属性操作/">jQuery 普通和表单属性操作/内容操作val()-html()</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="一-普通属性操作"><a href="#一-普通属性操作" class="headerlink" title="一.普通属性操作;"></a>一.普通属性操作;</h4><pre><code>- 1.属性添加和获取;   attr();  
+    &apos;$(&quot;div&quot;).attr(&quot;title&quot;)&apos;  
+    &apos;$(&quot;div&quot;).attr(&quot;title&quot;,&quot;ccc&quot;)&apos; 如果有两个参数就是赋值;如果只有一个参数就是获取;
+- 2.属性删除;        
+    &apos;removeAttr()&apos;;  只能有一个属性;删除;
+</code></pre><h4 id="2-属性删除-removeAttr-只能有一个属性-删除"><a href="#2-属性删除-removeAttr-只能有一个属性-删除" class="headerlink" title="+ 2.属性删除;        removeAttr();  只能有一个属性;删除;"></a>+ 2.属性删除;        removeAttr();  只能有一个属性;删除;</h4><pre><code>&apos;$(&quot;div&quot;).removeAttr(&quot;title&quot;)&apos;;        在标签上直接删除;
+</code></pre><ul>
+<li><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">二.对于表单属性或者属性值为<span class="literal">true</span>的类型的属性我们用prop();</div><div class="line">    因为attr();获取值为<span class="literal">undefined</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log($(<span class="string">"input"</span>).attr(<span class="string">"checked"</span>));  值为<span class="literal">undefined</span>;</div><div class="line"><span class="built_in">console</span>.log($(<span class="string">"input"</span>).prop(<span class="string">"checked"</span>));  值为<span class="literal">true</span>/<span class="literal">false</span>;</div><div class="line"></div><div class="line"><span class="keyword">if</span>($(<span class="string">"input"</span>).prop(<span class="string">"checked"</span>))&#123;</div><div class="line">    $(<span class="string">"input"</span>).prop(<span class="string">"checked"</span>,<span class="literal">false</span>);</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    $(<span class="string">"input"</span>).prop(<span class="string">"checked"</span>,<span class="literal">true</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">三个属性;  innerHTML/innerText/value;</div><div class="line">             html()/text()/val();  jquery中的</div><div class="line">            双闭合标签内部的内容一个识别标签一个不识别标签;</div><div class="line">            可以输入内容的vlaue属性;</div><div class="line">$(<span class="string">"div"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="number">1.</span>DOM对象中的innerHTML属性 === jquery对象中的html();</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">"div"</span>).html());</div><div class="line">    $(<span class="string">"div"</span>).html(<span class="string">"&lt;i&gt;我是html()赋值的内容&lt;/i&gt;"</span>)</div><div class="line"></div><div class="line"></div><div class="line">    <span class="number">2.</span>DOM对象中的innerText属性 === jquery对象中的text();</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">"div"</span>).text());</div><div class="line">    $(<span class="string">"div"</span>).text(<span class="string">"&lt;i&gt;我是html()赋值的内容&lt;/i&gt;"</span>)</div><div class="line"></div><div class="line"></div><div class="line">   <span class="number">3.</span>DOM对象中的value属性 === jquery对象中的val();</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">"input"</span>).prop(<span class="string">"value"</span>));</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">"input"</span>).val());</div><div class="line">    $(<span class="string">"input"</span>).val(<span class="number">222222222</span>)</div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/11/05/jQuery-普通和表单属性操作/" data-id="cj5wh3f4c00284obmmnspgmxi" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-jQuery-操作元素" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/04/jQuery-操作元素/" class="article-date">
+  <time datetime="2015-11-04T06:19:08.000Z" itemprop="datePublished">2015-11-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/jQuery/">jQuery</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/04/jQuery-操作元素/">jQuery 操作元素   创建/添加/删除/复制</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="创建元素有两种方法："><a href="#创建元素有两种方法：" class="headerlink" title="创建元素有两种方法："></a>创建元素有两种方法：</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">第一种：$(<span class="string">" 标签 "</span>)  :  (<span class="built_in">document</span>.createElement(<span class="string">"li"</span>));</div><div class="line">       <span class="keyword">var</span> jqEle = $(<span class="string">"&lt;li id='aaa'&gt;我是jquery创建出来的标签&lt;/li&gt;"</span>)</div><div class="line">       <span class="built_in">console</span>.log(jqEle);</div><div class="line">       把jquery对象放入到另一个jquery对象种；（添加）</div><div class="line">       $(<span class="string">"ul"</span>).append(jqEle);</div><div class="line"></div><div class="line"></div><div class="line">       第二种：利用父盒子的html();  (就等同于DOM种的innerHTML属性)</div><div class="line">               html();传参就是赋值；   不传参数就是获取值；</div><div class="line">           此方法容易出现覆盖；</div><div class="line">       $(<span class="string">"ul"</span>).html(<span class="string">"&lt;li id='aaa'&gt;我是jquery的html()创建出来的标签&lt;/li&gt;"</span>)</div><div class="line">           所以；</div><div class="line">       <span class="keyword">var</span> str = $(<span class="string">"ul"</span>).html()+<span class="string">"&lt;li id='aaa'&gt;我是jquery的html()创建出来的标签&lt;/li&gt;"</span>;</div><div class="line">       $(<span class="string">"ul"</span>).html(str);</div></pre></td></tr></table></figure>
+<h3 id="元素添加有六种方法：-操作的必须是jquery对象"><a href="#元素添加有六种方法：-操作的必须是jquery对象" class="headerlink" title="元素添加有六种方法： 操作的必须是jquery对象;"></a>元素添加有六种方法： 操作的必须是jquery对象;</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"> 第一种: 父盒子jq对象.append(jq子对象);     添加到父盒子对末尾;</div><div class="line"> $(<span class="string">"ul"</span>).append(jqEle);</div><div class="line"></div><div class="line"> 第二种: jq子对象.appendTo(父盒子jq对象);   添加到父盒子对末尾;</div><div class="line">jqEle.appendTo($(<span class="string">"ul"</span>));</div><div class="line"></div><div class="line"></div><div class="line"> 第三种: 父盒子jq对象.prepend(jq子对象);    添加到父盒子最前面;</div><div class="line"> $(<span class="string">"ul"</span>).prepend(jqEle);</div><div class="line"></div><div class="line"> 第四种: jq子对象.prependTo(父盒子jq对象);  添加到父盒子最前面;</div><div class="line">jqEle.prependTo($(<span class="string">"ul"</span>));</div><div class="line"></div><div class="line"></div><div class="line"> 第五种:  兄弟元素.after(jq对象);  把jq对象作为兄弟元素添加到自己后面;</div><div class="line"> $(<span class="string">"#li2"</span>).after(jqEle);</div><div class="line"></div><div class="line"></div><div class="line"> 第六种:  兄弟元素.before(jq对象);    把jq对象作为兄弟元素添加到自己前面;</div><div class="line"> $(<span class="string">"#li2"</span>).before(jqEle););</div></pre></td></tr></table></figure>
+<h3 id="元素删除有3种方法："><a href="#元素删除有3种方法：" class="headerlink" title="元素删除有3种方法："></a>元素删除有3种方法：</h3><pre><code>2种清空;  1种自己删除自己;
+</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">	</div><div class="line">第一种: 父盒子jq对象.empty();    清空比较彻底;连同事件一起;</div><div class="line">  推荐;</div><div class="line">  $(<span class="string">"ul"</span>).empty();</div><div class="line"></div><div class="line">第二种: 父盒子jq对象.html(<span class="string">""</span>);   清空,不推荐;</div><div class="line">  $(<span class="string">"ul"</span>).html(<span class="string">""</span>);</div><div class="line"></div><div class="line"></div><div class="line">  第三种: 自己.remove();        自己删除自己;</div><div class="line">  $(<span class="string">"#li2"</span>).remove();</div></pre></td></tr></table></figure>
+<h3 id="复制元素有1种方法："><a href="#复制元素有1种方法：" class="headerlink" title="复制元素有1种方法："></a>复制元素有1种方法：</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">      复制元素: 全部都是深层复制;</div><div class="line">      参数如果是<span class="literal">true</span>;   可以复制事件;</div><div class="line">      参数如果是<span class="literal">false</span>;  不可以复制事件;  默认<span class="literal">false</span>;</div><div class="line">      <span class="keyword">var</span> jqEle = $(<span class="string">"#li2"</span>).clone(<span class="literal">true</span>);</div><div class="line"></div><div class="line">      添加到ul中</div><div class="line">      $(<span class="string">"ul"</span>).append(jqEle);</div><div class="line"></div><div class="line"></div><div class="line">  &#125;);</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/11/04/jQuery-操作元素/" data-id="cj5wh3f4j002b4obmke4545dr" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-jQuery-自定义动画" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/02/jQuery-自定义动画/" class="article-date">
+  <time datetime="2015-11-02T06:19:08.000Z" itemprop="datePublished">2015-11-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/jQuery/">jQuery</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/02/jQuery-自定义动画/">jQuery 自定义动画</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">       自定义动画: animate();</div><div class="line">            jquery对象.animate(json,时间,匀速或者缓动,回调函数);</div><div class="line"></div><div class="line">       $(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">           <span class="number">1.</span>默认时间移动到目标位置;</div><div class="line">           $(<span class="string">"div"</span>).animate(&#123;<span class="string">"left"</span>:<span class="number">1000</span>&#125;);</div><div class="line">           </div><div class="line">           <span class="number">2.</span>指定时间移动到目标位置;</div><div class="line">           $(<span class="string">"div"</span>).animate(&#123;<span class="string">"left"</span>:<span class="number">1000</span>&#125;,<span class="number">5000</span>);</div><div class="line">          </div><div class="line">          <span class="number">3.</span>动画可以指定;默认是缓动;</div><div class="line">               swing:  由<span class="number">0</span>到快,在由快到<span class="number">0</span>;</div><div class="line">               linear: 匀速;</div><div class="line">           $(<span class="string">"div"</span>).animate(&#123;<span class="string">"left"</span>:<span class="number">1000</span>&#125;,<span class="number">5000</span>,<span class="string">"swring"</span>);	缓动;</div><div class="line">           $(<span class="string">"div"</span>).animate(&#123;<span class="string">"left"</span>:<span class="number">1000</span>&#125;,<span class="number">5000</span>,<span class="string">"linear"</span>);	匀速;</div><div class="line">           </div><div class="line">           <span class="number">4.</span>回调函数;(执行完毕当前的在执行别的;)</div><div class="line">           $(<span class="string">"div"</span>).animate(&#123;<span class="string">"left"</span>:<span class="number">500</span>&#125;, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">               $(<span class="string">"div"</span>).animate(&#123;<span class="string">"width"</span>:<span class="number">100</span>&#125;, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                   $(<span class="string">"div"</span>).animate(&#123;<span class="string">"height"</span>:<span class="number">100</span>&#125;, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                       $(<span class="string">"div"</span>).animate(&#123;<span class="string">"width"</span>:<span class="number">300</span>&#125;, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                           $(<span class="string">"div"</span>).animate(&#123;<span class="string">"height"</span>:<span class="number">300</span>&#125;, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                               $(<span class="string">"div"</span>).animate(&#123;<span class="string">"left"</span>:<span class="number">8</span>&#125;);</div><div class="line">                           &#125;);</div><div class="line">                       &#125;);</div><div class="line">                   &#125;);</div><div class="line">               &#125;);</div><div class="line">           &#125;);</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">           我们可以利用animate();</div><div class="line">               模拟show();hide();slideDown/Up();fadeIn/Out/To()....</div><div class="line"></div><div class="line"></div><div class="line">       &#125;);</div><div class="line">   &#125;);</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/11/02/jQuery-自定义动画/" data-id="cj5wh3f4r002h4obmkxqva813" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-原生js和jQuery对样式的设置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/29/原生js和jQuery对样式的设置/" class="article-date">
+  <time datetime="2015-10-29T11:59:08.000Z" itemprop="datePublished">2015-10-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/jQuery-原生JS区别/">jQuery-原生JS区别</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/29/原生js和jQuery对样式的设置/">原生js和jQuery对样式的设置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>1. 样式操作
+</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">css();有三种使用方法;         css();就类似于Style;</div><div class="line"></div><div class="line">       $(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">           第一种: 赋值;(两个参数;一个是属性,一个是值)                $(<span class="string">"div"</span>).css(<span class="string">"background"</span>,<span class="string">"red"</span>);</div><div class="line"></div><div class="line"></div><div class="line">           第二种: 赋值;(一个参数;一个json)</div><div class="line">           <span class="keyword">var</span> json = &#123;<span class="string">"width"</span>:<span class="number">300</span>,<span class="string">"height"</span>:<span class="number">300</span>,<span class="string">"background"</span>:<span class="string">"yellowgreen"</span>&#125;;</div><div class="line">           $(<span class="string">"div"</span>).css(json);</div><div class="line"></div><div class="line"></div><div class="line">           第三种: 获取;(一个参数;一个属性)</div><div class="line">           <span class="built_in">console</span>.log($(<span class="string">"div"</span>).css(<span class="string">"width"</span>));</div><div class="line">           <span class="built_in">console</span>.log($(<span class="string">"div"</span>).css(<span class="string">"margin"</span>));</div><div class="line">           <span class="built_in">console</span>.log($(<span class="string">"div"</span>).css(<span class="string">"background-color"</span>));</div><div class="line"></div><div class="line">       &#125;);</div></pre></td></tr></table></figure>
+<ol>
+<li>类操作<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">类的操作;有四种使用方法;         样式多的时候使用</div><div class="line"></div><div class="line">       第一种: 添加类;  addClass();       不会把原来的层叠掉;</div><div class="line">       $(<span class="string">"div"</span>).addClass(<span class="string">"current"</span>);</div><div class="line"></div><div class="line"></div><div class="line">       第二种: 删除类;  removeClass();    删除指定类名;</div><div class="line">       $(<span class="string">"div"</span>).removeClass(<span class="string">"aaa"</span>);</div><div class="line"></div><div class="line"></div><div class="line">       第三种: 判断类;  hasClass();       判断是否拥有类;如果标签很多,有一个有那么就算是有;</div><div class="line">       alert($(<span class="string">".aaa"</span>).hasClass(<span class="string">"aaa"</span>));如果有就是<span class="literal">true</span>;没有就是<span class="literal">false</span>;</div><div class="line">       alert($(<span class="string">"div"</span>).hasClass(<span class="string">"bbb"</span>));有一个对象有这个类,结果就是<span class="literal">true</span>;</div><div class="line"></div><div class="line"></div><div class="line">       第四种: 切换类;  toggleClass();    没有就添加,有了就删除;</div><div class="line">       $(<span class="string">".aaa"</span>).toggleClass(<span class="string">"xxx"</span>);</div><div class="line">       $(<span class="string">".aaa"</span>).toggleClass(<span class="string">"aaa"</span>);如果用该类名操作这个类,删除以后容易获取不到了;</div></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/29/原生js和jQuery对样式的设置/" data-id="cj5wh3f9t006n4obmlkkxvqxb" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-jQuery-原生JS区别" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/10/29/jQuery-原生JS区别/" class="article-date">
@@ -94,7 +327,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/29/jQuery-原生JS区别/" data-id="cj5we7ba3001jg4bmbwa2fxjk" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2015/10/29/jQuery-原生JS区别/" data-id="cj5wh3f4o002f4obmvxzdta40" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -155,7 +388,7 @@ AJAX
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/29/jQuery01/" data-id="cj5we7bay0027g4bmk9hlhxug" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2015/10/29/jQuery01/" data-id="cj5wh3f4t002k4obmlotsskza" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -200,7 +433,7 @@ AJAX
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/29/jQuery-动画/" data-id="cj5we7b9n001gg4bm1kan5ejg" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2015/10/29/jQuery-动画/" data-id="cj5wh3f4900244obmmk46xd9u" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -255,7 +488,7 @@ AJAX
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/28/js-正则表达式02/" data-id="cj5we7bc90034g4bmw30wt98x" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2015/10/28/js-正则表达式02/" data-id="cj5wh3f8d005m4obm3xc69afk" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -300,254 +533,7 @@ AJAX
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/28/js-正则表达式/" data-id="cj5we7bc90032g4bmpsodruiv" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-js特效-事件冒泡" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/10/27/js特效-事件冒泡/" class="article-date">
-  <time datetime="2015-10-27T05:40:08.000Z" itemprop="datePublished">2015-10-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/js-特效/">js-特效</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/27/js特效-事件冒泡/">js特效-事件冒泡</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="什么叫冒泡"><a href="#什么叫冒泡" class="headerlink" title="什么叫冒泡?"></a>什么叫冒泡?</h2><h3 id="触动一个元素的事件的时候-该元素的所有祖先元素的该事件都会被执行-这就叫做冒泡"><a href="#触动一个元素的事件的时候-该元素的所有祖先元素的该事件都会被执行-这就叫做冒泡" class="headerlink" title="触动一个元素的事件的时候,该元素的所有祖先元素的该事件都会被执行,这就叫做冒泡;"></a>触动一个元素的事件的时候,该元素的所有祖先元素的该事件都会被执行,这就叫做冒泡;</h3><h3 id="如果祖先元素没有绑定该事件-那么也会发生冒泡-因为该元素还是有这个事件的只不过"><a href="#如果祖先元素没有绑定该事件-那么也会发生冒泡-因为该元素还是有这个事件的只不过" class="headerlink" title="如果祖先元素没有绑定该事件,那么也会发生冒泡;因为该元素还是有这个事件的只不过,"></a>如果祖先元素没有绑定该事件,那么也会发生冒泡;因为该元素还是有这个事件的只不过,</h3><pre><code>事件的执行程序是null;
-</code></pre><h2 id="事件的传播有的时候我们主动利用-但是更多的时候我们在阻止传播"><a href="#事件的传播有的时候我们主动利用-但是更多的时候我们在阻止传播" class="headerlink" title="事件的传播有的时候我们主动利用,但是更多的时候我们在阻止传播;"></a>事件的传播有的时候我们主动利用,但是更多的时候我们在阻止传播;</h2><pre><code>1.火狐谷歌ie9+: 阻止冒泡和阻止捕获是一个方法;
-2.ie678      : 可以阻止冒泡,但是无法阻止捕获因为ie678没有捕获;
-</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span>火狐谷歌ie9+: 阻止冒泡和阻止捕获是一个方法;</div><div class="line">       event.stopPropagation();    方法;</div><div class="line">   <span class="number">2.</span>ie678;阻止冒泡:  event.cancelBubble = <span class="literal">true</span>;   属性;</div></pre></td></tr></table></figure>
-<ul>
-<li>兼容写法<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">兼容写法:</div><div class="line">      event = event || <span class="built_in">window</span>.event;</div><div class="line">      <span class="keyword">if</span>(event &amp;&amp; event.stopPropagation)&#123;</div><div class="line">          event.stopPropagation();</div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">          event.cancelBubble = <span class="literal">true</span>;</div><div class="line">      &#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/27/js特效-事件冒泡/" data-id="cj5we7bd4003rg4bm8p31sbwr" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-js-特效-事件委托" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/10/27/js-特效-事件委托/" class="article-date">
-  <time datetime="2015-10-27T05:40:08.000Z" itemprop="datePublished">2015-10-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/js-特效/">js-特效</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/27/js-特效-事件委托/">js-特效-事件委托</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="事件委托原来"><a href="#事件委托原来" class="headerlink" title="事件委托原来"></a>事件委托原来</h2><h4 id="事件委托是利用事件的冒泡原理来实现的，何为事件冒泡呢？就是事件从最深的节点开始，然后逐步向上传播事件，举个例子：页面上有这么一个节点树，div-gt-ul-gt-li-gt-a-比如给最里面的a加一个click点击事件，那么这个事件就会一层一层的往外执行，执行顺序a-gt-li-gt-ul-gt-div，有这样一个机制，那么我们给最外面的div加点击事件，那么里面的ul，li，a做点击事件的时候，都会冒泡到最外层的div上，所以都会触发，这就是事件委托，委托它们父级代为执行事件"><a href="#事件委托是利用事件的冒泡原理来实现的，何为事件冒泡呢？就是事件从最深的节点开始，然后逐步向上传播事件，举个例子：页面上有这么一个节点树，div-gt-ul-gt-li-gt-a-比如给最里面的a加一个click点击事件，那么这个事件就会一层一层的往外执行，执行顺序a-gt-li-gt-ul-gt-div，有这样一个机制，那么我们给最外面的div加点击事件，那么里面的ul，li，a做点击事件的时候，都会冒泡到最外层的div上，所以都会触发，这就是事件委托，委托它们父级代为执行事件" class="headerlink" title="事件委托是利用事件的冒泡原理来实现的，何为事件冒泡呢？就是事件从最深的节点开始，然后逐步向上传播事件，举个例子：页面上有这么一个节点树，div&gt;ul&gt;li&gt;a;比如给最里面的a加一个click点击事件，那么这个事件就会一层一层的往外执行，执行顺序a&gt;li&gt;ul&gt;div，有这样一个机制，那么我们给最外面的div加点击事件，那么里面的ul，li，a做点击事件的时候，都会冒泡到最外层的div上，所以都会触发，这就是事件委托，委托它们父级代为执行事件"></a>事件委托是利用事件的冒泡原理来实现的，何为事件冒泡呢？就是事件从最深的节点开始，然后逐步向上传播事件，举个例子：页面上有这么一个节点树，div&gt;ul&gt;li&gt;a;比如给最里面的a加一个click点击事件，那么这个事件就会一层一层的往外执行，执行顺序a&gt;li&gt;ul&gt;div，有这样一个机制，那么我们给最外面的div加点击事件，那么里面的ul，li，a做点击事件的时候，都会冒泡到最外层的div上，所以都会触发，这就是事件委托，委托它们父级代为执行事件</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">	<span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="comment">//问题: 新添加的元素没有老事件;</span></div><div class="line">                    <span class="comment">//解决办法:事件委托;</span></div><div class="line">            </div><div class="line">            <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"button"</span>)[<span class="number">0</span>];</div><div class="line">            <span class="keyword">var</span> ul = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"ul"</span>)[<span class="number">0</span>];</div><div class="line">            btn.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="comment">//产生一个新的li;</span></div><div class="line">                <span class="keyword">var</span> li = <span class="built_in">document</span>.createElement(<span class="string">"li"</span>);</div><div class="line">                <span class="comment">//证明这个是特殊li</span></div><div class="line">                li.innerHTML = <span class="string">"我是新添加的li"</span>;</div><div class="line">                li.className = <span class="string">"aaa"</span>;</div><div class="line">                ul.appendChild(li);</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">            </div><div class="line">            <span class="comment">//问题: 为li绑定事件;(新li没有)</span></div><div class="line"><span class="comment">//            var liArr = document.getElementsByTagName("li");</span></div><div class="line"><span class="comment">//            for(var i=0;i&lt;liArr.length;i++)&#123;</span></div><div class="line"><span class="comment">//                liArr[i].onclick = function () &#123;</span></div><div class="line"><span class="comment">//                    alert(1);</span></div><div class="line"><span class="comment">//                &#125;</span></div><div class="line"><span class="comment">//            &#125;</span></div><div class="line"></div><div class="line"></div><div class="line">            <span class="comment">//事件委托: 就是把该执行的程序赋值给他们的父盒子;</span></div><div class="line">                    <span class="comment">//通过冒泡到父盒子,然后只要判断是你需要的盒子,就执行逻辑就可以了;</span></div><div class="line">                    <span class="comment">//这样不管新的还是老的都会有这个事件;</span></div><div class="line">                <span class="comment">//判断标签: 1.id;     2.className;    3.tagName;</span></div><div class="line"></div><div class="line">            <span class="comment">//思路:通过冒泡给ul绑定事件,这样所有的子元素就都会触动到盒子的事件,</span></div><div class="line">            <span class="comment">//    然后判断子元素是不是想要的标签;是就执行,不是就不执行该;</span></div><div class="line">            ul.onclick = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">                <span class="comment">//判断事件触发者的标签名是不是"LI";如果是li就完成的时间委托;</span></div><div class="line">                event = event || <span class="built_in">window</span>.event;</div><div class="line">                <span class="keyword">var</span> ele = event.target?event.target:event.srcElement;</div><div class="line">                <span class="comment">//判断:是li就执行;</span></div><div class="line">                <span class="keyword">if</span>(ele.tagName === <span class="string">"LI"</span>)&#123;</div><div class="line">                    alert(<span class="string">"我是li"</span>);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">            <span class="comment">//jquery这样实现事件委托;</span></div><div class="line"><span class="comment">//            ul.on("click","li", function () &#123;</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//            &#125;);</span></div><div class="line">	&#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/27/js-特效-事件委托/" data-id="cj5we7bcp003eg4bmey5rqge4" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-js特效之监听封装-JQuery的-封装" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/10/27/js特效之监听封装-JQuery的-封装/" class="article-date">
-  <time datetime="2015-10-27T05:34:51.000Z" itemprop="datePublished">2015-10-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/27/js特效之监听封装-JQuery的-封装/">js特效之监听封装/JQuery的$封装</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//需求:用普通的方法封装一个函数可以绑定并执行多个函数;(不会出现层叠)</span></div><div class="line">              <span class="comment">//思路:在绑定新逻辑新函数之前,先把老函数获取到,</span></div><div class="line">              <span class="comment">//    然后在新函数li执行逻辑之前把老函数执行一次就可以;</span></div><div class="line"></div><div class="line">       <span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">ele,eve,fn</span>)</span>&#123;</div><div class="line">           <span class="comment">//1.在绑定新逻辑新函数之前,先把老函数获取到,</span></div><div class="line">           <span class="keyword">var</span> oldEvent = ele[<span class="string">"on"</span>+eve];<span class="comment">//返回值是一个函数或者null;</span></div><div class="line">           <span class="comment">//2.绑定事件；</span></div><div class="line">           ele[<span class="string">"on"</span>+eve] = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">               <span class="comment">//3.然后在新函数li执行逻辑之前把老函数执行一次就可以;</span></div><div class="line">               <span class="comment">//判断：有老函数我才执行老函数，如果没有老函数就</span></div><div class="line">               <span class="comment">//    说明我们是第一次绑定事件,那么就把要绑定的函数执行了就可以了;</span></div><div class="line">               <span class="comment">//if(oldEvent &amp;&amp; typeof oldEvent === "function")&#123;</span></div><div class="line">               <span class="keyword">if</span>(oldEvent)&#123;<span class="comment">//是函数就是true.是null就是false;</span></div><div class="line">                   oldEvent();<span class="comment">//如0果他在前,就是addEventListener的底层原理</span></div><div class="line">                   fn();<span class="comment">//如果他在前,就是attachEvent的底层原理</span></div><div class="line">               &#125;<span class="keyword">else</span>&#123;</div><div class="line">                   <span class="comment">//这说明第一次绑定事件,老事件是null;</span></div><div class="line">                   fn();</div><div class="line">               &#125;</div><div class="line">           &#125;</div><div class="line">       &#125;</div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//用一个方法,通过不同变量的传递,可以调用三种方法获取元素;</span></div><div class="line">           <span class="comment">//封装一个函数,如果传递的参数是以i为开头;调用document.getElementById();</span></div><div class="line">           <span class="comment">//封装一个函数,如果传递的参数是以c为开头;调用document.getElementsByClassName();</span></div><div class="line">           <span class="comment">//封装一个函数,如果传递的参数是以t为开头;调用document.getElementsByTagName();</span></div><div class="line"></div><div class="line">                   <span class="comment">//.box;   #box;    div；</span></div><div class="line"></div><div class="line"></div><div class="line">       </div><div class="line">       <span class="function"><span class="keyword">function</span> <span class="title">$</span>(<span class="params">str</span>)</span>&#123;</div><div class="line">           <span class="comment">//判断首字母:</span></div><div class="line">           <span class="keyword">var</span> char = str.charAt(<span class="number">0</span>);<span class="comment">//获取字符串的第一个字符;</span></div><div class="line">           <span class="comment">//参数用: 出去第一个字符以外的所有字符;</span></div><div class="line">           <span class="keyword">if</span>(char === <span class="string">"#"</span>)&#123;</div><div class="line">               <span class="keyword">return</span> <span class="built_in">document</span>.getElementById(str.slice(<span class="number">1</span>));</div><div class="line">           &#125;<span class="keyword">else</span> <span class="keyword">if</span>(char === <span class="string">"."</span>)&#123;</div><div class="line">               <span class="keyword">return</span> <span class="built_in">document</span>.getElementsByClassName(str.slice(<span class="number">1</span>));</div><div class="line">           &#125;<span class="keyword">else</span>&#123;</div><div class="line">               <span class="comment">//既不是.  也不是#   那就一定是标签名；而如果直接传递标签名，不需要截取字符串；</span></div><div class="line">               <span class="keyword">return</span> <span class="built_in">document</span>.getElementsByTagName(str);</div><div class="line">           &#125;</div><div class="line">       &#125;</div></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/27/js特效之监听封装-JQuery的-封装/" data-id="cj5we7bdk003tg4bmsuvr7fsq" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js-特效/">js-特效</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-js-特效-事件解绑" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/08/24/js-特效-事件解绑/" class="article-date">
-  <time datetime="2015-08-24T05:10:35.000Z" itemprop="datePublished">2015-08-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/js-特效/">js-特效</a>►<a class="article-category-link" href="/categories/js-特效/web/">web</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/24/js-特效-事件解绑/">js-特效-事件解绑</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="事件解绑就是把已经绑定的事件解除-怎么绑定就怎么解绑"><a href="#事件解绑就是把已经绑定的事件解除-怎么绑定就怎么解绑" class="headerlink" title="事件解绑就是把已经绑定的事件解除;  (怎么绑定就怎么解绑)"></a>事件解绑就是把已经绑定的事件解除;  (怎么绑定就怎么解绑)</h1><h2 id="1-直接绑定"><a href="#1-直接绑定" class="headerlink" title="1.直接绑定;"></a>1.直接绑定;</h2><pre><code>   document.onclick = fn1;
-直接解绑:  null;
-   document.onclick = null;
-</code></pre><h2 id="2-addEventListener事件解绑；-对火狐谷歌ie9"><a href="#2-addEventListener事件解绑；-对火狐谷歌ie9" class="headerlink" title="2.addEventListener事件解绑；(对火狐谷歌ie9+)"></a>2.addEventListener事件解绑；(对火狐谷歌ie9+)</h2><pre><code>   document.addEventListener(&quot;click&quot;,fn2);
-removeEventListener();
-   document.removeEventListener(&quot;click&quot;,fn2);
-</code></pre><h2 id="3-attachEvent事件解绑；-对ie678"><a href="#3-attachEvent事件解绑；-对ie678" class="headerlink" title="3.attachEvent事件解绑；(对ie678)"></a>3.attachEvent事件解绑；(对ie678)</h2><pre><code>    document.attachEvent(&quot;onclick&quot;,fn3);
-解绑：detachEvent();
-    document.detachEvent(&quot;onclick&quot;,fn3);
-</code></pre><ul>
-<li>注意点：<br>   1.怎么绑定，怎么解绑；<br>   2.只能一个一个解绑；不能一次解绑一群；<br>   3.必须传递满两个参数；<br>   4.匿名函数无法解绑；<pre><code>拓展：jquery会对事件的操作进行优化；
-</code></pre></li>
-</ul>
-<ul>
-<li><p>事件解绑封装</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">	<span class="comment">//思路：封装addEventListener和attachEvent;(浏览器支持谁，就使用谁)；</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">ele,eve,fn</span>)</span>&#123;</div><div class="line">        <span class="comment">//判断：浏览器是否支持某个方法，支持就调用；</span></div><div class="line">        <span class="keyword">if</span>(ele.addEventListener)&#123;</div><div class="line">            ele.addEventListener(eve,fn);</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(ele.attachEvent)&#123;</div><div class="line">            ele.attachEvent(<span class="string">"on"</span>+eve,fn);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            ele[<span class="string">"on"</span>+eve] = fn;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"><span class="string">``</span><span class="string">`  </span></div><div class="line"></div><div class="line">## 事件监听封装</div><div class="line">`<span class="string">``</span>js</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">ele,eve,fn</span>)</span>&#123;</div><div class="line">        <span class="comment">//判断：浏览器是否支持某个方法，支持就调用；</span></div><div class="line">        <span class="keyword">if</span>(ele.addEventListener)&#123;</div><div class="line">            ele.addEventListener(eve,fn);</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(ele.attachEvent)&#123;</div><div class="line">            ele.attachEvent(<span class="string">"on"</span>+eve,fn);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            ele[<span class="string">"on"</span>+eve] = fn;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>事件监听/解绑一起封装</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//把原来的全局函数;封装到一个对象里面去做一个方法;(以后在调用就要用 对象名.方法(参数))</span></div><div class="line">   <span class="keyword">var</span> Event = &#123;</div><div class="line">       <span class="attr">removeEvent</span>:<span class="function"><span class="keyword">function</span> (<span class="params">ele,eve,fn</span>)</span>&#123;</div><div class="line">           <span class="comment">//判断：浏览器是否支持某个方法，支持就调用；</span></div><div class="line">           <span class="keyword">if</span>(ele.removeEventListener)&#123;</div><div class="line">               ele.removeEventListener(eve,fn);</div><div class="line">           &#125;<span class="keyword">else</span> <span class="keyword">if</span>(ele.detachEvent)&#123;</div><div class="line">               ele.detachEvent(<span class="string">"on"</span>+eve,fn);</div><div class="line">           &#125;<span class="keyword">else</span>&#123;</div><div class="line">               <span class="comment">//dom0;</span></div><div class="line">               ele[<span class="string">'on'</span>+eve] = <span class="literal">null</span>;</div><div class="line">           &#125;</div><div class="line">       &#125;,</div><div class="line">       <span class="attr">addEvent</span>:<span class="function"><span class="keyword">function</span> (<span class="params">ele,eve,fn</span>)</span>&#123;</div><div class="line">           <span class="comment">//判断：浏览器是否支持某个方法，支持就调用；</span></div><div class="line">           <span class="keyword">if</span>(ele.addEventListener)&#123;</div><div class="line">               ele.addEventListener(eve,fn);</div><div class="line">           &#125;<span class="keyword">else</span> <span class="keyword">if</span>(ele.attachEvent)&#123;</div><div class="line">               ele.attachEvent(<span class="string">"on"</span>+eve,fn);</div><div class="line">           &#125;<span class="keyword">else</span>&#123;</div><div class="line">               ele[<span class="string">"on"</span>+eve] = fn;</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/08/24/js-特效-事件解绑/" data-id="cj5we7bd4003lg4bmfjm3crdg" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-js-特效-事件监听" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/08/22/js-特效-事件监听/" class="article-date">
-  <time datetime="2015-08-22T00:43:18.000Z" itemprop="datePublished">2015-08-22</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/js-特效/">js-特效</a>►<a class="article-category-link" href="/categories/js-特效/web/">web</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/22/js-特效-事件监听/">js-特效-事件监听</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="为什么会出现事件监听"><a href="#为什么会出现事件监听" class="headerlink" title="为什么会出现事件监听?"></a>为什么会出现事件监听?</h2><pre><code>因为普通事件绑定容易出现层叠;
-</code></pre><h2 id="事件监听"><a href="#事件监听" class="headerlink" title="事件监听"></a>事件监听</h2><pre><code>你做你的,我做我的,但是我监听着你!程序中,两个逻辑同一事件都执行;
-</code></pre><ul>
-<li><p>addEventListener();   火狐谷歌ie9+<br>1.参数有三个;<br>   (1).事件名;<br>   (2).逻辑;(匿名函数,函数名)<br>   (3).boolean;支持冒泡还是捕获;<br>2.先绑定谁,执行谁;事件监听不会自己和自己矛盾;<br>3.ie678不支持;</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">       <span class="built_in">console</span>.log(<span class="string">"测试事件监听1;"</span>);</div><div class="line">   &#125;);</div></pre></td></tr></table></figure>
-<p>ie678:   attachEvent();<br>1.参数有两个;<br>   (1).事件名(带on);<br>   (2).逻辑;(匿名函数,函数名)<br>   (3).没有第三个参数:ie678只支持冒泡不支持捕获;<br>2.先绑定谁,后执行;事件监听不会自己和自己矛盾;(执行先后影响不大)</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.attachEvent(<span class="string">"onclick"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">       <span class="built_in">console</span>.log(<span class="string">"测试事件监听2;"</span>);</div><div class="line">   &#125;);</div></pre></td></tr></table></figure>
-</li>
-<li><p>事件监听兼容封装</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//思路：封装addEventListener和attachEvent;(浏览器支持谁，就使用谁)；</span></div><div class="line">       <span class="comment">//参数：事件源，事件(不带on)，事件驱动程序；      返回值：不需要；</span></div><div class="line">       <span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">ele,eve,fn</span>)</span>&#123;</div><div class="line">           <span class="comment">//判断：浏览器是否支持某个方法，支持就调用；</span></div><div class="line">           <span class="comment">//if(ele.addEventListener)&#123;//比较严谨：ele.addEventListener &amp;&amp; typeof ele.addEventListener === "functioin"</span></div><div class="line">           <span class="keyword">if</span>(ele.addEventListener)&#123;<span class="comment">//方法名如果存在，就等于整个方法；//如果不存在就是undefined;</span></div><div class="line">               ele.addEventListener(eve,fn);</div><div class="line">           &#125;<span class="keyword">else</span> <span class="keyword">if</span>(ele.attachEvent)&#123;</div><div class="line">               ele.attachEvent(<span class="string">"on"</span>+eve,fn);</div><div class="line">           &#125;<span class="keyword">else</span>&#123;</div><div class="line">               <span class="comment">//dom0: 两个方法都不支持；</span></div><div class="line">               <span class="comment">//ele.onclick = fn;</span></div><div class="line">               ele[<span class="string">"on"</span>+eve] = fn;<span class="comment">//还是会出现，后面的事件把前面的事件层叠；</span></div><div class="line">           &#125;</div><div class="line">       &#125;</div></pre></td></tr></table></figure></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/08/22/js-特效-事件监听/" data-id="cj5we7bcp003hg4bmzwuc52jg" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2015/10/28/js-正则表达式/" data-id="cj5wh3f84005f4obmvg6dpubh" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -562,7 +548,7 @@ removeEventListener();
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/">__('next') &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/4/">__('next') &raquo;</a>
   </nav>
 </section>
         
@@ -572,7 +558,7 @@ removeEventListener();
   <div class="widget-wrap">
     <h3 class="widget-title">Catégories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/h5-cs/">h5/cs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery-原生JS区别/">jQuery-原生JS区别</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/">javascript基础</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/">js-DOM/BOM</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/">js-特效</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/web/">web</a></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/h5-cs/">h5/cs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery-原生JS区别/">jQuery-原生JS区别</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/">javascript基础</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/">js-DOM/BOM</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/">js-特效</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/插件/">插件</a></li></ul>
     </div>
   </div>
 
@@ -592,7 +578,7 @@ removeEventListener();
   <div class="widget-wrap">
     <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/tags/js-特效/" style="font-size: 10px;">js-特效</a> <a href="/tags/学习/" style="font-size: 20px;">学习</a> <a href="/tags/插件学习/" style="font-size: 13.33px;">插件学习</a> <a href="/tags/日记/" style="font-size: 16.67px;">日记</a>
+      <a href="/tags/js-特效/" style="font-size: 10px;">js-特效</a> <a href="/tags/学习/" style="font-size: 20px;">学习</a> <a href="/tags/插件学习/" style="font-size: 10px;">插件学习</a> <a href="/tags/日记/" style="font-size: 15px;">日记</a>
     </div>
   </div>
 
@@ -601,7 +587,7 @@ removeEventListener();
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
     </div>
   </div>
 
