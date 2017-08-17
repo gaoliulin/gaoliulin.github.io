@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ajax | welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ajax：即 Asynchronous [e’sɪŋkrənəs] Javascript And XML， AJAX                         不是一门的新的语言，而是对现有技术的综合利用。                                    本质是在HTTP协议的基础上以异步的方式与服务器进行通信。- 同步: 指的就是事情要一件一件做。等做完前一件才能做后">
+<meta name="keywords" content="学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ajax">
+<meta property="og:url" content="http://yoursite.com/2016/08/09/ajax-1/index.html">
+<meta property="og:site_name" content="welcome">
+<meta property="og:description" content="ajax：即 Asynchronous [e’sɪŋkrənəs] Javascript And XML， AJAX                         不是一门的新的语言，而是对现有技术的综合利用。                                    本质是在HTTP协议的基础上以异步的方式与服务器进行通信。- 同步: 指的就是事情要一件一件做。等做完前一件才能做后">
+<meta property="og:updated_time" content="2017-08-08T13:22:09.214Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ajax">
+<meta name="twitter:description" content="ajax：即 Asynchronous [e’sɪŋkrənəs] Javascript And XML， AJAX                         不是一门的新的语言，而是对现有技术的综合利用。                                    本质是在HTTP协议的基础上以异步的方式与服务器进行通信。- 同步: 指的就是事情要一件一件做。等做完前一件才能做后">
+  
+    <link rel="alternate" href="/atom.xml" title="welcome" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">welcome</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ajax-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/09/ajax-1/" class="article-date">
+  <time datetime="2016-08-09T10:53:18.000Z" itemprop="datePublished">2016-08-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ajax/">ajax</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ajax
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="ajax：即-Asynchronous-e’sɪŋkrənəs-Javascript-And-XML，-AJAX-不是一门的新的语言，而是对现有技术的综合利用。-本质是在HTTP协议的基础上以异步的方式与服务器进行通信。"><a href="#ajax：即-Asynchronous-e’sɪŋkrənəs-Javascript-And-XML，-AJAX-不是一门的新的语言，而是对现有技术的综合利用。-本质是在HTTP协议的基础上以异步的方式与服务器进行通信。" class="headerlink" title="ajax：即 Asynchronous [e’sɪŋkrənəs] Javascript And XML， AJAX                         不是一门的新的语言，而是对现有技术的综合利用。                                    本质是在HTTP协议的基础上以异步的方式与服务器进行通信。"></a>ajax：即 Asynchronous [e’sɪŋkrənəs] Javascript And XML， AJAX                         不是一门的新的语言，而是对现有技术的综合利用。                                    本质是在HTTP协议的基础上以异步的方式与服务器进行通信。</h3><pre><code>- 同步: 指的就是事情要一件一件做。等做完前一件才能做后一件任务
+- 同步: 不受当前任务的影响，两件事情同时进行，做一件事情时，不影响另一件事情的进行。
+编程中：异步程序代码执行时不会阻塞其它程序代码执行,从而提升整体执行效率
+</code></pre><ul>
+<li>XMLHttpRequest： 浏览器内建对象，用于在后台与服务器通信(交换数据) ， 由此我们便可实现对网页的部分更新，而不是刷新整个页面。</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">js 内置的 http 请求对象  XMLHttpRequest</div><div class="line"></div><div class="line">1.怎么使用 这个内置对象</div><div class="line">var xhr = new XMLHttpRequest;</div><div class="line"></div><div class="line">2.怎么样去组请求</div><div class="line">请求的行</div><div class="line">xhr.open('post','01.php');</div><div class="line"></div><div class="line">请求头</div><div class="line">//get  没有必要设置</div><div class="line">//post 必须设置 Content-Type: application/x-www-form-urlencoded</div><div class="line">xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');</div><div class="line"></div><div class="line">请内容</div><div class="line">3.发送请求</div><div class="line">xhr.send("name=xjj&amp;age=10");</div></pre></td></tr></table></figure>
+<ul>
+<li><p>请求<br>  HTTP请求3个组成部分与XMLHttpRequest方法的对应关系<br>  1、请求行<br>  xhr.open(‘post’,’01.php’);</p>
+<p>  2、请求头<br>  xhr.setRequestHeader(‘Content-Type’,’application/x-www-form-urlencoded’);<br>  get请求可以不设置</p>
+<p>  3、请求主体<br>  xhr.send(“name=xjj&amp;age=10”);<br>  get可以传空<br>  (注意书写顺序)</p>
+</li>
+<li>响应<br>  HTTP响应是由服务端发出的，作为客户端更应关心的是响应的结果。<br>  HTTP响应3个组成部分与XMLHttpRequest方法或属性的对应关系。<br>  由于服务器做出响应需要时间（比如网速慢等原因），所以我们需要监听服务器响应的状态，然后才能进行处理。</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">if(xhr.readyState == 4 &amp;&amp; xhr.status == 200)&#123;</div><div class="line">    console.log('ok');</div><div class="line">    console.log(xhr.responseText);</div><div class="line">    /*把内容渲染在页面当中*/</div><div class="line">    document.querySelector('#result').innerHTML = xhr.responseText;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="readyState-amp-onreadystatechange-事件"><a href="#readyState-amp-onreadystatechange-事件" class="headerlink" title="readyState &amp; onreadystatechange 事件"></a>readyState &amp; onreadystatechange 事件</h3><pre><code>- readyState： 记录XMLHttpRequest对象的当前状态
+    0：请求未初始化（还没有调用 open()）。  
+    1：请求已经建立，但是还没有发送（还没有调用 send()）。  
+    2：请求已发送，正在处理中（通常现在可以从响应中获取内容头）。  
+    3：请求在处理中；通常响应中已有部分数据可用了，但是服务器还没有完成响应的生成。4：响应已完成；您可以获取并使用服务器的响应了。
+
+- onreadystatechange：是Javascript的事件的一种，其意义在于监听XMLHttpRequest的状态
+    1、获取状态行（包括状态码&amp;状态信息）
+    xhr.status 状态码
+    xhr.statusText 状态码信息
+
+    2、获取响应头
+    xhr.getResponseHeader(&apos;Content-Type&apos;);
+    xhr.getAllResponseHeaders();
+
+    3、响应主体
+    xhr.responseText
+    xhr.responseXML
+    我们需要检测并判断响应头的MIME类型后确定使用request.responseText或者request.responseXML
+</code></pre><ul>
+<li><p>API详解</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">xhr.open()                  // 发起请求，可以是get、post方式</div><div class="line">xhr.setRequestHeader()      // 设置请求头</div><div class="line">xhr.send()                  //发送请求主体get方式使用xhr.send(null)</div><div class="line">xhr.onreadystatechange = function () &#123;&#125;         //监听响应状态</div><div class="line">xhr.status                  //表示响应码，如200</div><div class="line">xhr.statusText              //表示响应信息，如OK</div><div class="line">xhr.getAllResponseHeaders()         //获取全部响应头信息</div><div class="line">xhr.getResponseHeader('key')        //获取指定头信息</div><div class="line">xhr.responseText、xhr.responseXML    //都表示响应主体</div></pre></td></tr></table></figure>
+<p>  注：GET和POST请求方式的差异</p>
+<pre><code>1、GET没有请求主体，使用xhr.send(null)
+2、GET可以通过在请求URL上添加请求参数
+3、POST可以通过xhr.send(&apos;name=itcast&amp;age=10&apos;)
+4、POST需要设置
+5、GET效率更好（应用多）
+6、GET大小限制约4K，POST则没有限制
+</code></pre></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/08/09/ajax-1/" data-id="cj6gb6fdw000gn8bmo2fkrqv9" class="article-share-link">Delen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/08/09/xml-json/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Nieuwer</strong>
+      <div class="article-nav-title">
+        
+          xml-json
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/08/09/c3-web字体/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ouder</strong>
+      <div class="article-nav-title">c3-web字体-图标</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categorieën</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/ajax/">ajax</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/h5-cs/">h5/cs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery-原生JS区别/">jQuery-原生JS区别</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/">javascript基础</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/">js-DOM/BOM</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/">js-特效</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/插件/">插件</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/案例/">案例</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Labels</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/js-特效/">js-特效</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件学习/">插件学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/案例/">案例</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/js-特效/" style="font-size: 10px;">js-特效</a> <a href="/tags/学习/" style="font-size: 20px;">学习</a> <a href="/tags/插件学习/" style="font-size: 10px;">插件学习</a> <a href="/tags/日记/" style="font-size: 15px;">日记</a> <a href="/tags/案例/" style="font-size: 10px;">案例</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archieven</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/3016/08/">August 3016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recente berichten</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/3016/08/09/c3-动画/">c3-动画</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/07/案例-遮罩层/">案例-遮罩层</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/01/jQuery选择器/">jQuery选择器</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/15/node-js简介/">node.js简介</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/13/javascript三/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 ������<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,98 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-c3-动画" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/3016/08/09/c3-动画/" class="article-date">
+  <time datetime="3016-08-09T09:02:36.000Z" itemprop="datePublished">3016-08-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/h5-cs/">h5/cs</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/3016/08/09/c3-动画/">c3-动画</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="c3-动画"><a href="#c3-动画" class="headerlink" title="c3-动画"></a>c3-动画</h2><pre><code>a、通过@keyframes指定动画序列；
+b、通过百分比将动画序列分割成多个节点；
+c、在各节点中分别定义各属性
+d、通过animation将动画应用于相应元素；
+</code></pre><p>eg:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">.box img&#123;</div><div class="line">           width: 100%;</div><div class="line">           height: 100%;</div><div class="line">           display: block;</div><div class="line"></div><div class="line">           /*transition: all 2s;*/</div><div class="line"></div><div class="line">           animation: fengche 8s;</div><div class="line">       &#125;</div><div class="line">	1.花2s时间  放大1.5倍 旋转360度 </div><div class="line">       2.花4s时间  缩小0.8倍 旋转0度</div><div class="line">       3.花2s时间  变回1倍  旋转-60deg</div><div class="line">       4.动画时长8s  25% 50% 25%</div><div class="line"></div><div class="line">       @keyframes 用来定义动画序列  后面是自定义的动画序列的名称</div><div class="line">    @keyframes fengche&#123;</div><div class="line">           /*from&#123;&#125;*/</div><div class="line">           0%&#123;</div><div class="line"></div><div class="line">           &#125;</div><div class="line">           25%&#123;</div><div class="line">               transform: scale(1.5) rotate(360deg);</div><div class="line">           &#125;</div><div class="line">           75%&#123;</div><div class="line">               transform: scale(0.8) rotate(0deg);</div><div class="line">           &#125;</div><div class="line">           /*to&#123;&#125;*/</div><div class="line">           100%&#123;</div><div class="line">               transform: scale(1) rotate(-60deg);</div><div class="line">           &#125;</div><div class="line">       &#125;</div></pre></td></tr></table></figure></p>
+<pre><code>分解
+</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">.box &#123;</div><div class="line">           width: 200px;</div><div class="line">           height: 200px;</div><div class="line">           background-color: green;</div><div class="line"></div><div class="line">           /*动画序列的名称*/</div><div class="line">           animation-name: move;</div><div class="line">           /*动画执行的总时间*/</div><div class="line">           animation-duration: 2s;</div><div class="line">           /*动画执行的速度 ease linear ease-in ease-in-out ease-out */</div><div class="line">           animation-timing-function: ease;</div><div class="line">           /*动画延时*/</div><div class="line">           animation-delay: 1s;</div><div class="line">           /*动画结束的时候的状态 forwards 保持结束状态  backwards 回答最原生的状态 没有动画的那个状态*/</div><div class="line">           animation-fill-mode: forwards;</div><div class="line">           /*动画执行的次数  次数  特殊的值 infinite 执行无数次*/</div><div class="line">           animation-iteration-count: infinite;</div><div class="line">           /*动画逆播放*/</div><div class="line">           animation-direction: alternate;</div><div class="line">           /*分步执行 steps(3)*/</div><div class="line">       &#125;</div><div class="line"></div><div class="line">       .box:hover &#123;</div><div class="line">           /*执行的状态 是执行中  暂停  running、paused*/</div><div class="line">           animation-play-state: paused;</div><div class="line">       &#125;</div><div class="line"></div><div class="line">       @keyframes move &#123;</div><div class="line">           from &#123;</div><div class="line">               width: 300px;</div><div class="line">               height: 300px;</div><div class="line">           &#125;</div><div class="line"></div><div class="line">           to &#123;</div><div class="line">               width: 400px;</div><div class="line">               height: 400px;</div><div class="line">           &#125;</div><div class="line">       &#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/3016/08/09/c3-动画/" data-id="cj6gb6fiz003cn8bmlrj2luat" class="article-share-link">Delen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-案例-遮罩层" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/07/案例-遮罩层/" class="article-date">
+  <time datetime="2017-08-07T11:24:56.000Z" itemprop="datePublished">2017-08-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/案例/">案例</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/07/案例-遮罩层/">案例-遮罩层</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">/*全屏容器*/</div><div class="line">       .layer&#123;</div><div class="line">           width: 100%;</div><div class="line">           height: 100%;</div><div class="line">           background: black;</div><div class="line">           position: fixed;/*基于浏览器来的*/</div><div class="line">           left: 0;</div><div class="line">           top: 0;</div><div class="line">           opacity: 0.5;</div><div class="line">       &#125;</div><div class="line"></div><div class="line">       .box&#123;</div><div class="line">           position: absolute;</div><div class="line">           left: 50%;</div><div class="line">           top: 50%;</div><div class="line">           margin-left: -200px;</div><div class="line">           margin-top: -200px;</div><div class="line">           width: 400px;</div><div class="line">           height: 400px;</div><div class="line">           background: white;</div><div class="line"></div><div class="line">       &#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/08/07/案例-遮罩层/" data-id="cj6gb6fql0099n8bmw5t6k33y" class="article-share-link">Delen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/案例/">案例</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-jQuery选择器" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -112,7 +204,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/01/jQuery选择器/" data-id="cj5wh3f51002p4obmz9hq8xnb" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/08/01/jQuery选择器/" data-id="cj6gb6fmy005yn8bmu4mxjvpa" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -150,7 +242,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/15/node-js简介/" data-id="cj5wh3f98006d4obmqrxlbv7m" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/07/15/node-js简介/" data-id="cj6gb6fny006qn8bmvabzon4m" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -222,7 +314,7 @@ return 要返回的值;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/13/javascript三/" data-id="cj5wh3f5b002u4obmdskqdg2k" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/07/13/javascript三/" data-id="cj6gb6flo0050n8bmpursywy7" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -315,7 +407,7 @@ return 要返回的值;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/08/angular-02/" data-id="cj5wh3f2t001d4obmr6lwfozu" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/07/08/angular-02/" data-id="cj6gb6fgv0025n8bmkbp4chlv" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -353,7 +445,7 @@ return 要返回的值;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/08/angular-01/" data-id="cj5wh3f1q000m4obmp67ycw5m" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/07/08/angular-01/" data-id="cj6gb6fg8001xn8bmh62en7qe" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -389,7 +481,7 @@ return 要返回的值;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/08/angular01/" data-id="cj5wh3f2o00184obmh40cw75e" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/07/08/angular01/" data-id="cj6gb6fgl0021n8bmuaqneqzo" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -447,7 +539,7 @@ clear:right; 清除右浮动的影响
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/07/CSS四/" data-id="cj5wh3f1000094obmmjz6hshn" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/07/07/CSS四/" data-id="cj6gb6fdg0009n8bm8in61vsy" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -459,14 +551,14 @@ clear:right; 清除右浮动的影响
 
 
   
-    <article id="post-h5-history" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-ajax-跨域" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/08/05/h5-history/" class="article-date">
-  <time datetime="2016-08-05T13:32:38.000Z" itemprop="datePublished">2016-08-05</time>
+    <a href="/2016/08/09/ajax-跨域/" class="article-date">
+  <time datetime="2016-08-09T13:46:18.000Z" itemprop="datePublished">2016-08-09</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/h5-cs/">h5/cs</a>
+    <a class="article-category-link" href="/categories/ajax/">ajax</a>
   </div>
 
   </div>
@@ -477,7 +569,7 @@ clear:right; 清除右浮动的影响
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/05/h5-history/">h5-history</a>
+      <a class="article-title" href="/2016/08/09/ajax-跨域/">ajax-跨域</a>
     </h1>
   
 
@@ -485,110 +577,47 @@ clear:right; 清除右浮动的影响
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>浏览器历史记录<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">history.pushState(<span class="literal">null</span>,<span class="literal">null</span>,<span class="string">'test.html'</span>);  追加一条历史记录   地址</div><div class="line">   history.replaceState(<span class="literal">null</span>,<span class="literal">null</span>,<span class="string">'test.html'</span>); 替换一条历史记录  地址</div><div class="line">   都不会发生页面跳转</div><div class="line"></div><div class="line">   监听历史改变事件</div><div class="line">   <span class="built_in">window</span>.onpopstate = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="built_in">console</span>.log(location.href) &#125;</div></pre></td></tr></table></figure>
+        <h2 id="同源"><a href="#同源" class="headerlink" title="同源"></a>同源</h2><pre><code>    数据是可以共享的
+    同源的页面
+        协议，域名，端口。完全一致
+        数据是可以共享的
+    协议，域名，端口。完全一致
+    什么是端口？
+        浏览器默认使用80端口
+            不显示的
+    浏览器默认使用80端口
+        不显示的
+    m.youku.com
+    什么是域名？
+        127.0.0.1
+        www.youku.com
+        m.youku.com
+        www.youku.com
+        127.0.0.1
+        https://
+    什么是协议？
+        http://
+        https://
+        http://
+
+
+跨域的请求由于浏览器安全策略默认不被允许的
+如果协议，域名，端口，任何一样不同，那么属于跨域
+</code></pre><h2 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a><a href="http://blog.csdn.net/kongjiea/article/details/44201021" target="_blank" rel="external">跨域</a></h2><pre><code>跨域的方法很多，不同的应用场景我们都可以找到一个最合适的解决方案。比如单向的数据请求，我们应该优先选择JSONP或者window.name，双向通信优先采取location.hash
+</code></pre><p>  常用跨域方法</p>
+<ol>
+<li><p>JSONP</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">	</div><div class="line"><span class="comment">&lt;!--</span></div><div class="line">    </div><div class="line">1.在页面上先定义一javascript的函数,该函数用于接收其他网站传递来的数据</div><div class="line">2.利用script标签可以跨域获取资源的特性, 把函数的调用的代码获取回来.</div><div class="line">3.在script标签的src属性上要把函数的名称给传递给后台。</div><div class="line"></div><div class="line">--&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="comment">/*1.定义函数*/</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">eat</span>(<span class="params">food</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(food);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'打印'</span>+food );</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">&lt;!--2.script标签,跨域获取 api.study.com网站上的函数调用--&gt;</span></div><div class="line"><span class="comment">&lt;!--&lt;script src="http://api.study.com/jsonp.php?callback=eat"&gt;&lt;/script&gt;--&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"></div><div class="line"><span class="comment">/*工作中我们通常会用js脚本创建script标签*/</span></div><div class="line"><span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">script.src = <span class="string">'http://api.study.com/jsonp.php?callback=eat'</span>;</div><div class="line"><span class="built_in">document</span>.body.appendChild(script);</div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/05/h5-history/" data-id="cj5wh3f1z000s4obmx0u79bf7" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-h5-storage-本地存储" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/05/h5-storage-本地存储/" class="article-date">
-  <time datetime="2016-08-05T13:32:38.000Z" itemprop="datePublished">2016-08-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/h5-cs/">h5/cs</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/05/h5-storage-本地存储/">h5-storage 本地存储</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="本地存储参考"><a href="#本地存储参考" class="headerlink" title="本地存储参考"></a><a href="http://www.cnblogs.com/liuqiwang/p/5213779.html" target="_blank" rel="external">本地存储参考</a></h3><h3 id="cookie参考"><a href="#cookie参考" class="headerlink" title="cookie参考"></a><a href="http://blog.csdn.net/fangaoxin/article/details/6952954/" target="_blank" rel="external">cookie参考</a></h3><h3 id="简介"><a href="#简介" class="headerlink" title="简介:"></a>简介:</h3><pre><code>Storage模块管理应用本地数据存储，用于应用数据的保存和读取，应用本地数据localStorage,sessionStorage的区别在于数据的有效域不同，前者可在应用内跨域操作，数据存储期是持久化的，并且没有容量的限制，通过plus.storage可获取应用本地数据管理对象
-</code></pre><ol>
-<li>localstorage  一直保存在浏览器客户端</li>
-<li>sessionstorage  当浏览器关闭时就失效了</li>
-<li>cookie     在浏览器和服务器之间传递,在有效期内存在客户端(注意后台使用)</li>
+<li><p>cors<br>  服务端</p>
+<pre><code>header(&apos;Access-Control-Allow-Orgin:*&apos;);
+</code></pre></li>
 </ol>
-<p>操作方法<br>    localstorage.setItem(‘name’, ‘小高’);  存数据</p>
-<pre><code>localstorage.getItem(&apos;name&apos;);  取数据 
-localstorage.removeItem(&apos;name&apos;)  删除数据
-localstorage.clear()  清空数据
-</code></pre><h2 id="sessionstorage-同上四种"><a href="#sessionstorage-同上四种" class="headerlink" title="sessionstorage 同上四种"></a>sessionstorage 同上四种</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/05/h5-storage-本地存储/" data-id="cj5wh3f2j00154obmfzbzzrax" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-h5-geolocation全球定位" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/05/h5-geolocation全球定位/" class="article-date">
-  <time datetime="2016-08-05T13:32:38.000Z" itemprop="datePublished">2016-08-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/h5-cs/">h5/cs</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/05/h5-geolocation全球定位/">h5-geolocation全球定位</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="geolocation-全球定位"><a href="#geolocation-全球定位" class="headerlink" title="geolocation   全球定位"></a>geolocation   全球定位</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">	&lt;!-- 引入百度javascript版 API --&gt;</div><div class="line">&lt;script src="http://api.map.baidu.com/api?v=2.0&amp;ak=	0A5bc3c4fb543c8f9bc54b77bc155724"&gt;&lt;/script&gt;</div><div class="line">&lt;script&gt;</div><div class="line"></div><div class="line">    <span class="comment">/*如果存在这个属性就说明浏览器支持定位*/</span></div><div class="line">    <span class="comment">/*</span></div><div class="line">    * navigator.geolocation.getCurrentPosition(function(position)&#123;&#125;,function(error)&#123;&#125;);</div><div class="line">    * */</div><div class="line">    <span class="keyword">if</span> (navigator.geolocation) &#123;</div><div class="line">        navigator.geolocation.getCurrentPosition(<span class="function"><span class="keyword">function</span> (<span class="params">position</span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(position);</div><div class="line">            <span class="comment">/*</span></div><div class="line">            * 上海的定位   31.0412620965,121.6194754203</div><div class="line">            * 使用的代理   所以不一样 36.204823999999995 138.252924</div><div class="line">            * */</div><div class="line"></div><div class="line">            <span class="comment">/*主要是获取定位需要的经纬度*/</span></div><div class="line">            <span class="keyword">var</span> latitude = position.coords.latitude;   <span class="comment">// 纬度</span></div><div class="line">            <span class="keyword">var</span> longitude = position.coords.longitude; <span class="comment">// 经度</span></div><div class="line"></div><div class="line">            <span class="built_in">console</span>.log(position.coords.latitude,position.coords.longitude);</div><div class="line"></div><div class="line">            <span class="comment">/********************/</span></div><div class="line"></div><div class="line">            <span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(<span class="string">"container"</span>);</div><div class="line">            <span class="comment">/**/</span></div><div class="line">            <span class="keyword">var</span> point = <span class="keyword">new</span> BMap.Point(<span class="number">121.6194754203</span>, <span class="number">31.0412620965</span>);</div><div class="line"></div><div class="line">            map.centerAndZoom(point, <span class="number">10</span>);</div><div class="line">            map.enableScrollWheelZoom();</div><div class="line"></div><div class="line">            <span class="comment">// 定义好了一个图片标记</span></div><div class="line">            <span class="keyword">var</span> myIcon = <span class="keyword">new</span> BMap.Icon(<span class="string">"data:image/gif;base64,R0lGODdhEAAQAKEAADY+47O39P///wAAACwAAAAAEAAQAAACOYSPacLtvloAQYTaIjuTZgAZHSYsnVVd1gaej1i2ZgRHKhJXWox/n+KzKGAxRkeB0XCOwYeTNxwWAAA7"</span>, <span class="keyword">new</span> BMap.Size(<span class="number">16</span>, <span class="number">16</span>));</div><div class="line">            <span class="comment">// 创建标注</span></div><div class="line">            <span class="keyword">var</span> marker = <span class="keyword">new</span> BMap.Marker(point, &#123;<span class="attr">icon</span>: myIcon&#125;);</div><div class="line">            map.addOverlay(marker);</div><div class="line"></div><div class="line">        &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(error)</div><div class="line">        &#125;);</div><div class="line">        <span class="comment">/*Network location provider at 'https://www.googleapis.com/' : No response received.*/</span></div><div class="line">        <span class="comment">/*网络位置提供商在https://www.googleapis.com/”：没有收到响应。*/</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/05/h5-geolocation全球定位/" data-id="cj5wh3f29000x4obmjwwvlgei" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/08/09/ajax-跨域/" data-id="cj6gb6fe2000kn8bmvmwnk4nk" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -603,7 +632,7 @@ localstorage.clear()  清空数据
 
 
   <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
   </nav>
 </section>
         
@@ -611,9 +640,9 @@ localstorage.clear()  清空数据
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Catégories</h3>
+    <h3 class="widget-title">Categorieën</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/h5-cs/">h5/cs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery-原生JS区别/">jQuery-原生JS区别</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/">javascript基础</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/">js-DOM/BOM</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/">js-特效</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/插件/">插件</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/ajax/">ajax</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/h5-cs/">h5/cs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery-原生JS区别/">jQuery-原生JS区别</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/">javascript基础</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/">js-DOM/BOM</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/">js-特效</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/插件/">插件</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/案例/">案例</a></li></ul>
     </div>
   </div>
 
@@ -621,9 +650,9 @@ localstorage.clear()  清空数据
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Labels</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/js-特效/">js-特效</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件学习/">插件学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/js-特效/">js-特效</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件学习/">插件学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/案例/">案例</a></li></ul>
     </div>
   </div>
 
@@ -631,18 +660,18 @@ localstorage.clear()  清空数据
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/js-特效/" style="font-size: 10px;">js-特效</a> <a href="/tags/学习/" style="font-size: 20px;">学习</a> <a href="/tags/插件学习/" style="font-size: 10px;">插件学习</a> <a href="/tags/日记/" style="font-size: 15px;">日记</a>
+      <a href="/tags/js-特效/" style="font-size: 10px;">js-特效</a> <a href="/tags/学习/" style="font-size: 20px;">学习</a> <a href="/tags/插件学习/" style="font-size: 10px;">插件学习</a> <a href="/tags/日记/" style="font-size: 15px;">日记</a> <a href="/tags/案例/" style="font-size: 10px;">案例</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/3016/08/">August 3016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
     </div>
   </div>
 
@@ -650,9 +679,17 @@ localstorage.clear()  清空数据
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/3016/08/09/c3-动画/">c3-动画</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/07/案例-遮罩层/">案例-遮罩层</a>
+          </li>
         
           <li>
             <a href="/2017/08/01/jQuery选择器/">jQuery选择器</a>
@@ -664,14 +701,6 @@ localstorage.clear()  清空数据
         
           <li>
             <a href="/2017/07/13/javascript三/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/07/08/angular-02/">angular 02</a>
-          </li>
-        
-          <li>
-            <a href="/2017/07/08/angular-01/">angular 01</a>
           </li>
         
       </ul>
@@ -687,7 +716,7 @@ localstorage.clear()  清空数据
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 ������<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

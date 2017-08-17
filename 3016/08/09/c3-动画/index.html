@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>c3-动画 | welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="c3-动画a、通过@keyframes指定动画序列； b、通过百分比将动画序列分割成多个节点； c、在各节点中分别定义各属性 d、通过animation将动画应用于相应元素； eg:12345678910111213141516171819202122232425262728293031.box img&amp;#123;           width: 100%;           height:">
+<meta name="keywords" content="学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c3-动画">
+<meta property="og:url" content="http://yoursite.com/3016/08/09/c3-动画/index.html">
+<meta property="og:site_name" content="welcome">
+<meta property="og:description" content="c3-动画a、通过@keyframes指定动画序列； b、通过百分比将动画序列分割成多个节点； c、在各节点中分别定义各属性 d、通过animation将动画应用于相应元素； eg:12345678910111213141516171819202122232425262728293031.box img&amp;#123;           width: 100%;           height:">
+<meta property="og:updated_time" content="2017-08-08T00:31:25.552Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="c3-动画">
+<meta name="twitter:description" content="c3-动画a、通过@keyframes指定动画序列； b、通过百分比将动画序列分割成多个节点； c、在各节点中分别定义各属性 d、通过animation将动画应用于相应元素； eg:12345678910111213141516171819202122232425262728293031.box img&amp;#123;           width: 100%;           height:">
+  
+    <link rel="alternate" href="/atom.xml" title="welcome" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">welcome</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-c3-动画" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/3016/08/09/c3-动画/" class="article-date">
+  <time datetime="3016-08-09T09:02:36.000Z" itemprop="datePublished">3016-08-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/h5-cs/">h5/cs</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      c3-动画
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="c3-动画"><a href="#c3-动画" class="headerlink" title="c3-动画"></a>c3-动画</h2><pre><code>a、通过@keyframes指定动画序列；
+b、通过百分比将动画序列分割成多个节点；
+c、在各节点中分别定义各属性
+d、通过animation将动画应用于相应元素；
+</code></pre><p>eg:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">.box img&#123;</div><div class="line">           width: 100%;</div><div class="line">           height: 100%;</div><div class="line">           display: block;</div><div class="line"></div><div class="line">           /*transition: all 2s;*/</div><div class="line"></div><div class="line">           animation: fengche 8s;</div><div class="line">       &#125;</div><div class="line">	1.花2s时间  放大1.5倍 旋转360度 </div><div class="line">       2.花4s时间  缩小0.8倍 旋转0度</div><div class="line">       3.花2s时间  变回1倍  旋转-60deg</div><div class="line">       4.动画时长8s  25% 50% 25%</div><div class="line"></div><div class="line">       @keyframes 用来定义动画序列  后面是自定义的动画序列的名称</div><div class="line">    @keyframes fengche&#123;</div><div class="line">           /*from&#123;&#125;*/</div><div class="line">           0%&#123;</div><div class="line"></div><div class="line">           &#125;</div><div class="line">           25%&#123;</div><div class="line">               transform: scale(1.5) rotate(360deg);</div><div class="line">           &#125;</div><div class="line">           75%&#123;</div><div class="line">               transform: scale(0.8) rotate(0deg);</div><div class="line">           &#125;</div><div class="line">           /*to&#123;&#125;*/</div><div class="line">           100%&#123;</div><div class="line">               transform: scale(1) rotate(-60deg);</div><div class="line">           &#125;</div><div class="line">       &#125;</div></pre></td></tr></table></figure></p>
+<pre><code>分解
+</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">.box &#123;</div><div class="line">           width: 200px;</div><div class="line">           height: 200px;</div><div class="line">           background-color: green;</div><div class="line"></div><div class="line">           /*动画序列的名称*/</div><div class="line">           animation-name: move;</div><div class="line">           /*动画执行的总时间*/</div><div class="line">           animation-duration: 2s;</div><div class="line">           /*动画执行的速度 ease linear ease-in ease-in-out ease-out */</div><div class="line">           animation-timing-function: ease;</div><div class="line">           /*动画延时*/</div><div class="line">           animation-delay: 1s;</div><div class="line">           /*动画结束的时候的状态 forwards 保持结束状态  backwards 回答最原生的状态 没有动画的那个状态*/</div><div class="line">           animation-fill-mode: forwards;</div><div class="line">           /*动画执行的次数  次数  特殊的值 infinite 执行无数次*/</div><div class="line">           animation-iteration-count: infinite;</div><div class="line">           /*动画逆播放*/</div><div class="line">           animation-direction: alternate;</div><div class="line">           /*分步执行 steps(3)*/</div><div class="line">       &#125;</div><div class="line"></div><div class="line">       .box:hover &#123;</div><div class="line">           /*执行的状态 是执行中  暂停  running、paused*/</div><div class="line">           animation-play-state: paused;</div><div class="line">       &#125;</div><div class="line"></div><div class="line">       @keyframes move &#123;</div><div class="line">           from &#123;</div><div class="line">               width: 300px;</div><div class="line">               height: 300px;</div><div class="line">           &#125;</div><div class="line"></div><div class="line">           to &#123;</div><div class="line">               width: 400px;</div><div class="line">               height: 400px;</div><div class="line">           &#125;</div><div class="line">       &#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/3016/08/09/c3-动画/" data-id="cj6gb6fiz003cn8bmlrj2luat" class="article-share-link">Delen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/07/案例-遮罩层/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ouder</strong>
+      <div class="article-nav-title">案例-遮罩层</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categorieën</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/ajax/">ajax</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/h5-cs/">h5/cs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery-原生JS区别/">jQuery-原生JS区别</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/">javascript基础</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/">js-DOM/BOM</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/">js-特效</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/插件/">插件</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/案例/">案例</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Labels</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/js-特效/">js-特效</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件学习/">插件学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/案例/">案例</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/js-特效/" style="font-size: 10px;">js-特效</a> <a href="/tags/学习/" style="font-size: 20px;">学习</a> <a href="/tags/插件学习/" style="font-size: 10px;">插件学习</a> <a href="/tags/日记/" style="font-size: 15px;">日记</a> <a href="/tags/案例/" style="font-size: 10px;">案例</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archieven</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/3016/08/">August 3016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recente berichten</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/3016/08/09/c3-动画/">c3-动画</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/07/案例-遮罩层/">案例-遮罩层</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/01/jQuery选择器/">jQuery选择器</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/15/node-js简介/">node.js简介</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/13/javascript三/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 ������<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
