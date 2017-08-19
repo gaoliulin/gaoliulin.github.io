@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,139 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-CSS五" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/07/CSS五/" class="article-date">
+  <time datetime="2015-07-07T08:35:20.000Z" itemprop="datePublished">2015-07-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>►<a class="article-category-link" href="/categories/CSS/web/">web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/07/CSS五/">CSS五 定位 position 及使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>## </p>
+<h3 id="position常用属性有static-relative-relative-fixed"><a href="#position常用属性有static-relative-relative-fixed" class="headerlink" title="position常用属性有static,relative,relative,fixed,"></a>position常用属性有static,relative,relative,fixed,</h3><p>  static    静态定位,默认值,元素出现杂正常的流中,(会忽视left,top,right,bottom,z-index的声明)</p>
+<p>  relative    相对定位,相对于其正常位置进行定位,移动.本元素在原来空间仍然占据空间(配合使用left,top,right,bottom,z-index的声明)</p>
+<p>  absolute    绝对定位,找相对与static定位意外的有定位的父元素,相对于这个父元素设置本身位置,若没有,则相对与body定位(配合使用left,top,right,bottom,z-index的声明).<br>    设置absolute属性的元素在标准流死你不占位置的</p>
+<p>  fixed    固定定位(绝对定位),相对于浏览器窗口进行定位(配合使用left,top,right,bottom,z-index的声明)<br>  在标准流死你不占位置的</p>
+<h2 id="z-index-层级"><a href="#z-index-层级" class="headerlink" title="z-index 层级"></a>z-index 层级</h2><h2 id="怎样把盒子设置居中"><a href="#怎样把盒子设置居中" class="headerlink" title="怎样把盒子设置居中"></a>怎样把盒子设置居中</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">方法一: &#123;</div><div class="line">		<span class="attr">left</span>:<span class="number">50</span>%;</div><div class="line">		margin-left:<span class="number">-1</span>/<span class="number">2</span>width px;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">方法二: &#123;</div><div class="line">	<span class="attr">left</span>:<span class="number">50</span>%;</div><div class="line">	transform:trnaslateX(<span class="number">-50</span>%);</div><div class="line">&#125;</div><div class="line">方法三: &#123;</div><div class="line">	<span class="attr">left</span>:<span class="number">0</span>;</div><div class="line">	rigth:<span class="number">0</span>;</div><div class="line">	bottom:<span class="number">0</span>;</div><div class="line">	margin:<span class="number">0</span> auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="什么是精灵图？"><a href="#什么是精灵图？" class="headerlink" title="什么是精灵图？"></a>什么是精灵图？</h2><h3 id="1-CSS精灵是一种处理网页背景图像的方式（一般针对网页中的logo和一些其他图标）。它将一个页面涉及到的所有零星背景图像都集中到一张大图中去，然后将大图应用于网页，这样，当用户访问该页面时，只需向服务发送一次请求，网页中的背景图像即可全部展示出来。通常情况下，这个由很多小的背景图像合成的大图被称为精灵图"><a href="#1-CSS精灵是一种处理网页背景图像的方式（一般针对网页中的logo和一些其他图标）。它将一个页面涉及到的所有零星背景图像都集中到一张大图中去，然后将大图应用于网页，这样，当用户访问该页面时，只需向服务发送一次请求，网页中的背景图像即可全部展示出来。通常情况下，这个由很多小的背景图像合成的大图被称为精灵图" class="headerlink" title="1. CSS精灵是一种处理网页背景图像的方式（一般针对网页中的logo和一些其他图标）。它将一个页面涉及到的所有零星背景图像都集中到一张大图中去，然后将大图应用于网页，这样，当用户访问该页面时，只需向服务发送一次请求，网页中的背景图像即可全部展示出来。通常情况下，这个由很多小的背景图像合成的大图被称为精灵图."></a>1. CSS精灵是一种处理网页背景图像的方式（一般针对网页中的logo和一些其他图标）。它将一个页面涉及到的所有零星背景图像都集中到一张大图中去，然后将大图应用于网页，这样，当用户访问该页面时，只需向服务发送一次请求，网页中的背景图像即可全部展示出来。通常情况下，这个由很多小的背景图像合成的大图被称为精灵图.</h3><h3 id="2-精灵图的原理和使用方式"><a href="#2-精灵图的原理和使用方式" class="headerlink" title="2. 精灵图的原理和使用方式"></a>2. 精灵图的原理和使用方式</h3><p>CSS 精灵其实是将网页中的一些背景图像整合到一张大图中（精灵图）。然而，各个网页元素通常只需要精灵图中不同位置的某个小图，要想精确定位到精灵图中的某个小图，就需要使用CSS的background-image、background-repeat和background-position属性进行背景定位，其中最关键的是使用background-position属性精确地定位。</p>
+<h2 id="css滑动门技术"><a href="#css滑动门技术" class="headerlink" title="css滑动门技术"></a>css滑动门技术</h2><h3 id="制作网页时，为了美观，常常需要为网页元素设置特殊形状的背景-如果使用传统的CSS思想，要想为列表项“技术联盟”设置上图所示的圆角背景，可以对其所在的标记应用大圆角背景。这种方式固然可以实现圆角背景的效果，但是，如果以后增加或减少列表项中的文字，就需要重新对定义背景图像，以适应文本内容的多少。"><a href="#制作网页时，为了美观，常常需要为网页元素设置特殊形状的背景-如果使用传统的CSS思想，要想为列表项“技术联盟”设置上图所示的圆角背景，可以对其所在的标记应用大圆角背景。这种方式固然可以实现圆角背景的效果，但是，如果以后增加或减少列表项中的文字，就需要重新对定义背景图像，以适应文本内容的多少。" class="headerlink" title="制作网页时，为了美观，常常需要为网页元素设置特殊形状的背景.如果使用传统的CSS思想，要想为列表项“技术联盟”设置上图所示的圆角背景，可以对其所在的标记应用大圆角背景。这种方式固然可以实现圆角背景的效果，但是，如果以后增加或减少列表项中的文字，就需要重新对定义背景图像，以适应文本内容的多少。"></a>制作网页时，为了美观，常常需要为网页元素设置特殊形状的背景.如果使用传统的CSS思想，要想为列表项“技术联盟”设置上图所示的圆角背景，可以对其所在的<li>标记应用大圆角背景。这种方式固然可以实现圆角背景的效果，但是，如果以后增加或减少列表项中的文字，就需要重新对</li><li>定义背景图像，以适应文本内容的多少。</li></h3><h2 id="三．透明度"><a href="#三．透明度" class="headerlink" title="三．透明度"></a>三．透明度</h2><pre><code>样式属性：opacity
+使用方式：
+opacity:数值;    数值范围(0-1)
+filter:alpha(opacity=数值);    数值范围（0-100）  //IE8及其以下版本
+</code></pre><h2 id="隐藏"><a href="#隐藏" class="headerlink" title="隐藏"></a>隐藏</h2><h4 id="overflow-hidden-隐藏超出部分"><a href="#overflow-hidden-隐藏超出部分" class="headerlink" title="overflow:hidden;隐藏超出部分"></a>overflow:hidden;隐藏超出部分</h4><p>display:none;不显示元素,不占位置<br>visibiloty:hidden;不显示元素,不占位置<br>opacity:0;占位置<br>position-top:-9999px; 占位置</p>
+<h2 id="overflow介绍"><a href="#overflow介绍" class="headerlink" title="overflow介绍"></a>overflow介绍</h2><p>###　overflow 属性规定当内容溢出元素框时发生的事情。<br>    overflow:visible    默认值。内容不会被修剪，会呈现在元素框之外。<br>    overflow:hidden    内容会被修剪，并且其余内容是不可见的。<br>    overflow:scroll    内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br>    overflow:auto    如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/07/CSS五/" data-id="cj6hmta2u000akcbm8clb00up" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS三" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/07/CSS三/" class="article-date">
+  <time datetime="2015-07-07T06:05:05.000Z" itemprop="datePublished">2015-07-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>►<a class="article-category-link" href="/categories/CSS/web/">web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/07/CSS三/">CSS三 border padding margin</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h2><pre><code>所谓盒子模型就是把HTML页面中的元素看作是一个矩形的盒子，也就是一个盛装内容的容器。每个矩形都由元素的内容、内边距（padding）、边框（border）和外边距（margin）组成。
+</code></pre><h2 id="border"><a href="#border" class="headerlink" title="border"></a>border</h2><h3 id="css中盒子模型由三部分组成-1边框（border）-2-内边距（padding）-3外边距（margin）"><a href="#css中盒子模型由三部分组成-1边框（border）-2-内边距（padding）-3外边距（margin）" class="headerlink" title="css中盒子模型由三部分组成: 1边框（border） 2 内边距（padding） 3外边距（margin）"></a>css中盒子模型由三部分组成: 1边框（border） 2 内边距（padding） 3外边距（margin）</h3><h4 id="属性名称-介绍"><a href="#属性名称-介绍" class="headerlink" title="|属性名称    |                   介绍|"></a>|属性名称    |                   介绍|</h4><pre><code>|border-width     |设置边框宽度单位以px为主   例如:12px|
+|border-style     |设置边框样式|
+|border-color      |设置边框颜色|
+
+|border-top        |设置上边框样式|
+|border-bottom    |设置下边框样式|
+|border-left    |设置左边框样式|
+|border-right    |设置右边框样式|
+
+轮廓线    outline-style:none   取消轮廓线
+获取焦点    :focus  获取鼠标光标状态
+取消表单边框    border:0 none;           兼容性好
+label标签    &lt;label  for=&quot;ID名&quot;&gt;     友好性 
+</code></pre><h3 id="border-collapse-collapse-设置表格边框合并（适用于表格）"><a href="#border-collapse-collapse-设置表格边框合并（适用于表格）" class="headerlink" title="border-collapse:collapse      设置表格边框合并（适用于表格）"></a>border-collapse:collapse      设置表格边框合并（适用于表格）</h3><h2 id="padding"><a href="#padding" class="headerlink" title="padding"></a>padding</h2><h3 id="padding-10px-上，下，左，右距离分别是10px"><a href="#padding-10px-上，下，左，右距离分别是10px" class="headerlink" title="padding:10px    上，下，左，右距离分别是10px"></a>padding:10px    上，下，左，右距离分别是10px</h3><pre><code>padding:10px 40px    上下10px  左右40px
+padding:10px 40px 20px    上10px     左右40px    下20px
+padding:10px 20px 30px 40px    上10   右20px   下30px   左40px
+</code></pre><h3 id="padding-top-上内边距"><a href="#padding-top-上内边距" class="headerlink" title="padding-top:上内边距"></a>padding-top:上内边距</h3><pre><code>padding-right:右内边距
+padding-bottom:下内边距
+padding-left:左内边距
+</code></pre><h2 id="margin"><a href="#margin" class="headerlink" title="margin"></a>margin</h2><h3 id="用法与padding一样，margin对盒子宽度不会有影响"><a href="#用法与padding一样，margin对盒子宽度不会有影响" class="headerlink" title="用法与padding一样，margin对盒子宽度不会有影响"></a>用法与padding一样，margin对盒子宽度不会有影响</h3><pre><code>margin:10px      距离上下左右边距10px
+margin:10px  20px     距离上下10px   左右20px
+margin:10px   20px  30px    距离上10px    左右 20px   下30px
+margin:10px   20px   30px   40px    距离上10px   右20px   下 30px  左40px
+margin-left:    距离左边
+margin-right    距离右边
+margin-top    距离上边
+margin-bottom    距离下边
+margin:0  auto    auto 设置为相对边的值
+</code></pre><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><h3 id="外边距合并（叠加）是一个相当简单的概念。"><a href="#外边距合并（叠加）是一个相当简单的概念。" class="headerlink" title="外边距合并（叠加）是一个相当简单的概念。"></a>外边距合并（叠加）是一个相当简单的概念。</h3><pre><code>简单地说，外边距合并指的是，当两个垂直外边距相遇时，它们将形成一个外边距。合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。
+当一个元素出现在另一个元素上面时，第一个元素的下外边距与第二个元素的上外边距会发生合并。
+</code></pre><ul>
+<li>边距合并问题只发生在块级元素之间</li>
+<li>内外两个盒子都设置margin-top,那么水的值大听谁的,同时对两个盒子起作用<br>如果给外面父盒子设置  overfloat:hidden;那么分别对自己起作用</li>
+</ul>
+<h1 id="行内元素的padding-和margin"><a href="#行内元素的padding-和margin" class="headerlink" title="行内元素的padding 和margin"></a>行内元素的padding 和margin</h1><p>###　行内元素不要给上下的margin 和padding<br>    上下margin和padding会被忽略。<br>    左右margin和padding会起作用。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/07/CSS三/" data-id="cj6hmta2f0006kcbm3q5vnhz7" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-CSS二" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -104,7 +237,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/07/CSS二/" data-id="cj6gb6fd90006n8bm2qqjhuv7" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2015/07/07/CSS二/" data-id="cj6hmta2f0005kcbmngy2yt8r" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -182,7 +315,7 @@ background-attachment:scroll;滑动
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/07/CSS一/" data-id="cj6gb6fd00004n8bmxef61tcm" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2015/07/07/CSS一/" data-id="cj6hmta2f0004kcbmckshbe9s" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -201,7 +334,7 @@ background-attachment:scroll;滑动
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/HTML/">HTML</a>►<a class="article-category-link" href="/categories/HTML/web/">web</a>
+    <a class="article-category-link" href="/categories/HTML/">HTML</a>
   </div>
 
   </div>
@@ -307,10 +440,10 @@ _self    默认。在相同的框架中打开被链接文档。
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/06/HTML简介二-标签/" data-id="cj6gb6fkt004hn8bm5p9tyf3g" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2015/07/06/HTML简介二-标签/" data-id="cj6hmta3a000kkcbmcocju00v" class="article-share-link">Partager</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
 
     </footer>
   </div>
@@ -326,7 +459,7 @@ _self    默认。在相同的框架中打开被链接文档。
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/HTML/">HTML</a>►<a class="article-category-link" href="/categories/HTML/web/">web</a>
+    <a class="article-category-link" href="/categories/HTML/">HTML</a>
   </div>
 
   </div>
@@ -353,10 +486,10 @@ _self    默认。在相同的框架中打开被链接文档。
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/06/HTML简介三/" data-id="cj6gb6fdk000an8bm5us777o9" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2015/07/06/HTML简介三/" data-id="cj6hmta2u000ekcbmhbv78uqb" class="article-share-link">Partager</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
 
     </footer>
   </div>
@@ -365,14 +498,14 @@ _self    默认。在相同的框架中打开被链接文档。
 
 
   
-    <article id="post-2" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-HTML简介" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/06/25/2/" class="article-date">
-  <time datetime="2015-06-25T02:46:40.000Z" itemprop="datePublished">2015-06-25</time>
+    <a href="/2015/04/29/HTML简介/" class="article-date">
+  <time datetime="2015-04-29T03:47:02.000Z" itemprop="datePublished">2015-04-29</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/javasript/">javasript</a>►<a class="article-category-link" href="/categories/javasript/面向对象二/">面向对象二</a>
+    <a class="article-category-link" href="/categories/HTML/">HTML</a>
   </div>
 
   </div>
@@ -383,7 +516,7 @@ _self    默认。在相同的框架中打开被链接文档。
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/25/2/">2</a>
+      <a class="article-title" href="/2015/04/29/HTML简介/">HTML简介</a>
     </h1>
   
 
@@ -391,61 +524,22 @@ _self    默认。在相同的框架中打开被链接文档。
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##面向对象是一种思维,其他编程语言中也有</p>
+        <h2 id="一．DTD-文档类型声明"><a href="#一．DTD-文档类型声明" class="headerlink" title="一．DTD 文档类型声明"></a>一．DTD 文档类型声明</h2><h3 id="DTD-Document-Type-Declaration-文档类型声明。"><a href="#DTD-Document-Type-Declaration-文档类型声明。" class="headerlink" title="DTD (Document Type Declaration) 文档类型声明。"></a>DTD (Document Type Declaration) 文档类型声明。</h3><pre><code>作用：
+用来告诉浏览器在解析我们的网页时按照哪种版本解析
+</code></pre><h3 id="html4-01-的DTD有三种模式，分别是"><a href="#html4-01-的DTD有三种模式，分别是" class="headerlink" title="html4.01 的DTD有三种模式，分别是"></a>html4.01 的DTD有三种模式，分别是</h3><h4 id="Strict：严格模式-严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。"><a href="#Strict：严格模式-严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。" class="headerlink" title="Strict：严格模式.严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。"></a>Strict：严格模式.严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。</h4><h4 id="Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。"><a href="#Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。" class="headerlink" title="Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。"></a>Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。</h4><h4 id="Frameset：框架模式-（基本不用）在页面中若，使用frameset标签，推荐使用该模式声明"><a href="#Frameset：框架模式-（基本不用）在页面中若，使用frameset标签，推荐使用该模式声明" class="headerlink" title="Frameset：框架模式 （基本不用）在页面中若，使用frameset标签，推荐使用该模式声明"></a>Frameset：框架模式 （基本不用）在页面中若，使用frameset标签，推荐使用该模式声明</h4><h3 id="xhtml1-0-的DTD-有三种模式分别是"><a href="#xhtml1-0-的DTD-有三种模式分别是" class="headerlink" title="xhtml1.0 的DTD 有三种模式分别是"></a>xhtml1.0 的DTD 有三种模式分别是</h3><h4 id="Strict：严格模式"><a href="#Strict：严格模式" class="headerlink" title="Strict：严格模式"></a>Strict：严格模式</h4><h4 id="Transitional：过渡模式"><a href="#Transitional：过渡模式" class="headerlink" title="Transitional：过渡模式"></a>Transitional：过渡模式</h4><h4 id="Frameset：框架模式-（基本不用）"><a href="#Frameset：框架模式-（基本不用）" class="headerlink" title="Frameset：框架模式 （基本不用）"></a>Frameset：框架模式 （基本不用）</h4><h3 id="xhtml1-0-和-html4-01的区别"><a href="#xhtml1-0-和-html4-01的区别" class="headerlink" title="xhtml1.0 和 html4.01的区别"></a>xhtml1.0 和 html4.01的区别</h3><pre><code>xhtml1.0比html4.01在语法上规范要求更加严格
+如：双标签要成对、html以及其中的标签要小写
+</code></pre><h3 id="lang属性"><a href="#lang属性" class="headerlink" title="lang属性"></a>lang属性</h3><h4 id="lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。"><a href="#lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。" class="headerlink" title="lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。"></a>lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。</h4><h3 id="meta标签"><a href="#meta标签" class="headerlink" title="meta标签"></a>meta标签</h3><h4 id="作用：用作配置"><a href="#作用：用作配置" class="headerlink" title="作用：用作配置"></a>作用：用作配置</h4><pre><code> 使用方式：字符集配置
+ 在html中&lt;meta charset=”utf-8”/&gt; 是用来告诉浏览器，在解析我们的文件内容的时候，按照哪种编码格式来解析。
+若文件的编码格式 和  &lt;meta charset=”utf-8”/&gt;这里的编码格式不一致时，则会造成乱码。
+</code></pre><h2 id="SEO"><a href="#SEO" class="headerlink" title="SEO"></a>SEO</h2><p>SEO(Search Engine Optimization) ：搜索引擎优化<br>优化：<br>     就是通过某些手段，使我们的网站在被搜索时，排名靠前。<br><strong> 优化手段：<br>    -花钱买排名<br>        很烧钱，效果最好<br>    -广发外链<br>    -标签语义化<br>        在合适地方用合适的标签<br>        seo更加喜欢语义化健全的网站<br>    -从技术角度<br>        在meta标签里写上关键字… </strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/25/2/" data-id="cj6gb6fcc0000n8bm1s4k4pzg" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2015/04/29/HTML简介/" data-id="cj6hmta3a000gkcbm7ecsr3do" class="article-share-link">Partager</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-面向对象" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/06/25/面向对象/" class="article-date">
-  <time datetime="2015-06-25T02:13:54.000Z" itemprop="datePublished">2015-06-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/javascript/">javascript</a>►<a class="article-category-link" href="/categories/javascript/面向对象/">面向对象</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/25/面向对象/">面向对象</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="面向对象的基本概念"><a href="#面向对象的基本概念" class="headerlink" title="面向对象的基本概念"></a>面向对象的基本概念</h2><h3 id="解决问题的思维方式，-将解决问题的关注点方法在了解决问题的每一个详细的步骤上！"><a href="#解决问题的思维方式，-将解决问题的关注点方法在了解决问题的每一个详细的步骤上！" class="headerlink" title="解决问题的思维方式， 将解决问题的关注点方法在了解决问题的每一个详细的步骤上！"></a>解决问题的思维方式， 将解决问题的关注点方法在了解决问题的每一个详细的步骤上！</h3><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h3 id="解决问题的思维方式，-将解决问题的关注点方法在了解决问题所需要的一系列的对象身上！"><a href="#解决问题的思维方式，-将解决问题的关注点方法在了解决问题所需要的一系列的对象身上！" class="headerlink" title="解决问题的思维方式， 将解决问题的关注点方法在了解决问题所需要的一系列的对象身上！"></a>解决问题的思维方式， 将解决问题的关注点方法在了解决问题所需要的一系列的对象身上！</h3><h2 id="面向对象和面向过程的关系"><a href="#面向对象和面向过程的关系" class="headerlink" title="面向对象和面向过程的关系"></a>面向对象和面向过程的关系</h2><pre><code>面向对象其实就是对面向过程的封装
-
-### 什么是对象
-js中,无序的键值对集合,就是对象!
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/25/面向对象/" data-id="cj6gb6fqi0097n8bmktrowhwx" class="article-share-link">Delen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
 
     </footer>
   </div>
@@ -461,7 +555,7 @@ js中,无序的键值对集合,就是对象!
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/HTML/">HTML</a>►<a class="article-category-link" href="/categories/HTML/web/">web</a>
+    <a class="article-category-link" href="/categories/HTML/">HTML</a>
   </div>
 
   </div>
@@ -531,60 +625,10 @@ js中,无序的键值对集合,就是对象!
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/29/HTML简介四-form表单/" data-id="cj6gb6fih0030n8bmjbahtz80" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2015/04/29/HTML简介四-form表单/" data-id="cj6hmta3p000wkcbmqb47dedg" class="article-share-link">Partager</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML简介" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/04/29/HTML简介/" class="article-date">
-  <time datetime="2015-04-29T03:47:02.000Z" itemprop="datePublished">2015-04-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/HTML/">HTML</a>►<a class="article-category-link" href="/categories/HTML/web/">web</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/29/HTML简介/">HTML简介</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一．DTD-文档类型声明"><a href="#一．DTD-文档类型声明" class="headerlink" title="一．DTD 文档类型声明"></a>一．DTD 文档类型声明</h2><h3 id="DTD-Document-Type-Declaration-文档类型声明。"><a href="#DTD-Document-Type-Declaration-文档类型声明。" class="headerlink" title="DTD (Document Type Declaration) 文档类型声明。"></a>DTD (Document Type Declaration) 文档类型声明。</h3><pre><code>作用：
-用来告诉浏览器在解析我们的网页时按照哪种版本解析
-</code></pre><h3 id="html4-01-的DTD有三种模式，分别是"><a href="#html4-01-的DTD有三种模式，分别是" class="headerlink" title="html4.01 的DTD有三种模式，分别是"></a>html4.01 的DTD有三种模式，分别是</h3><h4 id="Strict：严格模式-严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。"><a href="#Strict：严格模式-严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。" class="headerlink" title="Strict：严格模式.严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。"></a>Strict：严格模式.严格模式中不推荐使用一些仅仅只是表现样式的而没有语义的标签。如b标签、i标签、u标签、s标签等，这些标签在严格模式中视为不规范。</h4><h4 id="Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。"><a href="#Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。" class="headerlink" title="Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。"></a>Transitional：过渡模式过渡模式中，使用一些仅仅表现样式而没有语义的标签，也会被视为规范。</h4><h4 id="Frameset：框架模式-（基本不用）在页面中若，使用frameset标签，推荐使用该模式声明"><a href="#Frameset：框架模式-（基本不用）在页面中若，使用frameset标签，推荐使用该模式声明" class="headerlink" title="Frameset：框架模式 （基本不用）在页面中若，使用frameset标签，推荐使用该模式声明"></a>Frameset：框架模式 （基本不用）在页面中若，使用frameset标签，推荐使用该模式声明</h4><h3 id="xhtml1-0-的DTD-有三种模式分别是"><a href="#xhtml1-0-的DTD-有三种模式分别是" class="headerlink" title="xhtml1.0 的DTD 有三种模式分别是"></a>xhtml1.0 的DTD 有三种模式分别是</h3><h4 id="Strict：严格模式"><a href="#Strict：严格模式" class="headerlink" title="Strict：严格模式"></a>Strict：严格模式</h4><h4 id="Transitional：过渡模式"><a href="#Transitional：过渡模式" class="headerlink" title="Transitional：过渡模式"></a>Transitional：过渡模式</h4><h4 id="Frameset：框架模式-（基本不用）"><a href="#Frameset：框架模式-（基本不用）" class="headerlink" title="Frameset：框架模式 （基本不用）"></a>Frameset：框架模式 （基本不用）</h4><h3 id="xhtml1-0-和-html4-01的区别"><a href="#xhtml1-0-和-html4-01的区别" class="headerlink" title="xhtml1.0 和 html4.01的区别"></a>xhtml1.0 和 html4.01的区别</h3><pre><code>xhtml1.0比html4.01在语法上规范要求更加严格
-如：双标签要成对、html以及其中的标签要小写
-</code></pre><h3 id="lang属性"><a href="#lang属性" class="headerlink" title="lang属性"></a>lang属性</h3><h4 id="lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。"><a href="#lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。" class="headerlink" title="lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。"></a>lang属性是language的简称，表示语言的意思。该属性不会对网页中的内容产生任何影响。它仅仅只是标识着该网站到底是一个什么语言类型的网站而已。</h4><h3 id="meta标签"><a href="#meta标签" class="headerlink" title="meta标签"></a>meta标签</h3><h4 id="作用：用作配置"><a href="#作用：用作配置" class="headerlink" title="作用：用作配置"></a>作用：用作配置</h4><pre><code> 使用方式：字符集配置
- 在html中&lt;meta charset=”utf-8”/&gt; 是用来告诉浏览器，在解析我们的文件内容的时候，按照哪种编码格式来解析。
-若文件的编码格式 和  &lt;meta charset=”utf-8”/&gt;这里的编码格式不一致时，则会造成乱码。
-</code></pre><h2 id="SEO"><a href="#SEO" class="headerlink" title="SEO"></a>SEO</h2><p>SEO(Search Engine Optimization) ：搜索引擎优化<br>优化：<br>     就是通过某些手段，使我们的网站在被搜索时，排名靠前。<br><strong> 优化手段：<br>    -花钱买排名<br>        很烧钱，效果最好<br>    -广发外链<br>    -标签语义化<br>        在合适地方用合适的标签<br>        seo更加喜欢语义化健全的网站<br>    -从技术角度<br>        在meta标签里写上关键字… </strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/29/HTML简介/" data-id="cj6gb6fj3003fn8bm6x596l7m" class="article-share-link">Delen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
 
     </footer>
   </div>
@@ -600,7 +644,7 @@ js中,无序的键值对集合,就是对象!
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/HTML/">HTML</a>►<a class="article-category-link" href="/categories/HTML/web/">web</a>
+    <a class="article-category-link" href="/categories/HTML/">HTML</a>
   </div>
 
   </div>
@@ -672,10 +716,10 @@ js中,无序的键值对集合,就是对象!
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/29/HTML简介五-列表/" data-id="cj6gb6fgg001zn8bmm6zkofdq" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2015/04/29/HTML简介五-列表/" data-id="cj6hmta3a000mkcbm040y035o" class="article-share-link">Partager</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
 
     </footer>
   </div>
@@ -684,16 +728,12 @@ js中,无序的键值对集合,就是对象!
 
 
   
-    <article id="post-我的第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/04/24/我的第一篇博客/" class="article-date">
-  <time datetime="2015-04-24T09:15:23.000Z" itemprop="datePublished">2015-04-24</time>
+    <a href="/2015/04/24/hello-world/" class="article-date">
+  <time datetime="2015-04-24T08:25:53.000Z" itemprop="datePublished">2015-04-24</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/javascript/">javascript</a>►<a class="article-category-link" href="/categories/javascript/web/">web</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -702,7 +742,7 @@ js中,无序的键值对集合,就是对象!
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/24/我的第一篇博客/">我的第一篇博客</a>
+      <a class="article-title" href="/2015/04/24/hello-world/">Hello World</a>
     </h1>
   
 
@@ -710,18 +750,22 @@ js中,无序的键值对集合,就是对象!
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##你好</p>
-<p>###你好啊</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;SS</div><div class="line">	<span class="keyword">var</span> a = <span class="number">10</span>;</div><div class="line">	<span class="keyword">var</span> b = <span class="number">20</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/24/我的第一篇博客/" data-id="cj6gb6fos007cn8bmjw9vrdog" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2015/04/24/hello-world/" data-id="cj6hmta6r0033kcbm5as28w4c" class="article-share-link">Partager</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
     </footer>
   </div>
   
@@ -732,7 +776,7 @@ js中,无序的键值对集合,就是对象!
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/page/7/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/9/">__('next') &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/7/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span>
   </nav>
 </section>
         
@@ -740,9 +784,9 @@ js中,无序的键值对集合,就是对象!
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categorieën</h3>
+    <h3 class="widget-title">Catégories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/ajax/">ajax</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/h5-cs/">h5/cs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery-原生JS区别/">jQuery-原生JS区别</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/">javascript基础</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/">js-DOM/BOM</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/">js-特效</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/插件/">插件</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/案例/">案例</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ajax/">ajax</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/h5-c3/">h5/c3</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery-原生JS区别/">jQuery-原生JS区别</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/">javascript基础</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/">js-DOM/BOM</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/">js-特效</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/node-js/">node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/插件/">插件</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/插件学习/">插件学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/案例/">案例</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/面向对象/">面向对象</a></li></ul>
     </div>
   </div>
 
@@ -750,7 +794,7 @@ js中,无序的键值对集合,就是对象!
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Labels</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/js-特效/">js-特效</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件学习/">插件学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/案例/">案例</a></li></ul>
     </div>
@@ -760,7 +804,7 @@ js中,无序的键值对集合,就是对象!
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
       <a href="/tags/js-特效/" style="font-size: 10px;">js-特效</a> <a href="/tags/学习/" style="font-size: 20px;">学习</a> <a href="/tags/插件学习/" style="font-size: 10px;">插件学习</a> <a href="/tags/日记/" style="font-size: 15px;">日记</a> <a href="/tags/案例/" style="font-size: 10px;">案例</a>
     </div>
@@ -769,9 +813,9 @@ js中,无序的键值对集合,就是对象!
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/3016/08/">August 3016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/3016/08/">August 3016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
     </div>
   </div>
 
@@ -779,7 +823,7 @@ js中,无序的键值对集合,就是对象!
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -796,11 +840,11 @@ js中,无序的键值对集合,就是对象!
           </li>
         
           <li>
-            <a href="/2017/07/15/node-js简介/">node.js简介</a>
+            <a href="/2017/07/13/javascript三/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2017/07/13/javascript三/">(no title)</a>
+            <a href="/2017/07/08/angular-02/">angular 02</a>
           </li>
         
       </ul>
@@ -816,7 +860,7 @@ js中,无序的键值对集合,就是对象!
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 ������<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

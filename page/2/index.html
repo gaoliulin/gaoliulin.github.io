@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -92,7 +92,85 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/09/ajax-模板引擎/" data-id="cj6gb6fdu000en8bmjlol9rle" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/08/09/ajax-模板引擎/" data-id="cj6hmta3p000ykcbm0qncsxet" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ajax-跨域" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/09/ajax-跨域/" class="article-date">
+  <time datetime="2016-08-09T13:46:18.000Z" itemprop="datePublished">2016-08-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ajax/">ajax</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/09/ajax-跨域/">ajax-跨域</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="同源"><a href="#同源" class="headerlink" title="同源"></a>同源</h2><pre><code>    数据是可以共享的
+    同源的页面
+        协议，域名，端口。完全一致
+        数据是可以共享的
+    协议，域名，端口。完全一致
+    什么是端口？
+        浏览器默认使用80端口
+            不显示的
+    浏览器默认使用80端口
+        不显示的
+    m.youku.com
+    什么是域名？
+        127.0.0.1
+        www.youku.com
+        m.youku.com
+        www.youku.com
+        127.0.0.1
+        https://
+    什么是协议？
+        http://
+        https://
+        http://
+
+
+跨域的请求由于浏览器安全策略默认不被允许的
+如果协议，域名，端口，任何一样不同，那么属于跨域
+</code></pre><h2 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a><a href="http://blog.csdn.net/kongjiea/article/details/44201021" target="_blank" rel="external">跨域</a></h2><pre><code>跨域的方法很多，不同的应用场景我们都可以找到一个最合适的解决方案。比如单向的数据请求，我们应该优先选择JSONP或者window.name，双向通信优先采取location.hash
+</code></pre><p>  常用跨域方法</p>
+<ol>
+<li><p>JSONP</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">	</div><div class="line"><span class="comment">&lt;!--</span></div><div class="line">    </div><div class="line">1.在页面上先定义一javascript的函数,该函数用于接收其他网站传递来的数据</div><div class="line">2.利用script标签可以跨域获取资源的特性, 把函数的调用的代码获取回来.</div><div class="line">3.在script标签的src属性上要把函数的名称给传递给后台。</div><div class="line"></div><div class="line">--&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="comment">/*1.定义函数*/</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">eat</span>(<span class="params">food</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(food);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'打印'</span>+food );</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">&lt;!--2.script标签,跨域获取 api.study.com网站上的函数调用--&gt;</span></div><div class="line"><span class="comment">&lt;!--&lt;script src="http://api.study.com/jsonp.php?callback=eat"&gt;&lt;/script&gt;--&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"></div><div class="line"><span class="comment">/*工作中我们通常会用js脚本创建script标签*/</span></div><div class="line"><span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">script.src = <span class="string">'http://api.study.com/jsonp.php?callback=eat'</span>;</div><div class="line"><span class="built_in">document</span>.body.appendChild(script);</div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>cors<br>  服务端</p>
+<pre><code>header(&apos;Access-Control-Allow-Orgin:*&apos;);
+</code></pre></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/08/09/ajax-跨域/" data-id="cj6hmta450016kcbmf8d7yg5q" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -154,7 +232,7 @@ http://www.w3school.com.cn/jquery/jquery_ajax_intro.asp
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/09/封装ajax工具函数/" data-id="cj6gb6foi0071n8bmp7hquruz" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/08/09/封装ajax工具函数/" data-id="cj6hmtab3006dkcbm9qr9zh7p" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -238,7 +316,7 @@ XML 和 JSON 就是用来在前后台传输复杂数据。它们特点具有自�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/09/xml-json/" data-id="cj6gb6fo2006tn8bmuxy280ze" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/08/09/xml-json/" data-id="cj6hmtaan005zkcbmz5q9uu45" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -326,52 +404,7 @@ XML 和 JSON 就是用来在前后台传输复杂数据。它们特点具有自�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/09/ajax-1/" data-id="cj6gb6fdw000gn8bmo2fkrqv9" class="article-share-link">Delen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-c3-web字体" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/09/c3-web字体/" class="article-date">
-  <time datetime="2016-08-09T10:23:18.000Z" itemprop="datePublished">2016-08-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/h5-cs/">h5/cs</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/09/c3-web字体/">c3-web字体-图标</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="web字体"><a href="#web字体" class="headerlink" title="web字体"></a><a href="http://www.cnblogs.com/fjdingsd/p/5663561.html" target="_blank" rel="external">web字体</a></h3><pre><code>[web字体参考2](http://www.cnblogs.com/fjdingsd/p/5663561.html)
-[web下载](https://www.youziku.com/)
-</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  1.如果啥也不定义  使用的是系统默认的的字体</div><div class="line">  2.</div><div class="line">  --&gt;</div><div class="line">      /*怎么用第三方的字体*/</div><div class="line">      /*1.需要下载字体文件 */</div><div class="line">      /*2.定义第三方字体*/</div><div class="line">      @font-face &#123;</div><div class="line">          /*3.指定字体的名称  可以自定义*/</div><div class="line">          font-family: itheimash7;</div><div class="line">          /*4.引用字体文件*/</div><div class="line">          /* 规范的写法  固定写法*/</div><div class="line">          src:</div><div class="line">          url('LiDeBiao-Xing3.eot?#iefix') format('embedded-opentype'),/*兼容IE 6-8 */</div><div class="line">          url('LiDeBiao-Xing3.woff') format('woff'),</div><div class="line">          url('LiDeBiao-Xing3.ttf') format('truetype'),</div><div class="line">          url('LiDeBiao-Xing3.svg') format('svg');</div><div class="line">          /*兼容了主流浏览器*/</div><div class="line">      &#125;</div><div class="line"></div><div class="line"></div><div class="line">      body&#123;</div><div class="line">          font-size: 20px;</div><div class="line">      &#125;</div><div class="line">      div:nth-child(2)&#123;</div><div class="line">          font-family: "Microsoft Yahei";</div><div class="line">      &#125;</div><div class="line">      div:last-child&#123;</div><div class="line">          /*5.使用自定义的  和使用字体一样的*/</div><div class="line">          font-family: itheimash7;</div><div class="line">      &#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/09/c3-web字体/" data-id="cj6gb6fhf002en8bm6e7yukmr" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/08/09/ajax-1/" data-id="cj6hmta3a000qkcbmi4q4mgx6" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -472,7 +505,52 @@ XML 和 JSON 就是用来在前后台传输复杂数据。它们特点具有自�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/09/ajax/" data-id="cj6gb6fg4001wn8bm5q6zmavm" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/08/09/ajax/" data-id="cj6hmta45001ckcbmq2pwivxb" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-c3-web字体" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/09/c3-web字体/" class="article-date">
+  <time datetime="2016-08-09T10:23:18.000Z" itemprop="datePublished">2016-08-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/h5-c3/">h5/c3</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/09/c3-web字体/">c3-web字体-图标</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="web字体"><a href="#web字体" class="headerlink" title="web字体"></a><a href="http://www.cnblogs.com/fjdingsd/p/5663561.html" target="_blank" rel="external">web字体</a></h3><pre><code>[web字体参考2](http://www.cnblogs.com/fjdingsd/p/5663561.html)
+[web下载](https://www.youziku.com/)
+</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  1.如果啥也不定义  使用的是系统默认的的字体</div><div class="line">  2.</div><div class="line">  --&gt;</div><div class="line">      /*怎么用第三方的字体*/</div><div class="line">      /*1.需要下载字体文件 */</div><div class="line">      /*2.定义第三方字体*/</div><div class="line">      @font-face &#123;</div><div class="line">          /*3.指定字体的名称  可以自定义*/</div><div class="line">          font-family: itheimash7;</div><div class="line">          /*4.引用字体文件*/</div><div class="line">          /* 规范的写法  固定写法*/</div><div class="line">          src:</div><div class="line">          url('LiDeBiao-Xing3.eot?#iefix') format('embedded-opentype'),/*兼容IE 6-8 */</div><div class="line">          url('LiDeBiao-Xing3.woff') format('woff'),</div><div class="line">          url('LiDeBiao-Xing3.ttf') format('truetype'),</div><div class="line">          url('LiDeBiao-Xing3.svg') format('svg');</div><div class="line">          /*兼容了主流浏览器*/</div><div class="line">      &#125;</div><div class="line"></div><div class="line"></div><div class="line">      body&#123;</div><div class="line">          font-size: 20px;</div><div class="line">      &#125;</div><div class="line">      div:nth-child(2)&#123;</div><div class="line">          font-family: "Microsoft Yahei";</div><div class="line">      &#125;</div><div class="line">      div:last-child&#123;</div><div class="line">          /*5.使用自定义的  和使用字体一样的*/</div><div class="line">          font-family: itheimash7;</div><div class="line">      &#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/08/09/c3-web字体/" data-id="cj6hmta50001tkcbmxx2ekd05" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -491,7 +569,7 @@ XML 和 JSON 就是用来在前后台传输复杂数据。它们特点具有自�
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/h5-cs/">h5/cs</a>
+    <a class="article-category-link" href="/categories/h5-c3/">h5/c3</a>
   </div>
 
   </div>
@@ -523,7 +601,7 @@ XML 和 JSON 就是用来在前后台传输复杂数据。它们特点具有自�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/09/c3-3D转换/" data-id="cj6gb6fh00029n8bmvjz7syrk" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/08/09/c3-3D转换/" data-id="cj6hmta4l001jkcbmqr36kh2a" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -542,7 +620,7 @@ XML 和 JSON 就是用来在前后台传输复杂数据。它们特点具有自�
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/h5-cs/">h5/cs</a>
+    <a class="article-category-link" href="/categories/h5-c3/">h5/c3</a>
   </div>
 
   </div>
@@ -575,7 +653,7 @@ XML 和 JSON 就是用来在前后台传输复杂数据。它们特点具有自�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/09/c3-2D转换/" data-id="cj6gb6fgp0023n8bm979yo1ck" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/08/09/c3-2D转换/" data-id="cj6hmta4l001gkcbmpbm7cuz1" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -594,7 +672,7 @@ XML 和 JSON 就是用来在前后台传输复杂数据。它们特点具有自�
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/h5-cs/">h5/cs</a>
+    <a class="article-category-link" href="/categories/h5-c3/">h5/c3</a>
   </div>
 
   </div>
@@ -619,51 +697,7 @@ XML 和 JSON 就是用来在前后台传输复杂数据。它们特点具有自�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/09/c3-flex布局/" data-id="cj6gb6fh7002cn8bmtdc3u9nk" class="article-share-link">Delen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-c3-过渡" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/08/c3-过渡/" class="article-date">
-  <time datetime="2016-08-08T09:46:16.000Z" itemprop="datePublished">2016-08-08</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/h5-cs/">h5/cs</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/08/c3-过渡/">c3-过渡(补间动画)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="过渡"><a href="#过渡" class="headerlink" title="过渡"></a>过渡</h2><pre><code>eg:
-</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div></pre></td><td class="code"><pre><div class="line">1.</div><div class="line">	.transition &#123;</div><div class="line">		width: 200px;</div><div class="line">		height: 200px;</div><div class="line">		margin: 100px auto;</div><div class="line">		background-color: green;</div><div class="line"></div><div class="line">		/*加过渡*/重要的 </div><div class="line">		transition:all 3s;     </div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*需求  当鼠标放上去的时候   产生动画  绿色背景到红色背景的动画 花3s时间完成*/</div><div class="line">	.transition:hover&#123;</div><div class="line">		/*改变属性状态 产生动画*/</div><div class="line">		background-color: red;</div><div class="line">	&#125;</div><div class="line">2， .transition&#123;</div><div class="line">			width: 200px;</div><div class="line">			height: 200px;</div><div class="line">			background: green;</div><div class="line">			margin: 100px auto;</div><div class="line"></div><div class="line">			/*需要设置过渡属性*/</div><div class="line">			/*</div><div class="line">			如果加上过渡属性了  具备了做补间动画的能力</div><div class="line">			什么时候触发这个效果  只要属性状态发生改变 就能触发过渡 产生动画</div><div class="line">			*/</div><div class="line">			/*</div><div class="line">			1. all  所有属性都具备了过渡的能力</div><div class="line">			2. width 仅仅只有宽度有过渡的能力</div><div class="line">			3. 第一个参数设需要过渡的属性</div><div class="line">			*/</div><div class="line">			transition: all 3s;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	.transition:hover&#123;</div><div class="line">		width: 400px;</div><div class="line">		height: 400px;</div><div class="line">	&#125;</div><div class="line">	3. </div><div class="line">		.transition &#123;</div><div class="line">			width: 200px;</div><div class="line">			height: 200px;</div><div class="line">			background-color: green;</div><div class="line"></div><div class="line">			position: absolute;</div><div class="line">			left: 200px;</div><div class="line">			top: 200px;</div><div class="line"></div><div class="line">			/*加过渡*/</div><div class="line">			/*设置指定的多个属性产生过渡*/</div><div class="line">			/*还可以设置每个属性自己的过渡时间 */</div><div class="line">			transition: background-color 3s ,left 3s ,width 1s;</div><div class="line">			/*all 代表所有的属性*/</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		/*</div><div class="line">		1.鼠标经过的时候触发</div><div class="line">		2.位置  移动200px 右移</div><div class="line">		3.宽度  300px宽度</div><div class="line">		4.颜色  红色</div><div class="line">		*/</div><div class="line">		.transition:hover&#123;</div><div class="line">			left: 400px;</div><div class="line">			width: 300px;</div><div class="line">			background-color: red;</div><div class="line">		&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">		.transition &#123;</div><div class="line">			width: 200px;</div><div class="line">			height: 200px;</div><div class="line">			margin: 100px auto;</div><div class="line">			background-color: green;</div><div class="line"></div><div class="line">			/*加过渡*/</div><div class="line">			/*组合写法*/</div><div class="line">			/*transition: all 1s ease 1s;*/</div><div class="line">			/*拆分写法*/</div><div class="line">			/*1.需要过渡的属性*/</div><div class="line">			transition-property: all;</div><div class="line">			/*2.过渡的时长*/</div><div class="line">			transition-duration: 4s;</div><div class="line">			/*3.动画的速度*/</div><div class="line">			/*</div><div class="line">			linear 匀速</div><div class="line">			ease  先快后慢    默认的速度</div><div class="line">			ease-in  先慢后快</div><div class="line">			ease-out  先快后慢</div><div class="line">			ease-in-out 慢 快 慢</div><div class="line">			*/</div><div class="line">			/* 用坐标来理解   贝塞尔曲线（了解即可） */</div><div class="line">			transition-timing-function: linear;</div><div class="line">			/*4.过渡的延时*/</div><div class="line">			transition-delay: 2s;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		/*鼠标经过的时候  高度变成400px  动画*/</div><div class="line">		.transition:hover&#123;</div><div class="line">			height: 400px;</div><div class="line">		&#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/08/c3-过渡/" data-id="cj6gb6fi1002rn8bmn6611sba" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/08/09/c3-flex布局/" data-id="cj6hmta50001qkcbm7xno66yl" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -678,7 +712,7 @@ XML 和 JSON 就是用来在前后台传输复杂数据。它们特点具有自�
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/3/">__('next') &raquo;</a>
+    <a class="extend prev" rel="prev" href="/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/">__('next') &raquo;</a>
   </nav>
 </section>
         
@@ -686,9 +720,9 @@ XML 和 JSON 就是用来在前后台传输复杂数据。它们特点具有自�
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categorieën</h3>
+    <h3 class="widget-title">Catégories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/ajax/">ajax</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/h5-cs/">h5/cs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery-原生JS区别/">jQuery-原生JS区别</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/">javascript基础</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/">js-DOM/BOM</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/">js-特效</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/插件/">插件</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/案例/">案例</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ajax/">ajax</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/h5-c3/">h5/c3</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery-原生JS区别/">jQuery-原生JS区别</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/">javascript基础</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/">js-DOM/BOM</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/">js-特效</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/node-js/">node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/插件/">插件</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/插件学习/">插件学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/案例/">案例</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/面向对象/">面向对象</a></li></ul>
     </div>
   </div>
 
@@ -696,7 +730,7 @@ XML 和 JSON 就是用来在前后台传输复杂数据。它们特点具有自�
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Labels</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/js-特效/">js-特效</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件学习/">插件学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/案例/">案例</a></li></ul>
     </div>
@@ -706,7 +740,7 @@ XML 和 JSON 就是用来在前后台传输复杂数据。它们特点具有自�
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
       <a href="/tags/js-特效/" style="font-size: 10px;">js-特效</a> <a href="/tags/学习/" style="font-size: 20px;">学习</a> <a href="/tags/插件学习/" style="font-size: 10px;">插件学习</a> <a href="/tags/日记/" style="font-size: 15px;">日记</a> <a href="/tags/案例/" style="font-size: 10px;">案例</a>
     </div>
@@ -715,9 +749,9 @@ XML 和 JSON 就是用来在前后台传输复杂数据。它们特点具有自�
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/3016/08/">August 3016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/3016/08/">August 3016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
     </div>
   </div>
 
@@ -725,7 +759,7 @@ XML 和 JSON 就是用来在前后台传输复杂数据。它们特点具有自�
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -742,11 +776,11 @@ XML 和 JSON 就是用来在前后台传输复杂数据。它们特点具有自�
           </li>
         
           <li>
-            <a href="/2017/07/15/node-js简介/">node.js简介</a>
+            <a href="/2017/07/13/javascript三/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2017/07/13/javascript三/">(no title)</a>
+            <a href="/2017/07/08/angular-02/">angular 02</a>
           </li>
         
       </ul>
@@ -762,7 +796,7 @@ XML 和 JSON 就是用来在前后台传输复杂数据。它们特点具有自�
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 ������<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

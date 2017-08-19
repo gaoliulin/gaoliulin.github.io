@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,93 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-jQuery-隐私迭代-连式编程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/06/jQuery-隐私迭代-连式编程/" class="article-date">
+  <time datetime="2015-11-06T06:19:08.000Z" itemprop="datePublished">2015-11-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/jQuery/">jQuery</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/06/jQuery-隐私迭代-连式编程/">jQuery 隐私迭代-连式编程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    绑定事件;</div><div class="line">    $(<span class="built_in">document</span>).on(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">        连式编程:  可以一直点的调用下去只要方法符合需求;</div><div class="line">                <span class="number">1.</span>每个方法底层都在你看不到的位置返回了一个$(<span class="keyword">this</span>)</div><div class="line">                <span class="number">2.</span>或者这个函数返回的就是一个jquery对象；</div><div class="line">                    如果想往回退，那么使用end();</div><div class="line">        隐式迭代:  操作多个元素不需要<span class="keyword">for</span>循环了,jquery底层帮我们实现一次调用多次赋值;</div><div class="line">        $(<span class="string">"div"</span>).show(<span class="number">2000</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            alert(<span class="number">1</span>);</div><div class="line">        &#125;);</div><div class="line"></div><div class="line"></div><div class="line">        当我们利用访问关系,找啊找,找啊找.......</div><div class="line">            想要往回退到之前的那个元素的时候,用end();</div><div class="line"></div><div class="line">        不想要li了.</div><div class="line"></div><div class="line">        第二个li;</div><div class="line">        <span class="built_in">console</span>.log($(<span class="string">"div"</span>).eq(<span class="number">0</span>).next().children(<span class="string">"li"</span>).eq(<span class="number">1</span>))</div><div class="line">        所有li;</div><div class="line">        <span class="built_in">console</span>.log($(<span class="string">"div"</span>).eq(<span class="number">0</span>).next().children(<span class="string">"li"</span>).eq(<span class="number">1</span>).end())</div><div class="line">        每次调用end();像回退一步;</div><div class="line">        <span class="built_in">console</span>.log($(<span class="string">"div"</span>).eq(<span class="number">0</span>).next().children(<span class="string">"li"</span>).eq(<span class="number">1</span>).end().end().end().end())</div><div class="line"></div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/11/06/jQuery-隐私迭代-连式编程/" data-id="cj6hmta7m003rkcbmr3xo9p2z" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-jQuery-获取盒子宽高-位置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/05/jQuery-获取盒子宽高-位置/" class="article-date">
+  <time datetime="2015-11-05T06:49:08.000Z" itemprop="datePublished">2015-11-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/jQuery/">jQuery</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/05/jQuery-获取盒子宽高-位置/">jQuery 获取盒子宽高-位置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="检测盒子宽高"><a href="#检测盒子宽高" class="headerlink" title="检测盒子宽高"></a>检测盒子宽高</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">检测盒子宽高;</div><div class="line">           <span class="number">1.</span>css();   <span class="number">2.</span>attr();   <span class="number">3.</span>prop();   <span class="number">4.</span>height();</div><div class="line"></div><div class="line">       $(<span class="string">"div"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">           获取盒子的高;</div><div class="line">           alert($(<span class="string">"div"</span>).css(<span class="string">"height"</span>));能够获取行内内嵌外链的最高权限属性;  带单位;</div><div class="line">           alert($(<span class="string">"div"</span>).css(<span class="string">"width"</span>));能够获取行内内嵌外链的最高权限属性;  带单位;</div><div class="line"></div><div class="line">           alert($(<span class="string">"div"</span>).height())<span class="comment">//或最高权限的高;数值类型;</span></div><div class="line">           alert($(<span class="string">"div"</span>).width());<span class="comment">//或最高权限的宽;数值类型                alert(typeof $("div").width());</span></div><div class="line"></div><div class="line">          可以获取值,也可以赋值;</div><div class="line">           <span class="built_in">console</span>.log($(<span class="string">"div"</span>).width());</div><div class="line">           $(<span class="string">"div"</span>).width(<span class="number">234</span>);</div><div class="line"></div><div class="line">       &#125;);</div></pre></td></tr></table></figure>
+<h3 id="盒子检测"><a href="#盒子检测" class="headerlink" title="盒子检测"></a>盒子检测</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> offset获取值;</div><div class="line">    返回值是一个json: 距离整个页面的距离; 和定位没有关系;</div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">".box2"</span>).offset());</div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">".box2"</span>).offset().left);   <span class="comment">//scroll().left;</span></div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">".box2"</span>).offset().top);   <span class="comment">//scroll().top;</span></div><div class="line"></div><div class="line"><span class="number">2.</span> position()系列: 我们宁愿用css();获取和设置top/left;</div><div class="line">    只能获取不能赋值: 距离父系盒子带有定位的盒子的距离;</div><div class="line">    和自己有没有定位无关,如果都么有那么是距离页面的距离;</div><div class="line">    position获取值;</div><div class="line">        返回值是一个json: 距离父系盒子带有定位的盒子的距离; 和定位有关系;</div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">".box2"</span>).position());</div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">".box2"</span>).position().left);<span class="comment">//scroll().left;</span></div><div class="line">    <span class="built_in">console</span>.log($(<span class="string">".box2"</span>).position().top);<span class="comment">//scroll().top;//新七步;</span></div><div class="line"></div><div class="line"> 注:   position()无法赋值;</div><div class="line"></div><div class="line"><span class="number">3.</span> scrollTop() 页面被卷去的部分;</div><div class="line">    可以赋值,也可以获取值;</div><div class="line">    scrollTop获取值;<span class="comment">//用jquery对象调用</span></div><div class="line">                <span class="comment">//window.pageYOffset || document.documentElement.scrollTop;</span></div><div class="line">            <span class="built_in">console</span>.log($(<span class="built_in">window</span>).scrollTop());</div><div class="line">    <span class="comment">//scrollTop()赋值;//window.scrollTo();</span></div><div class="line">            $(<span class="built_in">window</span>).scrollTop(<span class="number">107</span>);</div></pre></td></tr></table></figure>
+<h6 id="固定导航例子"><a href="#固定导航例子" class="headerlink" title="固定导航例子"></a>固定导航例子</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//需求: 页面滑动触动这个事件,检测被卷去的头部的高度.</span></div><div class="line">    <span class="comment">//      如果大于第一个盒子的高,那么第二个盒子添加固定定位,</span></div><div class="line">    <span class="comment">//      第一/三个盒子添加上下padding/marign;</span></div><div class="line">    $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">       <span class="comment">//判断:如果大于第一个盒子的高,那么第二个盒子添加固定定位,</span></div><div class="line">                <span class="comment">//第一/三个盒子添加上下padding/marign;</span></div><div class="line">        <span class="keyword">if</span>($(<span class="built_in">window</span>).scrollTop() &gt; $(<span class="string">".top"</span>).height())&#123;</div><div class="line">            <span class="keyword">var</span> json1 = &#123;<span class="string">"position"</span>:<span class="string">"fixed"</span>,<span class="string">"top"</span>:<span class="number">0</span>,<span class="string">"left"</span>:<span class="number">0</span>&#125;;</div><div class="line">            $(<span class="string">".nav"</span>).css(json1);</div><div class="line">            <span class="comment">//取消抖动效果;</span></div><div class="line">            $(<span class="string">".top"</span>).css(<span class="string">"margin-bottom"</span>,$(<span class="string">".nav"</span>).height());</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">var</span> json2 = &#123;<span class="string">"position"</span>:<span class="string">"static"</span>&#125;;</div><div class="line">            $(<span class="string">".nav"</span>).css(json2);</div><div class="line">            <span class="comment">//取消抖动效果;</span></div><div class="line">            $(<span class="string">".top"</span>).css(<span class="string">"margin-bottom"</span>,<span class="number">0</span>);</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/11/05/jQuery-获取盒子宽高-位置/" data-id="cj6hmta7m003tkcbm9m2jom7f" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-jQuery-普通和表单属性操作" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -102,7 +189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/05/jQuery-普通和表单属性操作/" data-id="cj6gb6fl1004kn8bmwclyxayq" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2015/11/05/jQuery-普通和表单属性操作/" data-id="cj6hmta76003hkcbmcgaqqw6v" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -148,7 +235,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/04/jQuery-操作元素/" data-id="cj6gb6fkd004bn8bm2ghp1uvl" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2015/11/04/jQuery-操作元素/" data-id="cj6hmta7m003lkcbmwar07y8o" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -191,7 +278,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/02/jQuery-自定义动画/" data-id="cj6gb6fl8004qn8bm4h0n8qah" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2015/11/02/jQuery-自定义动画/" data-id="cj6hmta7m003nkcbmg7xiozch" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -238,7 +325,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/29/原生js和jQuery对样式的设置/" data-id="cj6gb6fqe0094n8bmmrcz2bhb" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2015/10/29/原生js和jQuery对样式的设置/" data-id="cj6hmtaan005wkcbmx0eu47jp" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -283,52 +370,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/29/jQuery-原生JS区别/" data-id="cj6gb6fk30041n8bmxui2unl8" class="article-share-link">Delen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-jQuery-动画" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/10/29/jQuery-动画/" class="article-date">
-  <time datetime="2015-10-29T06:19:08.000Z" itemprop="datePublished">2015-10-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/jQuery/">jQuery</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/29/jQuery-动画/">jQuery 动画    显示和隐藏/滑入和滑出/淡入和淡出</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-显示和隐藏"><a href="#1-显示和隐藏" class="headerlink" title="1. 显示和隐藏"></a>1. 显示和隐藏</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="number">-1.</span> 显示动画;(四种)</div><div class="line">	+ 第一种:直接显示;   show();      不带参数;</div><div class="line">	$(<span class="string">"div"</span>).show();  </div><div class="line">	</div><div class="line">	+ 第二种:缓慢显示;          show(时间);   带参数;毫秒值;</div><div class="line">	$(<span class="string">"div"</span>).show(<span class="number">2000</span>);</div><div class="line">	</div><div class="line">	+ 第三种:缓慢显示;          show(字符串); 带参;字符串(速度)</div><div class="line">	<span class="comment">/* slow：600ms、normal：400ms、fast：200ms */</span></div><div class="line">	$(<span class="string">"div"</span>).show(<span class="string">'fast'</span>);</div><div class="line">	</div><div class="line">	+ 第四种:缓慢显示;回调函数;  show(时间,回调函数);</div><div class="line">	执行完毕show,之后在执行回调函数;</div><div class="line">	$(<span class="string">"div"</span>).show(<span class="number">2000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">           alert(<span class="string">"执行完毕"</span>);</div><div class="line">       &#125;);</div><div class="line"></div><div class="line"></div><div class="line"><span class="number">-2.</span> 隐藏动画;(四种 参数同上)</div><div class="line">	</div><div class="line">	$(<span class="string">"div"</span>).hide();  </div><div class="line"></div><div class="line"></div><div class="line">   <span class="number">-3.</span> 切换动画;(四种 参数同上)</div><div class="line">	</div><div class="line">	$(<span class="string">"div"</span>).toggle();</div></pre></td></tr></table></figure>
-<h2 id="2-滑入和滑出"><a href="#2-滑入和滑出" class="headerlink" title="2. 滑入和滑出"></a>2. 滑入和滑出</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="number">-1.</span> 滑入动画;(四种)</div><div class="line">	+ 第一种:直接滑入;   slideDown();      不带参数;</div><div class="line">	$(<span class="string">"div"</span>).slideDown();  </div><div class="line">	</div><div class="line">	+ 第二种:缓慢滑入;          slideDown(时间);   带参数;毫秒值;</div><div class="line">	$(<span class="string">"div"</span>).slideDown(<span class="number">2000</span>);</div><div class="line">	</div><div class="line">	+ 第三种:缓慢滑入;          slideDown(字符串); 带参;字符串(速度)</div><div class="line">	<span class="comment">/* slow：600ms、normal：400ms、fast：200ms */</span></div><div class="line">	$(<span class="string">"div"</span>).slideDown(<span class="string">'fast'</span>);</div><div class="line">	</div><div class="line">	+ 第四种:缓慢滑入;回调函数;  slideDown(时间,回调函数);</div><div class="line">	执行完毕slideDown,之后在执行回调函数;</div><div class="line">	$(<span class="string">"div"</span>).slideDown(<span class="number">2000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">           alert(<span class="string">"执行完毕"</span>);</div><div class="line">       &#125;);</div><div class="line"></div><div class="line"></div><div class="line"><span class="number">-2.</span> 滑出动画;(四种 参数同上)</div><div class="line">	</div><div class="line">	$(<span class="string">"div"</span>).slideUp();  </div><div class="line"></div><div class="line"></div><div class="line">   <span class="number">-3.</span> 切换动画;(四种 参数同上)</div><div class="line">	</div><div class="line">	$(<span class="string">"div"</span>).slideToggle();</div></pre></td></tr></table></figure>
-<h2 id="3-淡入和淡出"><a href="#3-淡入和淡出" class="headerlink" title="3. 淡入和淡出"></a>3. 淡入和淡出</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="number">-1.</span> 淡入动画;(四种)</div><div class="line">	+ 第一种:直接滑入;   fadeIn();      不带参数;</div><div class="line">	$(<span class="string">"div"</span>).fadeIn();  </div><div class="line">	</div><div class="line">	+ 第二种:缓慢淡入;          fadeIn(时间);   带参数;毫秒值;</div><div class="line">	$(<span class="string">"div"</span>).fadeIn(<span class="number">2000</span>);</div><div class="line">	</div><div class="line">	+ 第三种:缓慢淡入;          fadeIn(字符串); 带参;字符串(速度)</div><div class="line">	<span class="comment">/* slow：600ms、normal：400ms、fast：200ms */</span></div><div class="line">	$(<span class="string">"div"</span>).fadeIn(<span class="string">'fast'</span>);</div><div class="line">	</div><div class="line">	+ 第四种:缓慢淡入;回调函数;  fadeIn(时间,回调函数);</div><div class="line">	执行完毕slideDown,之后在执行回调函数;</div><div class="line">	$(<span class="string">"div"</span>).fadeIn(<span class="number">2000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">           alert(<span class="string">"执行完毕"</span>);</div><div class="line">       &#125;);</div><div class="line"></div><div class="line"></div><div class="line"><span class="number">-2.</span> 淡出动画;(四种 参数同上)</div><div class="line">	</div><div class="line">	$(<span class="string">"div"</span>).fadeOut();  </div><div class="line"></div><div class="line"></div><div class="line">   <span class="number">-3.</span> 切换动画;(四种 参数同上)</div><div class="line">	</div><div class="line">	$(<span class="string">"div"</span>).fadeToggle();  </div><div class="line">	</div><div class="line"><span class="number">4.</span>淡入到某种程度;(三种)   fadeTo();</div><div class="line">       $(<span class="string">"button"</span>).eq(<span class="number">3</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">           第一种:必须指定时间和透明程度;          fadeToggle();      不带参数;</div><div class="line">               display/opacity;</div><div class="line">           $(<span class="string">"div"</span>).fadeTo(<span class="number">2000</span>,<span class="number">0.2</span>);</div><div class="line"></div><div class="line">           第二种:必须指定时间和透明程度;          fadeToggle(字符串); 带参;字符串(速度)</div><div class="line">           <span class="comment">//    display/opacity;</span></div><div class="line">           <span class="comment">/* slow：600ms、normal：400ms、fast：200ms */</span></div><div class="line">           $(<span class="string">"div"</span>).fadeTo(<span class="string">"fast"</span>,<span class="number">0.5</span>);</div><div class="line"></div><div class="line">           第三种:指定时间切换;回调函数;  fadeToggle(时间,回调函数);</div><div class="line">           执行完毕show,之后在执行回调函数;</div><div class="line">           $(<span class="string">"div"</span>).fadeTo(<span class="number">2000</span>, <span class="number">0.1</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">               alert(<span class="string">"执行完毕"</span>);</div><div class="line">           &#125;);</div><div class="line">       &#125;);</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/29/jQuery-动画/" data-id="cj6gb6fk70044n8bmvl7wy893" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2015/10/29/jQuery-原生JS区别/" data-id="cj6hmta76003ekcbmrjuszh94" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -389,7 +431,52 @@ AJAX
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/29/jQuery01/" data-id="cj6gb6fl4004nn8bm8q4j2uic" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2015/10/29/jQuery01/" data-id="cj6hmta82003xkcbm7y0f4j7u" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-jQuery-动画" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/29/jQuery-动画/" class="article-date">
+  <time datetime="2015-10-29T06:19:08.000Z" itemprop="datePublished">2015-10-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/jQuery/">jQuery</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/29/jQuery-动画/">jQuery 动画    显示和隐藏/滑入和滑出/淡入和淡出</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-显示和隐藏"><a href="#1-显示和隐藏" class="headerlink" title="1. 显示和隐藏"></a>1. 显示和隐藏</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="number">-1.</span> 显示动画;(四种)</div><div class="line">	+ 第一种:直接显示;   show();      不带参数;</div><div class="line">	$(<span class="string">"div"</span>).show();  </div><div class="line">	</div><div class="line">	+ 第二种:缓慢显示;          show(时间);   带参数;毫秒值;</div><div class="line">	$(<span class="string">"div"</span>).show(<span class="number">2000</span>);</div><div class="line">	</div><div class="line">	+ 第三种:缓慢显示;          show(字符串); 带参;字符串(速度)</div><div class="line">	<span class="comment">/* slow：600ms、normal：400ms、fast：200ms */</span></div><div class="line">	$(<span class="string">"div"</span>).show(<span class="string">'fast'</span>);</div><div class="line">	</div><div class="line">	+ 第四种:缓慢显示;回调函数;  show(时间,回调函数);</div><div class="line">	执行完毕show,之后在执行回调函数;</div><div class="line">	$(<span class="string">"div"</span>).show(<span class="number">2000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">           alert(<span class="string">"执行完毕"</span>);</div><div class="line">       &#125;);</div><div class="line"></div><div class="line"></div><div class="line"><span class="number">-2.</span> 隐藏动画;(四种 参数同上)</div><div class="line">	</div><div class="line">	$(<span class="string">"div"</span>).hide();  </div><div class="line"></div><div class="line"></div><div class="line">   <span class="number">-3.</span> 切换动画;(四种 参数同上)</div><div class="line">	</div><div class="line">	$(<span class="string">"div"</span>).toggle();</div></pre></td></tr></table></figure>
+<h2 id="2-滑入和滑出"><a href="#2-滑入和滑出" class="headerlink" title="2. 滑入和滑出"></a>2. 滑入和滑出</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="number">-1.</span> 滑入动画;(四种)</div><div class="line">	+ 第一种:直接滑入;   slideDown();      不带参数;</div><div class="line">	$(<span class="string">"div"</span>).slideDown();  </div><div class="line">	</div><div class="line">	+ 第二种:缓慢滑入;          slideDown(时间);   带参数;毫秒值;</div><div class="line">	$(<span class="string">"div"</span>).slideDown(<span class="number">2000</span>);</div><div class="line">	</div><div class="line">	+ 第三种:缓慢滑入;          slideDown(字符串); 带参;字符串(速度)</div><div class="line">	<span class="comment">/* slow：600ms、normal：400ms、fast：200ms */</span></div><div class="line">	$(<span class="string">"div"</span>).slideDown(<span class="string">'fast'</span>);</div><div class="line">	</div><div class="line">	+ 第四种:缓慢滑入;回调函数;  slideDown(时间,回调函数);</div><div class="line">	执行完毕slideDown,之后在执行回调函数;</div><div class="line">	$(<span class="string">"div"</span>).slideDown(<span class="number">2000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">           alert(<span class="string">"执行完毕"</span>);</div><div class="line">       &#125;);</div><div class="line"></div><div class="line"></div><div class="line"><span class="number">-2.</span> 滑出动画;(四种 参数同上)</div><div class="line">	</div><div class="line">	$(<span class="string">"div"</span>).slideUp();  </div><div class="line"></div><div class="line"></div><div class="line">   <span class="number">-3.</span> 切换动画;(四种 参数同上)</div><div class="line">	</div><div class="line">	$(<span class="string">"div"</span>).slideToggle();</div></pre></td></tr></table></figure>
+<h2 id="3-淡入和淡出"><a href="#3-淡入和淡出" class="headerlink" title="3. 淡入和淡出"></a>3. 淡入和淡出</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="number">-1.</span> 淡入动画;(四种)</div><div class="line">	+ 第一种:直接滑入;   fadeIn();      不带参数;</div><div class="line">	$(<span class="string">"div"</span>).fadeIn();  </div><div class="line">	</div><div class="line">	+ 第二种:缓慢淡入;          fadeIn(时间);   带参数;毫秒值;</div><div class="line">	$(<span class="string">"div"</span>).fadeIn(<span class="number">2000</span>);</div><div class="line">	</div><div class="line">	+ 第三种:缓慢淡入;          fadeIn(字符串); 带参;字符串(速度)</div><div class="line">	<span class="comment">/* slow：600ms、normal：400ms、fast：200ms */</span></div><div class="line">	$(<span class="string">"div"</span>).fadeIn(<span class="string">'fast'</span>);</div><div class="line">	</div><div class="line">	+ 第四种:缓慢淡入;回调函数;  fadeIn(时间,回调函数);</div><div class="line">	执行完毕slideDown,之后在执行回调函数;</div><div class="line">	$(<span class="string">"div"</span>).fadeIn(<span class="number">2000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">           alert(<span class="string">"执行完毕"</span>);</div><div class="line">       &#125;);</div><div class="line"></div><div class="line"></div><div class="line"><span class="number">-2.</span> 淡出动画;(四种 参数同上)</div><div class="line">	</div><div class="line">	$(<span class="string">"div"</span>).fadeOut();  </div><div class="line"></div><div class="line"></div><div class="line">   <span class="number">-3.</span> 切换动画;(四种 参数同上)</div><div class="line">	</div><div class="line">	$(<span class="string">"div"</span>).fadeToggle();  </div><div class="line">	</div><div class="line"><span class="number">4.</span>淡入到某种程度;(三种)   fadeTo();</div><div class="line">       $(<span class="string">"button"</span>).eq(<span class="number">3</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">           第一种:必须指定时间和透明程度;          fadeToggle();      不带参数;</div><div class="line">               display/opacity;</div><div class="line">           $(<span class="string">"div"</span>).fadeTo(<span class="number">2000</span>,<span class="number">0.2</span>);</div><div class="line"></div><div class="line">           第二种:必须指定时间和透明程度;          fadeToggle(字符串); 带参;字符串(速度)</div><div class="line">           <span class="comment">//    display/opacity;</span></div><div class="line">           <span class="comment">/* slow：600ms、normal：400ms、fast：200ms */</span></div><div class="line">           $(<span class="string">"div"</span>).fadeTo(<span class="string">"fast"</span>,<span class="number">0.5</span>);</div><div class="line"></div><div class="line">           第三种:指定时间切换;回调函数;  fadeToggle(时间,回调函数);</div><div class="line">           执行完毕show,之后在执行回调函数;</div><div class="line">           $(<span class="string">"div"</span>).fadeTo(<span class="number">2000</span>, <span class="number">0.1</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">               alert(<span class="string">"执行完毕"</span>);</div><div class="line">           &#125;);</div><div class="line">       &#125;);</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/29/jQuery-动画/" data-id="cj6hmta6r0035kcbm0mbdcmg9" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -444,95 +531,7 @@ AJAX
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/28/js-正则表达式02/" data-id="cj6gb6fn50062n8bm70cfn9w2" class="article-share-link">Delen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-js-正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/10/28/js-正则表达式/" class="article-date">
-  <time datetime="2015-10-28T05:40:08.000Z" itemprop="datePublished">2015-10-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/js-特效/">js-特效</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/28/js-正则表达式/">js-正则表达式</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="正则表达式的声明有两种："><a href="#正则表达式的声明有两种：" class="headerlink" title="正则表达式的声明有两种："></a>正则表达式的声明有两种：</h4><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">##### 1.构造函数法;</div><div class="line">    var reg1 = new RegExp(/abc/);</div><div class="line">    console.dir(reg1);</div><div class="line">    console.log(reg1);</div><div class="line">    console.log(typeof reg1);</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">    2.直接量;字面量;</div><div class="line">    var reg2 = /abc/;</div><div class="line">    var reg3 = /abc/;</div><div class="line">    console.dir(reg2);</div><div class="line">    console.log(reg2);</div><div class="line">    console.log(typeof reg2);</div><div class="line"></div><div class="line">    简单数据类型比较的时候,比较的是数值;</div><div class="line">    复杂数据类型比较的时候,比较的是地址值;</div><div class="line">    console.log(reg1 === reg2);</div><div class="line">    console.log(reg3 === reg2);</div></pre></td></tr></table></figure>
-<h5 id="2-正则表达式的使用"><a href="#2-正则表达式的使用" class="headerlink" title="2.正则表达式的使用;"></a>2.正则表达式的使用;</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(<span class="number">1</span>)test();  测试参数是否符合正则表达式的约束;  符合就是<span class="literal">true</span>; 不符合就是<span class="literal">false</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="regexp">/abc/</span>.test(<span class="string">"abc"</span>));</div><div class="line"><span class="built_in">console</span>.log(<span class="regexp">/abc/</span>.test(<span class="string">"xxxxxxxx"</span>));</div></pre></td></tr></table></figure>
-<h3 id="正则的内部五大类"><a href="#正则的内部五大类" class="headerlink" title="正则的内部五大类"></a>正则的内部五大类</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">1. 预定义类 正则表达式预先设计好的一些元字符</div><div class="line">	1.1  .   除了换行和回车以外;</div><div class="line">	1.2  \d  数字字符;    \D:非数字;</div><div class="line">	1.3  \s:空白字符       \S: 非空白字符</div><div class="line">	1.4  \w: 单词字符;    \W:非单词字符;</div><div class="line">	1.5  .   除了换行和回车以外;</div><div class="line">	1.6  .   除了换行和回车以外;</div><div class="line">2. 简单类</div><div class="line">	2.1. 直接书写;  (必须是完整的，只多不能少,顺序必须对)</div><div class="line">	console.log(/abc/.test("abc"));</div><div class="line">    2.2. 写到[]里;  (只要包含里面的任何一个就可以)</div><div class="line">    console.log(/[abc]/.test("axxxxxxx"));</div><div class="line">3. 负向类</div><div class="line">	把^写到[]里面的最前面就是负向类; </div><div class="line">		仅仅是一部分不行，超出哪怕一个就没有问题了(不是个数,是种类).</div><div class="line">		被测试的参数只要有正则中没有规定的就是tru;</div><div class="line">    	如果完整包含,或者只是约束的一部分;那么就是fales;</div><div class="line">    console.log(/[^abc]/.test("abccr"));</div><div class="line">4. 范围类</div><div class="line">	范围类就是 : -;   从哪到哪的意思;一般与[]连用;</div><div class="line">    console.log(/[a-d]/.test("cc"));</div><div class="line">5. 组合类</div><div class="line">	就是把范围类,一起用;</div><div class="line">	console.log(/[a-dA-D0-5]/.test("cC3"));</div><div class="line"></div><div class="line">## 正则边界:  </div><div class="line">	1.以什么为开始;</div><div class="line">		^: 1.[]里面的负向类;   </div><div class="line">        	2.  进入//里面直接书写的^;以什么...开始;</div><div class="line">        	console.log(/^abc/.test("a"));   </div><div class="line">	2.以什么为结束; </div><div class="line">		$: 以什么...为结束;</div><div class="line">            想输入元素组就要用\符;</div><div class="line">            console.log(/abc$/.test("a"));   </div><div class="line">	3.必须是这样,不能多也不能少;</div><div class="line">      	console.log(/^abc$/.test("ab"));</div></pre></td></tr></table></figure>
-<h2 id="量词四种"><a href="#量词四种" class="headerlink" title="量词四种:"></a>量词四种:</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span>*       重复零次或更多    (&gt;=<span class="number">0</span>)</div><div class="line">	<span class="built_in">console</span>.log(<span class="regexp">/^a*$/</span>.test(<span class="string">""</span>));<span class="comment">//a* : 代表a不出现也可以,出现也可以,多少次都行;</span></div><div class="line">   <span class="number">2.</span>+       重复一次或更多次  (&gt;=<span class="number">1</span>)</div><div class="line">   	<span class="built_in">console</span>.log(<span class="regexp">/^a+$/</span>.test(<span class="string">""</span>));<span class="comment">//a* : 代表a不出现也可以,出现也可以,多少次都行;</span></div><div class="line">   <span class="number">3.</span>?       重复零次或一次    (<span class="number">0</span>||<span class="number">1</span>)  要么有 要么没有</div><div class="line">   	重复零次或一次    (<span class="number">0</span>||<span class="number">1</span>)  要么有 要么没有</div><div class="line">   	<span class="built_in">console</span>.log(<span class="regexp">/^a?$/</span>.test(<span class="string">""</span>));<span class="comment">//a* : 代表a不出现也可以,出现也可以,多少次都行;</span></div><div class="line">   <span class="number">4.</span>&#123;&#125;      重复多少次的意思</div><div class="line">(<span class="number">1</span>).&#123;<span class="number">4</span>&#125;  重复<span class="number">4</span>次;      (<span class="number">2</span>).&#123;<span class="number">4</span>,&#125;  重复<span class="number">4</span>次以上;     <span class="number">3.</span>&#123;<span class="number">4</span>,<span class="number">8</span>&#125;   重复<span class="number">4</span><span class="number">-8</span>次;</div><div class="line">  	&#123;n&#125;	  n次	（x=n）</div><div class="line">  	&#123;n,&#125;	  重复n次或更多  (x&gt;=n)</div><div class="line">  	&#123;n,m&#125;   重复出现的次数比n多但比m少 (n&lt;=x&lt;=m)</div></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/28/js-正则表达式/" data-id="cj6gb6fmr005rn8bm0ur7y32l" class="article-share-link">Delen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-js-特效-事件委托" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/10/27/js-特效-事件委托/" class="article-date">
-  <time datetime="2015-10-27T05:40:08.000Z" itemprop="datePublished">2015-10-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/js-特效/">js-特效</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/27/js-特效-事件委托/">js-特效-事件委托</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="事件委托原来"><a href="#事件委托原来" class="headerlink" title="事件委托原来"></a>事件委托原来</h2><h4 id="事件委托是利用事件的冒泡原理来实现的，何为事件冒泡呢？就是事件从最深的节点开始，然后逐步向上传播事件，举个例子：页面上有这么一个节点树，div-gt-ul-gt-li-gt-a-比如给最里面的a加一个click点击事件，那么这个事件就会一层一层的往外执行，执行顺序a-gt-li-gt-ul-gt-div，有这样一个机制，那么我们给最外面的div加点击事件，那么里面的ul，li，a做点击事件的时候，都会冒泡到最外层的div上，所以都会触发，这就是事件委托，委托它们父级代为执行事件"><a href="#事件委托是利用事件的冒泡原理来实现的，何为事件冒泡呢？就是事件从最深的节点开始，然后逐步向上传播事件，举个例子：页面上有这么一个节点树，div-gt-ul-gt-li-gt-a-比如给最里面的a加一个click点击事件，那么这个事件就会一层一层的往外执行，执行顺序a-gt-li-gt-ul-gt-div，有这样一个机制，那么我们给最外面的div加点击事件，那么里面的ul，li，a做点击事件的时候，都会冒泡到最外层的div上，所以都会触发，这就是事件委托，委托它们父级代为执行事件" class="headerlink" title="事件委托是利用事件的冒泡原理来实现的，何为事件冒泡呢？就是事件从最深的节点开始，然后逐步向上传播事件，举个例子：页面上有这么一个节点树，div&gt;ul&gt;li&gt;a;比如给最里面的a加一个click点击事件，那么这个事件就会一层一层的往外执行，执行顺序a&gt;li&gt;ul&gt;div，有这样一个机制，那么我们给最外面的div加点击事件，那么里面的ul，li，a做点击事件的时候，都会冒泡到最外层的div上，所以都会触发，这就是事件委托，委托它们父级代为执行事件"></a>事件委托是利用事件的冒泡原理来实现的，何为事件冒泡呢？就是事件从最深的节点开始，然后逐步向上传播事件，举个例子：页面上有这么一个节点树，div&gt;ul&gt;li&gt;a;比如给最里面的a加一个click点击事件，那么这个事件就会一层一层的往外执行，执行顺序a&gt;li&gt;ul&gt;div，有这样一个机制，那么我们给最外面的div加点击事件，那么里面的ul，li，a做点击事件的时候，都会冒泡到最外层的div上，所以都会触发，这就是事件委托，委托它们父级代为执行事件</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">	<span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="comment">//问题: 新添加的元素没有老事件;</span></div><div class="line">                    <span class="comment">//解决办法:事件委托;</span></div><div class="line">            </div><div class="line">            <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"button"</span>)[<span class="number">0</span>];</div><div class="line">            <span class="keyword">var</span> ul = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"ul"</span>)[<span class="number">0</span>];</div><div class="line">            btn.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="comment">//产生一个新的li;</span></div><div class="line">                <span class="keyword">var</span> li = <span class="built_in">document</span>.createElement(<span class="string">"li"</span>);</div><div class="line">                <span class="comment">//证明这个是特殊li</span></div><div class="line">                li.innerHTML = <span class="string">"我是新添加的li"</span>;</div><div class="line">                li.className = <span class="string">"aaa"</span>;</div><div class="line">                ul.appendChild(li);</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">            </div><div class="line">            <span class="comment">//问题: 为li绑定事件;(新li没有)</span></div><div class="line"><span class="comment">//            var liArr = document.getElementsByTagName("li");</span></div><div class="line"><span class="comment">//            for(var i=0;i&lt;liArr.length;i++)&#123;</span></div><div class="line"><span class="comment">//                liArr[i].onclick = function () &#123;</span></div><div class="line"><span class="comment">//                    alert(1);</span></div><div class="line"><span class="comment">//                &#125;</span></div><div class="line"><span class="comment">//            &#125;</span></div><div class="line"></div><div class="line"></div><div class="line">            <span class="comment">//事件委托: 就是把该执行的程序赋值给他们的父盒子;</span></div><div class="line">                    <span class="comment">//通过冒泡到父盒子,然后只要判断是你需要的盒子,就执行逻辑就可以了;</span></div><div class="line">                    <span class="comment">//这样不管新的还是老的都会有这个事件;</span></div><div class="line">                <span class="comment">//判断标签: 1.id;     2.className;    3.tagName;</span></div><div class="line"></div><div class="line">            <span class="comment">//思路:通过冒泡给ul绑定事件,这样所有的子元素就都会触动到盒子的事件,</span></div><div class="line">            <span class="comment">//    然后判断子元素是不是想要的标签;是就执行,不是就不执行该;</span></div><div class="line">            ul.onclick = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">                <span class="comment">//判断事件触发者的标签名是不是"LI";如果是li就完成的时间委托;</span></div><div class="line">                event = event || <span class="built_in">window</span>.event;</div><div class="line">                <span class="keyword">var</span> ele = event.target?event.target:event.srcElement;</div><div class="line">                <span class="comment">//判断:是li就执行;</span></div><div class="line">                <span class="keyword">if</span>(ele.tagName === <span class="string">"LI"</span>)&#123;</div><div class="line">                    alert(<span class="string">"我是li"</span>);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">            <span class="comment">//jquery这样实现事件委托;</span></div><div class="line"><span class="comment">//            ul.on("click","li", function () &#123;</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//            &#125;);</span></div><div class="line">	&#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/27/js-特效-事件委托/" data-id="cj6gb6frb009rn8bmzph4l8f3" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2015/10/28/js-正则表达式02/" data-id="cj6hmta9d004wkcbmz56fa72e" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -547,7 +546,7 @@ AJAX
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/page/4/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/6/">__('next') &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/4/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/6/">__('next') &raquo;</a>
   </nav>
 </section>
         
@@ -555,9 +554,9 @@ AJAX
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categorieën</h3>
+    <h3 class="widget-title">Catégories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/ajax/">ajax</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/h5-cs/">h5/cs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery-原生JS区别/">jQuery-原生JS区别</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/">javascript基础</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/">javasript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javasript/面向对象二/">面向对象二</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/">js-DOM/BOM</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/">js-特效</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/插件/">插件</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/案例/">案例</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ajax/">ajax</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/h5-c3/">h5/c3</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery-原生JS区别/">jQuery-原生JS区别</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/面向对象/">面向对象</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript基础/">javascript基础</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/">js-DOM/BOM</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/js-DOM-BOM/web/">web</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/js-特效/">js-特效</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/node-js/">node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/插件/">插件</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/插件学习/">插件学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/案例/">案例</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/面向对象/">面向对象</a></li></ul>
     </div>
   </div>
 
@@ -565,7 +564,7 @@ AJAX
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Labels</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/js-特效/">js-特效</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件学习/">插件学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日记/">日记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/案例/">案例</a></li></ul>
     </div>
@@ -575,7 +574,7 @@ AJAX
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
       <a href="/tags/js-特效/" style="font-size: 10px;">js-特效</a> <a href="/tags/学习/" style="font-size: 20px;">学习</a> <a href="/tags/插件学习/" style="font-size: 10px;">插件学习</a> <a href="/tags/日记/" style="font-size: 15px;">日记</a> <a href="/tags/案例/" style="font-size: 10px;">案例</a>
     </div>
@@ -584,9 +583,9 @@ AJAX
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/3016/08/">August 3016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/3016/08/">August 3016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
     </div>
   </div>
 
@@ -594,7 +593,7 @@ AJAX
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -611,11 +610,11 @@ AJAX
           </li>
         
           <li>
-            <a href="/2017/07/15/node-js简介/">node.js简介</a>
+            <a href="/2017/07/13/javascript三/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2017/07/13/javascript三/">(no title)</a>
+            <a href="/2017/07/08/angular-02/">angular 02</a>
           </li>
         
       </ul>
@@ -631,7 +630,7 @@ AJAX
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 ������<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
